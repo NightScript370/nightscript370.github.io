@@ -5,6 +5,8 @@ body, table {
 	padding: 0;
 	font-family: Whitney-Book,Helvetica Neue,Helvetica,Arial,sans-serif;
 	src: url("font.otf") format("opentype");
+	scrollbar-width: thin;
+	scrollbar-color: black grey
 }
 
 table {
