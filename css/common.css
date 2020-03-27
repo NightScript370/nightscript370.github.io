@@ -22,7 +22,7 @@ table {
 .dmlist {
 	width: 240px;
 	vertical-align: top;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 .you {
 	height: 52px;
@@ -36,13 +36,15 @@ table {
     max-width: 84px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+	white-space: nowrap;
+	font-size: 13px;
+    font-weight: 500;
 }
 .discriminator {
 	display: block;
-    font-size: 10px;
-    margin-top: 4px;
-    opacity: .4;
+	font-size: 12px;
+	line-height: 13px;
+	color: #b9bbbe;
 }
 .avatarSmall {
 	background-size: 30px 30px;
@@ -87,18 +89,8 @@ table {
     position: relative;
 	background: rgba(0,0,0,.2);
     border: 1px solid rgba(0,0,0,.1);
-    border-radius: 4px;
-}
-.searchbarInner input {
-	background: transparent;
-    border: none;
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 12px;
-    height: 26px;
-    min-width: 50px!important;
-    padding: 5px 7px;
-    resize: none;
+	border-radius: 4px;
+	text-align: center;
 }
 .friendsbar .tab-bar-item {
 	border-radius: 4px;
@@ -150,7 +142,25 @@ table {
     font-size: 14px;
     line-height: 1.25em;
     overflow: hidden;
-    position: relative;
+	position: relative;
+	text-decoration: none;
+	padding-left: 20px;
+
+	opacity: 0.7;
+	transition: opacity .1s ease-out;
+    -moz-transition: opacity .1s ease-out;
+    -webkit-transition: opacity .1s ease-out;
+    -o-transition: opacity .1s ease-out;
+}
+.channel:hover {
+	opacity: 1;
+}
+.channel img, .channel i {
+	padding-left: 4px;
+}
+.channel img {
+	height: 28px;
+	width: 24px;
 }
 .channel a {
 	align-items: center;
@@ -175,11 +185,14 @@ table {
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
-    opacity: .3;
     overflow: hidden;
     padding-right: 5px;
     text-overflow: ellipsis;
-    white-space: nowrap;
+	white-space: nowrap;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	text-decoration: underline;
 }
 
 
@@ -226,7 +239,7 @@ header {
     display: block;
     font-size: 12px;
     font-weight: 500;
-    margin-top: 12px;
+    margin-top: 4px;
     opacity: .3;
     overflow: hidden;
     padding: 9px 20px;

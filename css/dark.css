@@ -1,31 +1,24 @@
 table {
 	color:white;
 }
-.serverlist {
-	background: #202225;
-	color: white;
-}
 .dmlist {
-	background: #2f3136;
+	background: #16171A;
 	color: white;
 }
 .searchbar {
-	background: #2f3136;
+	background: #272A2E;
 	color: white;
 }
 .chat {
-	background: #36393e;
+	background: #202225;
 	color: white;
 }
 .youbase {
-	background: #2f3136;
-}
-.you {
-	background: rgba(32,34,37,.3);
+	background: #181A1D;
 }
 .friendsbar {
-	background: #36393f;
-    box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 2px 0 rgba(0,0,0,.06);
+	background: #272A2E80;
+	box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 2px 0 rgba(0,0,0,.06);
 }
 .noFriendtext {
 	color: hsla(0,0%,100%,.4);
