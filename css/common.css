@@ -22,7 +22,7 @@ table {
 .dmlist {
 	width: 240px;
 	vertical-align: top;
-	padding-top: 10px;
+	padding-top: 15px;
 }
 .you {
 	height: 52px;
@@ -439,3 +439,39 @@ header {
     flex-shrink: 0;
     padding: 8px 30px;
 }
+
+.tooltip {
+	position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 20;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -10px;
+	opacity: 0;
+	transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+  }
