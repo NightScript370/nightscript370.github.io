@@ -497,3 +497,16 @@ header {
   .grid-item:hover {
 	opacity: 1;
 }
+
+.pageContents {
+	background: #292D30;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 25px;
+	text-align: left;
+	font-size: 16px;
+}
+
+.pageContents a {
+	color: #4E72FF;
+}
