@@ -47,12 +47,11 @@ table {
 	color: #b9bbbe;
 }
 .avatarSmall {
-	background-size: 30px 30px;
-    float: left;
-    height: 30px;
-    margin-right: 10px;
-    width: 30px;
+	height: 32px;
+	margin-right: 8px;
+	width: 32px;
 	border-radius: 50%;
+	float: left;
 }
 .guild {
 	height: 50px;
