@@ -1,0 +1,17 @@
+{
+	"short_name": "NS Domain",
+	"name": "NightScript Domain",
+	"description": "Website documenting NightScript's accomplishments",
+	"icons": [
+		{
+			"src": "/images/avatar.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/index.html",
+	"background_color": "#1C9934",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#1C9934"
+}
