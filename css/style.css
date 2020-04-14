@@ -7,6 +7,9 @@ body {
 	background-attachment: fixed;
 	width: 100%; }
 
+html {
+	scroll-behavior: smooth;
+}
 a {
 	-webkit-transition: .3s all ease;
 	-o-transition: .3s all ease;
@@ -103,7 +106,7 @@ button {
 		position: absolute;
 		top: 20px;
 		right: 0;
-		margin-right: -25px;
+		margin-right: -15px;
 		-webkit-transition: 0.3s;
 		-o-transition: 0.3s;
 		transition: 0.3s; }
@@ -137,16 +140,6 @@ button {
 	width: 100%;
 	background-image: url('../images/bg_1.png');
 	z-index: 0; }
-	.bg-wrap:after {
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		background: #000;
-		opacity: .3; }
 	.bg-wrap .user-logo .img {
 		width: 200px;
 		height: 200px;
@@ -159,24 +152,29 @@ button {
 		font-family: 'Comfortaa', cursive;
 		font-style: normal; }
 
-a[data-toggle="collapse"] {
-	position: relative; }
-
-.dropdown-toggle::after {
-	display: block;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%); }
-
-@media (max-width: 991.98px) {
-	#sidebarCollapse span {
-		display: none; } }
-
 #content {
 	background-color: rgba(0, 0, 15, 0.7);
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s; }
+
+.bttbtn {
+	width: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	z-index: 999;
+	opacity: 1;
+	cursor: pointer;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	border-radius: 50%;
+	color: #FFF;
+	text-align: center;
+	font-size: 30px;
+	text-decoration: none;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s; }
+	.bttbtn:hover {
+		color: #FFF; }
