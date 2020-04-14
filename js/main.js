@@ -1,3 +1,4 @@
+//document.designMode = 'on';
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
 
 mybutton = document.getElementById("bttbtn");
