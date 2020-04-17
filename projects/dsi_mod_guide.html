@@ -52,54 +52,53 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="/css/style.css">
 	</head>
-	<body>
-		<div class="wrapper d-flex align-items-stretch">
-			<nav id="sidebar">
-				<div class="custom-menu">
-					<button type="button" id="sidebarCollapse" class="btn btn-primary" aria-label="Toggle Sidebar"></button>
-				</div>
-				<div class="img bg-wrap text-center pt-3">
-					<div class="user-logo">
-						<div class="img"></div>
-						<h4>NightScript Domain</h4>
-					</div>
-				</div>
-				<ul class="list-unstyled components nomb">
-					<li class="active"><a href="/"><span class="fa fa-home mr-1"></span> Home</a></li>
-					<li><a href="/projects"><span class="fa fa-folder-open-o mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">2</small></span> Projects</a></li>
-					<li><a href="/blog"><span class="fa fa-pencil-square-o mr-1"></span> Blog</a></li>
-					<li><a href="/gamerev"><span class="fa fa-gamepad mr-1"></span> Game Reviews</a></li>
-					<li><a href="/social"><span class="fa fa-share-alt mr-1"></span> Social Links</a></li>
-					<li><a href="https://paypal.me/maorninja"><span class="fa fa-paypal mr-1"></span> Donations</a></li>
-				</ul>
-			</nav>
-
-			<!-- Page Content  -->
-			<div id="content" class="px-5 pt-4">
-				dsi.cfw.guide is a website made to teach you how to mod your Nintendo DSi & Nintendo DSi XL systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings).<br><br>
-
-				<ul>
-					<li>Thanks to the help of Halvorsen#9996 on the DS(i) Mode Hacking discord server, we added a splash image to the website homepage, making it consistent with the other guide websites and giving it a bit of color.</li>
-					<li>Transformed Flipnote Lenny into a subsection instead of a separate guide. It's quite difficult to maintain two different guides when only one mini-section is different.</li>
-					<li>Removed the TempNAND section. It severely degrades your NAND and was not updated for Memory Pit.</li>
-					<li>Each "SD card setup" section was made into an unlinear guide. Quite frankly, users can copy files in whatever order they want and it wouldn't matter as long as they coppied all the files.</li>
-					<li>GodMode9i is now used instead of HBMenu. GodMode9i serves a purpose after installing Unlaunch (as opposed to the simple ended HBMenu) and isn't compressed in a unusual format. GodMode9i, by comparison is compressed in a .7z, a much more standard format. It can serve as an SD card manager and a Slot-1 card dumper.</li>
-					<li>dumpTool is used instead of fwTool 2.0. Unlike fwTool, we don't have to include an entire .zip file in order to link to one file. When attempting to link the fwTool.nds file as a standalone, the developer of fwTool DMCA'd the guide. By comparison, dumpTool is a standalone package, made just to dump your DSi NAND.</li>
-					<li>hiyaCFW and TWiLight Menu++ has been solidified as addons. They now appear in the top bar and are expressed as addons in the website description (found on the website homepage).</li>
-					<li>Evie11 and I combined our work to explain hiyaCFW's free-space issue. While she made the original instructions and javascript tool for checking if your SD card is acceptable, I moved it to the website FAQ and reworded the accompaning text.</li>
-					<li>The DSiWare dumping guide was more of a "how to dump from a 3DS" guide, instead of it being a <i>DSi</i> guide for a <i>DSi</i> website. I've switched it to use GodMode9i to dump DSiWare from your DSi NAND.</li>
-					<li>TWiLight Menu++'s SD card setup section was removed, instead replacing it with "place your files wherever you'd like on the SD Card". It did say that at the bottom of the SD card setup section but by the time you've read that and followed along with the guide, you've already organized all your roms. It's better you tell them outright first that it can be disorganized but organizations can be maade.</li>
-					<li>Evie11 and I are working together to make a NAND restoration guide. While it is highly unrecommended, we'd rather users do it right if they really want to.</li>
-					<li>I have merged the website credits and donations page and have moved them to the footer. I've also credited actual homebrew devs & removed credit entries from people who haven't done anything</li>
-					<li>The engine has been fixed to not hardcode more than 2 footer links. It now does a <code>for</code> loop in the yml file (which also now contains the links as it should have, since the titles were already there)</li>
-				</ul>
-
-				After these changes and other general changes (mostly rewords), emiyl has approached me in my discord DMs congratulating me on my work and thanking me for maintaining the guide while she could. As she gave me push access to the repository, I am now considered the main manager of the website.<br><br>
-
-				<a href="https://dsi.cfw.guide">Be sure to check it out. Your road of Custom Firmware is waiting for you!</a>
-
-				<a href="#" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()" class="bttbtn bg-dark d-flex justify-content-center" id="bttbtn">&#x2BC5;</a>
+	<body class="d-flex">
+		<div class="bg"></div>
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-primary" aria-label="Toggle Sidebar"></button>
 			</div>
+			<div class="img bg-wrap text-center pt-3">
+				<div class="user-logo">
+					<div class="img"></div>
+					<h4>NightScript Domain</h4>
+				</div>
+			</div>
+			<ul class="list-unstyled components nomb">
+				<li class="active"><a href="/"><span class="fa fa-home mr-1"></span> Home</a></li>
+				<li><a href="/projects"><span class="fa fa-folder-open-o mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">2</small></span> Projects</a></li>
+				<li><a href="/blog"><span class="fa fa-pencil-square-o mr-1"></span> Blog</a></li>
+				<li><a href="/gamerev"><span class="fa fa-gamepad mr-1"></span> Game Reviews</a></li>
+				<li><a href="/social"><span class="fa fa-share-alt mr-1"></span> Social Links</a></li>
+				<li><a href="https://paypal.me/maorninja"><span class="fa fa-paypal mr-1"></span> Donations</a></li>
+			</ul>
+		</nav>
+
+		<!-- Page Content  -->
+		<div id="content" class="px-5 pt-4">
+			dsi.cfw.guide is a website made to teach you how to mod your Nintendo DSi & Nintendo DSi XL systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings).<br><br>
+
+			<ul>
+				<li>Thanks to the help of Halvorsen#9996 on the DS(i) Mode Hacking discord server, we added a splash image to the website homepage, making it consistent with the other guide websites and giving it a bit of color.</li>
+				<li>Transformed Flipnote Lenny into a subsection instead of a separate guide. It's quite difficult to maintain two different guides when only one mini-section is different.</li>
+				<li>Removed the TempNAND section. It severely degrades your NAND and was not updated for Memory Pit.</li>
+				<li>Each "SD card setup" section was made into an unlinear guide. Quite frankly, users can copy files in whatever order they want and it wouldn't matter as long as they coppied all the files.</li>
+				<li>GodMode9i is now used instead of HBMenu. GodMode9i serves a purpose after installing Unlaunch (as opposed to the simple ended HBMenu) and isn't compressed in a unusual format. GodMode9i, by comparison is compressed in a .7z, a much more standard format. It can serve as an SD card manager and a Slot-1 card dumper.</li>
+				<li>dumpTool is used instead of fwTool 2.0. Unlike fwTool, we don't have to include an entire .zip file in order to link to one file. When attempting to link the fwTool.nds file as a standalone, the developer of fwTool DMCA'd the guide. By comparison, dumpTool is a standalone package, made just to dump your DSi NAND.</li>
+				<li>hiyaCFW and TWiLight Menu++ has been solidified as addons. They now appear in the top bar and are expressed as addons in the website description (found on the website homepage).</li>
+				<li>Evie11 and I combined our work to explain hiyaCFW's free-space issue. While she made the original instructions and javascript tool for checking if your SD card is acceptable, I moved it to the website FAQ and reworded the accompaning text.</li>
+				<li>The DSiWare dumping guide was more of a "how to dump from a 3DS" guide, instead of it being a <i>DSi</i> guide for a <i>DSi</i> website. I've switched it to use GodMode9i to dump DSiWare from your DSi NAND.</li>
+				<li>TWiLight Menu++'s SD card setup section was removed, instead replacing it with "place your files wherever you'd like on the SD Card". It did say that at the bottom of the SD card setup section but by the time you've read that and followed along with the guide, you've already organized all your roms. It's better you tell them outright first that it can be disorganized but organizations can be maade.</li>
+				<li>Evie11 and I are working together to make a NAND restoration guide. While it is highly unrecommended, we'd rather users do it right if they really want to.</li>
+				<li>I have merged the website credits and donations page and have moved them to the footer. I've also credited actual homebrew devs & removed credit entries from people who haven't done anything</li>
+				<li>The engine has been fixed to not hardcode more than 2 footer links. It now does a <code>for</code> loop in the yml file (which also now contains the links as it should have, since the titles were already there)</li>
+			</ul>
+
+			After these changes and other general changes (mostly rewords), emiyl has approached me in my discord DMs congratulating me on my work and thanking me for maintaining the guide while she could. As she gave me push access to the repository, I am now considered the main manager of the website.<br><br>
+
+			<a href="https://dsi.cfw.guide">Be sure to check it out. Your road of Custom Firmware is waiting for you!</a>
+
+			<a href="#" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()" class="bttbtn bg-dark d-flex justify-content-center" id="bttbtn" aria-label="Back to top">&#x2BC5;</a>
 		</div>
 
 		<script src="https://unpkg.com/@popperjs/core@2.2.3/dist/umd/popper.min.js"></script>

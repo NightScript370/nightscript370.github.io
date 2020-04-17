@@ -1,20 +1,24 @@
 body {
 	color: #00DDDD;
-	background-image: url('https://i.imgur.com/GdnbuVj.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
 	width: 100%; }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth; }
+
+.bg {
+	background-image: url('https://i.imgur.com/GdnbuVj.jpg');
+	background-position: center top; /* on iOS at least 'center center' will cause a jump when collpsing the top & bottom bars */ 
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 a {
 	-webkit-transition: .3s all ease;
 	-o-transition: .3s all ease;
-	transition: .3s all ease;
-	color: #2f89fc; }
+	transition: .3s all ease; }
 	a:hover, a:focus {
 		text-decoration: none !important;
 		outline: none !important;
