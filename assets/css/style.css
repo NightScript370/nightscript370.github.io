@@ -164,15 +164,11 @@ button {
 
 .bttbtn {
 	width: 40px;
-	opacity: 1;
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
 	border-radius: 50%;
 	color: #FFF;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	transition: 0.3s;
 	padding-top: 8px; }
 	.bttbtn:hover {
 		color: #FFF; }

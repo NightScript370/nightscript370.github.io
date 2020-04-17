@@ -6,7 +6,7 @@
 		<meta property="og:title" content="NightScript Domain - dsi.cfw.guide" />
 		<meta name="twitter:title" content="NightScript Domain - dsi.cfw.guide" />
 
-		<link rel="manifest" href="/site.webmanifest">
+		<link rel="manifest" href="/assets/site.webmanifest">
 		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<meta charset="utf-8">
@@ -18,12 +18,12 @@
 		<meta property="og:description" content="This page documents the changes I made to the modern and accurate DSi Modding Guide." />
 		<meta name="twitter:description" content="This page documents the changes I made to the modern and accurate DSi Modding Guide." />
 
-		<link rel='icon' href='/images/avatar.png'>
-		<link rel="shortcut icon" type="image/x-icon" href="/images/avatar.png" />
-		<link rel="apple-touch-icon" sizes="192x192" href="/images/avatar.png">
-		<meta name="og:image" content="/images/avatar.png">
-		<meta property="og:image" content="/images/avatar.png">
-		<meta name="twitter:image" content="/images/avatar.png">
+		<link rel='icon' href='/assets/images/avatar.png'>
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/avatar.png" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/assets/images/avatar.png">
+		<meta name="og:image" content="/assets/images/avatar.png">
+		<meta property="og:image" content="/assets/images/avatar.png">
+		<meta name="twitter:image" content="/assets/images/avatar.png">
 
 		<meta name="theme-color" content="#1C9934" />
 		<meta name="msapplication-navbutton-color" content="#1C9934">
@@ -50,7 +50,7 @@
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
 	</head>
 	<body class="d-flex">
 		<div class="bg"></div>
@@ -64,9 +64,18 @@
 					<h4>NightScript Domain</h4>
 				</div>
 			</div>
-			<ul class="list-unstyled components nomb">
+			<ul class="list-unstyled components mb-0">
 				<li class="active"><a href="/"><span class="fa fa-home mr-1"></span> Home</a></li>
-				<li><a href="/projects"><span class="fa fa-folder-open-o mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">2</small></span> Projects</a></li>
+				<li>
+					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<span class="fa fa-folder-open-o mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">2</small></span> Projects
+					</a>
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li><a href="/projects/dsi_mod_guide.html">DSi Modding Guide</a></li>
+						<li><a href="#">Yamamura</a></li>
+						<li><a href="#">This Website</a></li>
+					</ul>
+				</li>
 				<li><a href="/blog"><span class="fa fa-pencil-square-o mr-1"></span> Blog</a></li>
 				<li><a href="/gamerev"><span class="fa fa-gamepad mr-1"></span> Game Reviews</a></li>
 				<li><a href="/social"><span class="fa fa-share-alt mr-1"></span> Social Links</a></li>
@@ -80,7 +89,7 @@
 
 			<ul>
 				<li>Thanks to the help of Halvorsen#9996 on the DS(i) Mode Hacking discord server, we added a splash image to the website homepage, making it consistent with the other guide websites and giving it a bit of color.</li>
-				<li>Transformed Flipnote Lenny into a subsection instead of a separate guide. It's quite difficult to maintain two different guides when only one mini-section is different.</li>
+				<li>Flipnote Lenny is now a subsection of the main Unlaunch Installation guide instead of being separate. It's quite difficult to maintain two different guides when only one mini-section is different.</li>
 				<li>Removed the TempNAND section. It severely degrades your NAND and was not updated for Memory Pit.</li>
 				<li>Each "SD card setup" section was made into an unlinear guide. Quite frankly, users can copy files in whatever order they want and it wouldn't matter as long as they coppied all the files.</li>
 				<li>GodMode9i is now used instead of HBMenu. GodMode9i serves a purpose after installing Unlaunch (as opposed to the simple ended HBMenu) and isn't compressed in a unusual format. GodMode9i, by comparison is compressed in a .7z, a much more standard format. It can serve as an SD card manager and a Slot-1 card dumper.</li>
@@ -105,6 +114,7 @@
 
 		<script src="https://unpkg.com/@popperjs/core@2.2.3/dist/umd/popper.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"></script>
-		<script src="/js/main.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 	</body>
 </html>
