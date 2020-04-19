@@ -58,11 +58,11 @@ button {
 		margin-left: -300px; }
 		#sidebar.active .custom-menu {
 			margin-right: -25px; }
-		#sidebar.active .btn.btn-primary:before {
+		#sidebar.active .btn:before {
 			content: "\f054";
 			font-family: "ForkAwesome";
 			left: 2px !important; }
-		#sidebar.active .btn.btn-primary:after {
+		#sidebar.active .btn:after {
 			display: none; }
 	#sidebar ul.components {
 		padding: 0;
@@ -119,24 +119,22 @@ button {
 				-webkit-transition: none;
 				-o-transition: none;
 				transition: none; } }
-		#sidebar .custom-menu .btn.btn-primary {
+		#sidebar .custom-menu .btn {
 			background: #56657C;
-			border-color: transparent;
 			position: relative;
-			color: #000;
+			color: white;
 			width: 30px;
 			height: 30px; }
-			#sidebar .custom-menu .btn.btn-primary:hover {
+			#sidebar .custom-menu .btn:hover {
 				background: #67768D}
-			#sidebar .custom-menu .btn.btn-primary:after, #sidebar .custom-menu .btn.btn-primary:before {
+			#sidebar .custom-menu .btn:after, #sidebar .custom-menu .btn:before {
 				position: absolute;
 				top: 2px;
 				left: 0;
 				right: 0;
 				bottom: 0;
-				font-family: "ForkAwesome";
-				color: #fff; }
-			#sidebar .custom-menu .btn.btn-primary:after {
+				font-family: "ForkAwesome"; }
+			#sidebar .custom-menu .btn:after {
 				content: "\f053";
 				right: 2px; }
 
@@ -172,3 +170,26 @@ button {
 	padding-top: 8px; }
 	.bttbtn:hover {
 		color: #FFF; }
+
+.card {
+	background: #56657C;
+	color: white;
+	box-shadow: 10px 5px 5px black !important;
+}
+
+.card .card-body a {
+	color: white;
+	text-decoration: underline;
+	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+}
+
+.card .card-body a:not(.cardShareLinks):hover {
+	text-decoration: underline !important;
+	font-size: 1.3rem;
+}
+
+.card .card-body .cardShareLinks a:hover {
+	font-size: 1.1rem;
+}

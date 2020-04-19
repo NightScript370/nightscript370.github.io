@@ -4,7 +4,7 @@
 	"description": "Website documenting NightScript's accomplishments",
 	"icons": [
 		{
-			"src": "/images/avatar.png",
+			"src": "/assets/images/avatar.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}
