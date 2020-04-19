@@ -55,9 +55,9 @@ button {
 	-webkit-box-shadow: 3px 0 5px 0 #000;
 	box-shadow:         3px 0 5px 0 #000; }
 	#sidebar.active {
-		margin-left: -300px; }
+		margin-left: -295px; }
 		#sidebar.active .custom-menu {
-			margin-right: -25px; }
+			margin-right: -18px; }
 		#sidebar.active .btn:before {
 			content: "\f054";
 			font-family: "ForkAwesome";
@@ -192,4 +192,13 @@ button {
 
 .card .card-body .cardShareLinks a:hover {
 	font-size: 1.1rem;
+}
+
+.bottomLinks {
+	bottom: 0;
+	position:absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
 }
