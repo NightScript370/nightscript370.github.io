@@ -15,22 +15,50 @@ function scrollUp() {
 }
 
 /* Share Links button for cards */
-
 const sharedLinks = [
 	{
 		"title": "FaceBook",
 		"icon": "facebook-official",
-		"baselink": "https://www.facebook.com/sharer/sharer.php?u="
+		"baselink": "https://www.facebook.com/sharer/sharer.php?u=",
+		"cardview": true
 	},
 	{
 		"title": "Twitter",
 		"icon": "twitter",
 		"baselink": "https://twitter.com/intent/tweet?text=",
-		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": '
+		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": ',
+		"cardview": true
+	},
+	{
+		"title": "Pinterest",
+		"icon": "pinterest",
+		"baselink": "http://pinterest.com/pin/create/button/?description=''$TEXT$''&url=",
+		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
+		"cardview": true
+	},
+	{
+		"title": "LinkedIn",
+		"icon": "linkedin",
+		"baselink": "http://www.linkedin.com/shareArticle?mini=true&title=''$TEXT$''&url=",
+		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
+		"cardview": true
+	},
+	{
+		"title": "WhatsApp",
+		"icon": "whatsapp",
+		"baselink": "https://wa.me/?text=",
+		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": ',
+		"cardview": true
+	},
+	{
+		"title": "Tumblr",
+		"icon": "tumblr",
+		"baselink": "http://www.tumblr.com/share?v=3&t=''$TEXT$''&u=",
+		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
 	}
-]
+];
 
-function replaceNoShare(cards) {
+function replaceCardNoShare(cards) {
 	if (!cards.length)
 		return;
 
@@ -40,9 +68,9 @@ function replaceNoShare(cards) {
 		entrytitle = int.parentElement.firstElementChild.innerHTML;
 
 		socialLinksHTML = '<div class="text-center cardShareLinks">';
-		for (let socialEntry of sharedLinks) {
+		for (let socialEntry of sharedLinks.filter(entry => entry.cardview)) {
 			socialLinksHTML += `<a class="card-link" href="${
-					socialEntry.baselink
+					socialEntry.baselink.replace("''$TEXT$''", (socialEntry.separateText ? encodeURI(socialEntry.separateText.replace("$title$", entrytitle)) : ''))
 						+ (socialEntry.text ? encodeURI(socialEntry.text.replace("$title$", entrytitle)) : '')
 						+ encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
 				}"><i class="fa fa-${socialEntry.icon} fa-2x"></i></a>`;
@@ -51,4 +79,4 @@ function replaceNoShare(cards) {
 		int.parentElement.insertAdjacentHTML('beforeend', socialLinksHTML)
 	}
 }
-replaceNoShare(document.getElementsByClassName('noShare'));
+replaceCardNoShare(document.getElementsByClassName('noShare'));
