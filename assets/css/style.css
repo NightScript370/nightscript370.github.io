@@ -174,7 +174,7 @@ button {
 .card {
 	background: #56657C;
 	color: white;
-	box-shadow: 10px 5px 5px black !important;
+	box-shadow: 5px 5px 5px black !important;
 }
 
 .card .card-body a {
