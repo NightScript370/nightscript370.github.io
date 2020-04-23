@@ -1,6 +1,7 @@
 body {
 	color: #00DDDD;
-	width: 100%; }
+	width: 100%;
+	background-color: #00000F;}
 
 html {
 	scroll-behavior: smooth; }
@@ -14,6 +15,8 @@ html {
 	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
+	mask-image: radial-gradient(black, transparent 70%);
+	-webkit-mask-image: radial-gradient(black, transparent 70%);
 }
 a {
 	-webkit-transition: .3s all ease;
@@ -96,15 +99,6 @@ button {
 			color: #fff; }
 			#sidebar ul li.active > a:hover {
 				background: #56657C; }
-	@media (max-width: 991.98px) {
-		#sidebar {
-			margin-left: -300px;
-			position: fixed; }
-			#sidebar.active {
-				margin-left: 0; }
-			#sidebar .custom-menu {
-				margin-right: -25px !important;
-				top: 10px !important; } }
 	#sidebar .custom-menu {
 		display: inline-block;
 		position: absolute;
@@ -137,6 +131,15 @@ button {
 			#sidebar .custom-menu .btn:after {
 				content: "\f053";
 				right: 2px; }
+	@media (max-width: 991.98px) {
+		#sidebar {
+			margin-left: -300px;
+			position: fixed; }
+			#sidebar.active {
+				margin-left: 0; }
+			#sidebar .custom-menu {
+				margin-right: -25px !important;
+				top: 10px !important; } }
 
 .bg-wrap {
 	width: 100%;
@@ -201,4 +204,12 @@ button {
 	right:0;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+.mw-25 {
+	max-width: 25%;
+}
+
+.shareCard {
+	width: 20rem;
 }

@@ -51,6 +51,13 @@ const sharedLinks = [
 		"cardview": true
 	},
 	{
+		"title": "Reddit",
+		"icon": "reddit-alien",
+		"baselink": "http://www.reddit.com/submit?title=''$TEXT$''&url=",
+		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
+		"cardview": true
+	},
+	{
 		"title": "Tumblr",
 		"icon": "tumblr",
 		"baselink": "http://www.tumblr.com/share?v=3&t=''$TEXT$''&u=",
