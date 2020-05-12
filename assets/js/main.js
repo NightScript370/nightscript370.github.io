@@ -14,6 +14,31 @@ function scrollUp() {
 	event.preventDefault()
 }
 
+// Add anchors for headings
+for (let element of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+	if (!element.getAttribute('id')) {
+		if (element.getAttribute('noAnchor') == "true")
+			continue;
+
+		element.setAttribute("id", element.innerHTML.toLowerCase().split(" ").join("-"))
+	}
+
+	let anchor = document.createElement("a");
+	anchor.className = 'header-link';
+	anchor.href = '#' + element.getAttribute("id");
+	anchor.innerHTML = '<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>';
+	anchor.title = "Permalink";
+	element.insertBefore(anchor, element.childNodes[0]);
+};
+
+const host = location.hostname;
+for (element of document.querySelectorAll('a')) {
+	if (element.hostname == host || element.hostname == '')
+		continue;
+
+	element.target = '_blank'
+}
+
 /* Share Links button for cards */
 const sharedLinks = [
 	{

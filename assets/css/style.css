@@ -53,6 +53,7 @@ button {
 	transition: all 0.3s;
 	position: relative;
 	min-height: 100vh;
+	z-index: 100;
 
 	-moz-box-shadow:    3px 0 5px 0 #000;
 	-webkit-box-shadow: 3px 0 5px 0 #000;
@@ -209,4 +210,37 @@ button {
 
 .shareCard {
 	width: 20rem;
+}
+
+h1 .header-link,
+h2 .header-link,
+h3 .header-link,
+h4 .header-link,
+h5 .header-link,
+h6 .header-link {
+	float: left;
+	margin-left: -1.2em;
+	font-size: 0.6em;
+	line-height: 2;
+ opacity:0;
+ z-index: 5;
+ -webkit-transition:opacity .2s ease-in-out .1s;
+ -moz-transition:opacity .2s ease-in-out .1s;
+ -o-transition:opacity .2s ease-in-out .1s;
+ transition:opacity .2s ease-in-out .1s
+}
+h1:hover .header-link,
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+ opacity:1
+}
+
+.pl-6, .px-6 {
+    padding-left: 6rem !important;
+}
+.pr-6, .px-6 {
+    padding-right: 6rem !important;
 }
