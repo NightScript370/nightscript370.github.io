@@ -67,9 +67,6 @@ button {
 			left: 2px !important; }
 		#sidebar.active .btn:after {
 			display: none; }
-	#sidebar ul.components {
-		padding: 0;
-		overflow:auto; }
 	#sidebar ul li {
 		font-size: 17px; }
 		#sidebar ul li > ul {
@@ -86,7 +83,7 @@ button {
 					position: absolute;
 					top: -3px;
 					bottom: 0;
-					right: -5px;
+					right: 0px;
 					width: 12px;
 					height: 12px;
 					font-family: "Poppins", Arial, sans-serif;
