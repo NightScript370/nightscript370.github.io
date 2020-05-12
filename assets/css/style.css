@@ -15,9 +15,15 @@ html {
 	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
-	mask-image: radial-gradient(black, transparent 70%);
-	-webkit-mask-image: radial-gradient(black, transparent 70%);
 }
+
+@media (min-width: 991.98px) {
+	.bg {
+		mask-image: radial-gradient(black, transparent 70%);
+		-webkit-mask-image: radial-gradient(black, transparent 70%);
+	}
+}
+
 a {
 	-webkit-transition: .3s all ease;
 	-o-transition: .3s all ease;
