@@ -208,8 +208,10 @@ button {
 	max-width: 25%;
 }
 
-.shareCard {
-	width: 20rem;
+@media (min-width: 991.98px) {
+	.shareCard {
+		width: 20rem;
+	}
 }
 
 h1 .header-link,
@@ -238,9 +240,15 @@ h6:hover .header-link {
  opacity:1
 }
 
-.pl-6, .px-6 {
-    padding-left: 6rem !important;
+.page-padding {
+	width:100%;
+	padding-top: 1.5rem;
+	padding-left: 40px;
+	padding-right: 2rem;
 }
-.pr-6, .px-6 {
-    padding-right: 6rem !important;
+
+@media (min-width: 991.98px) {
+	.page-padding {
+		padding: 1.5rem 6rem;
+	}
 }
