@@ -149,7 +149,7 @@ button {
 					font-family: "ForkAwesome";
 					right: 2px; }
 					#sidebar .custom-menu .btn:after {
-						display: none; } }
+						display: none; }
 			#sidebar.active {
 				margin-left: 0; }
 				#sidebar.active .btn:before {
@@ -157,7 +157,7 @@ button {
 					font-family: "ForkAwesome";
 					left: 2px !important; }
 				#sidebar.active .btn:after {
-					display: none; }
+					display: none; } }
 
 .bg-wrap {
 	width: 100%;
