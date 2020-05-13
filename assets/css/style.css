@@ -109,7 +109,7 @@ button {
 	#sidebar .custom-menu {
 		display: inline-block;
 		position: absolute;
-		top: 20px;
+		top: 1rem;
 		right: 0;
 		margin-right: -15px;
 		-webkit-transition: 0.3s;
@@ -142,11 +142,22 @@ button {
 		#sidebar {
 			margin-left: -300px;
 			position: fixed; }
+			#sidebar .custom-menu {
+				margin-right: -25px !important; }
+				#sidebar .custom-menu .btn:before {
+					content: "\f054";
+					font-family: "ForkAwesome";
+					right: 2px; }
+					#sidebar .custom-menu .btn:after {
+						display: none; } }
 			#sidebar.active {
 				margin-left: 0; }
-			#sidebar .custom-menu {
-				margin-right: -25px !important;
-				top: 10px !important; } }
+				#sidebar.active .btn:before {
+					content: "\f053";
+					font-family: "ForkAwesome";
+					left: 2px !important; }
+				#sidebar.active .btn:after {
+					display: none; }
 
 .bg-wrap {
 	width: 100%;
@@ -251,13 +262,13 @@ h6:hover .header-link {
 
 .page-padding {
 	width:100%;
-	padding-top: 1.5rem;
-	padding-left: 40px;
+	padding-top: 0.5rem;
+	padding-left: 4rem;
 	padding-right: 2rem;
 }
 
 @media (min-width: 991.98px) {
 	.page-padding {
-		padding: 1.5rem 6rem;
+		padding: 1.5rem 5rem;
 	}
 }
