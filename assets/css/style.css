@@ -1,5 +1,5 @@
 body {
-	color: #00DDDD;
+	color: white;
 	width: 100%;
 	background-color: #00000F;}
 
@@ -7,7 +7,7 @@ html {
 	scroll-behavior: smooth; }
 
 .bg {
-	background-image: url('https://i.imgur.com/GdnbuVj.jpg');
+	background-image: url('../images/starBG.jpg');
 	background-position: center top; /* on iOS at least 'center center' will cause a jump when collpsing the top & bottom bars */ 
 	height: 100%;
 	width: 100%;
@@ -15,12 +15,15 @@ html {
 	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	filter: blur(5px) brightness(.75);
+	-webkit-filter: blur(5px) brightness(.75);
 }
 
 @media (min-width: 991.98px) {
 	.bg {
-		mask-image: radial-gradient(black, transparent 70%);
-		-webkit-mask-image: radial-gradient(black, transparent 70%);
+		mask-image: radial-gradient(black, transparent 100%);
+		-webkit-mask-image: radial-gradient(black, transparent 100%);
 	}
 }
 
@@ -162,7 +165,7 @@ button {
 		font-style: normal; }
 
 #content {
-	background-color: rgba(0, 0, 15, 0.7);
+	background-color: rgba(0, 0, 15, 0.4);
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s; }
