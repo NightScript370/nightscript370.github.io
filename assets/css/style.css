@@ -176,7 +176,7 @@ button {
 		font-style: normal; }
 
 #content {
-	background-color: rgba(0, 0, 15, 0.4);
+	background-color: rgba(0, 0, 15, 0.8);
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s; }
