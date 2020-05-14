@@ -1,44 +1,3 @@
-//document.designMode = 'on';
-document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
-
-/*Scroll to top button */
-mybutton = document.getElementById("bttbtn");
-mybutton.classList.toggle('fade');
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = () => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? mybutton.style.opacity = 1 : mybutton.style.opacity = 0;
-
-function scrollUp() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-	event.preventDefault()
-}
-
-// Add anchors for headings
-for (let element of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
-	if (!element.getAttribute('id')) {
-		if (element.getAttribute('noAnchor') == "true")
-			continue;
-
-		element.setAttribute("id", element.innerHTML.toLowerCase().replace(/ /g, "_"))
-	}
-
-	let anchor = document.createElement("a");
-	anchor.className = 'header-link';
-	anchor.href = '#' + element.getAttribute("id");
-	anchor.innerHTML = '<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>';
-	anchor.title = "Permalink";
-	element.insertAdjacentElement('afterbegin', anchor);
-};
-
-const host = location.hostname;
-for (element of document.querySelectorAll('a')) {
-	if (element.hostname == host || element.hostname == '')
-		continue;
-
-	element.target = '_blank'
-}
-
 /* Share Links button for cards */
 const sharedLinks = [
 	{
@@ -90,7 +49,7 @@ const sharedLinks = [
 	}
 ];
 
-function replaceCardNoShare(cards) {
+export function replaceCardNoShare(cards) {
 	if (!cards.length)
 		return;
 
@@ -116,5 +75,3 @@ function replaceCardNoShare(cards) {
 	}
 }
 replaceCardNoShare(document.getElementsByClassName('noShare'));
-
-tippy('[data-tippy-content]');

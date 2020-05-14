@@ -1,7 +1,15 @@
+:root {
+	--main-bg-color: #00000F;
+	--close-menu-arrow: "\f053";
+	--open-menu-arrow: "\f054";
+	--menu-element: #56657C;
+	--lighter-menu-element: #67768D;
+}
+
 body {
 	color: white;
 	width: 100%;
-	background-color: #00000F;}
+	background-color: var(--main-bg-color);}
 
 html {
 	scroll-behavior: smooth; }
@@ -55,7 +63,7 @@ button {
 #sidebar {
 	min-width: 300px;
 	max-width: 300px;
-	background: #00000F;
+	background: var(--main-bg-color);
 	color: #fff;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
@@ -72,7 +80,7 @@ button {
 		#sidebar.active .custom-menu {
 			margin-right: -18px; }
 		#sidebar.active .btn:before {
-			content: "\f054";
+			content: var(--open-menu-arrow);
 			font-family: "ForkAwesome";
 			left: 2px !important; }
 		#sidebar.active .btn:after {
@@ -100,12 +108,12 @@ button {
 					font-size: 8px; }
 			#sidebar ul li a:hover {
 				color: #fff;
-				background: #56657C; }
+				background: var(--menu-element); }
 		#sidebar ul li.active > a {
 			background: transparent;
 			color: #fff; }
 			#sidebar ul li.active > a:hover {
-				background: #56657C; }
+				background: var(--menu-element); }
 	#sidebar .custom-menu {
 		display: inline-block;
 		position: absolute;
@@ -121,13 +129,13 @@ button {
 				-o-transition: none;
 				transition: none; } }
 		#sidebar .custom-menu .btn {
-			background: #56657C;
+			background: var(--menu-element);
 			position: relative;
 			color: white;
 			width: 30px;
 			height: 30px; }
 			#sidebar .custom-menu .btn:hover {
-				background: #67768D}
+				background: var(--lighter-menu-element); }
 			#sidebar .custom-menu .btn:after, #sidebar .custom-menu .btn:before {
 				position: absolute;
 				top: 2px;
@@ -136,7 +144,7 @@ button {
 				bottom: 0;
 				font-family: "ForkAwesome"; }
 			#sidebar .custom-menu .btn:after {
-				content: "\f053";
+				content: var(--close-menu-arrow);
 				right: 2px; }
 	@media (max-width: 991.98px) {
 		#sidebar {
@@ -145,7 +153,7 @@ button {
 			#sidebar .custom-menu {
 				margin-right: -25px !important; }
 				#sidebar .custom-menu .btn:before {
-					content: "\f054";
+					content: var(--open-menu-arrow);
 					font-family: "ForkAwesome";
 					right: 2px; }
 					#sidebar .custom-menu .btn:after {
@@ -153,7 +161,7 @@ button {
 			#sidebar.active {
 				margin-left: 0; }
 				#sidebar.active .btn:before {
-					content: "\f053";
+					content: var(--close-menu-arrow);
 					font-family: "ForkAwesome";
 					left: 2px !important; }
 				#sidebar.active .btn:after {
@@ -193,7 +201,7 @@ button {
 		color: #FFF; }
 
 .card {
-	background: #56657C;
+	background: var(--menu-element);
 	color: white;
 	box-shadow: 5px 5px 5px black !important;
 }
