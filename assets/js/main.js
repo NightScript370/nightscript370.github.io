@@ -20,7 +20,7 @@ for (let element of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
 		if (element.getAttribute('noAnchor') == "true")
 			continue;
 
-		element.setAttribute("id", element.innerHTML.toLowerCase().split(" ").join("-"))
+		element.setAttribute("id", element.innerHTML.toLowerCase().replace(/ /g, "_"))
 	}
 
 	let anchor = document.createElement("a");
@@ -28,7 +28,7 @@ for (let element of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
 	anchor.href = '#' + element.getAttribute("id");
 	anchor.innerHTML = '<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>';
 	anchor.title = "Permalink";
-	element.insertBefore(anchor, element.childNodes[0]);
+	element.insertAdjacentElement('afterbegin', anchor);
 };
 
 const host = location.hostname;
@@ -95,7 +95,7 @@ function replaceCardNoShare(cards) {
 		return;
 
 	let entrylink, entrytitle, socialLinksHTML;
-	for (const int of cards) {
+	for (let int of cards) {
 		entrylink = int.parentElement.firstElementChild.getAttribute("href");
 		entrytitle = int.parentElement.firstElementChild.innerHTML;
 
