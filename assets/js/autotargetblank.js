@@ -1,7 +1,9 @@
 const host = location.hostname;
-for (let element of document.querySelectorAll('a')) {
-	if (element.hostname == host || element.hostname == '')
-		continue;
+export function autoTargetBlank (linkelements) {
+	for (let element of linkelements) {
+		if (element.hostname == host || element.hostname == '')
+			continue;
 
-	element.target = '_blank'
+		element.target = '_blank'
+	}
 }

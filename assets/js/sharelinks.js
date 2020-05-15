@@ -74,4 +74,3 @@ export function replaceCardNoShare(cards) {
 		int.parentElement.insertAdjacentHTML('beforeend', socialLinksHTML)
 	}
 }
-replaceCardNoShare(document.getElementsByClassName('noShare'));
