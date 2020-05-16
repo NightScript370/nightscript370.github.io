@@ -9,8 +9,8 @@
 export function tableOfContents (content, target, options) {
 	// Get content
 	var contentWrap = document.querySelector(content);
-	var toc = document.querySelector(target);
-	if (!contentWrap || !toc) return console.log('Elements not found');
+	var toc = document.querySelectorAll(target);
+	if (!contentWrap || !toc.length) return console.log('Elements not found');
 
 	// Settings & Defaults
 	var defaults = {
@@ -35,9 +35,8 @@ export function tableOfContents (content, target, options) {
 	 */
 	var merge = function (obj) {
 		for (var key in defaults) {
-			if (Object.prototype.hasOwnProperty.call(defaults, key)) {
+			if (Object.prototype.hasOwnProperty.call(defaults, key))
 				settings[key] = Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] : defaults[key];
-			}
 		}
 	};
 
@@ -119,34 +118,33 @@ export function tableOfContents (content, target, options) {
 		headerElement.setAttribute('noAnchor', 'true');
 		headerElement.innerHTML = settings.heading;
 
-		toc.insertAdjacentElement('beforeend', headerElement);
-		// Inject the HTML into the DOM
-		toc.innerHTML +=
-			'<' + settings.listType + '>' +
-				Array.prototype.map.call(headings, function (heading, index) {
+		const tocCode = document.createElement(settings.listType);
+		tocCode.innerHTML = Array.prototype.map.call(headings, (heading, index) => {
+			// Add an ID if one is missing
+			createID(heading);
 
-					// Add an ID if one is missing
-					createID(heading);
+			// Check the heading level vs. the current list
+			var currentLevel = heading.tagName.slice(1);
+			var levelDifference = currentLevel - level;
+			level = currentLevel;
+			var html = getStartingHTML(levelDifference, index);
 
-					// Check the heading level vs. the current list
-					var currentLevel = heading.tagName.slice(1);
-					var levelDifference = currentLevel - level;
-					level = currentLevel;
-					var html = getStartingHTML(levelDifference, index);
+			let tempheading = heading.cloneNode(true);
+			tempheading.querySelector(".sr-only").innerHTML = '';
 
-					let tempheading = heading.cloneNode(true);
-					tempheading.querySelector(".sr-only").innerHTML = '';
-					console.log(tempheading)
+			// Generate the HTML
+			html += `<li><a href="#${heading.id}">${(tempheading.textContent || tempheading.innerText).trim()}</a>`;
 
-					// Generate the HTML
-					html += `<li><a href="#${heading.id}">${(tempheading.textContent || tempheading.innerText).trim()}</a>`;
+			// If the last item, close it all out
+			if (index === len)
+				html += getOutdent(Math.abs(startingLevel - currentLevel));
 
-					// If the last item, close it all out
-					if (index === len)
-						html += getOutdent(Math.abs(startingLevel - currentLevel));
+			return html;
+		}).join('')
 
-					return html;
-				}).join('') + `</${settings.listType}>`;
+		for (let tocElement of toc) {
+			tocElement.innerHTML = headerElement.outerHTML + tocCode.outerHTML;
+		}
 	};
 
 	/**

@@ -285,7 +285,9 @@ h6:hover .header-link {
 }
 
 @media (min-width: 1200px) {
-	.page-padding[data-content] div[data-toc] {
-		float:right;
-	}
+	/*.col-lg-4.d-md-none.d-lg-block[data-toc] {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0; /* required */
+	} */
 }
