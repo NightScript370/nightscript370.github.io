@@ -115,7 +115,7 @@ export function tableOfContents (content, target, options) {
 		var len = headings.length - 1;
 
 		const headerElement = document.createElement(settings.headingLevel);
-		headerElement.setAttribute('noAnchor', 'true');
+		headerElement.setAttribute('noAnchor', '');
 		headerElement.innerHTML = settings.heading;
 
 		const tocCode = document.createElement(settings.listType);
@@ -130,10 +130,11 @@ export function tableOfContents (content, target, options) {
 			var html = getStartingHTML(levelDifference, index);
 
 			let tempheading = heading.cloneNode(true);
-			tempheading.querySelector(".sr-only").innerHTML = '';
+			for (let element of tempheading.getElementsByClassName("anchor"))
+				element.remove();
 
 			// Generate the HTML
-			html += `<li><a href="#${heading.id}">${(tempheading.textContent || tempheading.innerText).trim()}</a>`;
+			html += `<li><a href="#${encodeURIComponent(heading.getAttribute("id"))}">${tempheading.innerHTML.trim()}</a>`;
 
 			// If the last item, close it all out
 			if (index === len)
@@ -142,9 +143,8 @@ export function tableOfContents (content, target, options) {
 			return html;
 		}).join('')
 
-		for (let tocElement of toc) {
+		for (let tocElement of toc)
 			tocElement.innerHTML = headerElement.outerHTML + tocCode.outerHTML;
-		}
 	};
 
 	/**
