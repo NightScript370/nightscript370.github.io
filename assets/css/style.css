@@ -169,8 +169,8 @@ button {
 
 .bg-wrap {
 	width: 100%;
-	background-image: url('../images/bg_1.png');
-	z-index: 0; }
+	z-index: 0;
+	position: relative; }
 	.bg-wrap .user-logo .img {
 		width: 200px;
 		height: 200px;
@@ -282,12 +282,4 @@ h6:hover .header-link {
 		padding-left: 4.5rem;
 		padding-right: 4.5rem;
 	}
-}
-
-@media (min-width: 1200px) {
-	/*.col-lg-4.d-md-none.d-lg-block[data-toc] {
-		position: sticky;
-		position: -webkit-sticky;
-		top: 0; /* required */
-	} */
 }

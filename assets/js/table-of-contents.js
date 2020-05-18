@@ -8,21 +8,22 @@
  */
 export function tableOfContents (content, target, options) {
 	// Get content
-	var contentWrap = document.querySelector(content);
-	var toc = document.querySelectorAll(target);
+	const contentWrap = document.querySelector(content);
+	const toc = document.querySelectorAll(target);
 	if (!contentWrap || !toc.length) return console.log('Elements not found');
 
 	// Settings & Defaults
-	var defaults = {
+	const defaults = {
 		levels: 'h2, h3, h4, h5, h6',
 		heading: 'Table of Contents',
 		headingLevel: 'h2',
-		listType: 'ul'
+		listType: 'ul',
+		idPrefix: 'toc_'
 	};
-	var settings = {};
+	let settings = {};
 
 	// Placeholder for headings
-	var headings;
+	let headings;
 
 
 	//
@@ -33,7 +34,7 @@ export function tableOfContents (content, target, options) {
 	 * Merge user options into defaults
 	 * @param  {Object} obj The user options
 	 */
-	var merge = function (obj) {
+	const merge = (obj) => {
 		for (var key in defaults) {
 			if (Object.prototype.hasOwnProperty.call(defaults, key))
 				settings[key] = Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] : defaults[key];
@@ -44,9 +45,9 @@ export function tableOfContents (content, target, options) {
 	 * Create an ID for a heading if one does not exist
 	 * @param  {Node} heading The heading element
 	 */
-	var createID = function (heading) {
+	const createID = (heading) => {
 		if (heading.id.length) return;
-		heading.id = 'toc_' + heading.textContent.replace(/[^A-Za-z0-9]/g, '-');
+		heading.id = settings.idPrefix + heading.textContent.replace(/[^A-Za-z0-9]/g, '-');
 	};
 
 	/**
@@ -54,9 +55,9 @@ export function tableOfContents (content, target, options) {
 	 * @param  {Integer} count The number of times to indent the list
 	 * @return {String}        The HTML
 	 */
-	var getIndent = function (count) {
-		var html = '';
-		for (var i = 0; i < count; i++) {
+	const getIndent = (count) => {
+		let html = '';
+		for (let i = 0; i < count; i++) {
 			html += '<' + settings.listType + '>';
 		}
 		return html;
@@ -67,9 +68,9 @@ export function tableOfContents (content, target, options) {
 	 * @param  {Integer} count The number of times to "outdent" the list
 	 * @return {String}        The HTML
 	 */
-	var getOutdent = function (count) {
-		var html = '';
-		for (var i = 0; i < count; i++) {
+	const getOutdent = (count) => {
+		let html = '';
+		for (let i = 0; i < count; i++) {
 			html += '</' + settings.listType + '></li>';
 		}
 		return html;
@@ -81,38 +82,31 @@ export function tableOfContents (content, target, options) {
 	 * @param  {Integer} index The index of the heading in the "headings" NodeList
 	 * @return {String}        The HTML
 	 */
-	var getStartingHTML = function (diff, index) {
-
+	const getStartingHTML = (diff, index) => {
 		// If indenting
-		if (diff > 0) {
+		if (diff > 0)
 			return getIndent(diff);
-		}
-
-		// If outdenting
-		if (diff < 0) {
+		else if (diff < 0)
 			return getOutdent(Math.abs(diff));
-		}
 
 		// If it's not the first item and there's no difference
-		if (index && !diff) {
+		if (index && !diff)
 			return '</li>';
-		}
 
 		return '';
-
 	};
 
 	/**
 	 * Inject the table of contents into the DOM
 	 */
-	var injectTOC = function () {
+	const injectTOC = () => {
 
 		// Track the current heading level
-		var level = headings[0].tagName.slice(1);
-		var startingLevel = level;
+		let level = headings[0].tagName.slice(1);
+		const startingLevel = level;
 
 		// Cache the number of headings
-		var len = headings.length - 1;
+		const len = headings.length - 1;
 
 		const headerElement = document.createElement(settings.headingLevel);
 		headerElement.setAttribute('noAnchor', '');
@@ -150,15 +144,14 @@ export function tableOfContents (content, target, options) {
 	/**
 	 * Initialize the script
 	 */
-	var init = function () {
-
+	const init = () => {
 		// Merge any user settings into the defaults
 		merge(options || {});
 
 		// Get the headings
 		// If none are found, don't render a list
 		headings = contentWrap.querySelectorAll(settings.levels);
-		if (!headings.length) return console.log('No levels found');
+		if (!headings.length) return;
 
 		// Inject the table of contents
 		injectTOC();

@@ -53,24 +53,27 @@ export function replaceCardNoShare(cards) {
 	if (!cards.length)
 		return;
 
-	let entrylink, entrytitle, socialLinksHTML;
+	let entrylink, entrytitle, socialLinksElement, linkElement;
 	for (let int of cards) {
 		entrylink = int.parentElement.firstElementChild.getAttribute("href");
 		entrytitle = int.parentElement.firstElementChild.innerHTML;
 
-		socialLinksHTML = '<div class="text-center cardShareLinks">';
+		socialLinksElement = document.createElement("div");
+		socialLinksElement.classList.add('text-center');
+		socialLinksElement.classList.add('cardShareLinks');
 		for (let socialEntry of sharedLinks.filter(entry => entry.cardview)) {
-			socialLinksHTML += `<a
-					class="card-link"
-					data-tippy-content="Share this on ${socialEntry.title}!"
-					href="${
-						socialEntry.baselink.replace("''$TEXT$''", (socialEntry.separateText ? encodeURI(socialEntry.separateText.replace("$title$", entrytitle)) : ''))
-							+ (socialEntry.text ? encodeURI(socialEntry.text.replace("$title$", entrytitle)) : '')
-							+ encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
-					}"
-				><i class="fa fa-${socialEntry.icon} fa-2x"></i></a>`;
+			linkElement = document.createElement('a');
+			linkElement.classList.add('card-link');
+			linkElement.setAttribute('data-tippy-content', `Share this on ${socialEntry.title}`);
+			linkElement.setAttribute('href', 
+				socialEntry.baselink.replace("''$TEXT$''", (socialEntry.separateText ? encodeURI(socialEntry.separateText.replace("$title$", entrytitle)) : ''))
+				+ (socialEntry.text ? encodeURI(socialEntry.text.replace("$title$", entrytitle)) : '')
+				+ encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
+			);
+			linkElement.innerHTML = `<i class="fa fa-${socialEntry.icon} fa-2x"></i>`;
+			socialLinksElement.appendChild(linkElement);
 		}
-		socialLinksHTML += "</div>";
-		int.parentElement.insertAdjacentHTML('beforeend', socialLinksHTML)
+
+		int.parentElement.appendChild(socialLinksElement);
 	}
 }
