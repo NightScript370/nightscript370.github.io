@@ -21,19 +21,20 @@ function random(min, max) { // min and max included
 }
 
 let circles = [];
-while (circles.length < 6) {
+const circleMax = random(4, 10);
+while (circles.length < circleMax) {
 	// Pick a random circle
 	circles.push({
 		x: random(0, canvas.width),
 		y: random(0, canvas.height / 2),
-		r: random(3, 12)
+		r: random(3, 16)
 	});
 }
 
 // Draw all the circles
-for (var i = 0; i < circles.length; i++) {
+for (let circle of circles) {
 	ctx.beginPath();
-	ctx.arc(circles[i].x, circles[i].y, circles[i].r * 2, 0, 2 * Math.PI);
+	ctx.arc(circle.x, circle.y, circle.r * 2, 0, 2 * Math.PI);
 	ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--lighter-menu-element");
 	ctx.fill();
 	ctx.lineWidth = 1;
