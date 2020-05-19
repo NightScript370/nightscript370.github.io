@@ -2,8 +2,10 @@
 	--main-bg-color: #00000F;
 	--close-menu-arrow: "\f053";
 	--open-menu-arrow: "\f054";
-	--menu-element: #56657C;
-	--lighter-menu-element: #67768D;
+	--menu-element: #02194B;
+	--darker-menu-element: #01083A;
+	--menu-element-text-color: white;
+	--lighter-menu-element: #132A5C;
 }
 
 body {
@@ -131,7 +133,9 @@ button {
 		#sidebar .custom-menu .btn {
 			background: var(--menu-element);
 			position: relative;
-			color: white;
+			color: var(--menu-element-text-color);
+			border-width: .1rem;
+			border-color: var(--darker-menu-element);
 			width: 30px;
 			height: 30px; }
 			#sidebar .custom-menu .btn:hover {
@@ -202,12 +206,12 @@ button {
 
 .card {
 	background: var(--menu-element);
-	color: white;
+	color: var(--menu-element-text-color);
 	box-shadow: 5px 5px 5px black !important;
 }
 
 .card .card-body a {
-	color: white;
+	color: var(--menu-element-text-color);
 	text-decoration: underline;
 	-webkit-transition: all 0.1s;
 	-o-transition: all 0.1s;
@@ -282,4 +286,14 @@ h6:hover .header-link {
 		padding-left: 4.5rem;
 		padding-right: 4.5rem;
 	}
+}
+
+pre {
+	border-radius: 0.5rem;
+	border-color: var(--lighter-menu-element);
+	border-style: solid;
+	border-width: .1rem;
+	background-color: var(--menu-element);
+	padding: 1rem;
+	color: var(--menu-element-text-color);
 }
