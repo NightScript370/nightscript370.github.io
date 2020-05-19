@@ -138,7 +138,7 @@ export function tableOfContents (content, target, options) {
 		}).join('')
 
 		for (let tocElement of toc)
-			tocElement.innerHTML = headerElement.outerHTML + tocCode.outerHTML;
+			tocElement.innerHTML = headerElement.outerHTML + tocCode.outerHTML + tocElement.innerHTML;
 	};
 
 	/**
