@@ -297,3 +297,7 @@ pre {
 	padding: 1rem;
 	color: var(--menu-element-text-color);
 }
+
+img {
+	max-width: 100%;
+}
