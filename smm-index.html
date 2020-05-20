@@ -94,7 +94,7 @@
 					<p>Welcome to the Ultimate Super Mario Maker Modding Guide. This guide will teach you how to play and make mods for every entry in the Super Mario Maker series. Use the Table of Contents to navigate through the long list.</p>
 					<p>This guide is maintained by myself (NightScript), bunten, hus and the rest of the <a href="https://discord.gg/TfU8jZA">Mario Making Mods discord server</a>.</p>
 					<h2>Super Mario Maker (Wii U)</h2>
-						<h3>Playing Mods (Console)</h3>
+						<h3>Playing Mods (Wii U Hardware)</h3>
 						<ol>
 							<li>Download <a href="https://wiiubru.com/appstore/#/app/SDcafiine">SDCafiine</a> and extract it to the root of your SD Card.</li>
 							<li>Make a new folder on the root of your SD card called sdcafiine. Inside it create another folder and name it one of the respective title IDs.
@@ -153,7 +153,71 @@ version = 4
 							<li>Backgrounds follow a name structure like <code>M1_DV_plain.szs</code></li>
 						</ul>
 						<h3>Editing Music</h3>
-						<p>To come soon</p>
+						<h4>Tools you will need</h4>
+						<ul>
+							<li><a href="https://www.audacityteam.org/download/">Audacity</a></li>
+							<li><a href="https://github.com/Gota7/Citric-Composer/releases/latest">Citric Composer</a></li>
+						</ul>
+						<h4>Creating a singlechanneled BFSTM</h4>
+						<ol>
+							<li>Create a stereo music file in Audacity and export it as a .wav.<br>
+								<img src="https://i.imgur.com/B1eLth4.png">
+							</li>
+							<li>Inside Citric Composer, go to "Tools" and launch "Isabelle Sound Editor".</li>
+							<li>In the Sound Editor, go to "Edit", and click on "Import File".
+								<ul><li>At this point, this is how it should look now: <br>
+									<img src="https://i.imgur.com/r7w4r8z.png">
+								</li></ul>
+							</li>
+							<li>If you want your music to loop, check the loop checkbox, then set the loop start and loop end in samples.<br>
+								<img src="https://i.imgur.com/Y05norW.png">
+								<ul><li>If it's too difficult to do the above, you can set the loop start and loop end point in the track itself.
+									<ul>
+										<li>The yellow line is the loop start point.</li>
+										<li>The red line is the loop end point.</li>
+									</ul>
+									<img src="https://i.imgur.com/LsJdfKo.png">
+								</li></ul>
+							</li>
+							<li>Set the BFSTM version to <code>4.0.0</code>.</li>
+							<li>Set the Output Encoding type to <code>DSP-ADPCM</code>.</li>
+							<li>Click on "Update Project Info".
+								<ul><li>You can also save this as a project file</li></ul>
+							</li>
+							<li>Export your BFSTM by going to "File" and clicking on "Export Binary".</li>
+							<li>Save your file as "Cafe Stream"</li>
+						</ol>
+						<h4>Creating a Multi-Channeled BFSTM</h4>
+						To make multichanneled BFSTSMS, all you have to do is making the MONO channels.
+						
+						<ul><li>To create a mono channel, go to "Tracks" and click "Add new".<br>
+							<img src="https://i.imgur.com/j404Sje.png">
+						</li></ul>
+						
+						SMW and NSMBU music have 4 channels:
+						
+						<ul>
+							<li>First Channel: Main theme (Left)</li>
+							<li>Second Channel: Main theme (Right)</li>
+							<li>Third Channel: Yoshi Beat (Left)
+								<ul><li>Leave this blank if you do not want a Yoshi Beat. Do not remove this channel.</li></ul>
+							</li>
+							<li>Fourth Channel: Yoshi Beat (Right)
+								<ul><li>Leave this blank if you do not want a Yoshi Beat. Do not remove this channel.</li></ul>
+							</li>
+						</ul>
+						
+						<img src="https://i.imgur.com/AD8hqmV.png">
+						<ul><li>Make sure to correctly set the Left and Right channels, by using the slider on the left.</li></ul>
+
+						<ol>
+							<li>Go to Edit -> "Preferences..."</li>
+							<li>In the "Import/Export" tab, make sure to use a custom mix is set for "When exporting tracks to an audio file".</li>
+							<li>Follow the Citric Composer steps in the Single Channeled BFSTM section.</li>
+						</ol>
+
+							Save your file as \"CTR Stream\" if you want to save a 3DS BCSTM, or NX Stream if you want to save a Switch BFSTM.\r\n\r\n[img]https://i.imgur.com/Il5Rvef.png[/img]\r\n\r\nDon\'t forget to name the BCSTM/BFSTM correctly, so it can be patched. </font>\r\n\r\n\r\n<center><p><font size=\"6\">Creating a multichanneled BCSTM/BFSTM</font></center>\r\n\r\n<p>
+							SMM3DS BCSTMS are on the version 2.3.1, so set the version to it.\r\n\r\n[img]https://i.imgur.com/LJdAcpr.png[/img]
 						<h3>Editing Levels</h3>
 						<p>Coming soon</p>
 						<h3>Other Tools</h3>
@@ -192,6 +256,85 @@ version = 4
 							<li>Hit the save icon on the top.</li>
 							<li>For editing sprites, launch <code>Kuriimu.exe</code>, select your <code>.bin</code> file and replace the <code>.ctpk</code> file inside the <code>.bin</code> file.</li>
 						</ol>
+						<h3>Editing Music</h3>
+						<h4>Tools you will need</h4>
+						<ul>
+							<li><a href="https://www.audacityteam.org/download/">Audacity</a></li>
+							<li><a href="https://github.com/Gota7/Citric-Composer/releases/latest">Citric Composer</a></li>
+						</ul>
+						<h4>Creating a singlechanneled BFSTM</h4>
+						<ol>
+							<li>Create a stereo music file in Audacity and export it as a .wav.<br>
+								<img src="https://i.imgur.com/B1eLth4.png">
+							</li>
+							<li>Inside Citric Composer, go to "Tools" and launch "Isabelle Sound Editor".</li>
+							<li>In the Sound Editor, go to "Edit", and click on "Import File".
+								<ul><li>At this point, this is how it should look now: <br>
+									<img src="https://i.imgur.com/r7w4r8z.png">
+								</li></ul>
+							</li>
+							<li>If you want your music to loop, check the loop checkbox, then set the loop start and loop end in samples.<br>
+								<img src="https://i.imgur.com/Y05norW.png">
+								<ul><li>If it's too difficult to do the above, you can set the loop start and loop end point in the track itself.
+									<ul>
+										<li>The yellow line is the loop start point.</li>
+										<li>The red line is the loop end point.</li>
+									</ul>
+									<img src="https://i.imgur.com/LsJdfKo.png">
+								</li></ul>
+							</li>
+							<li>Set the BFSTM version to <code>2.3.1</code>.</li>
+							<li>Set the Output Encoding type to <code>DSP-ADPCM</code>.</li>
+							<li>Click on "Update Project Info".
+								<ul><li>You can also save this as a project file</li></ul>
+							</li>
+							<li>Export your BFSTM by going to "File" and clicking on "Export Binary".</li>
+							<li>Save your file as "CTR Stream"</li>
+						</ol>
+						<h4>Creating a Multi-Channeled BFSTM</h4>
+						To make multichanneled BFSTSMS, all you have to do is making the MONO channels.
+						
+						<ul><li>To create a mono channel, go to "Tracks" and click "Add new".<br>
+							<img src="https://i.imgur.com/j404Sje.png">
+						</li></ul>
+						
+						SMW and NSMBU music have 4 channels:
+						
+						<ul>
+							<li>First Channel: Main theme (Left)</li>
+							<li>Second Channel: Main theme (Right)</li>
+							<li>Third Channel: Yoshi Beat (Left)
+								<ul><li>Leave this blank if you do not want a Yoshi Beat. Do not remove this channel.</li></ul>
+							</li>
+							<li>Fourth Channel: Yoshi Beat (Right)
+								<ul><li>Leave this blank if you do not want a Yoshi Beat. Do not remove this channel.</li></ul>
+							</li>
+						</ul>
+						
+						<img src="https://i.imgur.com/AD8hqmV.png">
+						<ul><li>Make sure to correctly set the Left and Right channels, by using the slider on the left.</li></ul>
+
+						<ol>
+							<li>Go to Edit -> "Preferences..."</li>
+							<li>In the "Import/Export" tab, make sure to use a custom mix is set for "When exporting tracks to an audio file".</li>
+							<li>Follow the Citric Composer steps in the Single Channeled BFSTM section.</li>
+						</ol>
+						<h3>Filesystem Documentation</h3>
+						<ul>
+							<li>The code is written in Lua 5.0.3, and can be found here: <code>romfs:/UIX/Final/UIX/scripts</code>
+								<ul><li>The Lua basic functions were found by Sono and are <a href="https://pastebin.com/Gu4X7AsP">documented</a></li></ul>
+							</li>
+							<li>Editor icons can be found at <code>romfs:/Palette/Icon/Textures</code></li>
+							<li>Sprite models can be found here: <code>romfs:/Models/[game-style]_DV_[theme].szs</code></li>
+							<li>Tileset Textures can be found here: <code>romfs:/Tiledata/[game-style]_field_[theme]_textures.ctpk</code></li>
+							<li>Background Textures can be found here: <code>romfs:/Textures/[game-style]_dv_[theme]_textures.ctpk</code></li>
+							<li>Messages can be found here: <code>romfs:/MessagesC/[Region]/[Language]</code></li>
+							<li>Fonts can be found over at <code>romfs:/Font</code></li>
+							<li>Sound Effects can be found over at <code>romfs:/Sound/sound_data.bcsar</code></li>
+							<li>Background Music can be found over at <code>romfs:/Sound/stream/[musicname].bcstm</code></li>
+							<li>Layout Files can be found over at <code>romfs:/UIX/Final/UIX/Layouts/[layoutname].arc</code></li>
+							<li>Lighting for the New Super Mario Bros. U game style can be found over at <code>romfs:/A3D</code></li>
+						</ol>
 					<h2>Super Mario Maker 2 (Nintendo Switch)</h2>
 						<h3>Playing Mods (Hardware)</h3>
 						<ol>
@@ -225,6 +368,78 @@ version = 4
 							<li>Backgrounds follow a name structure like <code>M1_DV_plain.Nin_NX_NVN.zs</code></li>
 							<li>ZS files for sprites are in <code>romfs/Pack/XX_Model.pack/StaticSkin</code>, where XX is the game style</li>
 						</ul>
+						<h3>Editing Music</h3>
+						<h4>Tools you will need</h4>
+						<ul>
+							<li><a href="https://www.audacityteam.org/download/">Audacity</a></li>
+							<li><a href="https://github.com/Gota7/Citric-Composer/releases/latest">Citric Composer</a></li>
+						</ul>
+						<h4>Creating a singlechanneled BFSTM</h4>
+						<ol>
+							<li>Create a stereo music file in Audacity and export it as a .wav.<br>
+								<img src="https://i.imgur.com/B1eLth4.png">
+							</li>
+							<li>Inside Citric Composer, go to "Tools" and launch "Isabelle Sound Editor".</li>
+							<li>In the Sound Editor, go to "Edit", and click on "Import File".
+								<ul><li>At this point, this is how it should look now: <br>
+									<img src="https://i.imgur.com/r7w4r8z.png">
+								</li></ul>
+							</li>
+							<li>If you want your music to loop, check the loop checkbox, then set the loop start and loop end in samples.<br>
+								<img src="https://i.imgur.com/Y05norW.png">
+								<ul><li>If it's too difficult to do the above, you can set the loop start and loop end point in the track itself.
+									<ul>
+										<li>The yellow line is the loop start point.</li>
+										<li>The red line is the loop end point.</li>
+									</ul>
+									<img src="https://i.imgur.com/LsJdfKo.png">
+								</li></ul>
+							</li>
+							<li>Set the BFSTM version to <code>4.0.0</code>.</li>
+							<li>Set the Output Encoding type to <code>DSP-ADPCM</code>.</li>
+							<li>Click on "Update Project Info".
+								<ul><li>You can also save this as a project file</li></ul>
+							</li>
+							<li>Export your BFSTM by going to "File" and clicking on "Export Binary".</li>
+							<li>Save your file as "NX Stream"</li>
+						</ol>
+						<h4>Creating a Multi-Channeled BFSTM</h4>
+						To make multichanneled BFSTSMS, all you have to do is making the MONO channels.
+						
+						<ul><li>To create a mono channel, go to "Tracks" and click "Add new".<br>
+							<img src="https://i.imgur.com/j404Sje.png">
+						</li></ul>
+						
+						SMW and NSMBU music have 4 channels:
+						
+						<ul>
+							<li>First Channel: Main theme (Left)</li>
+							<li>Second Channel: Main theme (Right)</li>
+							<li>Third Channel: Yoshi Beat (Left)
+								<ul><li>Leave this blank if you do not want a Yoshi Beat. Do not remove this channel.</li></ul>
+							</li>
+							<li>Fourth Channel: Yoshi Beat (Right)
+								<ul><li>Leave this blank if you do not want a Yoshi Beat. Do not remove this channel.</li></ul>
+							</li>
+						</ul>
+						
+						<img src="https://i.imgur.com/AD8hqmV.png">
+						<ul><li>Make sure to correctly set the Left and Right channels, by using the slider on the left.</li></ul>
+
+						<ol>
+							<li>Go to Edit -> "Preferences..."</li>
+							<li>In the "Import/Export" tab, make sure to use a custom mix is set for "When exporting tracks to an audio file".</li>
+							<li>Follow the Citric Composer steps in the Single Channeled BFSTM section.</li>
+						</ol>
+						<h3>Creating Custom SFX without looping</h3>
+						<ol>
+							<li>Convert the <code>.wav</code> to <code>.bwav</code> using Citric Composer</li>
+							<li>Open the converted Bwav in a hex editor.
+								<ul><li>We recommend using HxD.</li></ul>
+							</li>
+							<li>Move to the 0x4C offset in the <code>bwav</code>.</li>
+							<li>Fill in 4 bytes with <code>FF</code>.</li>
+						</ol>
 					<h2>Resources</h2>
 					<details>
 						<summary><b>Wii U</b></summary>
@@ -478,34 +693,6 @@ version = 4
 						<p><strong>Tutorials</strong></p>
 						
 						How to convert 3DS byamls - https://mariomods.net/thread/474-how-to-convert-3ds-byamls (By Samplasion)<br />
-						<br>
-						<p><strong>Modding Information</strong></p>
-						
-						<p>- Firstly, some the code is written in Lua 5.0.3, and can be found here: <strong>romfsUIXFinalUIXscripts</strong></p>
-						
-						<p>- The lua basic functions were found by Sono and are listed <a href="https://pastebin.com/Gu4X7AsP">here</a></p>
-						
-						<p>- The icons for the editor can be found here: <strong>romfsPaletteIconTextures</strong></p>
-						
-						<p>- The sprite textures and animations can be found here: <strong>romfsModels[game]_DV_[theme].szs</strong></p>
-						
-						<p>- The tileset files can be found here: <strong>romfsTiledata[game]_field_[theme]_textures.ctpk</strong></p>
-						
-						<p>- The backgrounds can be found here: <strong>romfsTextures[game]_dv_[theme]_textures.ctpk</strong></p>
-						
-						<p>- Messages can be found here:  <strong>romfsMessageC[Region][Lanuage]</strong></p>
-						
-						<p>- Fonts can be found here:  <strong>romfsFont</strong></p>
-						
-						<p>- Game Icon can be found here:  <strong>romfsIcons</strong></p>
-						
-						<p>- Soundeffects can be found in:  <strong>romfsSoundsound_data.bcsar</strong></p>
-						
-						<p>- Background music can be found in:  <strong>romfsSoundstreammusicname.bcstm</strong></p>
-						
-						<p>- Layout files can be found in:  <strong>romfsUIXFinalUIXLayouts[layoutname].arc</strong></p>
-						
-						<p>- The lighting files for the NSMBU themes can be found at  <strong>romfsA3D</strong></p>
 					</details>
 				</div>
 				<div class="col-lg-4 d-md-none d-lg-block">
