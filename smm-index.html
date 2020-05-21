@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>NightScript Domain - Home</title>
-		<meta name="og:title" content="NightScript Domain - Home" />
-		<meta property="og:title" content="NightScript Domain - Home" />
-		<meta name="twitter:title" content="NightScript Domain - Home" />
+		<title>NightScript Domain - Super Mario Maker Modding</title>
+		<meta name="og:title" content="NightScript Domain - Super Mario Maker Modding" />
+		<meta property="og:title" content="NightScript Domain - Super Mario Maker Modding" />
+		<meta name="twitter:title" content="NightScript Domain - Super Mario Maker Modding" />
 
 		<link rel="manifest" href="/assets/site.webmanifest">
 		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
@@ -12,11 +12,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 
-		<meta name="keywords" content="NightScript, NightYoshi, NightYoshi370" />
-		<meta name="description" content="This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?" />
-		<meta name="og:description" content="This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?" />
-		<meta property="og:description" content="This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?" />
-		<meta name="twitter:description" content="This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?" />
+		<meta name="keywords" content="NightScript, NightYoshi, NightYoshi370, Mario, Super Mario, Super Mario Maker, Super Mario Maker 2, Super Mario Maker Mod, Super Mario Maker Modding, SMM Mod, SMM Modding, Super Mario Maker 2 Mod, Super Mario Maker 2 Modding, SMM2 Mod, SMM2 Modding, Super Mario Maker for Nintendo 3DS Mod, Super Mario Maker for Nintendo 3DS modding, SMM3DS Mod, SMM3DS Modding" />
+		<meta name="description" content="The complete guide to modding the Super Mario Maker series" />
+		<meta name="og:description" content="The complete guide to modding the Super Mario Maker series" />
+		<meta property="og:description" content="The complete guide to modding the Super Mario Maker series" />
+		<meta name="twitter:description" content="The complete guide to modding the Super Mario Maker series" />
 
 		<link rel='icon' href='/assets/images/avatar.png'>
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/avatar.png" />
@@ -64,7 +64,7 @@
 			</div>
 			<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
 			<ul class="list-unstyled mb-0">
-				<li class="active"><a href="/"><span class="fa fa-fw fa-home mr-1"></span> Home</a></li>
+				<li><a href="/"><span class="fa fa-fw fa-home mr-1"></span> Home</a></li>
 				<li>
 					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
 						<span class="fa fa-fw fa-folder-open-o mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">2</small></span> Projects
@@ -115,7 +115,6 @@
 						<ol>
 							<li>Open cemu:/graphicspack and create a new folder. The folder would need to be called SuperMarioMaker_xxxxx, where xxxxx would be replaced with the name of the mod without spaces.</li>
 							<li>Create a file called <code>rules.txt</code> and copy the following inside:
-
 <pre><code class="language-ini">[Definition]
 titleIds = 0x500001010ec00,0x5000e1010ed00,0x5000e1010eb00
 name = "A Super Mario Maker Mod"
@@ -123,7 +122,6 @@ path = "Super Mario Maker/Mods/Infinite Level Height"
 description = "A cool Super Mario Maker Mod"
 version = 4
 </code></pre>
-
 							Obviously change the name to match your mod.
 							</li>
 							<li>Create a new directory titled <code>contents</code> and place the modified files there.</li>
@@ -215,13 +213,26 @@ version = 4
 							<li>In the "Import/Export" tab, make sure to use a custom mix is set for "When exporting tracks to an audio file".</li>
 							<li>Follow the Citric Composer steps in the Single Channeled BFSTM section.</li>
 						</ol>
-
-							Save your file as \"CTR Stream\" if you want to save a 3DS BCSTM, or NX Stream if you want to save a Switch BFSTM.\r\n\r\n[img]https://i.imgur.com/Il5Rvef.png[/img]\r\n\r\nDon\'t forget to name the BCSTM/BFSTM correctly, so it can be patched. </font>\r\n\r\n\r\n<center><p><font size=\"6\">Creating a multichanneled BCSTM/BFSTM</font></center>\r\n\r\n<p>
-							SMM3DS BCSTMS are on the version 2.3.1, so set the version to it.\r\n\r\n[img]https://i.imgur.com/LJdAcpr.png[/img]
 						<h3>Editing Levels</h3>
-						<p>Coming soon</p>
-						<h3>Other Tools</h3>
-
+						<h4>Requirements</h4>
+						<ul>
+							<li>A PC capable of running Python</li>
+							<li>Python 3.5
+								<ul><li>(Python 3.4 works but not recommended. For anything lower, uninstall other versions or at least remove them from PATH)</li></ul>
+							</li>
+							<li>PyQt5 for Python 3.5: <a href="https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.6/PyQt5-5.6-gpl-Py3.5-Qt5.6.0-x32-2.exe/download">32-bit</a> -- <a href="https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.6/PyQt5-5.6-gpl-Py3.5-Qt5.6.0-x64-2.exe/download">64-bit</a>
+								<ul><li>For Python 3.4 users, get the PyQt5 version corresponding to Python 3.4</li></ul>
+							</li>
+							<li>The latest codebase of <a href="https://github.com/aboood40091/PointlessMaker/archive/master.zip">PointlessMaker</a></li>
+							<li>Your tilesets in PNG form</li>
+						</ul>
+						<h4>Instructions</h4>
+						<ol>
+							<li>Extract the <code>PointlessMaker-master.zip</code> archive somewhere.</li>
+							<li>Place all your tileset images in the <code>PointlessMaker-master/tilesets/</code> folder</li>
+							<li>Correctly install Python and PyQt5</li>
+							<li>Double-click the main.py excutable or open a cmd window in the PointlessMaker-master/ folder, and enter the following: [b]python main.py[/b]</li>
+						</ol>
 					<h2>Super Mario Maker for Nintendo 3DS</h2>
 						<h3>Playing Mods (Nintendo 3DS Hardware)</h3>
 						<ol>
@@ -334,6 +345,49 @@ version = 4
 							<li>Background Music can be found over at <code>romfs:/Sound/stream/[musicname].bcstm</code></li>
 							<li>Layout Files can be found over at <code>romfs:/UIX/Final/UIX/Layouts/[layoutname].arc</code></li>
 							<li>Lighting for the New Super Mario Bros. U game style can be found over at <code>romfs:/A3D</code></li>
+						</ol>
+						<h3>Editing BYAMLs</h3>
+						<h4>Requirements</h4>
+						<ul>
+							<li><a href="https://gbatemp.net/threads/wip-the-fourth-dimension-a-super-mario-3d-land-level-editor.424001/">The 4th Dimension SM3DL level editor</a></li>
+							<li>A Windows PC</li>
+							<li>Your Byaml</li>
+						</ul>
+						<h4>Converting a byaml to xml</h4>
+						<ol>
+							<li>Open The 4th Dimension</li>
+							<li>Open File > Byml converter > Byml -> Xml</li>
+							<li>Change the filter (in the lower-right corner) from <code>.byaml</code> to <code>*.*</code></li>
+							<li>Select your file</li>
+							<li>Enter a name to save the XML</li>
+						</ol>
+						<h4>Converting an XML back to BYAML</h4>
+						<ol>
+							<li>Open The 4th Dimension</li>
+							<li>Open File > Byml converter > Xml -> Byml</li>
+							<li>Select your XML file</li>
+							<li>Enter a name to save the byml</li>
+							<li>Rename the file extension from <code>.byml</code> to <code>.byaml</code></li>
+						</ol>
+						<h3>Editing Levels</h3>
+						<h4>Requirements</h4>
+						<ul>
+							<li>A PC capable of running Python</li>
+							<li>Python 3.5
+								<ul><li>(Python 3.4 works but not recommended. For anything lower, uninstall other versions or at least remove them from PATH)</li></ul>
+							</li>
+							<li>PyQt5 for Python 3.5: <a href="https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.6/PyQt5-5.6-gpl-Py3.5-Qt5.6.0-x32-2.exe/download">32-bit</a> -- <a href="https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.6/PyQt5-5.6-gpl-Py3.5-Qt5.6.0-x64-2.exe/download">64-bit</a>
+								<ul><li>For Python 3.4 users, get the PyQt5 version corresponding to Python 3.4</li></ul>
+							</li>
+							<li>The latest codebase of <a href="https://github.com/aboood40091/PointlessMaker/archive/master.zip">PointlessMaker</a></li>
+							<li>Your tilesets in PNG form</li>
+						</ul>
+						<h4>Instructions</h4>
+						<ol>
+							<li>Extract the <code>PointlessMaker-master.zip</code> archive somewhere.</li>
+							<li>Place all your tileset images in the <code>PointlessMaker-master/tilesets/</code> folder</li>
+							<li>Correctly install Python and PyQt5</li>
+							<li>Double-click the main.py excutable or open a cmd window in the PointlessMaker-master/ folder, and enter the following: [b]python main.py[/b]</li>
 						</ol>
 					<h2>Super Mario Maker 2 (Nintendo Switch)</h2>
 						<h3>Playing Mods (Nintendo Switch Hardware)</h3>
@@ -452,7 +506,7 @@ version = 4
 						
 						<p>Text Editor - <a href="https://github.com/IcySon55/Kuriimu/releases">Kuriimu</a></p>
 						
-						<p>Course Editor - <a href="https://mariomods.net/thread/358-pointlessmaker">PointlessMaker</a></p>
+						<p>Course Editor - <a href="https://localhost/thread/358-pointlessmaker">PointlessMaker</a></p>
 						
 						<p>Music Converter - <a href="https://github.com/libertyernie/LoopingAudioConverter/releases">LoopingAudioConverter</a></p>
 						
