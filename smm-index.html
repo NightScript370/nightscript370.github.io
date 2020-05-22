@@ -238,7 +238,10 @@ version = 4
 						<h3>File System Documentation</h3>
 						<ul>
 							<li>Sample Courses can be found at <code>content:/Course/</code>
-								<ul><li>These courses thumbnails can be found at <code>content:/CourseThumbnail/</code></li></ul>
+								<ul>
+									<li>Thumbnails for these sample courses can be found at <code>content:/CourseThumbnail/</code></li>
+									<li>Data for these sample courses can be found at <code>content/Pack/CourseData.pack</code></li>
+								</ul>
 							</li>
 							<li>The fonts are packed in the <code>szs</code> format and can found at <code>content:/Font</code>
 								<ul>
@@ -246,6 +249,31 @@ version = 4
 									<li><code>SpecialFont.bffnt</code>, <code>CountMario.bffnt</code>, <code>Block_NumberFont.bffnt</code> & <code>CountRanking.bffnt</code> - The Super Mario Maker Font</li>
 									<li><code>MessageFont.bffnt</code> - Used for messages</li>
 									<li><code>FontInfo.byml</code> - Has info telling the game what the font is and other info (to change definition)</li>
+								</ul>
+							</li>
+							<li>The layouts are in the szs format and can be found at <code>content/Layout</code> (Most of the layouts here are unused)
+								<ul>
+									<li><code>Boot_BootSceneXXX_00.szs</code> - Boot layouts for when you load into the game, depending on the day of the week.</li>
+									<li><code>Cursor.szs</code> - Wiimote Cursor (Unused).</li>
+									<li><code>E3_DebugMenuNormalBtn_00.szs</code> - Leftover button from the E3 2014 demo, back when the game was called Mario Maker.</li>
+									<li><code>E3_DebugMenuSelectBtn_00.szs</code> - Leftover (selected) button from the E3 2014 demo, back when the game was called Mario Maker.</li>
+									<li><code>image.jpg</code> - Image of Nikki from Swapnote (Leftover from SDK).</li>
+									<li><code>ItemIcon_00.szs</code> - Early Splatoon Weapon design</li>
+								</ul>
+							</li>
+							<li>Message files can be found at <code>content/Messages</code></li>
+							<li>The <code>content/Model</code> folder contains backgrounds, tilsets and amiibo costumes</li>
+							<li>The <code>content/Pack</code> folder contains <code>.pack</code> files (a <code>.sarc</code> with a bunch of <code>.szs</code> files inside it) for a variety of things (springs, byamls, etc)
+								<ul>
+									<li><code>Edit.pack</code> - Contains layouts and graphics for the editor</li>
+									<li><code>Env.pack</code> - Lighting files</li>
+									<li><code>Layout.pack</code> - Misc. layouts that aren't included in other packs (including Splatoon layouts)</li>
+									<li><code>Lcl.pack</code> - Random Course World layouts.</li>
+									<li><code>NormalPlay.pack</code> - Contains everything needed during playing a course, beating a course, the course splash screen, and the title screen.</li>
+									<li><code>Nwk.pack</code> - Course World layout files.</li>
+									<li><code>Sound.pack</code> - Contains sound effects and sounds pertaining to music files.</li>
+									<li><code>Static.pack</code> - Pack containing Byaml (Enemy behaviors, tileset and background paths, etc..) files</li>
+									<li></li>
 								</ul>
 							</li>
 						</ul>
@@ -267,6 +295,12 @@ version = 4
 							<li>Be sure that "Game Patching" is enabled.</li>
 							<li>Hit START to save the modified configuration.</li>
 							<li>Launch Super Mario Maker for Nintendo 3DS.</li>
+						</ol>
+						<h3>Playing Mods (Citra)</h3>
+						<ol>
+							<li>Within Citra, right click "Super Mario Maker for Nintendo 3DS" and hit "Open Mod Location"</li>
+							<li>In the window that just opened, make a new directory titled "romfs"</li>
+							<li>Place all the mod files inside.</li>
 						</ol>
 						<h3>Editing Sprites & Tilesets</h3>
 						<ol>
@@ -417,6 +451,15 @@ version = 4
 							<li>Create a folder titled <code>01009B90006DC000</code> at <code>sd:/atmosphere/contents/</code>.</li>
 							<li>Place all your modified files there.</li>
 							<li>Load up atmosphere and then launch Super Mario Maker 2!</li>
+						</ol>
+						<h3>Playing Mods (Yuzu)</h3>
+						<ol>
+							<li>Within Yuzu, right click Super Mario Maker 2 and select "Open Mod Data Location".</li>
+							<li>In the new folder that appeared, make a folder with the title of your mod.</li>
+							<li>Inside the newly created folder, make another folder titled "romfs"</li>
+							<li>Place your modified files inside this romfs folder</li>
+							<li>Within Yuzu, right click on the game and hit Properties</li>
+							<li>Make sure your mod is enabled by hitting the checkbox.</li>
 						</ol>
 						<h3>Editing Sprites & Tilesets</h3>
 						<h4>Instructions</h4>
