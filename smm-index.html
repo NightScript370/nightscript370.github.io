@@ -213,6 +213,28 @@ version = 4
 							<li>In the "Import/Export" tab, make sure to use a custom mix is set for "When exporting tracks to an audio file".</li>
 							<li>Follow the Citric Composer steps in the Single Channeled BFSTM section.</li>
 						</ol>
+						<h3>Adding new backgrounds (to themes that don't have one)</h3>
+						<ol>
+							<li>Make a copy of a background .szs file in that current directory</li>
+							<li>Export the output.bfres file from the .szs using Switch Toolbox.
+								<ul><li>Right click <code>output.bfres</code> -> Archive -> Export Raw Data to File Location</li></ul>
+							</li>
+							<li>Launch a hex editor application and open the output.bfres file you just exported.</li>
+							<li>Find every mention of the first two characters of the original file and replace them with any other two characters (except M1, M3, MW or WU).</li>
+							<li>Save your BFRES file</li>
+							<li>In Switch Toolbox, replace the output.bfres file in the new .szs with the new one you just edited
+								<ul><li>Right click <code>output.bfres</code> -> Archive -> Replace Raw Data</li></ul>
+							</li>
+							<li>At this point, make the edits to the background.</li>
+							<li>Rename the <code>.szs</code> file to the name you game it in the hex editor.</li>
+							<li>Within Switch Toolbox, open <code>/content/Static.pack</code></li>
+							<li>Search for a file called "XX_SceneDB.byaml" (XX being your game style) and open it.</li>
+							<li>On the top bar, switch to the "Text Editor" tab.</li>
+							<li>Decompile the byaml file into a editable xml format.</li>
+							<li>Let's say I want to change the underground background. Where it says <DV type="string">?????</DV>, replace ????? with the name of your szs file. (????? can be M0_DV_black, MW_DV_plain, etc.)</li>
+							<li>Compile the xml back into a byaml, and then save the edits by hitting the button on the bottom right.</li>
+							<li>Save your Static.Pack file.</li>
+						</ol>
 						<h3>Editing Levels</h3>
 						<h4>Requirements</h4>
 						<ul>
@@ -273,7 +295,7 @@ version = 4
 									<li><code>Nwk.pack</code> - Course World layout files.</li>
 									<li><code>Sound.pack</code> - Contains sound effects and sounds pertaining to music files.</li>
 									<li><code>Static.pack</code> - Pack containing Byaml (Enemy behaviors, tileset and background paths, etc..) files</li>
-									<li></li>
+									<li><code>StaticSkin.pack</code> - Pack containing sprites.</li>
 								</ul>
 							</li>
 						</ul>
@@ -386,6 +408,12 @@ version = 4
 								<ul><li>The Lua basic functions were found by Sono and are <a href="https://pastebin.com/Gu4X7AsP">documented</a></li></ul>
 							</li>
 							<li>Editor icons can be found at <code>romfs:/Palette/Icon/Textures</code></li>
+							<li>BFRES files can be found at <code>romfs:/Mush/</code>
+								<ul><li>Use <a href="https://github.com/KillzXGaming/Switch-Toolbox/releases">Switch Toolbox</a> to edit them</li></ul>
+							</li>
+							<li>Enemy Parameters can be found at <code>romfs:/Parameters</code>
+								<ul><li>You could use any text editor to edit it.</li></ul>
+							</li>
 							<li>Sprite models can be found here: <code>romfs:/Models/[game-style]_DV_[theme].szs</code></li>
 							<li>Tileset Textures can be found here: <code>romfs:/Tiledata/[game-style]_field_[theme]_textures.ctpk</code></li>
 							<li>Background Textures can be found here: <code>romfs:/Textures/[game-style]_dv_[theme]_textures.ctpk</code></li>
@@ -399,29 +427,6 @@ version = 4
 							<li>Layout Files can be found over at <code>romfs:/UIX/Final/UIX/Layouts/[layoutname].arc</code></li>
 							<li>Lighting for the New Super Mario Bros. U game style can be found over at <code>romfs:/A3D</code></li>
 						</ul>
-						<h3>Editing BYAMLs</h3>
-						<h4>Requirements</h4>
-						<ul>
-							<li><a href="https://gbatemp.net/threads/wip-the-fourth-dimension-a-super-mario-3d-land-level-editor.424001/">The 4th Dimension SM3DL level editor</a></li>
-							<li>A Windows PC</li>
-							<li>Your Byaml</li>
-						</ul>
-						<h4>Converting a byaml to xml</h4>
-						<ol>
-							<li>Open The 4th Dimension</li>
-							<li>Open File > Byml converter > Byml -> Xml</li>
-							<li>Change the filter (in the lower-right corner) from <code>.byaml</code> to <code>*.*</code></li>
-							<li>Select your file</li>
-							<li>Enter a name to save the XML</li>
-						</ol>
-						<h4>Converting an XML back to BYAML</h4>
-						<ol>
-							<li>Open The 4th Dimension</li>
-							<li>Open File > Byml converter > Xml -> Byml</li>
-							<li>Select your XML file</li>
-							<li>Enter a name to save the byml</li>
-							<li>Rename the file extension from <code>.byml</code> to <code>.byaml</code></li>
-						</ol>
 						<h3>Editing Levels</h3>
 						<h4>Requirements</h4>
 						<ul>
