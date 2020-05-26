@@ -12,10 +12,8 @@ gradientCanvas.style.background = 'rgba(0,0,0,0)'
 let bubblesCanvas = gradientCanvas.cloneNode(true);
 bubblesCanvas.setAttribute('id', 'bubblesCanvas');
 
-if (mediaQuery) {
-	gradientCanvas.classList.add('fade')
-	bubblesCanvas.classList.add('fade')
-}
+gradientCanvas.classList.add('fade')
+bubblesCanvas.classList.add('fade')
 
 sidebarLogo.parentElement.insertAdjacentElement('afterbegin', bubblesCanvas)
 sidebarLogo.parentElement.insertAdjacentElement('afterbegin', gradientCanvas)
