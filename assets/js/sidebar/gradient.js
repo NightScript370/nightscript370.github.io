@@ -1,4 +1,4 @@
-const canvas = document.getElementById("profileCanvas");
+const canvas = document.getElementById("gradientCanvas");
 const ctx = canvas.getContext("2d");
 const my_gradient = ctx.createLinearGradient(0, 0, 0, canvas.height * .98);
 my_gradient.addColorStop(0, "#020C49");

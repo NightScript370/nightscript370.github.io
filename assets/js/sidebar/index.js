@@ -2,17 +2,27 @@ document.getElementById('sidebarCollapse').addEventListener('click', () => docum
 
 let sidebarLogo = document.getElementById("sidebar-logo");
 
-let canvas = document.createElement("canvas");
-canvas.setAttribute('width', sidebarLogo.offsetWidth);
-canvas.setAttribute('height', sidebarLogo.offsetHeight);
-canvas.setAttribute('id', 'profileCanvas');
-canvas.style.position = 'absolute';
-canvas.classList.add('fade')
-sidebarLogo.parentElement.insertAdjacentElement('afterbegin', canvas)
+let gradientCanvas = document.createElement("canvas");
+gradientCanvas.setAttribute('width', sidebarLogo.offsetWidth);
+gradientCanvas.setAttribute('height', sidebarLogo.offsetHeight);
+gradientCanvas.setAttribute('id', 'gradientCanvas');
+gradientCanvas.style.position = 'absolute';
+gradientCanvas.style.background = 'rgba(0,0,0,0)'
+
+let bubblesCanvas = gradientCanvas.cloneNode(true);
+bubblesCanvas.setAttribute('id', 'bubblesCanvas');
+
+if (mediaQuery) {
+	gradientCanvas.classList.add('fade')
+	bubblesCanvas.classList.add('fade')
+}
+
+sidebarLogo.parentElement.insertAdjacentElement('afterbegin', bubblesCanvas)
+sidebarLogo.parentElement.insertAdjacentElement('afterbegin', gradientCanvas)
 
 export function doProfileBG() {
 	import('./gradient.js').then(() => import('./circles.js'));
 }
 doProfileBG();
 
-setTimeout(() => { canvas.classList.add('show') }, 200);
+setTimeout(() => { gradientCanvas.classList.add('show'); bubblesCanvas.classList.add('show') }, 200);
