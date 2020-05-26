@@ -1,3 +1,6 @@
+import './themes.js'
+import gradient from './gradient.js'
+
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
 
 let sidebarLogo = document.getElementById("sidebar-logo");
@@ -19,7 +22,8 @@ sidebarLogo.parentElement.insertAdjacentElement('afterbegin', bubblesCanvas)
 sidebarLogo.parentElement.insertAdjacentElement('afterbegin', gradientCanvas)
 
 export function doProfileBG() {
-	import('./gradient.js').then(() => import('./circles.js'));
+	gradient();
+	import('./circles.js');
 }
 doProfileBG();
 

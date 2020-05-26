@@ -6,10 +6,13 @@
 	--darker-menu-element: #01083A;
 	--menu-element-text-color: white;
 	--lighter-menu-element: #132A5C;
+	--gradient-top: #020C49;
+	--text-color: white;
+	--background: url('../images/starBG.jpg') center top/cover no-repeat 
 }
 
 body {
-	color: white;
+	color: var(--text-color);
 	width: 100%;
 	background-color: var(--main-bg-color);}
 
@@ -17,14 +20,11 @@ html {
 	scroll-behavior: smooth; }
 
 .bg {
-	background-image: url('../images/starBG.jpg');
-	background-position: center top; /* on iOS at least 'center center' will cause a jump when collpsing the top & bottom bars */ 
+	background: var(--background);
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	z-index: -1;
-	background-size: cover;
-	background-repeat: no-repeat;
 
 	filter: blur(5px) brightness(.75);
 	-webkit-filter: blur(5px) brightness(.75);
@@ -310,4 +310,13 @@ pre {
 
 img {
 	max-width: 100%;
+}
+
+.themeDot {
+	height: 2rem;
+	width: 2rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	border-radius: 50%;
+	display: inline-block;
 }
