@@ -191,7 +191,8 @@ button {
 	background-color: rgba(0, 0, 15, 0.8);
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
-	transition: all 0.3s; }
+	transition: all 0.3s;
+	min-height: 100vh; }
 
 .bttbtn {
 	width: 40px;
@@ -210,6 +211,15 @@ button {
 	box-shadow: 5px 5px 5px black !important;
 }
 
+.card-img, .card-img-top {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.card-img.invert, .card-img-top.invert {
+	background: rgba(255, 255, 255, 0.4);
+	filter: invert(100%)
+}
+
 .card .card-body a {
 	color: var(--menu-element-text-color);
 	text-decoration: underline;
@@ -218,7 +228,7 @@ button {
 	transition: all 0.1s;
 }
 
-.card .card-body a:not(.cardShareLinks):hover {
+.card .card-body a.h5:not(.cardShareLinks):hover {
 	text-decoration: underline !important;
 	font-size: 1.3rem;
 }
