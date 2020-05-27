@@ -7,7 +7,26 @@ const themes = {
 		'--menu-element': '#02194B',
 		'--darker-menu-element': '#01083A',
 		'--menu-element-text-color': 'white',
-		'--lighter-menu-element': '#132A5C'
+		'--lighter-menu-element': '#132A5C',
+		'--gradient-top': '#020C49',
+		'--text-color': 'white',
+		'--background': "url('/assets/images/starBG.jpg') center top/cover no-repeat",
+		'--background-filter': 'rgba(0, 0, 15, 0.8)',
+		'--sidebar-link': 'rgba(255, 255, 255, 0.6)',
+		'--sidebar-link-active': 'white'
+	},
+	'light': {
+		'--main-bg-color': '#D0CEC9',
+		'--menu-element': '#C9C6C0',
+		'--darker-menu-element': '#B8B5B0',
+		'--menu-element-text-color': 'black',
+		'--lighter-menu-element': '#DAD7D1',
+		'--gradient-top': '#222222',
+		'--text-color': 'black',
+		'--background': "white center top/cover no-repeat",
+		'--background-filter': 'inherit',
+		'--sidebar-link': 'rgba(0, 0, 0, 0.6)',
+		'--sidebar-link-active': 'black'
 	}
 }
 
