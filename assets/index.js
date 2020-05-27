@@ -1,5 +1,6 @@
 import "./js/sidebar/index.js";
 import "./js/scrollup.js";
+import './js/particles.js'
 import { replaceCardNoShare } from "./js/sharelinks.js";
 import { tableOfContents } from "./js/table-of-contents.js";
 import { addAnchor } from "./js/anchorlinks.js";

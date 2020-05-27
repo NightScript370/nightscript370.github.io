@@ -10,7 +10,7 @@ gradientCanvas.setAttribute('width', sidebarLogo.offsetWidth);
 gradientCanvas.setAttribute('height', sidebarLogo.offsetHeight);
 gradientCanvas.setAttribute('id', 'gradientCanvas');
 gradientCanvas.style.position = 'absolute';
-gradientCanvas.style.background = 'rgba(0,0,0,0)'
+//gradientCanvas.style.background = 'rgba(0,0,0,0)'
 
 let bubblesCanvas = gradientCanvas.cloneNode(true);
 bubblesCanvas.setAttribute('id', 'bubblesCanvas');
