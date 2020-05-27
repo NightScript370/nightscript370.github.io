@@ -12,6 +12,7 @@
 	--background-filter: rgba(0, 0, 15, 0.8);
 	--sidebar-link: rgba(255, 255, 255, 0.6);
 	--sidebar-link-active: white;
+	--shadow-color: black;
 }
 
 body {
@@ -86,9 +87,9 @@ button {
 	min-height: 100vh;
 	z-index: 100;
 
-	-moz-box-shadow:    3px 0 5px 0 #000;
-	-webkit-box-shadow: 3px 0 5px 0 #000;
-	box-shadow:         3px 0 5px 0 #000; }
+	-moz-box-shadow:    3px 0 5px 0 var(--shadow-color);
+	-webkit-box-shadow: 3px 0 5px 0 var(--shadow-color);
+	box-shadow:         3px 0 5px 0 var(--shadow-color); }
 	#sidebar.active {
 		margin-left: -295px; }
 		#sidebar.active .custom-menu {
@@ -219,7 +220,7 @@ button {
 .card {
 	background: var(--menu-element);
 	color: var(--menu-element-text-color);
-	box-shadow: 5px 5px 5px black !important;
+	box-shadow: 5px 5px 5px var(--shadow-color) !important;
 }
 
 .card-img, .card-img-top {

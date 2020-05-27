@@ -13,7 +13,8 @@ const themes = {
 		'--background': "url('/assets/images/starBG.jpg') center top/cover no-repeat",
 		'--background-filter': 'rgba(0, 0, 15, 0.8)',
 		'--sidebar-link': 'rgba(255, 255, 255, 0.6)',
-		'--sidebar-link-active': 'white'
+		'--sidebar-link-active': 'white',
+		'--shadow-color': 'black'
 	},
 	'light': {
 		'--main-bg-color': '#D0CEC9',
@@ -21,12 +22,13 @@ const themes = {
 		'--darker-menu-element': '#B8B5B0',
 		'--menu-element-text-color': 'black',
 		'--lighter-menu-element': '#DAD7D1',
-		'--gradient-top': '#222222',
+		'--gradient-top': '#666',
 		'--text-color': 'black',
 		'--background': "white center top/cover no-repeat",
 		'--background-filter': 'inherit',
 		'--sidebar-link': 'rgba(0, 0, 0, 0.6)',
-		'--sidebar-link-active': 'black'
+		'--sidebar-link-active': 'black',
+		'--shadow-color': '#666'
 	}
 }
 
