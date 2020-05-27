@@ -1,6 +1,5 @@
 import "./js/sidebar/index.js";
 import "./js/scrollup.js";
-import './js/particles.js'
 import { replaceCardNoShare } from "./js/sharelinks.js";
 import { tableOfContents } from "./js/table-of-contents.js";
 import { addAnchor } from "./js/anchorlinks.js";
@@ -12,5 +11,8 @@ addAnchor(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
 tableOfContents('[data-content]', '[data-toc]');
 autoTargetBlank(document.querySelectorAll('a'))
 tippy('[data-tippy-content]');
+
+if (document.cookie.includes('particles=on'))
+    import('./js/particles.js');
 
 //document.designMode = 'on';

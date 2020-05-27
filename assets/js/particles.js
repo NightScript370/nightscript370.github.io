@@ -1,4 +1,12 @@
-tsParticles
+const script = document.createElement('script')
+script.setAttribute('src', 'https://unpkg.com/tsparticles@1.14.3/dist/tsparticles.slim.js');
+document.querySelector('script').insertAdjacentElement('beforebegin', script);
+
+const tsParticlesDiv = document.createElement('div')
+tsParticlesDiv.setAttribute('id', 'tsparticles')
+document.getElementsByClassName('bg')[0].insertAdjacentElement('beforebegin', tsParticlesDiv);
+
+setTimeout(() => tsParticles
   .load("tsparticles", {
     "absorbers": [],
     "background": {},
@@ -301,4 +309,4 @@ tsParticles
       "type": "none",
       "url": ""
     }
-  })
+  }), 1000);
