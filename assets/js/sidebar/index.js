@@ -1,4 +1,4 @@
-import './themes.js'
+import './themeSwitch.js'
 import gradient from './gradient.js'
 
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
