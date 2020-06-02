@@ -1,0 +1,10 @@
+title       : "NightScript Domain"
+description : "This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?"
+repo        : "NightYoshi370/NightYoshi370.github.io"
+markdown_ext        : "markdown,mkdown,mkdn,mkd,md,html"
+
+defaults:
+  -
+    values:
+      layout: "default"
+      title: "Pk11"

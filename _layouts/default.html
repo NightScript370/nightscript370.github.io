@@ -1,7 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.lang | default: "en-US" }}">
 	<head>
-		<title>NightScript Domain - 404</title>
+		<title>{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+		<meta name="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+		<meta property="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+		<meta name="twitter:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
 
 		<link rel="manifest" href="/assets/site.webmanifest">
 		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
@@ -10,10 +13,17 @@
 		<meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 
 		<meta name="keywords" content="NightScript, NightYoshi, NightYoshi370" />
-		<meta name="description" content="Webpage not found" />
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta name="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 
 		<link rel='icon' href='/assets/images/avatar.png'>
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/avatar.png" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/assets/images/avatar.png">
+		<meta name="og:image" content="/assets/images/avatar.png">
+		<meta property="og:image" content="/assets/images/avatar.png">
+		<meta name="twitter:image" content="/assets/images/avatar.png">
 
 		<meta name="theme-color" content="#1C9934" />
 		<meta name="msapplication-navbutton-color" content="#1C9934">
@@ -41,6 +51,9 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		{% if page.syntax-highlight %}
+			<link rel="stylesheet" href="/assets/css/syntax.css">
+		{% endif %}
 	</head>
 	<body class="d-flex">
 		<div class="bg"></div>
@@ -53,21 +66,41 @@
 			</div>
 			<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
 			<ul class="list-unstyled mb-0">
-				<li><a href="/"><span class="fa fa-fw fa-home mr-1"></span> Home</a></li>
-				<li>
-					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-						<span class="fa fa-fw fa-folder-open-o mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">2</small></span> Projects
-					</a>
-					<ul class="collapse list-unstyled" id="pageSubmenu">
-						<li><a href="/projects/dsi_mod_guide.html">DSi Modding Guide</a></li>
-						<li><a href="#">Yamamura</a></li>
-						<li><a href="/projects/website.html">This Website</a></li>
-					</ul>
-				</li>
-				<li><a href="/blog"><span class="fa fa-fw fa-pencil-square-o mr-1"></span> Blog</a></li>
-				<li><a href="/gamerev"><span class="fa fa-fw fa-gamepad mr-1"></span> Game Reviews</a></li>
-				<li><a href="/social"><span class="fa fa-fw fa-share-alt mr-1"></span> Social Links</a></li>
-				<li><a href="https://paypal.me/maorninja"><span class="fa fa-fw fa-paypal mr-1"></span> Donations</a></li>
+				{% for item in site.data.nav.toc %}
+					{% if item.url %}
+						<li {% if item.title == page.title %}class="active"{% endif %}>
+							<a href="{{ item.url }}">
+								{% if item.icon %}
+									{% if item.notif %}
+										<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
+											<small class="badge badge-pill badge-danger d-flex justify-content-center">{{ item.notif }}</small>
+										</span>
+									{% else %}
+										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
+									{% endif %}
+								{% endif %} {{ item.title }}</a>
+						</li>
+					{% endif %}
+					{% if item.items %}
+						<li >
+							<a href="#{{ item.title }}Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+								{% if item.icon %}
+									{% if item.notif %}
+										<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
+											<small class="badge badge-pill badge-danger d-flex justify-content-center">{{ item.notif }}</small>
+										</span>
+									{% else %}
+										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
+									{% endif %}
+								{% endif %} {{ item.title }}</a>
+							<ul class="collapse list-unstyled" id="{{ item.title }}Submenu">
+								{% for entry in item.items %}
+									<li><a href="{{entry.url}}">{{entry.title}}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 			<span class="bottomLinks text-center mb-2">
 				<a href="/projects/website.html">Website Information</a> - <a href="https://github.com/NightYoshi370/nightyoshi370.github.io">Source Code</a>
@@ -76,14 +109,16 @@
 
 		<!-- Page Content  -->
 		<div id="content" class="page-padding">
-			<h1 class="mb-1">404 - Page Not Found</h1>
-			<p>The web page you tried to go to was not found. Please head on over to the <a href="/">Home Page</a>!</p>
+			{{ content }}
 
 			<a href="#" class="bttbtn bg-dark d-flex justify-content-center" id="bttbtn" aria-label="Back to top">
 				<i class="fa fa-sort-asc fa-2x"></i>
 			</a>
 		</div>
 
+		{% if page.syntax-highlight %}
+			<script src="/assets/js/syntaxHighlight.js"></script>
+		{% endif %}
 		<script src="https://unpkg.com/@popperjs/core@2.2.3/dist/umd/popper.min.js"></script>
 		<script src="https://unpkg.com/tippy.js@6"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"></script>

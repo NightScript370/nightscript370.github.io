@@ -1,0 +1,23 @@
+toc:
+  - title: Home
+    url: /
+    icon: home
+  - title: Projects
+    notif: 2
+    icon: folder-open-o
+    items:
+      - title: DSi Modding GUide
+        url: /projects/dsi-guide
+      - title: Yamamura
+        url: #
+      - title: NightScript Domain
+        url: /projects/website
+  - title: Blog
+    icon: pencil-square-o
+    url: /blog
+  - title: Game Reviews
+    icon: gamepad
+    url: /gamerev
+  - title: Social Links
+    icon: share-alt
+    url: /social
