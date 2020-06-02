@@ -13,7 +13,8 @@
 	--sidebar-link: rgba(255, 255, 255, 0.6);
 	--sidebar-link-active: white;
 	--shadow-color: black;
-	--hover-color: rgba(255, 255, 255, 0.3)
+	--hover-color: rgba(255, 255, 255, 0.4);
+	--light-hover-color: rgba(255, 255, 255, 0.2);
 }
 
 body {
