@@ -1,4 +1,3 @@
-import drawGradient from './gradient.js';
 import importThemes from './themes/index.js';
 
 const bottomLinks = document.getElementsByClassName('bottomLinks')[0];
@@ -18,8 +17,6 @@ const bottomLinks = document.getElementsByClassName('bottomLinks')[0];
 				if (theme.hasOwnProperty(key)) {
 					const element = theme[key];
 					document.documentElement.style.setProperty(key, element);
-
-					drawGradient();
 				}
 			}
 		})

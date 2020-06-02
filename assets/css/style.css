@@ -75,6 +75,12 @@ button {
 	background-repeat: no-repeat;
 	background-position: center center; }
 
+#gradient-sidebar {
+	position: absolute;
+	background-color: linear-gradient(var(--gradient-top), var(--main-bg-color));
+	transition: background-color 500ms;
+}
+
 #sidebar {
 	min-width: 300px;
 	max-width: 300px;

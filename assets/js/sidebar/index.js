@@ -1,30 +1,21 @@
 import './themeSwitch.js'
-import gradient from './gradient.js'
 
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
 
 let sidebarLogo = document.getElementById("sidebar-logo");
 
-let gradientCanvas = document.createElement("canvas");
-gradientCanvas.setAttribute('width', sidebarLogo.offsetWidth);
-gradientCanvas.setAttribute('height', sidebarLogo.offsetHeight);
-gradientCanvas.setAttribute('id', 'gradientCanvas');
-gradientCanvas.style.position = 'absolute';
-//gradientCanvas.style.background = 'rgba(0,0,0,0)'
-
-let bubblesCanvas = gradientCanvas.cloneNode(true);
+let bubblesCanvas = document.createElement("canvas");
+bubblesCanvas.setAttribute('width', sidebarLogo.offsetWidth);
+bubblesCanvas.setAttribute('height', sidebarLogo.offsetHeight);
 bubblesCanvas.setAttribute('id', 'bubblesCanvas');
-
-gradientCanvas.classList.add('fade')
+bubblesCanvas.style.position = 'absolute';
 bubblesCanvas.classList.add('fade')
 
-sidebarLogo.parentElement.insertAdjacentElement('afterbegin', bubblesCanvas)
-sidebarLogo.parentElement.insertAdjacentElement('afterbegin', gradientCanvas)
+let gradientDiv = document.getElementById("gradient-sidebar")
+gradientDiv.setAttribute('style', `width:${sidebarLogo.offsetWidth}px;height:${sidebarLogo.offsetHeight}px;`);
 
-export function doProfileBG() {
-	gradient();
-	import('./circles.js');
-}
-doProfileBG();
+gradientDiv.insertAdjacentElement('afterend', bubblesCanvas)
 
-setTimeout(() => { gradientCanvas.classList.add('show'); bubblesCanvas.classList.add('show') }, 200);
+import('./circles.js');
+
+setTimeout(() => bubblesCanvas.classList.add('show'), 200);
