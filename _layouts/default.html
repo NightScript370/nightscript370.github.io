@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
 	<head>
@@ -70,7 +74,7 @@
 				{% for item in site.data.nav.toc %}
 					{% if item.url %}
 						<li {% if item.title == page.title %}class="active"{% endif %}>
-							<a href="{{ item.url }}">
+							<a href="{{ item.url }}" class="proxim">
 								{% if item.icon %}
 									{% if item.notif %}
 										<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
@@ -83,8 +87,8 @@
 						</li>
 					{% endif %}
 					{% if item.items %}
-						<li >
-							<a href="#{{ item.title }}Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<li>
+							<a href="#{{ item.title }}Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim">
 								{% if item.icon %}
 									{% if item.notif %}
 										<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">

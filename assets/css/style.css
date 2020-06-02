@@ -13,6 +13,7 @@
 	--sidebar-link: rgba(255, 255, 255, 0.6);
 	--sidebar-link-active: white;
 	--shadow-color: black;
+	--hover-color: rgba(255, 255, 255, 0.3)
 }
 
 body {
@@ -79,9 +80,9 @@ button {
 	position: absolute;
 	background-image: linear-gradient(var(--gradient-top), var(--main-bg-color));
 	-moz-transition: all 0.3s ease;
-   -o-transition: all 0.3s ease;
-   -webkit-transition: all 0.3s ease;
-   transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 #sidebar {
@@ -118,7 +119,11 @@ button {
 		#sidebar ul li a {
 			padding: 5px 20px;
 			display: block;
-			color: var(--sidebar-link); }
+			color: var(--sidebar-link);
+			border: thin solid transparent;
+			-o-transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease; }
 			#sidebar ul li a span.notif {
 				position: relative; }
 				#sidebar ul li a span.notif small {
@@ -131,7 +136,8 @@ button {
 					font-family: "Poppins", Arial, sans-serif;
 					font-size: 8px; }
 			#sidebar ul li a:hover {
-				background: var(--menu-element); }
+				background: var(--menu-element);
+				border: thin solid var(--hover-color);}
 		#sidebar ul li.active > a {
 			background: transparent;
 			color: var(--sidebar-link-active); }
