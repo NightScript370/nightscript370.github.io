@@ -1,9 +1,10 @@
-export function addAnchor (elements) {
+const addAnchor = (elements) => {
 	for (let element of elements) {
-		if (!element.getAttribute('id')) {
-			if (element.hasAttribute('noAnchor')) continue;
+		if (element.hasAttribute('noAnchor'))
+			continue;
+
+		if (!element.getAttribute('id'))
 			element.setAttribute("id", encodeURIComponent(element.innerHTML.toLowerCase().replace(/ /g, "_")))
-		}
 	
 		let anchor = document.createElement("a");
 		anchor.innerHTML = '<span class="sr-only">Permalink</span><i class="fa fa-link"></i>';
@@ -14,3 +15,5 @@ export function addAnchor (elements) {
 		element.insertAdjacentElement('afterbegin', anchor);
 	};
 }
+
+export default addAnchor;

@@ -49,7 +49,7 @@ const sharedLinks = [
 	}
 ];
 
-export function replaceCardNoShare(cards) {
+const replaceCardNoShare = (cards) => {
 	if (!cards.length)
 		return;
 
@@ -77,3 +77,5 @@ export function replaceCardNoShare(cards) {
 		int.parentElement.appendChild(socialLinksElement);
 	}
 }
+
+export default replaceCardNoShare

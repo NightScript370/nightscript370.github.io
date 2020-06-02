@@ -1,9 +1,9 @@
 import "./js/sidebar/index.js";
 import "./js/scrollup.js";
-import { replaceCardNoShare } from "./js/sharelinks.js";
-import { tableOfContents } from "./js/table-of-contents.js";
-import { addAnchor } from "./js/anchorlinks.js";
-import { autoTargetBlank } from "./js/autotargetblank.js";
+import replaceCardNoShare from "./js/sharelinks.js";
+import tableOfContents from "./js/table-of-contents.js";
+import addAnchor from "./js/anchorlinks.js";
+import autoTargetBlank from "./js/autotargetblank.js";
 //import('./js/proximity.js')
 
 replaceCardNoShare(document.getElementsByClassName('noShare'));
@@ -13,6 +13,6 @@ autoTargetBlank(document.querySelectorAll('a'))
 tippy('[data-tippy-content]');
 
 if (document.cookie.includes('particles=on'))
-    import('./js/particles.js');
+	import('./js/particles.js');
 
 //document.designMode = 'on';

@@ -6,7 +6,7 @@
  * @param  {String} target  The selector for the container to render the table of contents into
  * @param  {Object} options An object of user options [optional]
  */
-export function tableOfContents (content, target, options) {
+const tableOfContents = (content, target, options) => {
 	// Get content
 	const contentWrap = document.querySelector(content);
 	const toc = document.querySelectorAll(target);
@@ -164,5 +164,6 @@ export function tableOfContents (content, target, options) {
 	//
 
 	init();
-
 };
+
+export default tableOfContents;

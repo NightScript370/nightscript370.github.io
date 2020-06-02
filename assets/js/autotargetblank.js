@@ -1,11 +1,4 @@
 const host = location.hostname;
-export function autoTargetBlank (linkelements) {
-	for (let element of linkelements) {
-		if (linksFilter(element))
-			element.setAttribute('target', '_blank');
-	}
-}
-
 let cache = {};
 function linksFilter (element) {
 	if (element.href in cache)
@@ -16,3 +9,12 @@ function linksFilter (element) {
 	cache[element.href] = setAttribute;
 	return setAttribute;
 }
+
+const autoTargetBlank = (linkelements) => {
+	for (let element of linkelements) {
+		if (linksFilter(element))
+			element.setAttribute('target', '_blank');
+	}
+}
+
+export default autoTargetBlank;
