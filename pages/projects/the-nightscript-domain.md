@@ -1,7 +1,7 @@
 ---
 title: Developing the NightScript Domain
 description: How did this website come to be?
-permalink: /blog/sonic-return-of-infinite
+permalink: /projects/ns-domain
 ---
 # The NightScript Domain!
 {:.mb-1}

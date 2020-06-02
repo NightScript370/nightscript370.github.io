@@ -22,7 +22,7 @@ There are multiple blog entries where I will be talking about my gaming experien
 
 <div class="card shareCard mb-2">
 	<div class="card-body">
-		<a class="h5 card-title" href="/blog/gaming.html">My Gaming Experiences</a>
+		<a class="h5 card-title" href="/blog/gaming">My Gaming Experiences</a>
 		<p class="card-text">I go in depth about my analysis on gaming. It describes my love for Super Smash Bros, Classic Sonic and my dislove for Mario (Guest Starring: Kirby!).</p>
 		<noscript class="card-text noShare">Sorry, JavaScript is required in order to see share links.</noscript>
 	</div>
@@ -33,7 +33,7 @@ Oh yeah, what you see above are some of my blog entries. They range from life ex
 
 <div class="card shareCard mb-2">
 	<div class="card-body">
-		<a class="h5 card-title" href="/blog/ownership-issues.html">Issues with ownership</a>
+		<a class="h5 card-title" href="/blog/ownership-issues">Issues with ownership</a>
 		<p class="card-text">Is what you have really yours? What is the true definition of ownership?</p>
 		<noscript class="card-text noShare">Sorry, JavaScript is required in order to see share links.</noscript>
 	</div>
