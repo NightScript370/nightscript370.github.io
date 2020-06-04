@@ -7,9 +7,13 @@ class ProximityManager {
 		let rect = proxim.getBoundingClientRect();
 		let x = pos.x - rect.left; // offset from corner
 		let y = pos.y - rect.top;
-		let color = getComputedStyle(document.documentElement).getPropertyValue(proxim.matches(":hover") ? "--hover-color" : "--light-hover-color");
+		let color = getComputedStyle(document.documentElement).getPropertyValue("--hover-color");
+		let lighterColor = getComputedStyle(document.documentElement).getPropertyValue("--light-hover-color");
 
-		proxim.style.background = `radial-gradient( circle at ${x}px ${y}px, ${color} 0%, transparent ${this.radius}px)`;
+		if (proxim.matches(":hover"))
+			proxim.style.background = lighterColor + ` radial-gradient( circle at ${x}px ${y}px, ${color} 0%, transparent ${this.radius}px)`;
+		else
+			proxim.style.background = `radial-gradient( circle at ${x}px ${y}px, ${lighterColor} 0%, transparent ${this.radius}px)`;
 	}
 }
 

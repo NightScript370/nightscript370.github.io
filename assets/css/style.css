@@ -121,7 +121,14 @@ button {
 			padding: 5px 20px;
 			display: block;
 			color: var(--sidebar-link);
-			border: thin solid transparent;
+
+			border-top-width: thin;
+			border-bottom-width: thin;
+			border-left-width: 0;
+			border-right-width: 0;
+			border-style: solid;
+			border-color: transparent;
+
 			-o-transition: all 0.3s ease;
 			-webkit-transition: all 0.3s ease;
 			transition: all 0.3s ease; }
@@ -137,13 +144,10 @@ button {
 					font-family: "Poppins", Arial, sans-serif;
 					font-size: 8px; }
 			#sidebar ul li a:hover {
-				background: var(--menu-element);
-				border: thin solid var(--hover-color);}
+				background: var(--light-hover-color);
+				border-color: var(--hover-color); }
 		#sidebar ul li.active > a {
-			background: transparent;
 			color: var(--sidebar-link-active); }
-			#sidebar ul li.active > a:hover {
-				background: var(--menu-element); }
 	#sidebar .custom-menu {
 		display: inline-block;
 		position: absolute;
