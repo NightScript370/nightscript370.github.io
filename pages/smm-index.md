@@ -12,7 +12,7 @@ syntax-highlight: true
 
 Welcome to the Ultimate Super Mario Maker Modding Guide. This guide will teach you how to play and make mods for every entry in the Super Mario Maker series. Use the Table of Contents to navigate through the long list.
 
-This guide is maintained by myself (NightScript), bunten, hus and the rest of the [Mario Making Mods discord server](https://discord.gg/TfU8jZA).
+This guide is maintained by myself (NightScript), bunten, GRAnimated and the rest of the [Mario Making Mods discord server](https://discord.gg/TfU8jZA).
 
 ## Super Mario Maker (Wii U)
 
@@ -157,6 +157,80 @@ SMW and NSMBU music have 4 channels:
 ### Memory Modding (Credits to Psycrow)
 
 ![](http://themindhero.com/smemod.png)
+
+### Custom Clapboard
+
+This is a tutorial on how to make your own custom Super Mario Maker clapperboards. 
+
+#### Requirements
+
+- An image editing program
+- Layout.pack (Located inside your Pack folder)
+- Images that you want to replace the clapperboard with
+- [Wexos Toolbox](http://wiki.tockdom.com/wiki/Wexos%27s_Toolbox) (Download on the right-hand side)
+- [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/releases)
+
+#### Instructions
+
+1. Open `Layout.pack` with Wexos Toolbox
+2. Search for `Layout/Cmn_ClapperboardBtn_00.szs`
+   - `Edit` on the Toolbar => `Search` => Type the above => `OK`
+3. Right-click the file and press `Export`
+4. Navigate to where you want to save your file. 
+   - NOTE: Before you press "Save", find the "File name" on the save window, & delete "Layout/" from the name. Wexos will **not** let you save until you do this.
+
+5. Open the exported file & export the `.arc` file.
+6. Open the exported `.arc` file and export the following files:
+   - `timg/KachinkoAO_00^t.bflim`
+   - `timg/KachinkoBeauty_00^t.bflim`
+   - `timg/KachinkoAO_01^t.bflim`
+   - `timg/KachinkoBeauty_01^t.bflim`
+
+   AO = Ambient Occlusion (Tells the file which parts are light, and which parts are dark. (Like the Edges)) 
+   Beauty = The Base Color Maps
+
+7. Open `KachinkoAO_00^t.bflim` with Switch Toolbox, you should see this:
+   ![](https://i.imgur.com/MLS0u8U.png)
+
+8. Press `File` then `Export` on the Top, Left-Hand corner of the window. 
+   - NOTE: There are two `File`s in Switch Toolbox, press this one:
+     ![](https://i.imgur.com/O0sMLxw.png)
+
+9. Save it as a PNG to wherever location you want
+   - Make sure the ending of the filename is `.png` not `.bflim`
+10. Edit it with GIMP (Or any other image editing program) & make the entire image black.
+   ![](https://i.imgur.com/tR4k3vZ.png)
+
+11. Overwrite the image.
+12. Open `KachinkoBeauty_00^t.bflim` with Switch Toolbox & repeat step 8.
+13. Open the file with your image editing program & change it to look how you want it to. 
+   ![](https://i.imgur.com/kSRABKD.png)
+
+14. Save the image then repeat steps 7 - 11 but with "KachinkoAO_01^t.bflim"
+15. Repeat steps 12 - 13 but with "KachinkoBeauty_01^t.bflim"
+   ![](https://i.imgur.com/yBN51Up.png)
+
+16. In Switch Toolbox open `KachinkoAO_00^t.bflim` & press "File" then "Replace".
+17. Navigate to the PNG & double-click it. 
+
+18. Save it as the settings shown here:
+   ![](https://i.imgur.com/Jo132dX.png)
+
+19. Press "OK", then "File", "Save" & Replace the original BFLIM.
+20. Repeat steps 16 - 19, but with "KachinkoAO_01^t.bflim", "KachinkoBeauty_00^t.bflim", & "KachinkoBeauty_01^t.bflim"
+21. Replace all 4 BFLIM's in "Cmn_ClapperboardBtn_00.arc" in Wexos Toolbox.
+22. In Wexos Toolbox, export "blyt/Cmn_ClapperboardBtn_00.bflyt"
+23. Open the BFLYT in Wexos Toolbox & Delete "P_PlateAO_00" & "P_BarAO_00" (Right click, then Remove)
+   ![](https://i.imgur.com/TOJsDKy.png)
+
+24. Save the BFLYT & Import into .arc
+25. Save `.arc`
+26. Replace `.arc` in `.szs`
+27. Save `.szs`
+28. Replace `.szs` in `Layout.pack` & Save `Layout.pack`
+
+Done! You have successfully made your own Clapperboard.
+![](https://i.imgur.com/fscKRjO.png)
 
 ### File System Documentation
 
