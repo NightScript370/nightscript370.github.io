@@ -10,11 +10,9 @@ function linksFilter (element) {
 	return setAttribute;
 }
 
-const autoTargetBlank = (linkelements) => {
+export default function (linkelements) {
 	for (let element of linkelements) {
 		if (linksFilter(element))
 			element.setAttribute('target', '_blank');
 	}
 }
-
-export default autoTargetBlank;

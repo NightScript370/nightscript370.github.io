@@ -1,4 +1,4 @@
-const addAnchor = (elements) => {
+export default function (elements) {
 	for (let element of elements) {
 		if (element.hasAttribute('noAnchor'))
 			continue;
@@ -15,5 +15,3 @@ const addAnchor = (elements) => {
 		element.insertAdjacentElement('afterbegin', anchor);
 	};
 }
-
-export default addAnchor;
