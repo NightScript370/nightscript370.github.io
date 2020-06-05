@@ -22,9 +22,8 @@ class ProximityManager {
 }
 
 const listener = (elementArray) => {
-	Array.prototype.forEach.call(elementArray, (proxim) => {
-		let proximityManager = new ProximityManager(proxim)
-		window.addEventListener("mousemove", (mouse) => proximityManager.effect({ x: mouse.x, y: mouse.y }));
-	})
+	let proximityArray = [];
+	Array.prototype.forEach.call(elementArray, (proxim) => proximityArray.push(new ProximityManager(proxim)))
+	window.addEventListener("mousemove", (mouse) => proximityArray.forEach(proximityManager => proximityManager.effect({ x: mouse.x, y: mouse.y }));
 }
 export default listener
