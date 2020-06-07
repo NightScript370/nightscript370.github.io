@@ -1,4 +1,4 @@
-toc:
+sidebar:
   - title: Home
     url: /
     icon: home
@@ -6,12 +6,12 @@ toc:
     notif: 2
     icon: folder-open-o
     items:
-      - title: DSi Modding GUide
+      - title: DSi Modding Guide
         url: /projects/dsi-guide
       - title: Yamamura
         url: #
       - title: NightScript Domain
-        url: /projects/website
+        url: /projects/ns-domain
   - title: Blog
     icon: pencil-square-o
     url: /blog
@@ -21,3 +21,8 @@ toc:
   - title: Social Links
     icon: share-alt
     url: /social
+footer:
+  - title: Website Information
+    url: /projects/ns-domain
+  - title: Source Code
+    url: https://github.com/NightYoshi370/nightyoshi370.github.io

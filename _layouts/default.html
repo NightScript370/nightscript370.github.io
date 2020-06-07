@@ -65,13 +65,13 @@ layout: compress
 			<div id="gradient-sidebar"></div>
 			<div id="sidebar-logo" class="img bg-wrap text-center">
 				<div class="user-logo pt-3">
-					<div class="img"></div>
+					<img src="/assets/images/logo.png">
 					<h4 noAnchor>NightScript Domain</h4>
 				</div>
 			</div>
 			<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
-			<ul class="list-unstyled mb-0">
-				{% for item in site.data.nav.toc %}
+			<ul class="list-unstyled mb-0" id="sidebarLinks">
+				{% for item in site.data.nav.sidebar %}
 					{% if item.url %}
 						<li {% if item.title == page.title %}class="active"{% endif %}>
 							<a href="{{ item.url }}" class="proxim">
@@ -108,7 +108,11 @@ layout: compress
 				{% endfor %}
 			</ul>
 			<span class="bottomLinks text-center mb-2">
-				<a href="/projects/website.html">Website Information</a> - <a href="https://github.com/NightYoshi370/nightyoshi370.github.io">Source Code</a>
+				<ul class="list-inline">
+					{% for item in site.data.nav.footer %}
+						<li class="list-inline-item"><a href="{{item.url}}">{{item.title}}</a></li>
+					{% endfor %}
+				</ul>
 			</span>
 		</nav>
 
