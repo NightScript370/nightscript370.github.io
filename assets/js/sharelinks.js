@@ -65,12 +65,16 @@ export default function (cards) {
 			linkElement = document.createElement('a');
 			linkElement.classList.add('card-link');
 			linkElement.setAttribute('data-tippy-content', `Share this on ${socialEntry.title}`);
-			linkElement.setAttribute('href', 
-				socialEntry.baselink.replace("''$TEXT$''", (socialEntry.separateText ? encodeURI(socialEntry.separateText.replace("$title$", entrytitle)) : ''))
-				+ (socialEntry.text ? encodeURI(socialEntry.text.replace("$title$", entrytitle)) : '')
-				+ encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
-			);
 			linkElement.innerHTML = (socialEntry.image ? `<img src="${socialEntry.image}">` : `<i class="fa fa-${socialEntry.icon} fa-2x"></i>`);
+
+			let link = socialEntry.baselink;
+			if (link.includes("''$TEXT$''") && socialEntry.separateText)
+				link.replace("''$TEXT$''", encodeURI(socialEntry.separateText.replace("$title$", entrytitle)))
+			if (socialEntry.text)
+				link += encodeURI(socialEntry.text.replace("$title$", entrytitle))
+			link += encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
+
+			linkElement.setAttribute('href', link)
 			socialLinksElement.appendChild(linkElement);
 		}
 
