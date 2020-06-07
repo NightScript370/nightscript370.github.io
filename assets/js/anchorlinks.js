@@ -5,7 +5,7 @@ export default function (elements) {
 
 		if (!element.getAttribute('id'))
 			element.setAttribute("id", encodeURIComponent(element.innerHTML.toLowerCase().replace(/ /g, "_")))
-	
+
 		let anchor = document.createElement("a");
 		anchor.innerHTML = '<span class="sr-only">Permalink</span><i class="fa fa-link"></i>';
 		anchor.setAttribute('title', "Permalink");
