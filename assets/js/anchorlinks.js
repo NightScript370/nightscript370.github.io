@@ -7,11 +7,18 @@ export default function (elements) {
 			element.setAttribute("id", encodeURIComponent(element.innerHTML.toLowerCase().replace(/ /g, "_")))
 
 		let anchor = document.createElement("a");
-		anchor.innerHTML = '<span class="sr-only">Permalink</span><i class="fa fa-link"></i>';
 		anchor.setAttribute('title', "Permalink");
 		anchor.setAttribute('href', '#' + element.getAttribute("id"));
 		anchor.classList.add('header-link');
 		anchor.classList.add('anchor');
+		anchor.setAttribute('style', `margin-left: -${getComputedStyle(element).getPropertyValue("font-size")}`);
+
+		let image = document.createElement("img")
+		image.src = "/assets/images/icons/link.png";
+		image.style.width = getComputedStyle(element).getPropertyValue("font-size");
+		//image.style.marginRight = '2em';
+
+		anchor.innerHTML = '<span class="sr-only">Permalink</span>' + image.outerHTML
 		element.insertAdjacentElement('afterbegin', anchor);
 	};
 }

@@ -52,7 +52,6 @@ layout: compress
 
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
 		{% if page.syntax-highlight %}
@@ -83,6 +82,8 @@ layout: compress
 									{% else %}
 										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 									{% endif %}
+								{% elsif item.image %}
+									<img src="{{item.image}}" class="mr-1">
 								{% endif %} {{ item.title }}</a>
 						</li>
 					{% endif %}
@@ -97,6 +98,8 @@ layout: compress
 									{% else %}
 										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 									{% endif %}
+								{% elsif item.image %}
+									<img src="{{item.image}}" class="mr-1">
 								{% endif %} {{ item.title }}</a>
 							<ul class="collapse list-unstyled" id="{{ item.title }}Submenu">
 								{% for entry in item.items %}
@@ -113,6 +116,7 @@ layout: compress
 						<li><a href="{{item.url}}">{{item.title}}</a></li>
 					{% endfor %}
 				</ul>
+				By NightScript, Icons8 & co.
 			</span>
 		</nav>
 
@@ -121,7 +125,7 @@ layout: compress
 			{{ content }}
 
 			<a href="#" class="bttbtn bg-dark d-flex justify-content-center" id="bttbtn" aria-label="Back to top">
-				<i class="fa fa-sort-asc fa-2x"></i>
+				<img src="/assets/images/icons/arrow.png">
 			</a>
 		</div>
 

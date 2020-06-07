@@ -1,10 +1,10 @@
 sidebar:
   - title: Home
     url: /
-    icon: home
+    image: /assets/images/icons/home.svg
   - title: Projects
-    notif: 2
-    icon: folder-open-o
+    #notif: 2
+    image: /assets/images/icons/folder.svg
     items:
       - title: DSi Modding Guide
         url: /projects/dsi-guide
@@ -13,13 +13,13 @@ sidebar:
       - title: NightScript Domain
         url: /projects/ns-domain
   - title: Blog
-    icon: pencil-square-o
+    image: /assets/images/icons/create.png
     url: /blog
   - title: Game Reviews
-    icon: gamepad
+    image: /assets/images/icons/game.png
     url: /gamerev
   - title: Social Links
-    icon: share-alt
+    image: /assets/images/icons/share.svg
     url: /social
 footer:
   - title: Website Information

@@ -9,17 +9,18 @@ let circleSpeed = 0.1;
 let circleMovement = 0.6;
 
 let circles = [];
-const circleMax = random(4, 10);
+const circleMax = random(4, 7);
 while (circles.length < circleMax) {
 	// Pick a random circle
 	circles.push({
 		x: random(0, canvas.width),
 		y: random(0, canvas.height / 2),
-		r: random(3, 16),
+		r: random(3, 12),
 		a: random(0, 360)
 	});
 }
 
+ctx.globalAlpha = 0;
 setInterval(() => {
 	ctx.clearRect(0,0,canvas.width, canvas.height)
 	for (let circle of circles) {
@@ -32,5 +33,8 @@ setInterval(() => {
 		ctx.stroke();
 		circle.a += circleSpeed;
 		circle.y += Math.sin(circle.a) * circleMovement;
+
+		if (ctx.globalAlpha != 1)
+			ctx.globalAlpha+=0.015;
 	}
 }, 50);

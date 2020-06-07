@@ -2,41 +2,41 @@
 const sharedLinks = [
 	{
 		"title": "FaceBook",
-		"icon": "facebook-official",
+		"image": "/assets/images/icons/facebook.svg",
 		"baselink": "https://www.facebook.com/sharer/sharer.php?u=",
 		"cardview": true
 	},
 	{
 		"title": "Twitter",
-		"icon": "twitter",
+		"image": "/assets/images/icons/twitter.svg",
 		"baselink": "https://twitter.com/intent/tweet?text=",
 		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": ',
 		"cardview": true
 	},
 	{
 		"title": "Pinterest",
-		"icon": "pinterest",
+		"image": "/assets/images/icons/pinterest.svg",
 		"baselink": "http://pinterest.com/pin/create/button/?description=''$TEXT$''&url=",
 		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
 		"cardview": true
 	},
 	{
 		"title": "LinkedIn",
-		"icon": "linkedin",
+		"image": "/assets/images/icons/linkedin.png",
 		"baselink": "http://www.linkedin.com/shareArticle?mini=true&title=''$TEXT$''&url=",
 		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
 		"cardview": true
 	},
 	{
 		"title": "WhatsApp",
-		"icon": "whatsapp",
+		"image": "/assets/images/icons/whatsapp.svg",
 		"baselink": "https://wa.me/?text=",
 		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": ',
 		"cardview": true
 	},
 	{
 		"title": "Reddit",
-		"icon": "reddit-alien",
+		"image": "/assets/images/icons/reddit.svg",
 		"baselink": "http://www.reddit.com/submit?title=''$TEXT$''&url=",
 		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
 		"cardview": true
@@ -70,7 +70,7 @@ export default function (cards) {
 				+ (socialEntry.text ? encodeURI(socialEntry.text.replace("$title$", entrytitle)) : '')
 				+ encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
 			);
-			linkElement.innerHTML = `<i class="fa fa-${socialEntry.icon} fa-2x"></i>`;
+			linkElement.innerHTML = (socialEntry.image ? `<img src="${socialEntry.image}">` : `<i class="fa fa-${socialEntry.icon} fa-2x"></i>`);
 			socialLinksElement.appendChild(linkElement);
 		}
 

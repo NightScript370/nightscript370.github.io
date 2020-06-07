@@ -118,7 +118,8 @@ button {
 			font-size: 15px; }
 		#sidebar ul#sidebarLinks li a {
 			padding: 5px 20px;
-			display: block;
+			display: flex;
+			align-items: center;
 			color: var(--sidebar-link);
 
 			border-top-width: thin;
@@ -126,7 +127,10 @@ button {
 			border-left-width: 0;
 			border-right-width: 0;
 			border: thin solid transparent;
-			border-image-slice: 1;}
+			border-image-slice: 1; }
+			#sidebar ul#sidebarLinks li a img {
+				width: 18px;
+				height: 18px;}
 			#sidebar ul#sidebarLinks li a span.notif {
 				position: relative; }
 				#sidebar ul#sidebarLinks li a span.notif small {
@@ -227,7 +231,7 @@ button {
 	right: 30px;
 	border-radius: 50%;
 	color: #FFF;
-	padding-top: 8px; }
+	padding: 8px; }
 	.bttbtn:hover {
 		color: #FFF; }
 
@@ -259,8 +263,18 @@ button {
 	font-size: 1.3rem;
 }
 
-.card .card-body .cardShareLinks a:hover {
-	font-size: 1.1rem;
+.card .card-body .cardShareLinks {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.card .card-body .cardShareLinks a img {
+	width: 2em;
+}
+
+.card .card-body .cardShareLinks a .fa {
+	font-size: 2em;
 }
 
 .bottomLinks {
@@ -270,6 +284,7 @@ button {
 	right:0;
 	margin-left:auto;
 	margin-right:auto;
+	color: var(--text-color);
 }
 
 .mw-25 {
