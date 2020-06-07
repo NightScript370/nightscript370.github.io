@@ -1,7 +1,7 @@
 :root {
 	--main-bg-color: #00000F;
-	--close-menu-arrow: "\f053";
-	--open-menu-arrow: "\f054";
+	--close-menu-arrow: url("../images/icons/icons8-back-48.png");
+	--open-menu-arrow: url("../images/icons/icons8-forward-48.png");
 	--menu-element: #02194B;
 	--darker-menu-element: #01083A;
 	--menu-element-text-color: white;
@@ -106,7 +106,9 @@ button {
 		#sidebar.active .custom-menu {
 			margin-right: -18px; }
 		#sidebar.active .btn:before {
-			content: var(--open-menu-arrow);
+			content: '';
+			background-image: var(--open-menu-arrow);
+			background-size: 100% auto;
 			font-family: "ForkAwesome";
 			left: 2px !important; }
 		#sidebar.active .btn:after {
@@ -179,7 +181,9 @@ button {
 				bottom: 0;
 				font-family: "ForkAwesome"; }
 			#sidebar .custom-menu .btn:after {
-				content: var(--close-menu-arrow);
+				content: '';
+				background-image: var(--close-menu-arrow);
+				background-size: 100% auto;
 				right: 2px; }
 	@media (max-width: 991.98px) {
 		#sidebar {
@@ -188,7 +192,9 @@ button {
 			#sidebar .custom-menu {
 				margin-right: -25px !important; }
 				#sidebar .custom-menu .btn:before {
-					content: var(--open-menu-arrow);
+					content: '';
+					background-image: var(--open-menu-arrow);
+					background-size: 100% auto;
 					font-family: "ForkAwesome";
 					right: 2px; }
 					#sidebar .custom-menu .btn:after {
@@ -196,7 +202,9 @@ button {
 			#sidebar.active {
 				margin-left: 0; }
 				#sidebar.active .btn:before {
-					content: var(--close-menu-arrow);
+					content: '';
+					background-image: var(--close-menu-arrow);
+					background-size: 100% auto;
 					font-family: "ForkAwesome";
 					left: 2px !important; }
 				#sidebar.active .btn:after {
