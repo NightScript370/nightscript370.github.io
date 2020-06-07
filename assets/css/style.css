@@ -87,8 +87,8 @@ button {
 }
 
 #sidebar {
-	min-width: 300px;
-	max-width: 300px;
+	min-width: 250px;
+	max-width: 250px;
 	background: var(--main-bg-color);
 	color: #fff;
 	-webkit-transition: all 0.3s;
@@ -102,7 +102,7 @@ button {
 	-webkit-box-shadow: 3px 0 5px 0 var(--shadow-color);
 	box-shadow:         3px 0 5px 0 var(--shadow-color); }
 	#sidebar.active {
-		margin-left: -295px; }
+		margin-left: -245px; }
 		#sidebar.active .custom-menu {
 			margin-right: -18px; }
 		#sidebar.active .btn:before {
@@ -112,10 +112,10 @@ button {
 		#sidebar.active .btn:after {
 			display: none; }
 	#sidebar ul#sidebarLinks li {
-		font-size: 17px; }
+		font-size: 18px; }
 		#sidebar ul#sidebarLinks li > ul li {
 			margin-left: 10px;
-			font-size: 14px; }
+			font-size: 15px; }
 		#sidebar ul#sidebarLinks li a {
 			padding: 5px 20px;
 			display: block;
@@ -183,7 +183,7 @@ button {
 				right: 2px; }
 	@media (max-width: 991.98px) {
 		#sidebar {
-			margin-left: -300px;
+			margin-left: -250px;
 			position: fixed; }
 			#sidebar .custom-menu {
 				margin-right: -25px !important; }
@@ -207,12 +207,12 @@ button {
 	z-index: 0;
 	position: relative; }
 	.bg-wrap .user-logo img {
-		width: 200px;
-		height: 200px;
+		width: 175px;
+		height: 175px;
 		border-radius: 50%;
 		margin: 0 auto;
 		margin-bottom: 10px; }
-	.bg-wrap .user-logo h4 {
+	.bg-wrap .user-logo h5 {
 		color: var(--sidebar-link-active);
 		font-family: 'Comfortaa', cursive;
 		font-style: normal; }

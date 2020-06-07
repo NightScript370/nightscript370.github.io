@@ -9,7 +9,6 @@ bubblesCanvas.setAttribute('width', sidebarLogo.offsetWidth);
 bubblesCanvas.setAttribute('height', sidebarLogo.offsetHeight);
 bubblesCanvas.setAttribute('id', 'bubblesCanvas');
 bubblesCanvas.style.position = 'absolute';
-bubblesCanvas.classList.add('fade')
 
 let gradientDiv = document.getElementById("gradient-sidebar")
 gradientDiv.setAttribute('style', `width:${sidebarLogo.offsetWidth}px;height:${sidebarLogo.offsetHeight}px;`);
@@ -17,5 +16,3 @@ gradientDiv.setAttribute('style', `width:${sidebarLogo.offsetWidth}px;height:${s
 gradientDiv.insertAdjacentElement('afterend', bubblesCanvas)
 
 import('./circles.js');
-
-setTimeout(() => bubblesCanvas.classList.add('show'), 200);
