@@ -4,7 +4,7 @@ description: These are all the locations I frequently use.
 permalink: /social
 ---
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4">
 	<div class="col">
 		<div class="card h-100">
 			<img src="/assets/images/social/twitter.svg" class="card-img-top" alt="Twitter">
