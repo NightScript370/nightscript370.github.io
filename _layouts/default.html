@@ -73,7 +73,7 @@ layout: compress
 			<ul class="list-unstyled mb-0" id="sidebarLinks">
 				{% for item in site.data.nav.sidebar %}
 					{% if item.url %}
-						<li {% if item.title == page.title %}class="active"{% endif %}>
+						<li {% if item.url == page.permalink %}class="active"{% endif %}>
 							<a href="{{ item.url }}" class="proxim">
 								{% if item.icon %}
 									{% if item.notif %}
@@ -89,7 +89,7 @@ layout: compress
 						</li>
 					{% endif %}
 					{% if item.items %}
-						<li>
+						<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
 							<a href="#{{ item.title }}Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim">
 								{% if item.icon %}
 									{% if item.notif %}
@@ -104,7 +104,7 @@ layout: compress
 								{% endif %} {{ item.title }}</a>
 							<ul class="collapse list-unstyled" id="{{ item.title }}Submenu">
 								{% for entry in item.items %}
-									<li><a href="{{entry.url}}">{{entry.title}}</a></li>
+									<li {% if entry.url == page.permalink %}class="active"{% endif %}><a href="{{entry.url}}">{{entry.title}}</a></li>
 								{% endfor %}
 							</ul>
 						</li>
