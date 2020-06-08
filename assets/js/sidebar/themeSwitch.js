@@ -34,8 +34,9 @@ export default async function setThemePicker() {
 		const theme = themes[key].default;
 
 		let div = document.createElement("span");
-		div.setAttribute('data-tippy-content', key);
+		div.setAttribute('data-tooltip', key);
 		div.classList.add('themeDot')
+		div.classList.add('nstooltip')
 		div.style.background = theme['--menu-element'];
 		div.addEventListener('click', () => themeSet(key, theme))
 		div.innerHTML = `<div data-tippy-content="${key}" style="height: 100%; width: 100%;"></div>`;

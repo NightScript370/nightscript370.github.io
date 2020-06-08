@@ -64,7 +64,8 @@ export default function (cards) {
 		for (let socialEntry of sharedLinks.filter(entry => entry.cardview)) {
 			linkElement = document.createElement('a');
 			linkElement.classList.add('card-link');
-			linkElement.setAttribute('data-tippy-content', `Share this on ${socialEntry.title}`);
+			linkElement.classList.add('nstooltip');
+			linkElement.setAttribute('data-tooltip', `Share this on ${socialEntry.title}`);
 			linkElement.innerHTML = (socialEntry.image ? `<img src="${socialEntry.image}">` : `<i class="fa fa-${socialEntry.icon} fa-2x"></i>`);
 
 			let link = socialEntry.baselink;
