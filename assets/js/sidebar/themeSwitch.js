@@ -14,8 +14,12 @@ const themeSet = (key, theme) => {
 (async () => {
 	const themes = await importThemes();
 
-	if (localStorage['theme'])
-		themeSet(localStorage['theme'], themes[localStorage['theme']].default)
+	if (localStorage['theme']) {
+		if (themes[localStorage['theme']])
+			themeSet(localStorage['theme'], themes[localStorage['theme']].default)
+		else
+			localStorage['theme'] = 'default'
+	}
 })()
 
 export default async function setThemePicker() {
