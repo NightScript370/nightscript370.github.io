@@ -2,26 +2,37 @@ import importThemes from './themes/index.js';
 
 const bottomLinks = document.getElementsByClassName('bottomLinks')[0];
 
+const themeSet = (key, theme) => {
+	for (const property in theme) {
+		if (theme.hasOwnProperty(property)) {
+			const element = theme[property];
+			document.documentElement.style.setProperty(property, element);
+		}
+	}
+
+	localStorage.setItem('theme', key);
+}
+
 (async () => {
 	const themes = await importThemes();
 
+	if (localStorage['theme'])
+		themeSet(localStorage['theme'], themes[localStorage['theme']].default)
+
 	const themesContainer = document.createElement("div");
-	for (let theme of Object.values(themes)) {
-		theme = theme.default;
+	for (const key in themes) {
+		if (!themes.hasOwnProperty(key))
+			continue;
+
+		const theme = themes[key].default;
 
 		let div = document.createElement("span");
 		div.classList.add('themeDot')
 		div.style.background = theme['--menu-element'];
-		div.addEventListener('click', () => {
-			for (const key in theme) {
-				if (theme.hasOwnProperty(key)) {
-					const element = theme[key];
-					document.documentElement.style.setProperty(key, element);
-				}
-			}
-		})
+		div.addEventListener('click', () => themeSet(key, theme))
 
 		themesContainer.appendChild(div);
 	}
+
 	bottomLinks.insertAdjacentElement('afterbegin', themesContainer)
 })()
