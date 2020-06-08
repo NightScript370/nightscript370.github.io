@@ -1,7 +1,8 @@
 :root {
-	--main-bg-color: #00000F;
 	--close-menu-arrow: url("/assets/images/icons/icons8-back-48.png");
 	--open-menu-arrow: url("/assets/images/icons/icons8-forward-48.png");
+
+	--main-bg-color: #00000F;
 	--menu-element: #02194B;
 	--darker-menu-element: #01083A;
 	--menu-element-text-color: white;
@@ -15,6 +16,7 @@
 	--shadow-color: black;
 	--hover-color: rgba(255, 255, 255, 0.4);
 	--light-hover-color: rgba(255, 255, 255, 0.2);
+	--sidebar-link-active-weight: normal;
 }
 
 body {
@@ -148,7 +150,8 @@ button {
 				background: var(--light-hover-color);
 				border-color: var(--hover-color); }
 		#sidebar ul#sidebarLinks li.active > a {
-			color: var(--sidebar-link-active); }
+			color: var(--sidebar-link-active);
+			font-weight: var(--sidebar-link-active-weight); }
 	#sidebar .custom-menu {
 		display: inline-block;
 		position: absolute;

@@ -10,5 +10,8 @@ export default {
 	'--background-filter': 'initial',
 	'--sidebar-link': 'rgba(255, 255, 255, 0.6)',
 	'--sidebar-link-active': 'white',
-	'--shadow-color': 'transparent'
+	'--sidebar-link-active-weight': 'normal',
+	'--shadow-color': 'transparent',
+	'--hover-color': 'rgba(255, 255, 255, 0.4)',
+	'--light-hover-color': 'rgba(255, 255, 255, 0.2)'
 }

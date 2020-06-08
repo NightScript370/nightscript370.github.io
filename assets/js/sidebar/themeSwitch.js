@@ -30,6 +30,7 @@ export default async function setThemePicker() {
 		const theme = themes[key].default;
 
 		let div = document.createElement("span");
+		div.setAttribute('data-tippy-content', key);
 		div.classList.add('themeDot')
 		div.style.background = theme['--menu-element'];
 		div.addEventListener('click', () => themeSet(key, theme))

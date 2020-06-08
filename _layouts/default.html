@@ -54,12 +54,12 @@ layout: compress
 
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		<script src="/assets/js/sidebar/themeSwitch.js" type="module"></script>
 		{% if page.syntax-highlight %}
 			<link rel="stylesheet" href="/assets/css/syntax.css">
 		{% endif %}
 	</head>
 	<body class="d-flex">
-		<script src="/assets/js/sidebar/themeSwitch.js" type="module"></script>
 		<div class="bg"></div>
 		<nav id="sidebar">
 			<div id="gradient-sidebar"></div>
@@ -84,7 +84,7 @@ layout: compress
 										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 									{% endif %}
 								{% elsif item.image %}
-									<img src="{{item.image}}" class="mr-1">
+									<img src="{{item.image}}" class="mr-2">
 								{% endif %} {{ item.title }}</a>
 						</li>
 					{% endif %}
@@ -100,7 +100,7 @@ layout: compress
 										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 									{% endif %}
 								{% elsif item.image %}
-									<img src="{{item.image}}" class="mr-1">
+									<img src="{{item.image}}" class="mr-2">
 								{% endif %} {{ item.title }}</a>
 							<ul class="collapse list-unstyled" id="{{ item.title }}Submenu">
 								{% for entry in item.items %}
@@ -130,12 +130,12 @@ layout: compress
 			</a>
 		</div>
 
-		{% if page.syntax-highlight %}
-			<script src="/assets/js/syntaxHighlight.js"></script>
-		{% endif %}
 		<script src="https://unpkg.com/@popperjs/core@2.2.3/dist/umd/popper.min.js"></script>
 		<script src="https://unpkg.com/tippy.js@6"></script>
 		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+		{% if page.syntax-highlight %}
+			<script src="/assets/js/syntaxHighlight.js"></script>
+		{% endif %}
 		<script src="/assets/index.js" type="module"></script>
 		<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 	</body>

@@ -8,7 +8,10 @@ export default {
 	'--text-color': 'black',
 	'--background': "white center top/cover no-repeat",
 	'--background-filter': 'inherit',
-	'--sidebar-link': 'rgba(0, 0, 0, 0.6)',
+	'--sidebar-link': 'rgba(0, 0, 0, 0.75)',
 	'--sidebar-link-active': 'black',
-	'--shadow-color': '#666'
+	'--sidebar-link-active-weight': 'bold',
+	'--shadow-color': '#666',
+	'--hover-color': 'rgba(255, 255, 255, 0.4)',
+	'--light-hover-color': 'rgba(255, 255, 255, 0.2)'
 }
