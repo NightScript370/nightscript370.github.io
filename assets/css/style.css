@@ -380,8 +380,8 @@ img {
 		bottom: 0.7em;
 		left: 50%;
 		transform: translate3d(-50%, 0%, 0);
-		transition: all .3s ease;
-		transition-delay: .3s;
+		transition: all .15s ease;
+		transition-delay: .05s;
 		width: 0;
 		height: 0;
 		border-style: solid;
@@ -394,7 +394,7 @@ img {
 		position: absolute;
 		color: #fff;
 		background: #282828;
-		padding: 8px 12px;
+		padding: 4px 6px;
 		width: -webkit-max-content;
 		width: -moz-max-content;
 		width: max-content;
@@ -405,8 +405,8 @@ img {
 		top: 0;
 		border-radius: 4px;
 		transform: translate3d(-50%, 0%, 0);
-		transition: all .3s ease;
-		transition-delay: .3s; }
+		transition: all .15s ease;
+		transition-delay: .05s; }
 	.nstooltip:hover {
 		background-color: rgba(0, 0, 0, 0.12); }
 		.nstooltip:hover:before, .nstooltip:hover:after {
