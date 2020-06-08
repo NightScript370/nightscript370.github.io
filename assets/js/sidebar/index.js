@@ -1,4 +1,4 @@
-import './themeSwitch.js'
+import themeSelect from './themeSwitch.js'
 
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
 
@@ -15,4 +15,5 @@ gradientDiv.setAttribute('style', `width:${sidebarLogo.offsetWidth}px;height:${s
 
 gradientDiv.insertAdjacentElement('afterend', bubblesCanvas)
 
+themeSelect();
 import('./circles.js');

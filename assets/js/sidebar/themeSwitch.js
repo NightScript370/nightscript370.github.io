@@ -1,7 +1,5 @@
 import importThemes from './themes/index.js';
 
-const bottomLinks = document.getElementsByClassName('bottomLinks')[0];
-
 const themeSet = (key, theme) => {
 	for (const property in theme) {
 		if (theme.hasOwnProperty(property)) {
@@ -18,6 +16,11 @@ const themeSet = (key, theme) => {
 
 	if (localStorage['theme'])
 		themeSet(localStorage['theme'], themes[localStorage['theme']].default)
+})()
+
+export default async function setThemePicker() {
+	const themes = await importThemes();
+	const bottomLinks = document.getElementsByClassName('bottomLinks')[0];
 
 	const themesContainer = document.createElement("div");
 	for (const key in themes) {
@@ -35,4 +38,4 @@ const themeSet = (key, theme) => {
 	}
 
 	bottomLinks.insertAdjacentElement('afterbegin', themesContainer)
-})()
+}
