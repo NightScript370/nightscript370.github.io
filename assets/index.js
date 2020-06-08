@@ -15,6 +15,7 @@ replaceCardNoShare(document.getElementsByClassName('noShare'));
 addAnchor(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
 tableOfContents('[data-content]', '[data-toc]');
 autoTargetBlank(document.querySelectorAll('a'))
-tippy('[data-tippy-content]');
+
+document.addEventListener('DOMContentLoaded', (event) =>  tippy('[data-tippy-content]'))
 
 //document.designMode = 'on';

@@ -34,6 +34,7 @@ export default async function setThemePicker() {
 		div.classList.add('themeDot')
 		div.style.background = theme['--menu-element'];
 		div.addEventListener('click', () => themeSet(key, theme))
+		div.innerHTML = `<div data-tippy-content="${key}" style="height: 100%; width: 100%;"></div>`;
 
 		themesContainer.appendChild(div);
 	}
