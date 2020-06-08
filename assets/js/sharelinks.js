@@ -70,7 +70,7 @@ export default function (cards) {
 
 			let link = socialEntry.baselink;
 			if (link.includes("''$TEXT$''") && socialEntry.separateText)
-				link.replace("''$TEXT$''", encodeURI(socialEntry.separateText.replace("$title$", entrytitle)))
+				link = link.replace("''$TEXT$''", encodeURI(socialEntry.separateText.replace("$title$", entrytitle)))
 			if (socialEntry.text)
 				link += encodeURI(socialEntry.text.replace("$title$", entrytitle))
 			link += encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
