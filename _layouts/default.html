@@ -5,6 +5,8 @@ layout: compress
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
 	<head>
+		<script src="/assets/js/sidebar/themeSwitch.js" type="module"></script>
+
 		<title>{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 		<meta name="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
 		<meta property="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
@@ -54,7 +56,6 @@ layout: compress
 
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
-		<script src="/assets/js/sidebar/themeSwitch.js" type="module"></script>
 		{% if page.syntax-highlight %}
 			<link rel="stylesheet" href="/assets/css/syntax.css">
 		{% endif %}
