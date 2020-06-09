@@ -12,6 +12,14 @@ sidebar:
         url: #
       - title: NightScript Domain
         url: /projects/ns-domain
+  - title: Modding Guides
+    #notif: 2
+    image: /assets/images/icons/wrench
+    items:
+      - title: Super Mario Maker
+        url: /modding/smm-index
+      - title: Nintendo DS(i)
+        url: /modding/ds-index
   - title: Blog
     image: /assets/images/icons/create.png
     url: /blog

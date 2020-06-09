@@ -1,7 +1,7 @@
 ---
 title: Super Mario Maker Modding Index
 description: The complete guide to modding the Super Mario Maker series
-permalink: /smm-index
+permalink: /modding/smm-index
 syntax-highlight: true
 ---
 # Super Mario Maker Modding Guide
