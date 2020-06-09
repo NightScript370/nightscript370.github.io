@@ -14,7 +14,7 @@ sidebar:
         url: /projects/ns-domain
   - title: Modding Guides
     #notif: 2
-    image: /assets/images/icons/wrench
+    image: /assets/images/icons/wrench.png
     items:
       - title: Super Mario Maker
         url: /modding/smm-index
