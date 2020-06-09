@@ -41,7 +41,7 @@ DLDI (short for Dynamically Linked Device Interface) is a unified interface for 
 This was made due to each flashcard having different read/write commands. It was a hassle to code in a read/write function for every card, especially considering there are cards that are unknown to the marker.
 
 In order to patch DLDI, you will need a patcher. Here is a [list](https://www.chishm.com/DLDI#tools) of patchers out there depending on your device
-- nds-bootstrap automatically applies DLDI patches your Homebrew, but 
+- nds-bootstrap automatically applies DLDI patches your Homebrew
 
 ### CloneBoot
 
@@ -140,6 +140,17 @@ Keep in mind you only need to follow "Hardware NAND Mod Guide" and "Decrypting y
 The Nintendo DSi System Menu uses a signed 32-bit integer to determine the free space on the NAND. Using the actual NAND, amount will never go above 128 MB so it was safe. However, when we redirect the NAND to the SD Card, it goes above the 32-bit integer limit, which makes it overflow to a negative number. The negative number of free space will unfortunately cause an "An error has occurred" error message, not letting you boot into the menu. Fortunately, this can be fixed by making a dummy file to put it in a positive number.
 
 The positive and negative numbers are determined by pairs of two. For example, 1-2 GB of free space is allowed while 3-4 isn't. 5-6 GB of free space is allowed while 7-8 isn't.
+
+In version 1.4.0, RSA signatures in the DS Cart Whitelist aren't verified.there is an exploit regarding a vulnerability in the Nintendo DSi Flashcart whitelist that allows you to take access over the ARM9 processor, It requires version 1.4.0 (it was patched in future versions and didn't exist in prior versions) and a flashcart with a modified ROM
+
+#### Nintendo DSi Slot-1 Access & Blockout
+Slot-1 access is blocked when launching applications from the System Menu, except if said applications is either the Slot-1 launcher itself or System Settings. In order to launch normally unlaunchable slot-1 cartridges, you'll need to either make a System Settings exploit or install Unlaunch. Without either of those, you cannot launch unlaunchable flashcarts and you cannot dump ROMs to your SD card.
+
+The flashcart white list is checked via RSA signatures are contained via RSA keys on every firmware expect 1.4.0. This means that people can white list their own carts
+
+Before 1.4.0, the white list used to contain only two sections. In 1.4.0, they've introduced a third section which was made to block flashcarts that got around the first two. The third section loads up to eight different section of the rom and checks them with a hash to see if the rom has been tampered with. However, due to the forgetfullness of putting any sanity check, we can overflow into the exception vector/interrupt address using a large enough value. Best of all, this runs on ARM7 (aka the security processor) so this makes it the first exploit for the ARM7 processor. Since this happens before the lock out of the SFCG registers, we could run advanced homebrew (such as Slot-1 dumpers & external slot-1 dumpers)
+
+Unfortunately, the requirements are tight. It requires version 1.4.0 and a flashcart with a modified ROM. Also, the expoit never officially came out, due to Unlaunch being much simpler to install and having less requirements (just a way to get into homebrew) with the same advantages.
 
 #### Nintendo DSi Camera
 The Nintendo DSi Camera application has the ability to take pictures in the JPEG and save them to either the System Memory or the SD card. The way it's loaded restricts it to only DSi made images, due to lacking the proper HMAC stored inside a custom EXIF tag. Any custom images are not readable on the DSi, wther its PC taken or PC edited.
