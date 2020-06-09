@@ -128,7 +128,7 @@ The Nintendo DS shipped with a 67Mhz processor in 2004. The Nintendo DSi shipped
 
 nds-bootstrap has TWL Clock Speed as an option, but it will not try to adjust the ROM to work with the higher clock speed. That's on the application itself, and applications not working with a higher clock speed is NOT a bug on the nds-bootstrap end.
 
-### Hardmodding
+#### Hardmodding
 
 Hardmodding is when you physically solder the motherboard of the Nintendo DSi to an SD card adapter in order to be read on a computer. This is useful for restoring NAND backups, viewing NAND on your PC, etc...
 
