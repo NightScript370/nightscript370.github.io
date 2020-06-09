@@ -2,7 +2,6 @@
 title: Nintendo DS Modding Index
 description: The complete guide to modding the Nintendo DS
 permalink: /modding/ds-index
-syntax-highlight: true
 ---
 # Nintendo DS Modding Guide
 
