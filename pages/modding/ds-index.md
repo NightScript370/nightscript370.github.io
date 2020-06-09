@@ -27,14 +27,6 @@ AP (short for anti-piracy) is a method used by developers to enforce legitimate 
 
 In case there isn't a `.IPS` file for your ROM or your software didn't patch your ROM, you could try directly modifying the ROM itself using [nds-scene tool](https://gbatemp.net/download/retrogamefan-nds-rom-tool-v1-0_b1215.35735/)
 
-### Hardmodding
-
-Hardmodding is when you physically solder the motherboard of the Nintendo DSi to an SD card adapter in order to be read on a computer. This is useful for restoring NAND backups, viewing NAND on your PC, etc...
-
-Here is a guide on how to do so: [Link](https://gbatemp.net/threads/dsi-downgrading-the-complete-guide.393682/)
-
-Keep in mind you only need to follow "Hardware NAND Mod Guide" and "Decrypting your NAND". The rest isn't necessary.
-
 ### Flashcards
 
 DS mode flashcards are a slot-1 method of running Nintendo DS applications. Flashcarts have the advantages of keeping console files and portable files separate, the ability to be used without modding your system and are usable on DS Phat/Lite consoles. However, unlike modding the actual console, there are multiple flashcarts on the market, each with different kernel requirements. The kernel you use is the most important.
@@ -135,6 +127,14 @@ While most of the benefits of Custom Firmware are for the Nintendo DSi and the N
 The Nintendo DS shipped with a 67Mhz processor in 2004. The Nintendo DSi shipped with an 133Mhz processor in 2009. Most games of the Nintendo DS library were made before the Nintendo DSi came out, and as such the only processor available to them was 67Mhz. Some applications tied themselves to that clock speed and as a result, would not work well with a higher clock speed. Most games, however, would outperform the original with a higher clock speed.
 
 nds-bootstrap has TWL Clock Speed as an option, but it will not try to adjust the ROM to work with the higher clock speed. That's on the application itself, and applications not working with a higher clock speed is NOT a bug on the nds-bootstrap end.
+
+### Hardmodding
+
+Hardmodding is when you physically solder the motherboard of the Nintendo DSi to an SD card adapter in order to be read on a computer. This is useful for restoring NAND backups, viewing NAND on your PC, etc...
+
+Here is a guide on how to do so: [Link](https://gbatemp.net/threads/dsi-downgrading-the-complete-guide.393682/)
+
+Keep in mind you only need to follow "Hardware NAND Mod Guide" and "Decrypting your NAND". The rest isn't necessary.
 
 #### Nintendo DSi System Menu
 The Nintendo DSi System Menu uses a signed 32-bit integer to determine the free space on the NAND. Using the actual NAND, amount will never go above 128 MB so it was safe. However, when we redirect the NAND to the SD Card, it goes above the 32-bit integer limit, which makes it overflow to a negative number. The negative number of free space will unfortunately cause an "An error has occurred" error message, not letting you boot into the menu. Fortunately, this can be fixed by making a dummy file to put it in a positive number.
