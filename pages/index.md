@@ -14,6 +14,37 @@ Programming isn't the only thing I do (but it's my specialty). I also find inter
 I do most of my communications on Discord (primarily on my personal Discord Server) but I'm also reachable elsewhere. Just take a look at my social page to know where to find me. I go by three names: maorninja(322), NightYoshi370 and NightScript. I much prefer NightScript but some sites either have it taken or don't allow name changes.   
 I also take PayPal donations, if that's sort of your thing.
 
+### Graphic Design
+
+Being in a Graphic design class for my 11th grade, I got introduced to the powerful tool known as photoshop. We made a lot of wacky things, some of them I absolutely adore. Here are examples of a few:
+
+<div id="carouselExampleIndicators" class="carousel slide" style="height: 40vh;" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" style="display:flex; align-items: center; text-align: center;">
+		<div class="carousel-item active" data-interval="600000">
+			<img src="/assets/images/gd/CropLetterYoshi.jpg" class="d-block" style="max-height: 40vh;text-align: center;" alt="...">
+		</div>
+		<div class="carousel-item" data-interval="600000">
+			<img src="/assets/images/gd/tysonhesse.jfif" class="d-block"  style="max-height: 40vh;text-align: center;" alt="...">
+		</div>
+		<div class="carousel-item" data-interval="600000">
+			<img src="/assets/images/gd/ns_doodle.jpg" class="d-block" style="max-height: 40vh;text-align: center;" alt="...">
+		</div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
 ### Gaming
 
 When I have the time to play video games, I'd much prefer to play them on my Lenovo Yoga 710. While it is objectively underpowered for complex gaming, I don't play complex games. My gameplay preferences mostly come down to the traditional old school video games. It's why I'm a huge Nintendo fan, despite their obviously bad practices. Heck, they're the only exceptions that I make for consoles. I have an Old 3DS XL, a DS Lite and a Nintendo Wii.
