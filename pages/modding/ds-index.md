@@ -46,7 +46,7 @@ Developing Nintendo DS Homebrew typically uses devKitPro tools, such as devKitAR
 
 DS mode flashcards are a slot-1 method of running Nintendo DS applications. Flashcarts have the advantages of keeping console files and portable files separate, the ability to be used without modding your system and are usable on DS Phat/Lite consoles. However, unlike modding the actual console, there are multiple flashcarts on the market, each with different kernel requirements. The kernel you use is the most important.
 
-[There is a **work in progress** flashcart index made](https://nightyoshi370.github.io/mm-github-pages-starter/), which has kernels, firmware, reviews and purchase links.
+[There is a **work in progress** flashcart index](https://nightyoshi370.github.io/mm-github-pages-starter/), which has kernels, firmware, reviews and purchase links.
 
 #### DLDI
 
@@ -118,6 +118,20 @@ You can spot a game that uses dma via no$gba by enabling the DMA log on ARM9. A 
 In previous nds-bootstrap versions, a Mario Kart DS ROM was needed for SDK3-4 games to work or save.
 The ROM acted as a Donor ROM. nds-bootstrap grabs the donor's arm7 binary, replacing the original ROM's arm7 binary, in order for the save patches to work, and there was a few side effects as a result.
 In later nds-bootstrap versions, a Donor ROM is needed for certain THUMB or SDK5 games to boot, as well as save.
+
+#### Action Replay cheats
+
+Action Replay cheat codes are codes that allow you to make low-level programmable changes in the memory region of your favorite game(s). These changes range from simple value tweaks to extremely advanced ASM tweaks, both of which could alter the experience of the game(s) being played altogether.
+
+Flashcarts can take advantage of cheat codes by using cheat databases. Cheat functionality is integrated within the flashcart kernel respectively. The following kernels can utilize cheats:
+- Wood R4 (`usrcheat.dat`)
+- YSMenu (`usrcheat.dat`)
+
+Homebrew/digital based solutions can also take advantage of the cheat databases, the software currently available can use the following:
+- NitroHax (`cheats.xml`)
+- TWiLightMenu/nds-bootstrap (`usrcheat.dat`)
+
+For the most complete cheat database, we recommend using the one made by DeadSkullzJr titled [DeadSkullzJr's Cheat Database](https://gbatemp.net/threads/deadskullzjrs-nds-cheat-databases.488711/page-38#post-9090779)
 
 ### Nintendo DSi/TWL_FIRM of Nintendo 3DS
 #### Setting-up CFW
