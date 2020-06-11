@@ -18,37 +18,6 @@ Welcome to the resources for Nintendo DS modding. This will attempt to explain m
 	</button>
 </div>
 
-### Anti-Piracy
-
-AP (short for anti-piracy) is a method used by developers to enforce legitimate purchases and prevent piracy. This can be circumvented either from the loader or the ROM itself.
-
-- For nds-bootstrap's purposes, you could load a `.IPS` file in order to circumvent said patches. This `.IPS` file will be patched inside nds-bootstrap, so you could keep the ROM files intact. A pack of `.IPS` files are automatically included with TWiLight Menu++.
-- For Wood R4 purposes, these patches are included in the software itself. You will not need to modify the ROM itself.
-
-In case there isn't a `.IPS` file for your ROM or your software didn't patch your ROM, you could try directly modifying the ROM itself using [nds-scene tool](https://gbatemp.net/download/retrogamefan-nds-rom-tool-v1-0_b1215.35735/)
-
-### Flashcards
-
-DS mode flashcards are a slot-1 method of running Nintendo DS applications. Flashcarts have the advantages of keeping console files and portable files separate, the ability to be used without modding your system and are usable on DS Phat/Lite consoles. However, unlike modding the actual console, there are multiple flashcarts on the market, each with different kernel requirements. The kernel you use is the most important.
-
-We have a niche list of kernels on this website: https://nightyoshi370.github.io/mm-github-pages-starter/
-
-This is a WIP and it isn't properly made, but it should help you with the bare minimum
-
-### DLDI
-
-DLDI (short for Dynamically Linked Device Interface) is a unified interface for libfat made by Chishm that homebrew developers can attach to their projects.
-This was made due to each flashcard having different read/write commands. It was a hassle to code in a read/write function for every card, especially considering there are cards that are unknown to the marker.
-
-In order to patch DLDI, you will need a patcher. Here is a [list](https://www.chishm.com/DLDI#tools) of patchers out there depending on your device
-- nds-bootstrap automatically applies DLDI patches your Homebrew
-
-### CloneBoot
-
-Cloneboot is when a game sends it's own loaded arm9/arm7 binary to another console. It is used for DS Download Play, for single-card multiplayer. Not all games that have single-card multiplayer uses cloneboot though.
-
-Currently, nds-bootstrap's cloneboot patches is broken due to arm9/7 binaries being patched, which makes the RSA signatures invalid.
-
 ### WiFi
 
 - On Nintendo DS applications, you could only use WEP and Open WiFi
@@ -68,7 +37,26 @@ Hotspots are usable, so you don't need to change your router configuration
 4. Set `1.1.1.1` as your secondary DNS.
 5. You might need to NoSSL patch your game at this point, depending on the game.
 
-### Time Bomb
+### Homebrew
+#### Development
+
+Developing Nintendo DS Homebrew typically uses devKitPro tools, such as devKitARM, libnds, and libfat. There are multiple graphics library, such as NightFox Lib and EasyGL2D. There's also ToolchainGenericDS, made by coto and a port of FatFS, if you don't like how libnds is handled
+
+#### Flashcards
+
+DS mode flashcards are a slot-1 method of running Nintendo DS applications. Flashcarts have the advantages of keeping console files and portable files separate, the ability to be used without modding your system and are usable on DS Phat/Lite consoles. However, unlike modding the actual console, there are multiple flashcarts on the market, each with different kernel requirements. The kernel you use is the most important.
+
+[There is a **work in progress** flashcart index made](https://nightyoshi370.github.io/mm-github-pages-starter/), which has kernels, firmware, reviews and purchase links.
+
+#### DLDI
+
+DLDI (short for Dynamically Linked Device Interface) is a unified interface for libfat made by Chishm that homebrew developers can attach to their projects.
+This was made due to each flashcard having different read/write commands. It was a hassle to code in a read/write function for every card, especially considering there are cards that are unknown to the marker.
+
+In order to patch DLDI, you will need a patcher. Here is a [list](https://www.chishm.com/DLDI#tools) of patchers out there depending on your device
+- nds-bootstrap automatically applies DLDI patches your Homebrew
+
+#### Time Bomb
 
 A time bomb is a expiration date on flashcart kernels that manufacturers use to force users to buy a new card. Once your system clock goes beyond a certain date, the kernel will refuse to boot past the expiration screen. Thankfully, a flag is not set anywhere and it's handled in the flashcart firmware, giving us two options for work arounds:
 
@@ -82,18 +70,32 @@ We recommend YSMenu due to the higher compatibility, cheats and lack of need for
 
 In order to test whether your flashcart has a timebomb, set the date on your system to the latest value possible and launch the flashcart.
 
-### ARGV Support
+#### ARGV Support
 ARGV is an information transmitter between two homebrew Nintendo DS applications. It could be used for forwarders or alternative menus.
 
 - The homebrew needs to be programmed in order to take advantage of it. For example, GBARunner2, NesDS and GameYob all have ARGV implementation
 - There also needs to have a way to set the ARGV variables. TWiLight Menu++ and HBMenu allow setting ARGV arguments
 
-### Thumb instructions
+### Retail ROMs
+#### Anti-Piracy
 
+AP (short for anti-piracy) is a method used by developers to enforce legitimate purchases and prevent piracy. This can be circumvented either from the loader or the ROM itself.
+
+- For nds-bootstrap's purposes, you could load a `.IPS` file in order to circumvent said patches. This `.IPS` file will be patched inside nds-bootstrap, so you could keep the ROM files intact. A pack of `.IPS` files are automatically included with TWiLight Menu++.
+- For Wood R4 purposes, these patches are included in the software itself. You will not need to modify the ROM itself.
+
+In case there isn't a `.IPS` file for your ROM or your software didn't patch your ROM, you could try directly modifying the ROM itself using [nds-scene tool](https://gbatemp.net/download/retrogamefan-nds-rom-tool-v1-0_b1215.35735/)
+
+#### CloneBoot
+
+Cloneboot is when a game sends it's own loaded arm9/arm7 binary to another console. It is used for DS Download Play, for single-card multiplayer. Not all games that have single-card multiplayer uses cloneboot though.
+
+Currently, nds-bootstrap's cloneboot patches is broken due to arm9/7 binaries being patched, which makes the RSA signatures invalid.
+
+#### Thumb instructions
 Instead of the 32-bit regular ARM instructions, THUMB use 16-bit instructions. This is useful when memory bandwidth is a bottleneck.
 
-### Save Files
-
+#### Save Files
 Nintendo DS cartridges have 4 known save types:
 
 - EEPROM - Electrically Erasable Programmable Read-Only Memory
@@ -105,14 +107,19 @@ Though rare, there are DS Cartridges with NAND based saves: WarioWare DIY & Jam 
 
 There are different formats to use depending on the loader, but nds-bootstrap uses the raw `.sav` format. If you use a different format, here is a website you can use to convert it: http://www.shunyweb.info/convert.php
 
-### Card Read DMA
+#### Card Read DMA
 Card DMA (stands for Direct Memory Access) is a more efficient way to read catridge data than by software. When there isn't any data available, code can still execute. In software catridge data reads, polling the register to see if there is new data wastes times. It is the preferred way of accessing data.
 
 You can spot a game that uses dma via no$gba by enabling the DMA log on ARM9. A DMA access to the card uses AF000001 as the third parameter.
 - For example: `DMA2: 04100010 023C18C0 AF000001`
 
-### Nintendo DSi
+#### Donor ROM
 
+In previous nds-bootstrap versions, a Mario Kart DS ROM was needed for SDK3-4 games to work or save.
+The ROM acted as a Donor ROM. nds-bootstrap grabs the donor's arm7 binary, replacing the original ROM's arm7 binary, in order for the save patches to work, and there was a few side effects as a result.
+In later nds-bootstrap versions, a Donor ROM is needed for certain THUMB or SDK5 games to boot, as well as save.
+
+### Nintendo DSi/TWL_FIRM of Nintendo 3DS
 #### Setting-up CFW
 While most of the benefits of Custom Firmware are for the Nintendo DSi and the Nintendo 3DS family of systems, it allows you to unlock your consoles possibilities. Installing Custom Firmware is quite easy, and in most cases, all you need is a (micro)SD Card. We have the best of guides for you to follow, with step-by-step instructions.
 
@@ -157,11 +164,8 @@ The Nintendo DSi Camera application has the ability to take pictures in the JPEG
 
 A `pit.bin` file is used in order to load images. However, the header size at offset 0x16 is unchecked, so a big enough header size value can exceed boundaries and cause the buffer to overwrite and jump to unsigned code. This is how Memory Pit is powered.
 
-### Donor ROM
-
-In previous nds-bootstrap versions, a Mario Kart DS ROM was needed for SDK3-4 games to work or save.
-The ROM acted as a Donor ROM. nds-bootstrap grabs the donor's arm7 binary, replacing the original ROM's arm7 binary, in order for the save patches to work, and there was a few side effects as a result.
-In later nds-bootstrap versions, a Donor ROM is needed for certain THUMB or SDK5 games to boot, as well as save.
+#### Nintendo DSi Bootstage 2
+The second bootstage of the Nintendo DSi loads launcher's "title.tmd" into memory. However, they do not specify a filesize limit check, meaning that the first 80k bytes are loaded into RAM while the rest can be a custom payload. This is the basis of Unlaunch exploit.
 
 </div>
 
