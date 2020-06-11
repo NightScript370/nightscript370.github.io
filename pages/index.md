@@ -24,15 +24,15 @@ Being in a Graphic design class for my 11th grade, I got introduced to the power
 		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 	</ol>
-	<div class="carousel-inner" style="display:flex; align-items: center; text-align: center;">
+	<div class="carousel-inner">
 		<div class="carousel-item active" data-interval="600000">
-			<img src="/assets/images/gd/CropLetterYoshi.jpg" class="d-block" style="max-height: 40vh;text-align: center;" alt="...">
+			<img src="/assets/images/gd/CropLetterYoshi.jpg" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
 		</div>
 		<div class="carousel-item" data-interval="600000">
-			<img src="/assets/images/gd/tysonhesse.jfif" class="d-block"  style="max-height: 40vh;text-align: center;" alt="...">
+			<img src="/assets/images/gd/tysonhesse.jfif" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
 		</div>
 		<div class="carousel-item" data-interval="600000">
-			<img src="/assets/images/gd/ns_doodle.jpg" class="d-block" style="max-height: 40vh;text-align: center;" alt="...">
+			<img src="/assets/images/gd/ns_doodle.jpg" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
 		</div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
