@@ -22,6 +22,11 @@ Being in a Graphic design class for my 11th grade, I got introduced to the power
 {% assign my_array = my_array | push: "/assets/images/gd/CropLetterYoshi.jpg" %}
 {% assign my_array = my_array | push: "/assets/images/gd/tysonhesse.jfif" %}
 {% assign my_array = my_array | push: "/assets/images/gd/ns_doodle.jpg" %}
+{% assign my_array = my_array | push: "/assets/images/gd/Maor_Movie.jpg" %}
+{% assign my_array = my_array | push: "/assets/images/gd/smash.jpg" %}
+{% assign my_array = my_array | push: "/assets/images/gd/splatoon.jpg" %}
+{% assign my_array = my_array | push: "/assets/images/gd/hp-poster.jpg" %}
+{% assign my_array = my_array | push: "/assets/images/gd/link.jpg" %}
 
 {% include carousel.html pages=my_array %}
 
