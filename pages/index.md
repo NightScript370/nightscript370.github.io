@@ -18,32 +18,12 @@ I also take PayPal donations, if that's sort of your thing.
 
 Being in a Graphic design class for my 11th grade, I got introduced to the powerful tool known as photoshop. We made a lot of wacky things, some of them I absolutely adore. Here are examples of a few:
 
-<div id="carouselExampleIndicators" class="carousel slide" style="height: 40vh;" data-ride="carousel">
-	<ol class="carousel-indicators">
-		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner">
-		<div class="carousel-item active" data-interval="600000">
-			<img src="/assets/images/gd/CropLetterYoshi.jpg" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
-		</div>
-		<div class="carousel-item" data-interval="600000">
-			<img src="/assets/images/gd/tysonhesse.jfif" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
-		</div>
-		<div class="carousel-item" data-interval="600000">
-			<img src="/assets/images/gd/ns_doodle.jpg" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
-		</div>
-	</div>
-	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
-</div>
+{% assign my_array = "" | split: ',' %}
+{% assign my_array = my_array | push: "/assets/images/gd/CropLetterYoshi.jpg" %}
+{% assign my_array = my_array | push: "/assets/images/gd/tysonhesse.jfif" %}
+{% assign my_array = my_array | push: "/assets/images/gd/ns_doodle.jpg" %}
+
+{% include carousel.html pages=my_array %}
 
 ### Gaming
 
