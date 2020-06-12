@@ -119,7 +119,7 @@ In previous nds-bootstrap versions, a Mario Kart DS ROM was needed for SDK3-4 ga
 The ROM acted as a Donor ROM. nds-bootstrap grabs the donor's arm7 binary, replacing the original ROM's arm7 binary, in order for the save patches to work, and there was a few side effects as a result.
 In later nds-bootstrap versions, a Donor ROM is needed for certain THUMB or SDK5 games to boot, as well as save.
 
-#### Action Replay cheats
+#### Action Replay Cheats
 
 Action Replay cheat codes are codes that allow you to make low-level programmable changes in the memory region of your favorite game(s). These changes range from simple value tweaks to extremely advanced ASM tweaks, both of which could alter the experience of the game(s) being played altogether.
 
@@ -129,7 +129,11 @@ Flashcarts can take advantage of cheat codes by using cheat databases. Cheat fun
 
 Homebrew/digital based solutions can also take advantage of the cheat databases, the software currently available can use the following:
 - NitroHax (`cheats.xml`)
-- TWiLightMenu/nds-bootstrap (`usrcheat.dat`)
+  - The engine used here loads the entire cheats.xml database into the Nintendo DS's limited RAM and trys to manage things from there. This imposes a serious limit on how many cheats you can have, as NitroHax will not load a cheats.xml file past 2.4 MB
+- TWiLight Menu++ (`usrcheat.dat`)
+  - TWiLight Menu++ reads the `usrcheat.dat` and sends off the enabled cheat values to another file, which nds-bootstrap picks up
+  - The cheat engine used in nds-bootstrap is based on the one used in NitroHax. However, due to the cheat file containing only enabled cheats for that specific title, the cheats file does not have a real limit.
+  - Bootstrap 4 DS (aka the nds-bootstrap version used on flashcarts) does not support cheats, due to not having enough RAM and the limitations of the Memory Expansion Pack.
 
 For the most complete cheat database, we recommend using the one made by DeadSkullzJr titled [DeadSkullzJr's Cheat Database](https://gbatemp.net/threads/deadskullzjrs-nds-cheat-databases.488711/page-38#post-9090779)
 
