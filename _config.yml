@@ -7,4 +7,3 @@ defaults:
   -
     values:
       layout: "default"
-      title: "Pk11"

@@ -1,19 +1,20 @@
 import themeSelect from './themeSwitch.js'
+import './profilebg.js'
 themeSelect();
 
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
+document.addEventListener("click", (evt) => {
+	if (window.innerWidth > 991.98) return;
 
-let sidebarLogo = document.getElementById("sidebar-logo");
+	const flyoutElement = document.getElementById("sidebar");
+	let targetElement = evt.target; // clicked element
 
-let bubblesCanvas = document.createElement("canvas");
-bubblesCanvas.setAttribute('width', sidebarLogo.offsetWidth);
-bubblesCanvas.setAttribute('height', sidebarLogo.offsetHeight);
-bubblesCanvas.setAttribute('id', 'bubblesCanvas');
-bubblesCanvas.style.position = 'absolute';
+	do {
+		if (targetElement == flyoutElement) return;
+		targetElement = targetElement.parentNode;
+	} while (targetElement);
 
-let gradientDiv = document.getElementById("gradient-sidebar")
-gradientDiv.setAttribute('style', `width:${sidebarLogo.offsetWidth}px;height:${sidebarLogo.offsetHeight}px;`);
-
-gradientDiv.insertAdjacentElement('afterend', bubblesCanvas)
-
-import('./circles.js');
+	// This is a click outside.
+	if (document.getElementById('sidebar').classList.value == 'active')
+		document.getElementById('sidebar').classList.toggle('active')
+});
