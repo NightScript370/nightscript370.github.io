@@ -20,7 +20,7 @@ let circleSpeed = 0.1;
 let circleMovement = 0.6;
 
 let circles = [];
-const circleMax = random(4, 7);
+const circleMax = random(5, 7);
 while (circles.length < circleMax) {
 	// Pick a random circle
 	circles.push({

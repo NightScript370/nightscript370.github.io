@@ -13,6 +13,7 @@
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
+	display: hidden;
   }
   
   .carousel__ns__slides {
