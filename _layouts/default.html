@@ -52,12 +52,13 @@ layout: compress
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@NightScript" />
 
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
 		{% if page.syntax-highlight %}
 			<link rel="stylesheet" href="/assets/css/syntax.css">
+		{% endif %}
+		{% if page.carousel %}
+			<link rel="stylesheet" href="/assets/css/carousel.css">
 		{% endif %}
 	</head>
 	<body class="d-flex">
@@ -66,8 +67,7 @@ layout: compress
 			<div id="gradient-sidebar"></div>
 			<div id="sidebar-logo" class="img bg-wrap text-center">
 				<div class="user-logo pt-3">
-					<img src="/assets/images/logo.png">
-					<h5 noAnchor>NightScript Domain</h5>
+					<img src="/assets/images/servericon.png">
 				</div>
 			</div>
 			<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>

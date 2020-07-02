@@ -1,26 +1,44 @@
-<div id="carouselExampleIndicators" class="carousel slide" style="height: 40vh;" data-ride="carousel">
-	<ol class="carousel-indicators">
-		{% assign number = 0 %}
+<div class="container">
+	<div class="carousel_ns" id="{{include.id}}">
+		{% assign number = 1 %}
 		{% for page in include.pages %}
-			<li data-target="#carouselExampleIndicators" data-slide-to="{{number}}" {% if number == 0 %}class="active"{% endif %}></li>
+			<input type="radio" name="slides" {% if number == 1 %}checked="checked"{% endif %} id="slide-{{number}}">
 			{% assign number = number | plus: 1 %}
 		{% endfor %}
-	</ol>
-	<div class="carousel-inner">
-		{% assign number = 0 %}
-		{% for page in include.pages %}
-			<div class="carousel-item {% if number == 0 %}active{% endif %}">
-				<img src="{{page}}" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
-			</div>
-			{% assign number = number | plus: 1 %}
-		{% endfor %}
+		<ul class="carousel__ns__slides">
+			{% for page in include.pages %}
+				<li class="carousel__ns__slide">
+					<figure>
+						<div><img src="{{page[0]}}" alt=""></div>
+						<figcaption>{{page[1]}}.</figcaption>
+					</figure>
+				</li>
+			{% endfor %}
+		</ul>
+		<ul class="carousel__ns__thumbnails">
+			{% assign number = 1 %}
+			{% for page in include.pages %}
+				<li><label for="slide-{{number}}"><img src="{{page[0]}}" alt=""></label></li>
+				{% assign number = number | plus: 1 %}
+			{% endfor %}
+		</ul>
 	</div>
-	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
 </div>
+
+<style>
+	{% assign number = include.pages | size %}
+	{% for page in include.pages %}
+		#{{include.id}} > input:nth-of-type({{number}}):checked ~ .carousel__ns__slides .carousel__ns__slide:first-of-type {
+			margin-left: -{{ number | times: 100 | minus: 100 }}%;
+		}
+		{% assign number = number | minus: 1 %}
+	{% endfor %}
+
+	{% assign number = 1 %}
+	{% for page in include.pages %}
+		#{{include.id}} > input:nth-of-type({{number}}):checked ~ .carousel__ns__thumbnails li:nth-of-type({{number}}) {
+			box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+		}
+		{% assign number = number | plus: 1 %}
+	{% endfor %}
+</style>
