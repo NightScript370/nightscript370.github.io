@@ -37,7 +37,7 @@
 	{% assign number = 1 %}
 	{% for page in include.pages %}
 		#{{include.id}} > input:nth-of-type({{number}}):checked ~ .carousel__ns__thumbnails li:nth-of-type({{number}}) {
-			box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+			box-shadow: 0px 0px 0px 5px var(--lighter-menu-element);
 		}
 		{% assign number = number | plus: 1 %}
 	{% endfor %}
