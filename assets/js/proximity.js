@@ -19,7 +19,7 @@ class ProximityManager {
 		if (!window.chrome) {
 			this.proxim.style.borderImageSource = `radial-gradient( circle at ${x}px ${y}px, var(--light-hover-color) 0%, transparent ${nohoverradius}px)`;
 			this.proxim.style.borderColor = "var(--hover-color)"
-		} 
+		}
 	}
 }
 

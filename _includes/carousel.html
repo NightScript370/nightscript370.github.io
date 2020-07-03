@@ -15,13 +15,13 @@
 				</li>
 			{% endfor %}
 		</ul>
-		<ul class="carousel__ns__thumbnails">
+		<div class="carousel__ns__thumbnails row mt-2">
 			{% assign number = 1 %}
 			{% for page in include.pages %}
-				<li><label for="slide-{{number}}"><img src="{{page[0]}}" alt=""></label></li>
+				<div class="col-lg-1 col-md-2 col-sm-3 carousel__ns__thumbnail my-2"><label for="slide-{{number}}"><img src="{{page[0]}}" alt=""></label></div>
 				{% assign number = number | plus: 1 %}
 			{% endfor %}
-		</ul>
+		</div>
 	</div>
 </div>
 
@@ -36,7 +36,7 @@
 
 	{% assign number = 1 %}
 	{% for page in include.pages %}
-		#{{include.id}} > input:nth-of-type({{number}}):checked ~ .carousel__ns__thumbnails li:nth-of-type({{number}}) {
+		#{{include.id}} > input:nth-of-type({{number}}):checked ~ .carousel__ns__thumbnails .carousel__ns__thumbnail:nth-of-type({{number}}) label img {
 			box-shadow: 0px 0px 0px 5px var(--lighter-menu-element);
 		}
 		{% assign number = number | plus: 1 %}

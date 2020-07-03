@@ -81,23 +81,7 @@
   .carousel__ns__slide.scrollable {
 	overflow-y: scroll;
   }
-  
-  .carousel__ns__thumbnails {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	margin: 0 -10px;
-  }
-  .carousel__ns__slides + .carousel__ns__thumbnails {
-	margin-top: 20px;
-  }
-  .carousel__ns__thumbnails li {
-	flex: 1 1 auto;
-	max-width: calc((100% / 6) - 20px);
-	margin: 0 10px;
-	transition: all 300ms ease-in-out;
-  }
+
   .carousel__ns__thumbnails label {
 	display: block;
 	position: relative;
@@ -130,4 +114,6 @@
 	height: 100%;
 	object-fit: cover;
   }
-  
+  .carousel__ns__thumbnail {
+	transition: all 300ms ease-in-out;
+  }
