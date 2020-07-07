@@ -60,6 +60,13 @@ layout: compress
 		{% if page.carousel %}
 			<link rel="stylesheet" href="/assets/css/carousel.css">
 		{% endif %}
+		{% if page.listinnumber %}
+			<style>
+				ol ol, ol ul, ul ol, ul ul {
+					margin-bottom: 1rem;
+				}
+			</style>
+		{% endif %}
 	</head>
 	<body class="d-flex">
 		<div class="bg"></div>

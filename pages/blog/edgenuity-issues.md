@@ -2,6 +2,7 @@
 title: "Edgenuity issues"
 description: Here's an in depth analysis of the system titled Edgenuity
 permalink: /blog/edgenuity-issues
+listinnumber: true
 ---
 
 # Edgenuity Issues
@@ -29,27 +30,25 @@ According to the research I’ve done, a company titled edgenuity has been going
    You might be thinking that I’m looking too deep into things, and if so, let’s look at things with face value (aka what is being presented instead of trying to interpret things on our own)
 
    The course aims are to improve all aspects of the English that we speak, as in Writing, Reading and Communicating. If that's the case, how do we have work such as the following?
-
-```
-He took the Elephant - All-the-Elephant-there-was - and said 'Play at being an Elephant,' and All-the-Elephant-there-was played. He took the Beaver - All-the-Beaver-there-was - and said 'Play at being a Beaver,' and All-the-Beaver-there-was played. He took the Cow - All-the-Cow-there-was - and said 'Play at being a Cow,' and All-the-Cow-there-was played.
-```
+   > He took the Elephant - All-the-Elephant-there-was - and said 'Play at being an Elephant,' and All-the-Elephant-there-was played. He took the Beaver - All-the-Beaver-there-was - and said 'Play at being a Beaver,' and All-the-Beaver-there-was played. He took the Cow - All-the-Cow-there-was - and said 'Play at being a Cow,' and All-the-Cow-there-was played.
 
    The aim of this was trying to show how to determine who the target audience for a passage is. In this example, it is clearly oriented towards children, by repeating words. However, isn’t this course supposed to be oriented towards improving communication in real life? How could we then include farm examples here? It doesn’t make any sense.
 
    I’ve also had an issue where they try to get into my personal life. In a certain assignment, it asked me what creates images in my mind, and then it told me what they think should be in my mind. Even though all of these sentences make images in my mind, they determined it was wrong.
+   > ![](https://cdn.discordapp.com/attachments/562823520984367135/729408129716191352/unknown.png)
 
    I was wondering if anyone else had any issues with edgenuity so I checked the edgenuity fan subreddit and look what...interesting...things I found:
 
-   Sexist Ideologies
-   Incorrect information about largest information
+   - [Sexist Ideologies](https://www.reddit.com/r/edgenuity/comments/hczarj/what_why_did_edgenuity_approve_of_this_in_the/)
+   - [Incorrect information about largest desert](https://www.reddit.com/r/edgenuity/comments/h7ce2n/quick_google_search_proved_that_the_largest/)
 
    It’s not just me that has issues with this site
 7. Their absolute insistence that you learn it from them is extremely harmful. In order to advance to the course assignment, we have to watch their video fully without skipping around or doing anything of the sort. You are to sit for the next 4 minutes with the tab highlighted (point 2), and no speed up (point 4). As well as being inaccurate (point 6), there are other better courses and works students can engage in that offer more face value than what is being presented. For example, I do my own independent writing on a blog. Here are two examples of my writing.
 
-   - Issues with ownership: https://nightyoshi370.github.io/blog/ownership-issues
-   - Video game development plan: https://nightyoshi370.github.io/blog/sonic-return-of-infinite
+   - [Issues with ownership](https://nightyoshi370.github.io/blog/ownership-issues)
+   - [Video game development plan](https://nightyoshi370.github.io/blog/sonic-return-of-infinite)
 
-   Heck, even the ones I’m not proud of (such as this one about gaming) still offer me experience, practices, and allow me to analyze the way I write. I already know on my own what words such as “analyze” and “theme” is; why do I need a computer to force me to watch it?
+   Heck, even the ones I’m not proud of (such as [this one about gaming](https://nightyoshi370.github.io/blog/gaming)) still offer me experience, practices, and allow me to analyze the way I write. I already know on my own what words such as “analyze” and “theme” is; why do I need a computer to force me to watch it?
 
    Plus, the definition of said words isn’t the greatest, but if little Jimmy wanted to use another resource, it isn’t one or the other. We can’t skip the video and say “we already learned this”.
 
@@ -58,15 +57,15 @@ He took the Elephant - All-the-Elephant-there-was - and said 'Play at being an E
    First impressions are extremely important. For example, in the video game world, they determine whether a console would be successful or not. New Super Mario Bros U was the Nintendo Wii U’s first impression and that’s why it was a failure. Meanwhile, Breath of the Wild was the Nintendo Switch’s first impression and it’s easily the best Nintendo console ever released. So, looking at edgenuity, you could already see why people don’t like forced tutorials when they point out the obvious.
 8. The amount of work served is overwhelming, especially to those who prefer to take their time, either to improve quality or require assistance understanding the material. As someone that does not like strict time limits, I feel emotionally destroyed when I miss one day and I see 2 hours of work. This past week, I have 8 hours of work missing and my mental level is going down the drain.
 
-   Looking through the subreddit I mentioned before, I found this image: https://www.reddit.com/r/edgenuity/comments/gze79c/this_is_going_to_be_hell/
+   Looking through the subreddit I mentioned before, I found this image:
+   > ![](https://preview.redd.it/9pqi6nchrs351.png?width=960&crop=smart&auto=webp&s=32556fd4dff356a16b8e34c2331470985d74d6c1)     
+   > <footer><a href="https://www.reddit.com/r/edgenuity/comments/gze79c/this_is_going_to_be_hell/">Source (Reddit)</a></footer>
 
    This is WRONG. They shove thousands of assignments down people's throats and you can’t speed it up to try and catch up because of the previous points (can’t fast forward and force to watch the video and it has to be from them).
 9. Now, about the class itself, I don’t even feel like I need it. The method that is used to do the course is more troublesome than it’s worth, and I’m only doing this because I need to make up a D from my 10th grade english class. If I have to deal with all this emotional stress though, I don’t want to do this.
 
 To get to the point, I feel like edgenuity is a terrible platform and since it's handled by the district level, I don't think it's possible to use anything else. That's why I request a drop out of the class; it is destroying my time, emotions and other aspects of me. This is half the size (5 pages) of a 10 paged article I wrote on why the 10th grade English teacher I had was awful, yet it was only in the first week of using this software. If I were to stay here any more, I would have much more to write about for #6. As brought up in point 9, I don't even have a bad grade. I only wanted to join summer school because I wanted to make up the D I have received in the class with the bad teacher that I wrote a 10 page rant on (PS: He got fired the year I left my old school.)
-In a more general sense, with all the points brought up above, I say the inclusion of Edgenuity in the education department contributes to the mindset that school districts choose things that are cheap. It does the exact opposite of the goal it tries to achieve and the simple fact that we cannot use anything else is frustrating beyond no words. I haven’t even mentioned any bugs, in which there are so many of them some could even hit the front page of r/softwaregore, a subreddit talking about computer bugs.
-
-https://www.reddit.com/r/edgenuity/comments/hifm75/i_i_didnt_even_write_anything_and_got_a_100/
+In a more general sense, with all the points brought up above, I say the inclusion of Edgenuity in the education department contributes to the mindset that school districts choose things that are cheap. It does the exact opposite of the goal it tries to achieve and the simple fact that we cannot use anything else is frustrating beyond no words. I haven’t even mentioned any [bugs](https://www.reddit.com/r/edgenuity/comments/hifm75/i_i_didnt_even_write_anything_and_got_a_100/), in which there are so many of them some could even hit the front page of r/softwaregore, a subreddit talking about computer bugs.
 
 To the principal of the summer school program I sent this to, If you've read up to this point, I congratulate you. You have been able to withstand a semi-immature complaint about a system that is not up to the school. This rant, however, gave me more experience on how to write professionally and how to argue a point. I've willingly spent more time writing this essay which would probably not go anywhere than actually doing the assignments themselves. I consider that a problem and I feel like it's a problem that could be changed.
 
