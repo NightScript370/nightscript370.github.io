@@ -137,6 +137,12 @@ Homebrew/digital based solutions can also take advantage of the cheat databases,
 
 For the most complete cheat database, we recommend using the one made by DeadSkullzJr titled [DeadSkullzJr's Cheat Database](https://gbatemp.net/threads/deadskullzjrs-nds-cheat-databases.488711/page-38#post-9090779)
 
+Cheat codes generally have types A through E, and here is a description of them:
+
+- The 0xE code type is a 32-bit code type that allows you to make multiple writes in many consecutives addresses all at once. Essentially, it is like the basic 32-bit RAM write code type (0x0), except this doesn't have addresses listed next the the values you want to write. Instead, the 0xE code type is programmed to automatically branch from a starting address, then determine the addresses to write to. From there, you just have to tack in the amount to write to in order for it to do the job.
+
+Credits: (`DeadSkullzJr`)
+
 ### Nintendo DSi/TWL_FIRM of Nintendo 3DS
 #### Setting-up CFW
 While most of the benefits of Custom Firmware are for the Nintendo DSi and the Nintendo 3DS family of systems, it allows you to unlock your consoles possibilities. Installing Custom Firmware is quite easy, and in most cases, all you need is a (micro)SD Card. We have the best of guides for you to follow, with step-by-step instructions.
