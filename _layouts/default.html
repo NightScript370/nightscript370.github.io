@@ -67,6 +67,12 @@ layout: compress
 				}
 			</style>
 		{% endif %}
+
+		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+		<script>
+			window.OneSignal = window.OneSignal || [];
+			OneSignal.push(() => OneSignal.init({ appId: "2492bd69-a16e-4fd4-98b6-5b9fbf00ebd4" }));
+		</script>
 	</head>
 	<body class="d-flex">
 		<div class="bg"></div>
