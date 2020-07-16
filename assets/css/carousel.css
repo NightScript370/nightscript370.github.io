@@ -1,23 +1,15 @@
-.carousel .carousel-indicators {
-    position: static;
-    margin-top: 20px
+.carousel-thumbnails .card img {
+	display: block;
+	opacity: 0.5;
+	object-fit: cover;
 }
 
-.carousel .carousel-indicators>li {
-    width: 100px
-}
-
-.carousel .carousel-indicators li img {
-    display: block;
-    opacity: 0.5
-}
-
-.carousel .carousel-indicators li.active img {
-    opacity: 1
-}
-
-.carousel .carousel-indicators li:hover img {
+.carousel-thumbnails .card:hover img {
     opacity: 0.75
+}
+
+.carousel-thumbnails .card.active img {
+    opacity: 1
 }
 
 .carousel-caption p {
