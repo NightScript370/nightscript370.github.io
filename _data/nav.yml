@@ -23,9 +23,6 @@ sidebar:
   - title: Blog
     image: /assets/images/icons/create.png
     url: /blog
-  - title: Game Reviews
-    image: /assets/images/icons/game.png
-    url: /gamerev
   - title: Social Links
     image: /assets/images/icons/share.svg
     url: /social
