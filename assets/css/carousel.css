@@ -1,20 +1,15 @@
 .carousel-thumbnails .card img {
 	display: block;
-	opacity: 0.5;
 	object-fit: cover;
-	max-width: 10vh;
-	max-height: 10vh;
 }
 
-.carousel-thumbnails .card:hover img {
-    opacity: 0.75
+.carousel-caption {
+	bottom: 0;
+	position: static;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
-.carousel-thumbnails .card.active img {
-    opacity: 1
-}
-
-.carousel-caption p {
-	text-align: center;
-	background-color: rgba(0,0,0,.5);
+.carousel-thumbnails {
+	margin-top: 0;
 }

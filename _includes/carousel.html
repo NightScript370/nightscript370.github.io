@@ -22,16 +22,16 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
+</div>
 
-	<div class="carousel-thumbnails row row-cols-1 row-cols-md-6 row-cols-lg-4 row-cols-xl-6 row-cols-xxl-9 row-cols-xxxl-12 g-4">
-		{% assign number = 0 %}
-		{% for page in include.pages %}
-			<div class="col">
-				<a class="card {% if number == 0 %}active{% endif %}" data-target="#carousel1" data-slide-to="{{number}}">
-					<img src="{{page[0]}}" class="card-img-top" alt="...">
-				</a>
-			</div>
-			{% assign number = number | plus: 1 %}
-		{% endfor %}
-	</div>
+<div class="row row-cols-1 row-cols-md-6 row-cols-lg-4 row-cols-xl-6 row-cols-xxl-9 row-cols-xxxl-12 g-4 carousel-thumbnails">
+	{% assign number = 0 %}
+	{% for page in include.pages %}
+		<div class="col">
+			<a class="card {% if number == 0 %}active{% endif %}" data-target="#carousel1" data-slide-to="{{number}}">
+				<img src="{{page[0]}}" class="card-img-top" alt="...">
+			</a>
+		</div>
+		{% assign number = number | plus: 1 %}
+	{% endfor %}
 </div>
