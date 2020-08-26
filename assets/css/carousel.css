@@ -1,119 +1,15 @@
-.carousel_ns {
+.carousel-thumbnails .card img {
 	display: block;
-	text-align: left;
-	position: relative;
-	margin-bottom: 22px;
-  }
-  .carousel_ns > input {
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	display: hidden;
-  }
-  
-  .carousel__ns__slides {
-	position: relative;
-	z-index: 1;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	white-space: nowrap;
-	box-sizing: border-box;
-	display: flex;
-  }
-  
-  .carousel__ns__slide {
-	position: relative;
-	display: block;
-	flex: 1 0 100%;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	transition: all 300ms ease-out;
-	box-sizing: border-box;
-	white-space: normal;
-  }
-  .carousel__ns__slide figure {
-	display: flex;
-	margin: 0;
-  }
-  .carousel__ns__slide div {
-	position: relative;
-	width: 100%;
-  }
-  .carousel__ns__slide div:before {
-	display: block;
-	content: "";
-	width: 100%;
-	padding-top: 45%;
-  }
-  .carousel__ns__slide div > img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-  }
-  .carousel__ns__slide img {
-	display: block;
-	flex: 1 1 auto;
-	object-fit: contain;
-  }
-  .carousel__ns__slide figcaption {
-	align-self: flex-end;
-	padding: 20px 20px 0 20px;
-	flex: 0 0 auto;
-	width: 25%;
-	min-width: 150px;
-  }
-  .carousel__ns__slide .credit {
-	margin-top: 1rem;
-	color: rgba(0, 0, 0, 0.5);
-	display: block;
-  }
-  .carousel__ns__slide.scrollable {
-	overflow-y: scroll;
-  }
-
-  .carousel__ns__thumbnails label {
-	display: block;
-	position: relative;
-  }
-  .carousel__ns__thumbnails label:before {
-	display: block;
-	content: "";
-	width: 100%;
-	padding-top: 100%;
-  }
-  .carousel__ns__thumbnails label > img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-  }
-  .carousel__ns__thumbnails label:hover, .carousel__ns__thumbnails label:focus {
-	cursor: pointer;
-  }
-  .carousel__ns__thumbnails label:hover img, .carousel__ns__thumbnails label:focus img {
-	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
-	transition: all 300ms ease-in-out;
-  }
-  .carousel__ns__thumbnails img {
-	display: block;
-	width: 100%;
-	height: 100%;
 	object-fit: cover;
-  }
-  .carousel__ns__thumbnail {
-	transition: all 300ms ease-in-out;
-  }
+}
+
+.carousel-caption {
+	bottom: 0;
+	position: static;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.carousel-thumbnails {
+	margin-top: 0;
+}
