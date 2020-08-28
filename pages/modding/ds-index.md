@@ -76,6 +76,14 @@ ARGV is an information transmitter between two homebrew Nintendo DS applications
 - The homebrew needs to be programmed in order to take advantage of it. For example, GBARunner2, NesDS and GameYob all have ARGV implementation
 - There also needs to have a way to set the ARGV variables. TWiLight Menu++ and HBMenu allow setting ARGV arguments
 
+### Hardmod
+Hardmodding is when you physically solder the motherboard of the Nintendo DSi to an SD card adapter in order to be read on a computer. This is useful for restoring NAND backups, viewing NAND on your PC, etc...
+#### Nintendo DS
+![](https://media.discordapp.net/attachments/547986366357700620/736370094392999947/mobo_pinout.png?width=893&height=603)
+
+#### Nintendo DSi
+Follow the "Hardware NAND Mod Guide" and "Decrypting your NAND" of [this](https://gbatemp.net/threads/dsi-downgrading-the-complete-guide.393682/) guide
+
 ### Retail ROMs
 #### Anti-Piracy
 
@@ -158,14 +166,6 @@ While most of the benefits of Custom Firmware are for the Nintendo DSi and the N
 The Nintendo DS shipped with a 67Mhz processor in 2004. The Nintendo DSi shipped with an 133Mhz processor in 2009. Most games of the Nintendo DS library were made before the Nintendo DSi came out, and as such the only processor available to them was 67Mhz. Some applications tied themselves to that clock speed and as a result, would not work well with a higher clock speed. Most games, however, would outperform the original with a higher clock speed.
 
 nds-bootstrap has TWL Clock Speed as an option, but it will not try to adjust the ROM to work with the higher clock speed. That's on the application itself, and applications not working with a higher clock speed is NOT a bug on the nds-bootstrap end.
-
-#### Hardmodding
-
-Hardmodding is when you physically solder the motherboard of the Nintendo DSi to an SD card adapter in order to be read on a computer. This is useful for restoring NAND backups, viewing NAND on your PC, etc...
-
-Here is a guide on how to do so: [Link](https://gbatemp.net/threads/dsi-downgrading-the-complete-guide.393682/)
-
-Keep in mind you only need to follow "Hardware NAND Mod Guide" and "Decrypting your NAND". The rest isn't necessary.
 
 #### Nintendo DSi System Menu
 The Nintendo DSi System Menu uses a signed 32-bit integer to determine the free space on the NAND. Using the actual NAND, amount will never go above 128 MB so it was safe. However, when we redirect the NAND to the SD Card, it goes above the 32-bit integer limit, which makes it overflow to a negative number. The negative number of free space will unfortunately cause an "An error has occurred" error message, not letting you boot into the menu. Fortunately, this can be fixed by making a dummy file to put it in a positive number.
