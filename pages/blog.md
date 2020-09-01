@@ -25,6 +25,10 @@ I like to write a lot so I thought I might as well write things in a blog. These
 
 - [Video Game Concepts] --- [Sonic: Return of Infinite](https://nightyoshi370.github.io/blog/sonic-return-of-infinite)
 
+### Personal Experiences
+
+- [NightScript's Summer of 2020](https://nightyoshi370.github.io/blog/summer-2020)
+
 ##### Scrapped Articles
 
 These articles are bad and should not be read. They are only here for both archival purposes and because I either cannot find a replacement or because I didn't write one yet
