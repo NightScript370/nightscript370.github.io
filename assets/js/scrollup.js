@@ -8,6 +8,8 @@ mybutton.addEventListener('click', () => {
 	event.preventDefault()
 });
 
-document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? mybutton.style.opacity = 1 : mybutton.style.opacity = 0;
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = () => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? mybutton.style.opacity = 1 : mybutton.style.opacity = 0;
+if (!window.matchMedia("print")) {
+	document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? mybutton.style.opacity = 1 : mybutton.style.opacity = 0;
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = () => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? mybutton.style.opacity = 1 : mybutton.style.opacity = 0;
+}

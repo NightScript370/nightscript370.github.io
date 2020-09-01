@@ -11,16 +11,17 @@ const themeSet = (key, theme) => {
 	localStorage.setItem('theme', key);
 }
 
-(async () => {
-	const themes = await importThemes();
+if (!window.matchMedia("print"))
+	(async () => {
+		const themes = await importThemes();
 
-	if (localStorage['theme']) {
-		if (themes[localStorage['theme']])
-			themeSet(localStorage['theme'], themes[localStorage['theme']].default)
-		else
-			localStorage['theme'] = 'default'
-	}
-})()
+		if (localStorage['theme']) {
+			if (themes[localStorage['theme']])
+				themeSet(localStorage['theme'], themes[localStorage['theme']].default)
+			else
+				localStorage['theme'] = 'default'
+		}
+	})()
 
 export default async function setThemePicker() {
 	const themes = await importThemes();

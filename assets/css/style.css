@@ -451,3 +451,38 @@ img {
 				blockquote:before,blockquote:after {
 					content: ""
 				}
+
+@media print {
+	:root {
+		--main-bg-color: white;
+		--menu-element: #EEE;
+		--darker-menu-element: #EEE;
+		--menu-element-text-color: black;
+		--lighter-menu-element: #DAD7D1;
+		--gradient-top: #666;
+		--text-color: black;
+		--background: white center top/cover no-repeat;
+		--background-filter: white;
+		--sidebar-link: rgba(0, 0, 0, 0.75);
+		--sidebar-link-active: black;
+		--sidebar-link-active-weight: bold;
+		--shadow-color: #DDD;
+		--hover-color: rgba(255, 255, 255, 0.4);
+		--light-hover-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.page-padding {
+		width:100%;
+		padding-top: 0.5rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	#sidebar {
+		display: none;
+	}
+
+	.carousel.slide {
+		display: none;
+	}
+}
