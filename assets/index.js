@@ -11,8 +11,6 @@ if (!window.matchMedia("print").matches) {
 	import("./js/anchorlinks.js").then(mod => mod.default(document.querySelectorAll('h1, h2, h3, h4, h5, h6')))
 	import("./js/table-of-contents.js").then(mod => mod.default('[data-content]', '[data-toc]'))
 	import("./js/autotargetblank.js").then(mod => mod.default(document.querySelectorAll('a')))
-} else {
-	console.log('matches print')
 }
 
 //document.designMode = 'on';
