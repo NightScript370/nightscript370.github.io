@@ -11,7 +11,7 @@ const themeSet = (key, theme) => {
 	localStorage.setItem('theme', key);
 }
 
-if (!window.matchMedia("print"))
+if (!window.matchMedia("print").matches)
 	(async () => {
 		const themes = await importThemes();
 
