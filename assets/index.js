@@ -1,19 +1,15 @@
-import "./js/sidebar/index.js";
-import "./js/scrollup.js";
-import proximity from "./js/proximity.js";
-import replaceCardNoShare from "./js/sharelinks.js";
-import tableOfContents from "./js/table-of-contents.js";
-import addAnchor from "./js/anchorlinks.js";
-import autoTargetBlank from "./js/autotargetblank.js";
+if (!window.matchMedia("print")) {
+	if (document.cookie.includes('particles=on'))
+		import('./js/particles.js');
 
-if (document.cookie.includes('particles=on'))
-	import('./js/particles.js');
+	import("./js/sidebar/index.js").then(mod => mod.default());
+	import("./js/scrollup.js").then(mod => mod.default());
+	import("./js/proximity.js").then(mod => mod.default(document.getElementsByClassName("proxim")))
 
-proximity(document.getElementsByClassName("proxim"))
-
-replaceCardNoShare(document.getElementsByClassName('noShare'));
-addAnchor(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
-tableOfContents('[data-content]', '[data-toc]');
-autoTargetBlank(document.querySelectorAll('a'))
+	import("./js/sharelinks.js").then(mod => mod.default(document.getElementsByClassName('noShare')))
+	import("./js/anchorlinks.js").then(mod => mod.default(document.querySelectorAll('h1, h2, h3, h4, h5, h6')))
+	import("./js/table-of-contents.js").then(mod => mod.default('[data-content]', '[data-toc]'))
+	import("./js/autotargetblank.js").then(mod => mod.default(document.querySelectorAll('a')))
+}
 
 //document.designMode = 'on';
