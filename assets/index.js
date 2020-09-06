@@ -2,7 +2,6 @@ if (!window.matchMedia("print").matches) {
 	if (localStorage['particles'] == 'on')
 		import('./js/particles.js');
 
-	console.log('test')
 	import("./js/sidebar/index.js")
 	import("./js/scrollup.js")
 	import("./js/proximity.js").then(mod => mod.default(document.getElementsByClassName("proxim")))
