@@ -485,4 +485,8 @@ img {
 	.carousel.slide {
 		display: none;
 	}
+
+	.bttbtn {
+		display: none;
+	}
 }
