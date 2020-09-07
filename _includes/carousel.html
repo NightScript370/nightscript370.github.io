@@ -1,10 +1,10 @@
 <div class="container">
-	<div id="carousel1" class="carousel slide" style="max-height: 60vh;" data-ride="carousel">
+	<div id="carousel1" class="carousel slide" style="max-height: 40vh;" data-ride="carousel">
 		<div class="carousel-inner">
 			{% assign number = 0 %}
 			{% for page in include.pages %}
 				<div class="carousel-item {% if number == 0 %}active{% endif %}">
-					<img src="{{page[0]}}" class="d-block mx-auto" style="max-height: 60vh;" alt="...">
+					<img src="{{page[0]}}" class="d-block mx-auto" style="max-height: 40vh;" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<p>{{page[1]}}</p>
 					</div>

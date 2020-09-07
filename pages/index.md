@@ -6,20 +6,6 @@ carousel: true
 landing: true
 ---
 
-# Welcome to the NightScript Domain!
-
-This website was made to record various accomplishments I've done over the years. The content you may find here could range from video game reviews, blogs, projects or other things I may throw onto here. Maybe you'll find something interesting here? Who knows, but hey; at least appreciate the nice beautiful background of a mountain. Well, for those of you who weren't distracted and did not go to the source code of this website to see the image in its full glory, note that this website is open source on GitHub. Heck, this website is hosted on GitHub using GitHub Pages. I guess that should tell you what type of person I am.
-
-If you haven't figured it out yet, I'm kind of a laid-back yet lazy 16 year old programmer that is extremely enthusiastic in open source code and external contributions. I mainly program for the homebrew community, specifically the Nintendo DS Homebrew community. I can code in PHP, JavaScript, Python and some C++.     
-Programming isn't the only thing I do (but it's my specialty). I also find interest in graphic design (using Photoshop CS6), writing, gaming and moderating. Outside of my own personal server, I moderate Mario Making Mods (a discord server on modding the Super Mario Maker series) and the DS(i) Mode Hacking Discord Server. It's rare that you'll see me moderate though, because most of the userbase are rule-abiding users.
-
-I do most of my communications on Discord (primarily on my personal Discord Server) but I'm also reachable elsewhere. Just take a look at my social page to know where to find me. I go by three names: maorninja(322), NightYoshi370 and NightScript. I much prefer NightScript but some sites either have it taken or don't allow name changes.   
-I also take PayPal donations, if that's sort of your thing.
-
-### Graphic Design
-
-Being in a Graphic design class for my 11th grade, I got introduced to the powerful tool known as photoshop. We made a lot of wacky things, some of them I absolutely adore. Here are examples of a few:
-
 {% assign symbolface = "" | split: ',' | push: "/assets/images/gd/CropLetterYoshi.jpg" | push: "Here's an image of myself, but in symbolism" %}
 {% assign tyson = "" | split: ',' | push: "/assets/images/gd/tysonhesse.jfif" | push: "A fan book of Tyson Hesse, made in a low budget design (class assignment)" %}
 {% assign mspaint = "" | split: ',' | push: "/assets/images/gd/ns_doodle.jpg" | push: "A doodle I had to make for class" %}
@@ -39,29 +25,55 @@ Being in a Graphic design class for my 11th grade, I got introduced to the power
 {% assign my_array = my_array | push: harryshoe %}
 {% assign my_array = my_array | push: link %}
 
-{% include carousel.html pages=my_array id="graphicDesign" %}
-
-### Gaming
-
-When I have the time to play video games, I'd much prefer to play them on my Lenovo Yoga 710. While it is objectively underpowered for complex gaming, I don't play complex games. My gameplay preferences mostly come down to the traditional old school video games. It's why I'm a huge Nintendo fan, despite their obviously bad practices. Heck, they're the only exceptions that I make for consoles. I have an Old 3DS XL, a DS Lite and a Nintendo Wii.
-
-There are multiple blog entries where I will be talking about my gaming experiences. The one with the pin icon best describes what I think games should be, but I also go into game reviews.
-
-<div class="card shareCard mb-2">
-	<div class="card-body">
-		<a class="h5 card-title" href="/blog/gaming">My Gaming Experiences</a>
-		<p class="card-text">I go in depth about my analysis on gaming. It describes my love for Super Smash Bros, Classic Sonic and my dislove for Mario (Guest Starring: Kirby!).</p>
-		<noscript class="card-text noShare">Sorry, JavaScript is required in order to see share links.</noscript>
+<div class="row">
+	<div class="col-md-4">
+		<div style="min-height: 5.5rem;">
+			<img src="/assets/images/avatar.png" style="float:right; height: 5rem; line-height:1; border-radius: .5rem;">
+			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
+		</div>
+		<div class="card mb-2">
+			<div class="card-body">
+				<h5 class="card-title">My abilities</h5>
+				<ul class="card-text">
+					<li>Graphic Design (using Photoshop CS6 + Paint.NET)</li>
+					<li>Website Design (using HTML, CSS and JavaScript)</li>
+					<li>DS Homebrew Development (using devKitARM and libnds)</li>
+					<li>Leadership + Community Management</li>
+					<li>Comprehensive story writting (and other writting in general)</li>
+				</ul>
+			</div>
+		</div>
+		<div class="card mb-2">
+			<div class="card-body">
+				<h5 class="card-title">Previous Contributions of mine</h5>
+				<ul class="card-text">
+					<li>The complete guide to softmodding a Nintendo DSi</li>
+					<li>Yamamura - The customizable Discord Bot</li>
+					<li>NightScript Domain</li>
+					<li>TWiLight Menu++</li>
+				</ul>
+			</div>
+		</div>
+		<div class="card mb-2">
+			<div class="card-body">
+				<h5 class="card-title">Recent Blog Articles</h5>
+				<ul class="card-text">
+					<li><a href="/blog/summer-2020">My Summer of 2020</a></li>
+					<li><a href="/blog/edgenuity-issues">Issues with Edgenuity</a></li>
+					<li><a href="/blog/sonic-return-of-infinite">Sonic: Return of Infinite</a></li>
+					<li><a href="/blog/ownership-issues">Issues with ownership</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-center">
+			<a class="col nstooltip" href="https://paypal.me/maorninja" data-tooltip="Donate to my PayPal"><img src="/assets/images/social/paypal.svg" style="height: 2rem;"></a>
+			<a class="col nstooltip" href="https://discord.gg/vbYZCRZ" data-tooltip="Join my Discord Server"><img src="/assets/images/social/discord.svg" style="height: 2rem;"></a>
+			<a class="col nstooltip" href="https://github.com/NightYoshi370" data-tooltip="See recent contributions on GitHub"><img src="/assets/images/social/github.svg" class="icon-invert" style="height: 2rem;"></a>
+			<a class="col nstooltip" href="https://twitter.com/NightScript" data-tooltip="Tweet at me @NightScript"><img src="/assets/images/social/twitter.svg" style="height: 2rem;"></a>
+		</div>
 	</div>
-</div>
-
-### Blogging
-Oh yeah, what you see above are some of my blog entries. They range from life experiences, frustrations I have, opinions or random topics. They can all be found in the blog index page (currently not developed) but here are some of my highlists and the newest ones
-
-<div class="card shareCard mb-2">
-	<div class="card-body">
-		<a class="h5 card-title" href="/blog/ownership-issues">Issues with ownership</a>
-		<p class="card-text">Is what you have really yours? What is the true definition of ownership?</p>
-		<noscript class="card-text noShare">Sorry, JavaScript is required in order to see share links.</noscript>
+	<div class="col-md-8">
+		<h3>Graphic Design Works</h3>
+		{% include carousel.html pages=my_array id="graphicDesign" %}
 	</div>
 </div>
