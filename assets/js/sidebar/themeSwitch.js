@@ -1,23 +1,25 @@
 if(!localStorage.theme)
 	localStorage.theme = "default";
 
-Array.from(document.styleSheets).forEach(r => {
-	let theme = r.href.match(/assets\/css\/themes\/(.*?).css/);
-	if(theme)
-		theme = theme[1];
-	else
-		return;
+function setThemePicker() {
+	Array.from(document.styleSheets).forEach(r => {
+		let theme = r.href.match(/assets\/css\/themes\/(.*?).css/);
+		if(theme)
+			theme = theme[1];
+		else
+			return;
 
-	let span = document.createElement("span");
-	span.setAttribute('data-tooltip', theme);
-	span.classList.add('themeDot')
-	span.classList.add('nstooltip')
-	span.style.background = r.cssRules[0].cssText.match(/--menu-element: *(.*?);/)[1];
-	span.onclick = () => themeSet(theme);
-	span.innerHTML = `<div data-tippy-content="${theme}" style="height: 100%; width: 100%;"></div>`;
-	document.getElementById("themesContainer").prepend(span);
-	console.log(theme)
-});
+		let span = document.createElement("span");
+		span.setAttribute('data-tooltip', theme);
+		span.classList.add('themeDot')
+		span.classList.add('nstooltip')
+		span.style.background = r.cssRules[0].cssText.match(/--menu-element: *(.*?);/)[1];
+		span.onclick = () => themeSet(theme);
+		span.innerHTML = `<div data-tippy-content="${theme}" style="height: 100%; width: 100%;"></div>`;
+		document.getElementById("themesContainer").prepend(span);
+		console.log(theme)
+	});
+}
 
 function themeSet(theme) {
 	if(theme)
