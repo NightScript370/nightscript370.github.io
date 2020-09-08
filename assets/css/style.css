@@ -500,3 +500,7 @@ img {
 		display: none;
 	}
 }
+
+#contactMeButtons a img {
+	height: 2rem;
+}

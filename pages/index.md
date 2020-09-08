@@ -65,11 +65,11 @@ landing: true
 				</ul>
 			</div>
 		</div>
-		<div class="row text-center">
-			<a class="col nstooltip" href="https://paypal.me/maorninja" data-tooltip="Donate to my PayPal"><img src="/assets/images/social/paypal.svg" style="height: 2rem;"></a>
-			<a class="col nstooltip" href="https://discord.gg/vbYZCRZ" data-tooltip="Join my Discord Server"><img src="/assets/images/social/discord.svg" style="height: 2rem;"></a>
-			<a class="col nstooltip" href="https://github.com/NightYoshi370" data-tooltip="See recent contributions on GitHub"><img src="/assets/images/social/github.svg" class="icon-invert" style="height: 2rem;"></a>
-			<a class="col nstooltip" href="https://twitter.com/NightScript" data-tooltip="Tweet at me @NightScript"><img src="/assets/images/social/twitter.svg" style="height: 2rem;"></a>
+		<div class="row text-center" id="contactMeButtons">
+			<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/social/twitter.svg"></a>
+			<a class="col nstooltip" data-tooltip="See my projects on GitHub" href="https://github.com/NightYoshi370"><img src="/assets/images/social/github.svg" class="icon-invert"></a>
+			<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/social/discord.svg"></a>
+			<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/social/paypal.svg"></a>
 		</div>
 	</div>
 	<div class="col-md-8">
