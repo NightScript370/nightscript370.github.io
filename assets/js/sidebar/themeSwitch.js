@@ -17,7 +17,6 @@ function setThemePicker() {
 		span.onclick = () => themeSet(theme);
 		span.innerHTML = `<div data-tippy-content="${theme}" style="height: 100%; width: 100%;"></div>`;
 		document.getElementById("themesContainer").prepend(span);
-		console.log(theme)
 	});
 }
 
