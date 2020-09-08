@@ -1,5 +1,4 @@
 import './profilebg.js'
-import('./themeSwitch.js').then(mod => mod.default());
 
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
 document.addEventListener("click", (evt) => {
