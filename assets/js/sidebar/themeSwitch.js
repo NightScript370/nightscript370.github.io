@@ -3,6 +3,9 @@ if(!localStorage.theme)
 
 function setThemePicker() {
 	Array.from(document.styleSheets).forEach(r => {
+		if(!r.href)
+			return;
+
 		let theme = r.href.match(/assets\/css\/themes\/(.*?).css/);
 		if(theme)
 			theme = theme[1];
@@ -25,6 +28,9 @@ function themeSet(theme) {
 		localStorage.theme = theme;
 	
 	Array.from(document.styleSheets).forEach(r => {
+		if(!r.href)
+			return;
+
 		let theme = r.href.match(/assets\/css\/themes\/(.*?).css/);
 		if(theme)
 			theme = theme[1];
