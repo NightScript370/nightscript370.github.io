@@ -1,5 +1,7 @@
 import './profilebg.js'
 
+setThemePicker();
+
 document.getElementById('sidebarCollapse').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('active'));
 document.addEventListener("click", (evt) => {
 	if (window.innerWidth > 991.98) return;
