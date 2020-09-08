@@ -33,7 +33,7 @@ landing: true
 		</div>
 		<div class="card mb-2">
 			<div class="card-body">
-				<h5 class="card-title">My abilities</h5>
+				<h5 noAnchor class="card-title">My abilities</h5>
 				<ul class="card-text">
 					<li>Graphic Design (using Photoshop CS6 + Paint.NET)</li>
 					<li>Website Design (using HTML, CSS and JavaScript)</li>
@@ -45,7 +45,7 @@ landing: true
 		</div>
 		<div class="card mb-2">
 			<div class="card-body">
-				<h5 class="card-title">Previous Contributions of mine</h5>
+				<h5 noAnchor class="card-title">Previous Contributions of mine</h5>
 				<ul class="card-text">
 					<li>The complete guide to softmodding a Nintendo DSi</li>
 					<li>Yamamura - The customizable Discord Bot</li>
@@ -56,7 +56,7 @@ landing: true
 		</div>
 		<div class="card mb-2">
 			<div class="card-body">
-				<h5 class="card-title">Recent Blog Articles</h5>
+				<h5 noAnchor class="card-title">Recent Blog Articles</h5>
 				<ul class="card-text">
 					<li><a href="/blog/summer-2020">My Summer of 2020</a></li>
 					<li><a href="/blog/edgenuity-issues">Issues with Edgenuity</a></li>
@@ -73,7 +73,7 @@ landing: true
 		</div>
 	</div>
 	<div class="col-md-8">
-		<h3>Graphic Design Works</h3>
+		<h3 noAnchor>Graphic Design Works</h3>
 		{% include carousel.html pages=my_array id="graphicDesign" %}
 	</div>
 </div>
