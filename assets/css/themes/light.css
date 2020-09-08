@@ -6,7 +6,7 @@
 	--lighter-menu-element: #DAD7D1;
 	--gradient-top: #666;
 	--text-color: black;
-	--background: "white center top/cover no-repeat";
+	--background: white center top/cover no-repeat;
 	--background-filter: inherit;
 	--sidebar-link: rgba(0, 0, 0, 0.75);
 	--sidebar-link-active: black;
