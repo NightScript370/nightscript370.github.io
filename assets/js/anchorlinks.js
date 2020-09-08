@@ -11,11 +11,9 @@ export default function (elements) {
 		anchor.setAttribute('href', '#' + element.getAttribute("id"));
 		anchor.classList.add('header-link');
 		anchor.classList.add('anchor');
-		anchor.setAttribute('style', `margin-left: -${getComputedStyle(element).getPropertyValue("font-size")}`);
 
 		let image = document.createElement("img")
 		image.src = "/assets/images/icons/link.png";
-		image.style.width = getComputedStyle(element).getPropertyValue("font-size");
 		//image.style.marginRight = '2em';
 
 		anchor.innerHTML = '<span class="sr-only">Permalink</span>' + image.outerHTML

@@ -309,6 +309,7 @@ button {
 
 .anchor {
 	float: left;
+	margin-left: -1.75ex;
 	opacity:0;
 	z-index: 5;
 	-webkit-transition:opacity .2s ease-in-out .1s;
@@ -326,7 +327,9 @@ h6:hover .anchor {
 }
 
 .anchor img {
-	padding: 6px;
+	width: 1.5ex;
+	vertical-align: baseline;
+	margin-right: .25ex;
 }
 
 .page-padding {
