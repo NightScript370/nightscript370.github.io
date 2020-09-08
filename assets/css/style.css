@@ -335,8 +335,12 @@ h6:hover .anchor {
 .page-padding {
 	width:100%;
 	padding-top: 0.5rem;
-	padding-left: 4rem;
+	padding-left: 3.8rem;
 	padding-right: 2rem;
+}
+
+.noAnchorsPadding {
+	padding-left: 2.5rem;
 }
 
 @media (min-width: 991.98px) {

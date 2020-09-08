@@ -12,16 +12,14 @@ const themeSet = (key, theme) => {
 }
 
 if (!window.matchMedia("print").matches)
-	(async () => {
-		const themes = await importThemes();
-
+	importThemes().then(themes => {
 		if (localStorage['theme']) {
 			if (themes[localStorage['theme']])
 				themeSet(localStorage['theme'], themes[localStorage['theme']].default)
 			else
 				localStorage['theme'] = 'default'
 		}
-	})()
+	})
 
 export default async function setThemePicker() {
 	const themes = await importThemes();

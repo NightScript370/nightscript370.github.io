@@ -1,4 +1,5 @@
 export default function (elements) {
+	let anchorsMade = 0;
 	for (let element of elements) {
 		if (element.hasAttribute('noAnchor'))
 			continue;
@@ -18,5 +19,12 @@ export default function (elements) {
 
 		anchor.innerHTML = '<span class="sr-only">Permalink</span>' + image.outerHTML
 		element.insertAdjacentElement('afterbegin', anchor);
-	};
+
+		anchorsMade++;
+	}
+
+	if (!anchorsMade) {
+		let bodyElement = document.getElementById("content")
+		bodyElement.classList.add('noAnchorsPadding')
+	}
 }

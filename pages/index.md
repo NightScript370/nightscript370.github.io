@@ -27,8 +27,8 @@ landing: true
 
 <div class="row">
 	<div class="col-md-4">
-		<div style="min-height: 5.5rem;">
-			<img src="/assets/images/avatar.png" style="float:right; height: 5rem; line-height:1; border-radius: .5rem;">
+		<div style="min-height: 5rem;" class="mb-2">
+			<img src="/assets/images/avatar.png" style="float:right; height: 5rem; line-height:1; border-radius: .5rem;" class="ml-2">
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
 		</div>
 		<div class="card mb-2">
@@ -54,7 +54,7 @@ landing: true
 				</ul>
 			</div>
 		</div>
-		<div class="card mb-2">
+		<div class="card mb-4">
 			<div class="card-body">
 				<h5 noAnchor class="card-title">Recent Blog Articles</h5>
 				<ul class="card-text">
@@ -65,14 +65,14 @@ landing: true
 				</ul>
 			</div>
 		</div>
-		<div class="row text-center" id="contactMeButtons">
-			<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/social/twitter.svg"></a>
-			<a class="col nstooltip" data-tooltip="See my projects on GitHub" href="https://github.com/NightYoshi370"><img src="/assets/images/social/github.svg" class="icon-invert"></a>
-			<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/social/discord.svg"></a>
+		<div class="row text-center mb-4" id="contactMeButtons">
+			<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
+			<a class="col nstooltip" data-tooltip="See my projects on GitHub" href="https://github.com/NightYoshi370"><img src="/assets/images/icons/github.svg"></a>
+			<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
 			<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/social/paypal.svg"></a>
 		</div>
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-8 mb-4">
 		<h3 noAnchor>Graphic Design Works</h3>
 		{% include carousel.html pages=my_array id="graphicDesign" %}
 	</div>
