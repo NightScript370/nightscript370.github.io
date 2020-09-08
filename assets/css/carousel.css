@@ -8,6 +8,7 @@
 	position: static;
 	padding-top: 0;
 	padding-bottom: 0;
+	color: var(--text-color);
 }
 
 .carousel-thumbnails {
