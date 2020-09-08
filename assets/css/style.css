@@ -508,3 +508,7 @@ img {
 #contactMeButtons a img {
 	height: 2rem;
 }
+
+.dropdown:hover .collapse {
+	display: block!important;
+}

@@ -108,25 +108,27 @@ layout: compress
 					{% endif %}
 					{% if item.items %}
 						{% assign submenu = item.title | append: "Submenu" | replace: " ", "" %}
-						<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
-							<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim">
-								{% if item.icon %}
-									{% if item.notif %}
-										<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
-											<small class="badge rounded-pill bg-danger d-flex justify-content-center">{{ item.notif }}</small>
-										</span>
-									{% else %}
-										<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
-									{% endif %}
-								{% elsif item.image %}
-									<img src="{{item.image}}" class="mr-2">
-								{% endif %} {{ item.title }}</a>
-							<ul class="collapse list-unstyled" id="{{ submenu }}">
-								{% for entry in item.items %}
-									<li {% if entry.url == page.permalink %}class="active"{% endif %}><a href="{{entry.url}}">{{entry.title}}</a></li>
-								{% endfor %}
-							</ul>
-						</li>
+						<noscript><div class="dropdown"></noscript>
+							<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
+								<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim">
+									{% if item.icon %}
+										{% if item.notif %}
+											<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
+												<small class="badge rounded-pill bg-danger d-flex justify-content-center">{{ item.notif }}</small>
+											</span>
+										{% else %}
+											<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
+										{% endif %}
+									{% elsif item.image %}
+										<img src="{{item.image}}" class="mr-2">
+									{% endif %} {{ item.title }}</a>
+								<ul class="collapse list-unstyled" id="{{ submenu }}">
+									{% for entry in item.items %}
+										<li {% if entry.url == page.permalink %}class="active"{% endif %}><a href="{{entry.url}}">{{entry.title}}</a></li>
+									{% endfor %}
+								</ul>
+							</li>
+						<noscript></div></noscript>
 					{% endif %}
 				{% endfor %}
 			</ul>
