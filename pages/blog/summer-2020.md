@@ -5,7 +5,7 @@ permalink: /blog/summer-2020
 ---
 
 # NightScript's Summer of 2020
-<small class="font-italic font-weight-light font-underline">Published on August 31st, 2020 - Rewriten on August 6th, 2020</small>
+<small class="font-italic font-weight-light font-underline">Published on August 31st, 2020 - Updated on August 8th, 2020</small>
 
 <div class="d-block d-xl-none" data-toc></div>
 <div class="row" markdown="1">
@@ -21,7 +21,7 @@ Before quarantine started, I have been following a developer called Danny Thomps
 
 [After my portfolio was rebuilt](/projects/ns-domain), it used a modern interface with a toggleable sidebar and colors that catch your attention. The codebase was much cleaner as well, using Bootstrap 5 as my website design base instead of the outdated table standard from the acmlmboard days. This was going to be the website I used to showcase how I am, who I am and what I do. After porting over the dsi.cfw.guide page from the old portfolio, though, I decided I wanted to ramble on about a few things. That's when I started to be a blogger.
 
-One of my concerns was that my voice wouldn't be heard, or that it would be heard by the wrong people. I did not want my blog to become too alienating to non-programmers, but I also wanted to appeal to people like myself. I am typically shunned from the general crowd due to my weird opinions (TikTok is a dumb platform filled with cringy and flat out bad memes, Nintendo is not a childs company and can be enjoyed by all ages, programming isn't exclusive to people that graduated out of Harverd) but I have found my people over on Discord that like my content. I have run into the occasional idiot or problems on the platform, but my friends have stuck with me from beginning to end, so they were the people I was trying to aim at. Still, this would be my first experience being a blog writter so I decided to do something philisophical, that can appeal to everyone; What is considered ownership.
+One of my concerns was that my voice wouldn't be heard, or that it would be heard by the wrong people. I did not want my blog to become too alienating to non-programmers, but I also wanted to appeal to people like myself. I am typically shunned from the general crowd due to my weird opinions (TikTok is a dumb platform filled with cringy and flat out bad memes, Nintendo is not a childs company and can be enjoyed by all ages, programming isn't exclusive to people that graduated out of Harvard) but I have found my people over on Discord that like my content. I have run into the occasional idiot or problems on the platform, but my friends have stuck with me from beginning to end, so they were the people I was trying to aim at. Still, this would be my first experience being a blog writter so I decided to do something philisophical, that can appeal to everyone; What is considered ownership.
 
 The responses were better than I expected. What was written as a way to practice for my SAT quickly turned into something people can relate to and enjoyed. Despite all the grammar mistakes I made, people were indeed looking forward to more of my writing. I started looking at things I wrote over at Mario Making Mods and rewrite them for this market, but only one ended up becoming published; an original classic sonic game. Since it was published around E3 time, people enjoyed a hypothetical Sonic game idea while SEGA was giving nothing to the series, so it did gain somewhat of an audience. My third article published was my hatred for the Edgenuity platforms, and how online schooling should not be handled. This appealed to an even lesser market, that being students still in school. Finally, there's this article, which appeals to a small portion of people; those who like me enough to know what I've done this summer yet weren't involved with me at all.
 
@@ -32,7 +32,7 @@ At the end of the day, however, I still had school and that took priority. Despi
 
 ### Part 2 --- NightScript vs College Board
 
-Getting back into school after a full week of coding and writingg was an interesting process. After we shut down back in the week of March 10th, our school handled online school as a barren wasteland. Instead of actively giving us lessons, I went an entire month without doing anything in terms of schooling and the month after that was filled with somewhat-productive schooling from 2 teachers (out of the 6 I had). The rest either did not give assignments or mismanaged them. I didn't care about them though, as I had my AP exams to handle.
+Getting back into school after a full week of coding and writing was an interesting process. After we shut down back in the week of March 10th, our school handled online school as a barren wasteland. Instead of actively giving us lessons, I went an entire month without doing anything in terms of schooling and the month after that was filled with somewhat-productive schooling from 2 teachers (out of the 6 I had). The rest either did not give assignments or mismanaged them. I didn't care about them though, as I had my AP exams to handle.
 
 Since we couldn't do these exams in person, College Board decided to have this exam handled online by having the WORST management College Board has ever done.
 
@@ -65,13 +65,23 @@ The other teachers of mine had a more adaptive mindset and let us complete assig
 
 Out of the 6 bad classes, 3 of them ended up working out and clearly made the most out of the situation. I am very grateful that those classes took the time to properly do online-schooling right.
 
-### Part 4 --- NightScript vs Reddit
+### Part 4 --- NightScript vs Camp
 
-My DS modding experiences have taken me to weird places. From receiving the crc role over at Nintendo Homebrew to becoming good buddies with most DS devs, none of them were as weird as the r/NDSHacks experience I've had. However, I do not want to talk about ***why*** I disliked r/NDSHacks. Talking bad about people behind their backs is not something I'd like to be doing, especially in a blog entry. What I will say though, is the outcome.
+School has just finished, I had not yet enrolled in the summer school I applied for and I'm currently feeling bored. Thankfully, the camp for kids with special needs was still happening this year and as with other years when I was in high school, I decided to help out. My help didn't really do much though, as it was done all through Zoom. Keep in mind this happened all early on in the quarantine phase, so we were all super law-abidant. Still, there was not much fun to be had when a camp is run through zoom, so much so that I didn't do the last day of camp. Since this is so short (and I actually did things unlike when I was in New York), I can describe what I did.
 
-See, at this point in time, r/NDSHacks was the only subreddit for Nintendo DS Modding that was active. Due to the issues I had with them, I decided to make my own similar to how r/3DShacks was handled, titled r/NDSBrew. I had RocketRobz post all the TWiLight Menu++ there, I would handle DeadSkullzJr's cheat database and pkmn-chest and there were some other homebrew posted there. At first, it was quite steady but activity suddenly jumped when we started to move TWiLight Menu++ updates there. Activity skyrocketed and we have around 350 members at the time of writing this, with the hopes of having a much bigger number soon. Even though it isn't as popular as r/NDSHacks, I still consider it a success.
+- Every year, we would have councelors be one-on-one with students. Also known as for every camper, we had two councelors. However, this year, we just had councelors...exist. They weren't assigned to any camper, and we typically didn't talk with them.
+- The time was cut short. Instead of having camp last 2 weeks, we had camp for only one week.
+- The events were missing. What would have been the typical Disney Land, Universal and other trips have been replaced with puzzle activities.<br>Fun fact: Campers had to come to our house to get the puzzles, and one of them came at 8:00 AM the day after they were supposed to come.
 
-I am grateful for everyone who gave me a chance and helped me bring this subreddit to such a high number. It wasn't the first time I've done things on reddit (I have been made the official Universal Team representative on Reddit) but it was the biggest thing I've done yet.
+Once everyone collected their puzzle and such, we started off the camp and it flew by as fast as it came. That's because the time was cut short, from 2 weeks to one week.
+
+- Day 1: Whoever completed the camp puzzle the fastest got 20$. I never tried the puzzle, but I bet I wouldn't get the money if I completed it.
+- Day 2: The camp director himself told me to teach the students how to assemble a "science kit" he bought and delivered, which was nothing more than just placing a piece of wood inside another wood slot. I think that clickbait could get the company in big trouble, but I threw out the childish kit.
+- Day 3: There was a "magician" that came and performed "magic tricks". Seemed to have cropped his display. *I wonder why*
+- Day 4: Got in a car and yeeted "Camper of the year" trophies at all the campers doorsteps. It looses its value when it's in the singular form yet delivered to everyone.
+- Day 5: Apparently, this was some sort of talent show, but I didn't attend that day. I forgot why, but I suppose it was because I didn't find any interest anymore and I was quite busy with the summer school that started the week before.
+
+This years camp obviously wasn't that exciting to the counselors and I did feel a bit disappointed, but it wasn't meant for me; it was purely on the campers and if they're happy, I'm happy. Even though I couldn't be with them in person, we still tried to connect.
 
 ### Part 5 --- NightScript vs Summer School
 
@@ -82,7 +92,15 @@ What I didn't describe in that rant though, was the results of writing that. I p
 
 I am very grateful that my teacher is able to understand my frustrations with systems like those and is willing to provide alternatives.
 
-### Part 6 --- NightScript vs New York
+### Part 6 --- NightScript vs Reddit
+
+My DS modding experiences have taken me to weird places. From receiving the crc role over at Nintendo Homebrew to becoming good buddies with most DS devs, none of them were as weird as the r/NDSHacks experience I've had. However, I do not want to talk about ***why*** I disliked r/NDSHacks. Talking bad about people behind their backs is not something I'd like to be doing, especially in a blog entry. What I will say though, is the outcome.
+
+See, at this point in time, r/NDSHacks was the only subreddit for Nintendo DS Modding that was active. Due to the issues I had with them, I decided to make my own similar to how r/3DShacks was handled, titled r/NDSBrew. I had RocketRobz post all the TWiLight Menu++ there, I would handle DeadSkullzJr's cheat database and pkmn-chest and there were some other homebrew posted there. At first, it was quite steady but activity suddenly jumped when we started to move TWiLight Menu++ updates there. Activity skyrocketed and we have around 350 members at the time of writing this, with the hopes of having a much bigger number soon. Even though it isn't as popular as r/NDSHacks, I still consider it a success.
+
+I am grateful for everyone who gave me a chance and helped me bring this subreddit to such a high number. It wasn't the first time I've done things on reddit (I have been made the official Universal Team representative on Reddit) but it was the biggest thing I've done yet.
+
+### Part 7 --- NightScript vs New York
 I planned to have this as its own blog but to be honest, my New York experience was not that interesting to have a dedicated page.
 
 First off, I hope I never go to the airport that I flew with ever again due to their constant rudeness. "Your luggage is three pounds overweight, give me one hundred dollars". Who the heck do you think you are?
@@ -93,7 +111,7 @@ First off, I hope I never go to the airport that I flew with ever again due to t
 
 I am grateful that I was able to experience such a thing in my family.
 
-### Part 7 --- NightScript vs TWiLight Menu++
+### Part 8 --- NightScript vs TWiLight Menu++
 
 So far, most of my work have been contributing to my own projects but there have been a fair number of commits I have done to other projects, one of which being TWiLight Menu++. TWLMenu is currently the biggest name in the Nintendo DS scene, being an all-in-one menu working across all NTR/TWL environments. It is **the** gateway to use when you want to launch a rom using nds-bootstrap and while nds-bootstrap remains the only way to play DS game backups from your SD card, it will continue to grow. However, there were certain sections of the application which felt...incomplete, for the lack of a better word. I decided to start doing some research and start rounding off the things that needed to be done.
 
@@ -112,12 +130,6 @@ So far, most of my work have been contributing to my own projects but there have
 
 I am very grateful for RocketRobz for accepting my contributions to his application, and the people that helped test my constant failures. Working on a project as big as this has been a dream of mine for a while, and even though there were a ton of hiccups on the way (Blargboard forks, GridLauncher forks, etc), it's now finally happened.
 
-### Part 8 --- NightScript vs Guide Management
-
-I mainly work alone on projects and when it's with someone else, I'm typically the leader. If I'm not the leader, then I started off like that and typically stay like that throughout the entire project. However, the summer was quickly closing and I couldn't continue this. It doesn't help that I was sleeping on these guides for a majority of the summer because the official Discord server for development on these guides was filled with Nitro simps and the problems I was going to adress weren't even the site's biggest problems (but I couldn't even fix the big problems because I didn't own these guides). However, this all changed when emiyl gave me permission to move the channel to DS(i) Mode Hacking, getting more exposure for these guides. More importantly, the changes to the DSi Modding Guide caught the attention of Evie and urmum_69, who started to review my changes and the site as a whole. I gave them permission to start editing the fork and eventually, we reached a point where the guide is incomparable to how it was a year ago. You could read a list of all these changes on [the DSi Modding Guide page](/projects/dsi-guide), hosted here on this website.
-
-I could not have asked for better partners to work with for this guide. Both of them contributed to Nintendo Modding guides beforehand, but I'm glad that we could all unite for DSi Modding. Even though I've taken a backseat, I've atleast built the foundation for what Evie and urmum are doing.
-
 ### Part 9 --- NightScript vs JoJo Bizarre Adventure
 
 Ironic how I'm writing about JoJo's Bizarre Adventure in my 9th part of this summer experience, yet JoJo never received Part 9 because Araki is stuck on JoJolion.
@@ -132,7 +144,13 @@ I guess one issue though, is how this has been affecting my mental health. While
 
 I suppose it's something I will need to get over, but thankfully I think I'm starting to maintain control of myself. Plus, breathing calms me down (but I suppose also that is a JoJo reference, so I'm stuck of wanting to not make jojo references but ending up making them).
 
-### Part 10 --- NightScript vs Senior year
+### Part 10 --- NightScript vs Guide Management
+
+I mainly work alone on projects and when it's with someone else, I'm typically the leader. If I'm not the leader, then I started off like that and typically stay like that throughout the entire project. However, the summer was quickly closing and I couldn't continue this. It doesn't help that I was sleeping on these guides for a majority of the summer because the official Discord server for development on these guides was filled with Nitro simps and the problems I was going to adress weren't even the site's biggest problems (but I couldn't even fix the big problems because I didn't own these guides). However, this all changed when emiyl gave me permission to move the channel to DS(i) Mode Hacking, getting more exposure for these guides. More importantly, the changes to the DSi Modding Guide caught the attention of Evie and urmum_69, who started to review my changes and the site as a whole. I gave them permission to start editing the fork and eventually, we reached a point where the guide is incomparable to how it was a year ago. You could read a list of all these changes on [the DSi Modding Guide page](/projects/dsi-guide), hosted here on this website.
+
+I could not have asked for better partners to work with for this guide. Both of them contributed to Nintendo Modding guides beforehand, but I'm glad that we could all unite for DSi Modding. Even though I've taken a backseat, I've atleast built the foundation for what Evie and urmum are doing.
+
+### Finale - Part 11 --- NightScript vs Senior year
 
 So, I started this off with no plans of switching school. The public school I went to the year before and for summer schooling was the school I planned to start. In fact, all the paper work was already brought over, I already had my chromebook and I had just received my textbook. I really felt down that I wouldn't be able to experience my daily "walk-back-from-school" session any longer and most of my friends left, but that's ok as long as I wasn't in the private school I went to the year before, because I had a bad experience there and thought nothing would ever change. As it happened though, it had changed; I was just ill-informed.
 
@@ -150,10 +168,11 @@ Most of you guys felt the same way. When posting the news on my discord server, 
 
 You know how I always meme StackZ for working on a billion projects at the same time? I think I fell into that trap too, but I thankfully narrowed my workflow throughout the end of the year. Here are a list of projects I've started but never finished:
 
-- WWW 2.0 - The classic VVVVVV was rewriten in JavaScript under the title WWW. My plan with this was to update the toolchains and add in the rest of the game. Backwards compatibility is a pain though, so it got dismissed
-- MMM Archive - An archive of the Mario Making Mods website. Couldn't do it because I needed a PC tool
 - Puffle Paddle Deluxe - A clone of Puffle Paddle for the Nintendo 3DS. While not canceled, StackZ never works on it
-- DSi Mode Hacking website - A website for our community and TWiLight documentation. Got lazy but maybe I'll do it again.
+- An archive for the Mario Making Mods website - Couldn't do it because I needed a PC tool which I couldn't end up finding.
+- nesDS - An NES emulator for the Nintendo DS(i). My fork had plans attached to it that would clean up the codebase, which never happened because it was too late in the summer
+- WWW 2.0 - The classic VVVVVV game, rewritten in JS for the web. My plan with this was to update the toolchains and add in the rest of the game. However, the toolchain maintainer didn't care about backwards compatibility until it was too late.
+- DSi Mode Hacking website - A website for our community. It would have been hosted under ds-homebrew.github.io and contained guides, flashcart kernels and other goodies. I didn't do it because of the overflow but maybe I could have another go at it again, especially considering Nintendo Homebrew might use it.
 
 ### Conclusion
 

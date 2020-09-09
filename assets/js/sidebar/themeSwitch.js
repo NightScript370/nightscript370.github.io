@@ -18,30 +18,25 @@ function setThemePicker() {
 		span.classList.add('nstooltip')
 		span.style.background = r.cssRules[0].cssText.match(/--menu-element: *(.*?);/)[1];
 		span.onclick = () => themeSet(theme);
-		span.innerHTML = `<div data-tippy-content="${theme}" style="height: 100%; width: 100%;"></div>`;
 		document.getElementById("themesContainer").prepend(span);
 	});
 }
 
 function themeSet(theme) {
-	if(theme)
+	if (theme)
 		localStorage.theme = theme;
-	
+
 	Array.from(document.styleSheets).forEach(r => {
-		if(!r.href)
+		if (!r.href)
 			return;
 
 		let theme = r.href.match(/assets\/css\/themes\/(.*?).css/);
-		if(theme)
+		if (theme)
 			theme = theme[1];
 		else
 			return;
 
-		if(theme == localStorage.theme) {
-			r.disabled = false;
-		} else {
-			r.disabled = true;
-		}
+		r.disabled = (theme != localStorage.theme);
 	});
 }
 
