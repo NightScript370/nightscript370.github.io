@@ -402,9 +402,6 @@ img {
 		color: #fff;
 		background: #282828;
 		padding: 4px 6px;
-		width: -webkit-max-content;
-		width: -moz-max-content;
-		width: max-content;
 		max-width: 200px;
 		opacity: 0;
 		pointer-events: none;
