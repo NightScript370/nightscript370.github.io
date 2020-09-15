@@ -17,7 +17,7 @@ export default function (elements) {
 		image.src = "/assets/images/icons/link.png";
 		//image.style.marginRight = '2em';
 
-		anchor.innerHTML = '<span class="sr-only">Permalink</span>' + image.outerHTML
+		anchor.innerHTML = '<span class="visually-hidden">Permalink</span>' + image.outerHTML
 		element.insertAdjacentElement('afterbegin', anchor);
 
 		anchorsMade++;
