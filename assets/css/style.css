@@ -81,7 +81,7 @@ button {
 
 #gradient-sidebar {
 	position: absolute;
-	background-image: linear-gradient(var(--gradient-top), var(--sidebar-bg-color));
+	background: linear-gradient(var(--gradient-top), rgba(0,0,0,0));
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
