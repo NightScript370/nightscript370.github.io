@@ -268,8 +268,12 @@ button {
 	transition: all 0.1s;
 }
 
-.card .card-body a.h5:not(.cardShareLinks):hover {
+.card .card-body a.h5:not(.cardShareLinks):not(.card-header-icon):hover {
 	text-decoration: underline !important;
+	font-size: 1.3rem;
+}
+
+.card .card-body a.h5.card-header-icon:hover u {
 	font-size: 1.3rem;
 }
 
@@ -402,6 +406,9 @@ img {
 		color: #fff;
 		background: #282828;
 		padding: 4px 6px;
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
 		max-width: 200px;
 		opacity: 0;
 		pointer-events: none;
@@ -508,4 +515,21 @@ img {
 
 .dropdown:hover .collapse {
 	display: block!important;
+}
+
+.gist-meta, .gist .blob-num {
+	display: none;
+}
+
+.gist #file-my-activity {
+	margin-top: .2rem !important;
+	margin-bottom: .2rem !important;
+}
+
+.gist .blob-code {
+	padding-left: 20px;
+}
+
+.gist {
+	margin-top: .5rem;
 }

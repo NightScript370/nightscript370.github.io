@@ -27,9 +27,23 @@ landing: true
 
 <div class="row">
 	<div class="col-md-4">
-		<div style="min-height: 5rem;" class="mb-2">
-			<img src="/assets/images/avatar.png" style="float:right; height: 5rem; line-height:1; border-radius: .5rem;" class="ml-2">
+		<div style="min-height: 8rem;" class="mb-3">
+			<img src="/assets/images/avatar.png" style="float:right; height: 8rem; line-height:1; border-radius: .5rem;" class="ml-2">
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
+			<div class="row text-center mt-3" id="contactMeButtons">
+				<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
+				<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
+				<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/social/paypal.svg"></a>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<a class="h5 card-title card-header-icon" href="https://github.com/NightYoshi370" style="text-decoration: none;"><img src="/assets/images/icons/github.svg" style="height: 1.5em;"> <u>Github Profile stats</u></a>
+				<script src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.js"></script>
+				<img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true" style="width: 100%;" class="mb-3">
+				<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact" style="width: 100%;">
+			</div>
+			<div class="card-footer"><small class="text-muted">Stats made using <a href="https://github.com/anuraghazra/github-readme-stats">Github Readme Stats</a></small></div>
 		</div>
 		<div class="card mb-2">
 			<div class="card-body">
@@ -43,37 +57,72 @@ landing: true
 				</ul>
 			</div>
 		</div>
+	</div>
+	<div class="col-md-8">
+		<div class="card mb-3">
+			<div class="card-body">
+				<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
+				<div class="card-text">
+					<div style="min-height: 6rem;">
+						<img src="/assets/images/projects/servericon-trim.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
+						<a class="h5" href="/projects/ns-domain">NightScript Domain</a>
+						<p>The very website you are using right now was something I (alongside my friends) coded back during the COVID-19 quarantine</p>
+					</div>
+					<hr>
+					<div style="min-height: 6rem;">
+						<img src="/assets/images/projects/yamamura.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
+						<a class="h5" href="#">Yamamura (Link not working yet)</a>
+						<p>A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available</p>
+					</div>
+					<hr>
+					<div style="min-height: 6rem;">
+						<img src="/assets/images/projects/twilight.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
+						<a class="h5" href="https://github.com/DS-Homebrew/TWiLightMenu">TWiLight Menu++</a>
+						<p>An all in one menu for launching title launchers (such as emulators, hypervisors and how would I explain nds-bootstrap :P). Works on all NTR/TWL environments</p>
+					</div>
+					<hr>
+					<div style="min-height: 6rem;">
+						<img src="/assets/images/projects/dsi-guide-icon.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
+						<a class="h5" href="/projects/dsi-guide">dsi.cfw.guide</a>
+						<p>dsi.cfw.guide is a website made to guide users through modding their Nintendo DSi (XL) systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings).</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="card mb-2">
 			<div class="card-body">
-				<h5 noAnchor class="card-title">Previous Contributions of mine</h5>
-				<ul class="card-text">
-					<li>The complete guide to softmodding a Nintendo DSi</li>
-					<li>Yamamura - The customizable Discord Bot</li>
-					<li>NightScript Domain</li>
-					<li>TWiLight Menu++</li>
-				</ul>
+				<h3 noAnchor class="card-title">Latest blog posts</h3>
+				<div class="card-text">
+					<div style="position: relative;">
+						<a class="h5" href="/blog/summer-2020">My Summer of 2020</a>
+						<p style="display:block;">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</p>
+						<a href="/blog/summer-2020" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+					</div>
+					<hr>
+					<div style="position: relative;">
+						<a class="h5" href="/blog/edgenuity-issues">Issues with Edgenuity</a>
+						<p style="display:block;">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</p>
+						<a href="/blog/edgenuity-issues" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+					</div>
+					<hr>
+					<div style="position: relative;">
+						<a class="h5" href="/blog/sonic-return-of-infinite">Classic Sonic: Return of Infinite</a>
+						<p style="display:block;">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</p>
+						<a href="/blog/sonic-return-of-infinite" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+					</div>
+					<hr>
+					<div style="position: relative;">
+						<a class="h5" href="/blog/ownership-issues">Issues with Ownership</a>
+						<p style="display:block;">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</p>
+						<a href="/blog/ownership-issues" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="card mb-4">
-			<div class="card-body">
-				<h5 noAnchor class="card-title">Recent Blog Articles</h5>
-				<ul class="card-text">
-					<li><a href="/blog/summer-2020">My Summer of 2020</a></li>
-					<li><a href="/blog/edgenuity-issues">Issues with Edgenuity</a></li>
-					<li><a href="/blog/sonic-return-of-infinite">Sonic: Return of Infinite</a></li>
-					<li><a href="/blog/ownership-issues">Issues with ownership</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row text-center mb-4" id="contactMeButtons">
-			<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
-			<a class="col nstooltip" data-tooltip="See my projects on GitHub" href="https://github.com/NightYoshi370"><img src="/assets/images/icons/github.svg"></a>
-			<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
-			<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/social/paypal.svg"></a>
-		</div>
-	</div>
-	<div class="col-md-8 mb-4">
-		<h3 noAnchor>Graphic Design Works</h3>
-		{% include carousel.html pages=my_array id="graphicDesign" %}
 	</div>
 </div>
+
+<!--
+<h3>Graphic Design Works</h3>
+{% include carousel.html pages=my_array id="graphicDesign" %}
+-->
