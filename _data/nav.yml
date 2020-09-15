@@ -2,9 +2,9 @@ sidebar:
   - title: Home
     url: /
     image: /assets/images/icons/home.svg
-  - title: Graphic Design Works
+  - title: Graphic Design
     url: /
-    image: /assets/images/icons/photo-gallery.svg
+    image: /assets/images/icons/photo-gallery.png
   - title: Projects
     #notif: 2
     image: /assets/images/icons/folder.svg
