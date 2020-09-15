@@ -1,5 +1,7 @@
 :root {
 	--main-bg-color: #D0CEC9;
+	--sidebar-bg-color: #D0CEC9;
+	--sidebar-image: #D0CEC9;
 	--menu-element: #C9C6C0;
 	--darker-menu-element: #B8B5B0;
 	--menu-element-text-color: black;

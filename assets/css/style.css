@@ -81,7 +81,7 @@ button {
 
 #gradient-sidebar {
 	position: absolute;
-	background-image: linear-gradient(var(--gradient-top), var(--main-bg-color));
+	background-image: linear-gradient(var(--gradient-top), var(--sidebar-bg-color));
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
@@ -91,7 +91,7 @@ button {
 #sidebar {
 	min-width: 250px;
 	max-width: 250px;
-	background: var(--main-bg-color);
+	background: var(--sidebar-image);
 	color: #fff;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
@@ -103,6 +103,13 @@ button {
 	-moz-box-shadow:    3px 0 5px 0 var(--shadow-color);
 	-webkit-box-shadow: 3px 0 5px 0 var(--shadow-color);
 	box-shadow:         3px 0 5px 0 var(--shadow-color); }
+	#sidebar .sidebar-contents {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: var(--sidebar-bg-color)}
 	#sidebar.active {
 		margin-left: -245px; }
 		#sidebar.active .custom-menu {
@@ -181,8 +188,7 @@ button {
 				top: 2px;
 				left: 0;
 				right: 0;
-				bottom: 0;
-				font-family: "ForkAwesome"; }
+				bottom: 0; }
 			#sidebar .custom-menu .btn:after {
 				content: '';
 				background-image: var(--close-menu-arrow);
@@ -198,7 +204,6 @@ button {
 					content: '';
 					background-image: var(--open-menu-arrow);
 					background-size: 100% auto;
-					font-family: "ForkAwesome";
 					right: 2px; }
 					#sidebar .custom-menu .btn:after {
 						display: none; }
@@ -207,20 +212,18 @@ button {
 				#sidebar.active .btn:before {
 					content: '';
 					background-image: var(--close-menu-arrow);
-					background-size: 100% auto;
-					font-family: "ForkAwesome"; }
+					background-size: 100% auto; }
 				#sidebar.active .btn:after {
 					display: none; } }
 
-.bg-wrap {
-	width: 100%;
-	z-index: 0;
-	position: relative; }
-	.bg-wrap .user-logo img {
-		width: 195px;
-		height: 195px;
-		border-radius: 50%;
-		margin: 0 auto; }
+#sidebar-logo {
+	position: relative;
+	min-height: 225px;
+	display: flex;
+	justify-content: center;
+	align-items: center; }
+	#sidebar-logo img {
+		width: 180px; }
 
 #content {
 	background-color: var(--background-filter);

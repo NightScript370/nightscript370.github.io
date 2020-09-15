@@ -25,7 +25,7 @@ while (circles.length < circleMax) {
 	// Pick a random circle
 	circles.push({
 		x: random(0, bubblesCanvas.width),
-		y: random(0, bubblesCanvas.height / 2),
+		y: random(0, bubblesCanvas.height / 1.4),
 		r: random(3, 12),
 		a: random(0, 360)
 	});

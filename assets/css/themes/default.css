@@ -1,5 +1,7 @@
 :root {
 	--main-bg-color: #00000F;
+	--sidebar-bg-color: rgba(0,0,15,.5);
+	--sidebar-image: url(/assets/images/sheikah.jpg) center top/contain repeat;
 	--menu-element: #02194B;
 	--darker-menu-element: #01083A;
 	--menu-element-text-color: white;
