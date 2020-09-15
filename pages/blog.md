@@ -3,7 +3,7 @@ title: Blog Posts
 permalink: /blog
 ---
 
-## NightScript's Domain -- Blog Section
+# NightScript's Domain -- Blog Section
 I like to write a lot so I thought I might as well write things in a blog. These posts are mearly expressing my viewpoints, opinions and thoughts. Please keep an open mind when reading this.
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -29,7 +29,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 
 - [NightScript's Summer of 2020](https://nightyoshi370.github.io/blog/summer-2020)
 
-##### Scrapped Articles
+### Scrapped Articles
 
 These articles are bad and should not be read. They are only here for both archival purposes and because I either cannot find a replacement or because I didn't write one yet
 

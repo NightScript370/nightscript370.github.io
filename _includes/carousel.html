@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container d-none d-md-block">
 	<div id="carousel1" class="carousel slide" style="max-height: 40vh;" data-ride="carousel">
 		<div class="carousel-inner">
 			{% assign number = 0 %}
@@ -14,23 +14,21 @@
 		</div>
 
 		<a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
+			<img src="/assets/images/icons/icons8-back-48.png" style="height: 1.5em;">
+			<span class="d-none d-xl-inline">Previous</span>
 		</a>
 		<a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
+			<span class="d-none d-xl-inline">Next</span>
+			<img src="/assets/images/icons/icons8-forward-48.png" style="height: 1.5em;">
 		</a>
 	</div>
 </div>
 
-<div class="row row-cols-4 row-cols-md-6 row-cols-lg-4 row-cols-xl-6 row-cols-xxl-9 g-4 carousel-thumbnails mb-3">
+<div class="row g-4 carousel-thumbnails justify-content-center mb-3">
 	{% assign number = 0 %}
 	{% for page in include.pages %}
-		<div class="col">
-			<a class="card {% if number == 0 %}active{% endif %}" data-target="#carousel1" data-slide-to="{{number}}">
-				<img src="{{page[0]}}" class="card-img-top" alt="...">
-			</a>
+		<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-1">
+			<img src="{{page[0]}}" {% if number == 0 %}class="active"{% endif %} data-target="#carousel1" data-slide-to="{{number}}">
 		</div>
 		{% assign number = number | plus: 1 %}
 	{% endfor %}

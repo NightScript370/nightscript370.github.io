@@ -14,3 +14,11 @@
 .carousel-thumbnails {
 	margin-top: 0;
 }
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+	opacity: 1;
+}
+
+.carousel-control-next, .carousel-control-prev {
+	opacity: .75;
+}

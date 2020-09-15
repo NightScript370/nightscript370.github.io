@@ -2,28 +2,8 @@
 title: Home
 description: This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?
 permalink: /
-carousel: true
 landing: true
 ---
-
-{% assign symbolface = "" | split: ',' | push: "/assets/images/gd/CropLetterYoshi.jpg" | push: "Here's an image of myself, but in symbolism" %}
-{% assign tyson = "" | split: ',' | push: "/assets/images/gd/tysonhesse.jfif" | push: "A fan book of Tyson Hesse, made in a low budget design (class assignment)" %}
-{% assign mspaint = "" | split: ',' | push: "/assets/images/gd/ns_doodle.jpg" | push: "A doodle I had to make for class" %}
-{% assign movie = "" | split: ',' | push: "/assets/images/gd/Maor_Movie.jpg" | push: "A fan made movie poster I had to make for class. Based on the old sonic movie cause :^)" %}
-{% assign smashshoe = "" | split: ',' | push: "/assets/images/gd/smash.jpg" | push: "A poster for a Super Smash Bros Shoe (awful)" %}
-{% assign splatoon = "" | split: ',' | push: "/assets/images/gd/splatoon.jpg" | push: "A poster for a Splatoon Shoe" %}
-{% assign harryshoe = "" | split: ',' | push: "/assets/images/gd/hp-poster.jpg" | push: "A poster for a Shoe based on the Harry Potter series" %}
-{% assign link = "" | split: ',' | push: "/assets/images/gd/link.jpg" | push: "A poster about the Hyrule warrior and the Kalamity he's supposed to be saving the princess from" %}
-
-{% assign my_array = "" | split: ',' %}
-{% assign my_array = my_array | push: symbolface %}
-{% assign my_array = my_array | push: tyson %}
-{% assign my_array = my_array | push: mspaint %}
-{% assign my_array = my_array | push: movie %}
-{% assign my_array = my_array | push: smashshoe %}
-{% assign my_array = my_array | push: splatoon %}
-{% assign my_array = my_array | push: harryshoe %}
-{% assign my_array = my_array | push: link %}
 
 <div class="row">
 	<div class="col-md-4">
@@ -121,8 +101,3 @@ landing: true
 		</div>
 	</div>
 </div>
-
-<!--
-<h3>Graphic Design Works</h3>
-{% include carousel.html pages=my_array id="graphicDesign" %}
--->
