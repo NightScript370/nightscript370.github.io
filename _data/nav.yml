@@ -3,7 +3,7 @@ sidebar:
     url: /
     image: /assets/images/icons/home.svg
   - title: Graphic Design
-    url: /
+    url: /graphic-design
     image: /assets/images/icons/photo-gallery.png
   - title: Projects
     #notif: 2
