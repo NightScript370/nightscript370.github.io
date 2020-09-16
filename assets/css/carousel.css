@@ -15,10 +15,12 @@
 	margin-top: 0;
 }
 
-.carousel-control-next:hover, .carousel-control-prev:hover {
-	opacity: 1;
+.carousel-control-next, .carousel-control-next:focus, .carousel-control-prev, .carousel-control-prev:focus {
+	opacity: .75;
+	color: var(--text-color);
+	font-weight: var(--sidebar-link-active-weight);
 }
 
-.carousel-control-next, .carousel-control-prev {
-	opacity: .75;
+.carousel-control-next:hover, .carousel-control-prev:hover {
+	opacity: 1;
 }
