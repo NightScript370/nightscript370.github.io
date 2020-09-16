@@ -1,12 +1,12 @@
 :root {
 	--main-bg-color: #00000F;
-	--sidebar-bg-color: #00000F77;
+	--sidebar-bg-color: #00000FD0;
 	--sidebar-image: url(/assets/images/sheikah.jpg) center top/contain repeat;
 	--menu-element: #02194B;
 	--darker-menu-element: #01083A;
 	--menu-element-text-color: white;
 	--lighter-menu-element: #132A5C;
-	--gradient-top: #020C49FF;
+	--gradient-top: #020C49D0;
 	--text-color: white;
 	--background: url(/assets/images/starBG.jpg) center top/cover no-repeat;
 	--background-filter: rgba(0, 0, 15, 0.7);
