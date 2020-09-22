@@ -30,7 +30,10 @@ export default async function (elements) {
 			langStatsPage = htmlToElem(langStatsPage)
 			langStatsPage.setAttribute('width', null)
 			langStatsPage.setAttribute('height', null)
-			langStatsPage.setAttribute('viewBox', '24 21 245 125')
+			langStatsPage.setAttribute('viewBox', '24 34 245 110')
+
+			let header = langStatsPage.querySelector('[data-testid="header"]')
+			header.setAttribute('y', '15')
 
 			element.insertAdjacentElement('afterend', langStatsPage)
 		}
