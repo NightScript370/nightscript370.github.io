@@ -31,9 +31,15 @@ export default async function (elements) {
 			langStatsPage.setAttribute('width', null)
 			langStatsPage.setAttribute('height', null)
 			langStatsPage.setAttribute('viewBox', '24 34 245 110')
+			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 
 			let header = langStatsPage.querySelector('[data-testid="header"]')
 			header.setAttribute('y', '15')
+
+			let style = langStatsPage.querySelector('style')
+			style.innerHTML = style.innerHTML
+				.replace(".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFFFFF }", ".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: var(--text-color); font-weight: bold; }")
+				.replace("fill: #00AEFF;", "fill: var(--text-color);")
 
 			element.insertAdjacentElement('afterend', langStatsPage)
 		}
@@ -45,10 +51,15 @@ export default async function (elements) {
 			profStatsPage.setAttribute('width', null)
 			profStatsPage.setAttribute('height', null)
 			profStatsPage.setAttribute('viewBox', '22 22 355 125')
+			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 			profStatsPage.classList.add('mb-3')
 
 			let circleRank = profStatsPage.querySelector('[data-testid="rank-circle"]')
 			circleRank.setAttribute('transform', 'translate(335, 47.5)')
+
+			let style = profStatsPage.querySelector('style')
+			style.innerHTML = style.innerHTML
+				.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
 
 			profStatsPage.querySelectorAll('[data-testid="icon"]')
 				.forEach(iconElem => iconElem.setAttribute('x', '35'))
