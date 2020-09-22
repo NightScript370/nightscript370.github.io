@@ -44,11 +44,11 @@ export default async function (elements) {
 			profStatsPage = htmlToElem(profStatsPage)
 			profStatsPage.setAttribute('width', null)
 			profStatsPage.setAttribute('height', null)
-			profStatsPage.setAttribute('viewBox', '22 22 370 125')
+			profStatsPage.setAttribute('viewBox', '22 22 355 125')
 			profStatsPage.classList.add('mb-3')
 
 			let circleRank = profStatsPage.querySelector('[data-testid="rank-circle"]')
-			circleRank.setAttribute('transform', 'translate(350, 47.5)')
+			circleRank.setAttribute('transform', 'translate(335, 47.5)')
 
 			profStatsPage.querySelectorAll('[data-testid="icon"]')
 				.forEach(iconElem => iconElem.setAttribute('x', '35'))
