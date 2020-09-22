@@ -44,11 +44,36 @@ export default async function (elements) {
 			profStatsPage = htmlToElem(profStatsPage)
 			profStatsPage.setAttribute('width', null)
 			profStatsPage.setAttribute('height', null)
-			profStatsPage.setAttribute('viewBox', '22 22 390 125')
+			profStatsPage.setAttribute('viewBox', '22 22 370 125')
 			profStatsPage.classList.add('mb-3')
 
 			let circleRank = profStatsPage.querySelector('[data-testid="rank-circle"]')
-			circleRank.setAttribute('transform', 'translate(375, 47.5)')
+			circleRank.setAttribute('transform', 'translate(350, 47.5)')
+
+			profStatsPage.querySelectorAll('[data-testid="icon"]')
+				.forEach(iconElem => iconElem.setAttribute('x', '35'))
+
+			profStatsPage.querySelectorAll('text')
+				.forEach(elem => {
+					switch (parseInt(elem.getAttribute('x'))) {
+						case 25:
+							elem.setAttribute('x', '55');
+							elem.classList.remove('bold')
+							break;
+						case 200:
+							elem.setAttribute('x', '30');
+							elem.classList.add('bold')
+							elem.setAttribute('text-anchor', 'end')
+							break;
+					}
+
+					elem.innerHTML = elem.innerHTML
+						.replace('Total Stars', 'Stars Gained')
+						.replace('Total Commits', 'Commits Pushed')
+						.replace('Total PRs', 'PRs sent')
+						.replace('Total Issues', 'Issues Opened')
+						.replace(':', '')
+				})
 
 			element.insertAdjacentElement('afterend', profStatsPage)
 		}
