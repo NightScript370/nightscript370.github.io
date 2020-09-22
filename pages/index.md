@@ -19,9 +19,11 @@ landing: true
 		<div class="card mb-3">
 			<div class="card-body">
 				<a class="h5 card-title card-header-icon" href="https://github.com/NightYoshi370" style="text-decoration: none;"><img src="/assets/images/icons/github.svg" style="height: 1.5em;"> <u>Github Profile stats</u></a>
-				<script src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.js"></script>
-				<img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
-				<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
+				<noscript class="gitStats">
+					<iframe src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.pibb"></iframe>
+				</noscript>
+				<!-- <img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
+					<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))"> -->
 			</div>
 			<div class="card-footer"><small class="text-muted">Stats made using <a href="https://github.com/anuraghazra/github-readme-stats">Github Readme Stats</a></small></div>
 		</div>
