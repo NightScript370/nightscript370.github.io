@@ -24,8 +24,12 @@ export default async function (elements) {
 			+ url
 			+ paramsURL;
 
-		let langsResponse = await fetch(gitStatsURL('/top-langs?layout=compact&card_width=345&'))
-		if (langsResponse.ok) {
+		const langStatsURL = gitStatsURL('/top-langs?layout=compact&card_width=345&')
+		try {
+			let langsResponse = await fetch(langStatsURL);
+			if (!langsResponse.ok)
+				throw new Error();
+
 			let langStatsPage = await langsResponse.text();
 			langStatsPage = htmlToElem(langStatsPage)
 			langStatsPage.removeAttribute('width')
@@ -51,10 +55,19 @@ export default async function (elements) {
 			});
 
 			element.insertAdjacentElement('afterend', langStatsPage)
+		} catch {
+			const langStatsImage = document.createElement('img')
+			langStatsImage.src = langStatsURL
+			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
+			element.insertAdjacentElement('afterend', langStatsImage)
 		}
 
-		let profStatsResponse = await fetch(gitStatsURL('?hide_title=true&show_icons=true&'))
-		if (profStatsResponse.ok) {
+		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&')
+		try {
+			let profStatsResponse = await fetch(profStatsURL)
+			if (!profStatsResponse.ok)
+				throw new Error();
+
 			let profStatsPage = await profStatsResponse.text();
 			profStatsPage = htmlToElem(profStatsPage)
 			profStatsPage.removeAttribute('width')
@@ -99,6 +112,11 @@ export default async function (elements) {
 				})
 
 			element.insertAdjacentElement('afterend', profStatsPage)
+		} catch {
+			const profStatsImage = document.createElement('img')
+			profStatsImage.src = profStatsURL
+			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
+			element.insertAdjacentElement('afterend', profStatsImage)
 		}
 
 		let gitActivityResponse = await fetch('https://cors-anywhere.herokuapp.com/' + (iframeData.src).replace('.pibb', '/raw'))
