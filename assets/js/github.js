@@ -24,22 +24,31 @@ export default async function (elements) {
 			+ url
 			+ paramsURL;
 
-		let langsResponse = await fetch(gitStatsURL('/top-langs?layout=compact&card_width=240&'))
+		let langsResponse = await fetch(gitStatsURL('/top-langs?layout=compact&card_width=345&'))
 		if (langsResponse.ok) {
 			let langStatsPage = await langsResponse.text();
 			langStatsPage = htmlToElem(langStatsPage)
-			langStatsPage.setAttribute('width', null)
-			langStatsPage.setAttribute('height', null)
-			langStatsPage.setAttribute('viewBox', '24 34 245 110')
+			langStatsPage.removeAttribute('width')
+			langStatsPage.removeAttribute('height')
+			langStatsPage.setAttribute('viewBox', '24 0 347 85')
 			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 
-			let header = langStatsPage.querySelector('[data-testid="header"]')
-			header.setAttribute('y', '15')
+			let headerPaddingFix = langStatsPage.querySelector('[data-testid="card-title"]')
+			headerPaddingFix.setAttribute('transform', 'translate(25, 20)')
+
+			let bodyPaddingFix = langStatsPage.querySelector('[data-testid="main-card-body"]')
+			bodyPaddingFix.setAttribute('transform', 'translate(0, 30)')
 
 			let style = langStatsPage.querySelector('style')
 			style.innerHTML = style.innerHTML
 				.replace(".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFFFFF }", ".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: var(--text-color); font-weight: bold; }")
 				.replace("fill: #00AEFF;", "fill: var(--text-color);")
+
+			let i = 0;
+			langStatsPage.querySelector('[data-testid="lang-items"]').querySelectorAll('g').forEach(r => {
+				r.setAttribute("transform", "translate(" + (120 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
+				i++;
+			});
 
 			element.insertAdjacentElement('afterend', langStatsPage)
 		}
@@ -48,14 +57,17 @@ export default async function (elements) {
 		if (profStatsResponse.ok) {
 			let profStatsPage = await profStatsResponse.text();
 			profStatsPage = htmlToElem(profStatsPage)
-			profStatsPage.setAttribute('width', null)
-			profStatsPage.setAttribute('height', null)
-			profStatsPage.setAttribute('viewBox', '22 22 355 125')
+			profStatsPage.removeAttribute('width')
+			profStatsPage.removeAttribute('height')
+			profStatsPage.setAttribute('viewBox', '22 0 355 125')
 			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
-			profStatsPage.classList.add('mb-3')
+			profStatsPage.classList.add('mb-2')
 
 			let circleRank = profStatsPage.querySelector('[data-testid="rank-circle"]')
-			circleRank.setAttribute('transform', 'translate(335, 47.5)')
+			circleRank.setAttribute('transform', 'translate(330, 52)')
+
+			let fixPosition = profStatsPage.querySelector('[data-testid="main-card-body"]')
+			fixPosition.removeAttribute('transform')
 
 			let style = profStatsPage.querySelector('style')
 			style.innerHTML = style.innerHTML
