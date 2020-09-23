@@ -7,9 +7,9 @@ class ProximityManager {
 	}
 
 	effect(pos) {
-		let rect = this.proxim.getBoundingClientRect();
-		let x = pos.x - rect.left; // offset from corner
-		let y = pos.y - rect.top;
+		const rect = this.proxim.getBoundingClientRect();
+		const x = pos.x - rect.left; // offset from corner
+		const y = pos.y - rect.top;
 
 		if (this.proxim.matches(":hover") && !this.proxim.classList.contains('no-enhanced-hover-proxim'))
 			this.proxim.style.background = `var(--light-hover-color) radial-gradient( circle at ${x}px ${y}px, var(--hover-color) 0%, transparent ${hoverradius}px)`

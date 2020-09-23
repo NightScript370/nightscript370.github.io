@@ -4,7 +4,7 @@ function linksFilter (element) {
 	if (element.href in cache)
 		return cache[element.href];
 
-	let setAttribute = (![host, ''].includes(element.hostname) && !element.hasAttribute('target'));
+	const setAttribute = (![host, ''].includes(element.hostname) && !element.hasAttribute('target'));
 
 	cache[element.href] = setAttribute;
 	return setAttribute;

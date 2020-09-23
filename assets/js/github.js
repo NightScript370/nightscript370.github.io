@@ -26,33 +26,39 @@ export default async function (elements) {
 
 		const langStatsURL = gitStatsURL('/top-langs?layout=compact&card_width=345&')
 		try {
-			let langsResponse = await fetch(langStatsURL);
+			const langsResponse = await fetch(langStatsURL);
 			if (!langsResponse.ok)
 				throw new Error();
 
-			let langStatsPage = await langsResponse.text();
-			langStatsPage = htmlToElem(langStatsPage)
+			const langStatsPage = htmlToElem(await langsResponse.text());
 			langStatsPage.removeAttribute('width')
 			langStatsPage.removeAttribute('height')
 			langStatsPage.setAttribute('viewBox', '24 0 347 85')
 			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 
-			let headerPaddingFix = langStatsPage.querySelector('[data-testid="card-title"]')
-			headerPaddingFix.setAttribute('transform', 'translate(25, 20)')
+			// Fix Heading Padding
+			langStatsPage
+				.querySelector('[data-testid="card-title"]')
+				.setAttribute('transform', 'translate(25, 20)')
 
-			let bodyPaddingFix = langStatsPage.querySelector('[data-testid="main-card-body"]')
-			bodyPaddingFix.setAttribute('transform', 'translate(0, 30)')
+			// Fix body padding
+			langStatsPage
+				.querySelector('[data-testid="main-card-body"]')
+				.setAttribute('transform', 'translate(0, 30)')
 
-			let style = langStatsPage.querySelector('style')
+			const style = langStatsPage.querySelector('style')
 			style.innerHTML = style.innerHTML
 				.replace(".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFFFFF }", ".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: var(--text-color); font-weight: bold; }")
 				.replace("fill: #00AEFF;", "fill: var(--text-color);")
 
 			let i = 0;
-			langStatsPage.querySelector('[data-testid="lang-items"]').querySelectorAll('g').forEach(r => {
-				r.setAttribute("transform", "translate(" + (120 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
-				i++;
-			});
+			langStatsPage
+				.querySelector('[data-testid="lang-items"]')
+				.querySelectorAll('g')
+				.forEach(r => {
+					r.setAttribute("transform", "translate(" + (120 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
+					i++;
+				});
 
 			element.insertAdjacentElement('afterend', langStatsPage)
 		} catch {
@@ -64,32 +70,37 @@ export default async function (elements) {
 
 		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&')
 		try {
-			let profStatsResponse = await fetch(profStatsURL)
+			const profStatsResponse = await fetch(profStatsURL)
 			if (!profStatsResponse.ok)
 				throw new Error();
 
-			let profStatsPage = await profStatsResponse.text();
-			profStatsPage = htmlToElem(profStatsPage)
+			const profStatsPage = htmlToElem(await profStatsResponse.text());
 			profStatsPage.removeAttribute('width')
 			profStatsPage.removeAttribute('height')
 			profStatsPage.setAttribute('viewBox', '22 0 355 125')
 			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 			profStatsPage.classList.add('mb-2')
 
-			let circleRank = profStatsPage.querySelector('[data-testid="rank-circle"]')
-			circleRank.setAttribute('transform', 'translate(330, 52)')
+			// Move circle rank more left
+			profStatsPage
+				.querySelector('[data-testid="rank-circle"]')
+				.setAttribute('transform', 'translate(330, 52)')
 
-			let fixPosition = profStatsPage.querySelector('[data-testid="main-card-body"]')
-			fixPosition.removeAttribute('transform')
+			// Remove Padding
+			profStatsPage
+				.querySelector('[data-testid="main-card-body"]')
+				.removeAttribute('transform')
 
 			let style = profStatsPage.querySelector('style')
 			style.innerHTML = style.innerHTML
 				.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
 
-			profStatsPage.querySelectorAll('[data-testid="icon"]')
+			profStatsPage
+				.querySelectorAll('[data-testid="icon"]')
 				.forEach(iconElem => iconElem.setAttribute('x', '35'))
 
-			profStatsPage.querySelectorAll('text')
+			profStatsPage
+				.querySelectorAll('text')
 				.forEach(elem => {
 					switch (parseInt(elem.getAttribute('x'))) {
 						case 25:
@@ -119,15 +130,22 @@ export default async function (elements) {
 			element.insertAdjacentElement('afterend', profStatsImage)
 		}
 
-		let gitActivityResponse = await fetch('https://cors-anywhere.herokuapp.com/' + (iframeData.src).replace('.pibb', '/raw'))
-		if (gitActivityResponse.ok) {
-			let codeElement = document.createElement('code')
+		try {
+			let gitActivityResponse = await fetch('https://cors-anywhere.herokuapp.com/' + (iframeData.src).replace('.pibb', '/raw'))
+			if (!gitActivityResponse.ok)
+				throw new Error();
+
+			const codeElement = document.createElement('code')
 			codeElement.classList.add('language-text')
 			codeElement.innerText = await gitActivityResponse.text();
 
-			let preElement = document.createElement('pre')
+			const preElement = document.createElement('pre')
 			preElement.appendChild(codeElement)
 			element.insertAdjacentElement('afterend', preElement)
+		} catch {
+			const iframeElement = document.createElement('iframe')
+			iframeElement.setAttribute('src', iframeData.src)
+			element.insertAdjacentElement('afterend', iframeElement)
 		}
 	}
 }
