@@ -46,7 +46,7 @@ landing: true
 				<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
 				<div class="card-text">
 					<div style="min-height: 6rem;">
-						<img src="/assets/images/projects/servericon-trim.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
+						<img src="/assets/images/icon.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
 						<a class="h5" href="/projects/ns-domain">NightScript Domain</a>
 						<p>The very website you are using right now was something I (alongside my friends) coded back during the COVID-19 quarantine</p>
 					</div>
