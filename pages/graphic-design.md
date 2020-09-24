@@ -5,14 +5,14 @@ permalink: /graphic-design
 carousel: true
 ---
 
-{% assign symbolface = "" | split: ',' | push: "/assets/images/gd/CropLetterYoshi.jpg" | push: "Symbols could potentially replace pixels. Here's my face converted into a bunch of characters" %}
-{% assign tyson = "" | split: ',' | push: "/assets/images/gd/tysonhesse.jfif" | push: "Book cover of my favorite animator, Tyson Hesse. The assignment specifically requested to use stock & low-budget assets, so I'm not sure if I'm allowed to be proud or not" %}
-{% assign mspaint = "" | split: ',' | push: "/assets/images/gd/ns_doodle.jpg" | push: "This was a test project I made with the masking tool. Decided to come up with a logo design for a potential Microsoft Paint 3D remake (focusing on layers & 3D text)" %}
-{% assign movie = "" | split: ',' | push: "/assets/images/gd/Maor_Movie.jpg" | push: "Watch the absolute horror that is a creature based on the old Sonic Movie design. Luckily, it's just a poster....for now" %}
-{% assign smashshoe = "" | split: ',' | push: "/assets/images/gd/smash.jpg" | push: "Run with Smash Power with this Super Smash Bros. styled shoe" %}
-{% assign splatoon = "" | split: ',' | push: "/assets/images/gd/splatoon.jpg" | push: "Slide on the ink of your paint" %}
-{% assign harryshoe = "" | split: ',' | push: "/assets/images/gd/hp-poster.jpg" | push: "Use the latest Harry Potter shoes to fly where the broom takes you" %}
-{% assign link = "" | split: ',' | push: "/assets/images/gd/link.jpg" | push: "Breath of the Wild advertisement, despite me never playing the game :P" %}
+{% assign symbolface = "/assets/images/gd/CropLetterYoshi.jpg | Symbols could potentially replace pixels. Here's my face converted into a bunch of characters" | split: ' | ' %}
+{% assign tyson = "/assets/images/gd/tysonhesse.jfif | Book cover of my favorite animator, Tyson Hesse. The assignment specifically requested to use stock & low-budget assets, so I'm not sure if I'm allowed to be proud or not" | split: ' | ' %}
+{% assign mspaint = "/assets/images/gd/ns_doodle.jpg | This was a test project I made with the masking tool. Decided to come up with a logo design for a potential Microsoft Paint 3D remake (focusing on layers & 3D text)" | split: ' | ' %}
+{% assign movie = "/assets/images/gd/Maor_Movie.jpg | Watch the absolute horror that is a creature based on the old Sonic Movie design. Luckily, it's just a poster....for now" | split: ' | ' %}
+{% assign smashshoe = "/assets/images/gd/smash.jpg | Run with Smash Power with this Super Smash Bros. styled shoe" | split: ' | ' %}
+{% assign splatoon = "/assets/images/gd/splatoon.jpg | Slide on the ink of your paint" | split: ' | ' %}
+{% assign harryshoe = "/assets/images/gd/hp-poster.jpg | Use the latest Harry Potter shoes to fly where the broom takes you" | split: ' | ' %}
+{% assign link = "/assets/images/gd/link.jpg | Breath of the Wild advertisement, despite me never playing the game :P" | split: ' | ' %}
 
 {% assign my_array = "" | split: ',' %}
 {% assign my_array = my_array | push: symbolface %}

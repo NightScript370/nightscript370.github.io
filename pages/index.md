@@ -11,7 +11,7 @@ landing: true
 			<img src="/assets/images/avatar.png" style="float:right; height: 8rem; line-height:1; border-radius: .5rem;" class="ml-2">
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
 			<div class="row text-center mt-3" id="contactMeButtons">
-				<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/social/paypal.svg"></a>
+				<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
 				<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
 				<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
 			</div>

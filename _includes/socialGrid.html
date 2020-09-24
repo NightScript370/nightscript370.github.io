@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4">
+	{% for page in include.pages %}
+		<div class="col">
+			<div class="socialPageCard">
+				<div class="socialCardContent">
+					<a class="socialCardImage" href="{{page[0]}}" alt="{{page[1]}}"><img src="/assets/images/icons/{{page[2]}}"></a>
+					<a class="h2 socialCardTitle" href="{{page[0]}}">{{page[1]}}</a>
+					<p class="socialCardNote">{{page[3]}}</p>
+					<p class="socialCardText">{{page[4]}}</p>
+					<div class="socialCardButtons"><a href="{{page[0]}}" type="button" class="btn btn-primary">{{page[5]}}</a></div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
