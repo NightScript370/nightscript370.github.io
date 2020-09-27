@@ -64,15 +64,25 @@ a {
 		-webkit-box-shadow: none;
 		box-shadow: none; }
 
-button {
-	-webkit-transition: .3s all ease;
-	-o-transition: .3s all ease;
-	transition: .3s all ease; }
-	button:hover, button:focus {
-		text-decoration: none !important;
-		outline: none !important;
-		-webkit-box-shadow: none !important;
-		box-shadow: none !important; }
+.btn {
+	position: relative;
+	overflow: hidden; }
+	.btn .hamon {
+		position: absolute; 
+		border-radius: 50%; 
+		/* To make it round */
+		background-color: rgba(0, 0, 0, 0.3); 
+
+		width: 100px; 
+		height: 100px; 
+		transform: translate(-50%, -50%) scale(0);
+		animation: hamon 0.5s ease-out; }
+		@keyframes hamon {
+			to {
+				transform: translate(-50%, -50%) scale(3);
+				opacity: 0;
+			}
+		}
 
 .img {
 	background-size: cover;

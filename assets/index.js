@@ -14,6 +14,9 @@ if (!window.matchMedia("print").matches) {
 	if (document.querySelectorAll('h1, h2, h3, h4, h5, h6').length)
 		import("./js/anchorlinks.js").then(mod => mod.default(document.querySelectorAll('h1, h2, h3, h4, h5, h6')))
 
+	if (document.querySelectorAll('button, a.btn[type="button"]').length)
+		import("./js/hamon.js").then(mod => mod.default(document.querySelectorAll('button, a.btn[type="button"]')))
+
 	if (document.querySelectorAll('a').length)
 		import("./js/autotargetblank.js").then(mod => mod.default(document.querySelectorAll('a')))
 
