@@ -5,8 +5,19 @@ permalink: /
 landing: true
 ---
 
+{% assign twitter = "/projects/ns-domain | NightScript Domain | projects/ns-domain.png |  | <br>A website I made to document my accomplishments | Visit its history" | split: ' | ' %}
+{% assign github = "# | Yamamura | projects/yamamura.png | Pages coming soon | A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available | See what it was" | split: ' | ' %}
+{% assign paypal = "https://github.com/DS-Homebrew/TWiLightMenu | TWiLight Menu++ | projects/twilight.png | Though I'm not the leader, I'm an active contributor | An all in one menu for launching title launchers (such as emulators, hypervisors and how would I explain nds-bootstrap :P). Works on all NTR/TWL environments | View Source Code" | split: ' | ' %}
+{% assign discord = "/projects/dsi-guide | dsi.cfw.guide | projects/dsi-guide-icon.png | A community-oriented project | dsi.cfw.guide is a website made to guide users through modding their Nintendo DSi (XL) systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings). | See what I've changed" | split: ' | ' %}
+
+{% assign my_array = "" | split: ',' %}
+{% assign my_array = my_array | push: twitter %}
+{% assign my_array = my_array | push: github %}
+{% assign my_array = my_array | push: paypal %}
+{% assign my_array = my_array | push: discord %}
+
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-5 col-lg-4">
 		<div style="min-height: 8rem;" class="mb-3">
 			<img src="/assets/images/avatar.png" style="float:right; height: 8rem; line-height:1; border-radius: .5rem;" class="ml-2">
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
@@ -40,63 +51,35 @@ landing: true
 			</div>
 		</div>
 	</div>
-	<div class="col-md-8">
-		<div class="card mb-3">
-			<div class="card-body">
-				<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
-				<div class="card-text">
-					<div style="min-height: 6rem;">
-						<img src="/assets/images/icon.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
-						<a class="h5" href="/projects/ns-domain">NightScript Domain</a>
-						<p>The very website you are using right now was something I (alongside my friends) coded back during the COVID-19 quarantine</p>
-					</div>
-					<hr>
-					<div style="min-height: 6rem;">
-						<img src="/assets/images/projects/yamamura.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
-						<a class="h5" href="#">Yamamura (Link not working yet)</a>
-						<p>A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available</p>
-					</div>
-					<hr>
-					<div style="min-height: 6rem;">
-						<img src="/assets/images/projects/twilight.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
-						<a class="h5" href="https://github.com/DS-Homebrew/TWiLightMenu">TWiLight Menu++</a>
-						<p>An all in one menu for launching title launchers (such as emulators, hypervisors and how would I explain nds-bootstrap :P). Works on all NTR/TWL environments</p>
-					</div>
-					<hr>
-					<div style="min-height: 6rem;">
-						<img src="/assets/images/projects/dsi-guide-icon.png" style="float:right; height: 6rem; line-height:1; border-radius: .5rem;" class="ml-2">
-						<a class="h5" href="/projects/dsi-guide">dsi.cfw.guide</a>
-						<p>dsi.cfw.guide is a website made to guide users through modding their Nintendo DSi (XL) systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings).</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="col-md-7 col-lg-8">
+		<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
+		{% include socialGrid.html pages=my_array grid="mini" %}
 		<div class="card mb-2">
 			<div class="card-body">
 				<h3 noAnchor class="card-title">Latest blog posts</h3>
 				<div class="card-text">
-					<div style="position: relative;">
+					<div>
 						<a class="h5" href="/blog/summer-2020">My Summer of 2020</a>
-						<p style="display:block;">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</p>
-						<a href="/blog/summer-2020" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+						<div class="mb-0">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</div>
+						<a href="/blog/summer-2020" style="text-align: right;">Read More...</a>
 					</div>
 					<hr>
-					<div style="position: relative;">
+					<div>
 						<a class="h5" href="/blog/edgenuity-issues">Issues with Edgenuity</a>
-						<p style="display:block;">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</p>
-						<a href="/blog/edgenuity-issues" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+						<div class="mb-0">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</div>
+						<a href="/blog/edgenuity-issues" style="text-align: right;">Read More...</a>
 					</div>
 					<hr>
-					<div style="position: relative;">
+					<div>
 						<a class="h5" href="/blog/sonic-return-of-infinite">Classic Sonic: Return of Infinite</a>
-						<p style="display:block;">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</p>
-						<a href="/blog/sonic-return-of-infinite" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+						<div class="mb-0">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</div>
+						<a href="/blog/sonic-return-of-infinite" style="text-align: right;">Read More...</a>
 					</div>
 					<hr>
-					<div style="position: relative;">
+					<div>
 						<a class="h5" href="/blog/ownership-issues">Issues with Ownership</a>
-						<p style="display:block;">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</p>
-						<a href="/blog/ownership-issues" style="position: absolute; right: 0; bottom: 0">Read More...</a>
+						<div class="mb-0">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</div>
+						<a href="/blog/ownership-issues" style="text-align: right;">Read More...</a>
 					</div>
 				</div>
 			</div>

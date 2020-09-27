@@ -17,4 +17,4 @@ While I'm also on other platforms (Reddit, GBAtemp, GitLab and others), please u
 {% assign my_array = my_array | push: paypal %}
 {% assign my_array = my_array | push: discord %}
 
-{% include socialGrid.html pages=my_array %}
+{% include socialGrid.html pages=my_array grid="page" %}
