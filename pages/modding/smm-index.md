@@ -6,7 +6,7 @@ syntax-highlight: true
 ---
 # Super Mario Maker Modding Guide
 
-<div class="d-block d-xl-none" data-toc></div>
+<div class="d-xl-none" data-toc></div>
 <div class="row" markdown="1">
 <div class="col-xl-8" data-content markdown="1">
 

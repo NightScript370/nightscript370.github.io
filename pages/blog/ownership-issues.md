@@ -7,7 +7,7 @@ permalink: /blog/ownership-issues
 # Ownership Issues
 <small class="font-italic font-weight-light font-underline">Published on May 12th, 2020 - Edited on June 1st, 2020</small>
 
-<div class="d-block d-xl-none" data-toc></div>
+<div class="d-xl-none" data-toc></div>
 <div class="row" markdown="1">
 <div class="col-xl-8" data-content markdown="1">
 
