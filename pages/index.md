@@ -5,6 +5,39 @@ permalink: /
 landing: true
 ---
 
+{% capture blog %}
+<div class="card mb-2">
+	<div class="card-body">
+		<h3 noAnchor class="card-title">Latest blog posts</h3>
+		<div class="card-text">
+			<div>
+				<a class="h5" href="/blog/summer-2020">My Summer of 2020</a>
+				<div class="mb-0">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</div>
+				<a href="/blog/summer-2020" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
+				<a class="h5" href="/blog/edgenuity-issues">Issues with Edgenuity</a>
+				<div class="mb-0">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</div>
+				<a href="/blog/edgenuity-issues" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
+				<a class="h5" href="/blog/sonic-return-of-infinite">Classic Sonic: Return of Infinite</a>
+				<div class="mb-0">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</div>
+				<a href="/blog/sonic-return-of-infinite" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
+				<a class="h5" href="/blog/ownership-issues">Issues with Ownership</a>
+				<div class="mb-0">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</div>
+				<a href="/blog/ownership-issues" style="text-align: right;">Read More...</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endcapture %}
+
 {% assign twitter = "/projects/ns-domain | NightScript Domain | projects/ns-domain.png |  | <br>A website I made to document my accomplishments | Visit its history" | split: ' | ' %}
 {% assign github = "# | Yamamura | projects/yamamura.png | Pages coming soon | A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available | See what it was" | split: ' | ' %}
 {% assign paypal = "https://github.com/DS-Homebrew/TWiLightMenu | TWiLight Menu++ | projects/twilight.png | Though I'm not the leader, I'm an active contributor | An all in one menu for launching title launchers (such as emulators, hypervisors and how would I explain nds-bootstrap :P). Works on all NTR/TWL environments | View Source Code" | split: ' | ' %}
@@ -54,35 +87,7 @@ landing: true
 	<div class="col-md-7 col-lg-8">
 		<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
 		{% include socialGrid.html pages=my_array grid="mini" %}
-		<div class="card mb-2">
-			<div class="card-body">
-				<h3 noAnchor class="card-title">Latest blog posts</h3>
-				<div class="card-text">
-					<div>
-						<a class="h5" href="/blog/summer-2020">My Summer of 2020</a>
-						<div class="mb-0">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</div>
-						<a href="/blog/summer-2020" style="text-align: right;">Read More...</a>
-					</div>
-					<hr>
-					<div>
-						<a class="h5" href="/blog/edgenuity-issues">Issues with Edgenuity</a>
-						<div class="mb-0">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</div>
-						<a href="/blog/edgenuity-issues" style="text-align: right;">Read More...</a>
-					</div>
-					<hr>
-					<div>
-						<a class="h5" href="/blog/sonic-return-of-infinite">Classic Sonic: Return of Infinite</a>
-						<div class="mb-0">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</div>
-						<a href="/blog/sonic-return-of-infinite" style="text-align: right;">Read More...</a>
-					</div>
-					<hr>
-					<div>
-						<a class="h5" href="/blog/ownership-issues">Issues with Ownership</a>
-						<div class="mb-0">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</div>
-						<a href="/blog/ownership-issues" style="text-align: right;">Read More...</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="d-none d-lg-block">{{ blog }}</div>
 	</div>
 </div>
+<div class="d-lg-none">{{blog}}</div>
