@@ -32,8 +32,7 @@ export default async function (elements) {
 			if (!langsResponse.ok)
 				throw new Error();
 
-			const htmlText = await langsResponse.text();
-			const langStatsPage = htmlToElem(htmlText);
+			const langStatsPage = htmlToElem(await langsResponse.text());
 			langStatsPage.removeAttribute('width')
 			langStatsPage.removeAttribute('height')
 			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
@@ -139,14 +138,8 @@ export default async function (elements) {
 			const profStatsPage = htmlToElem(await profStatsResponse.text());
 			profStatsPage.removeAttribute('width')
 			profStatsPage.removeAttribute('height')
-			profStatsPage.setAttribute('viewBox', '22 0 355 125')
 			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 			profStatsPage.classList.add('mb-2')
-
-			// Move circle rank more left
-			profStatsPage
-				.querySelector('[data-testid="rank-circle"]')
-				.setAttribute('transform', 'translate(330, 52)')
 
 			// Remove Padding
 			profStatsPage
@@ -184,7 +177,29 @@ export default async function (elements) {
 						.replace(':', '')
 				})
 
-			element.insertAdjacentElement('afterend', profStatsPage)
+			const wideProfStats = profStatsPage.cloneNode(true);
+			wideProfStats.classList.add('d-none')
+			wideProfStats.classList.add('d-lg-block')
+			wideProfStats.setAttribute('viewBox', '22 0 355 125')
+
+			// Move circle rank more left
+			wideProfStats
+				.querySelector('[data-testid="rank-circle"]')
+				.setAttribute('transform', 'translate(330, 52)')
+
+			const tallProfStats = profStatsPage.cloneNode(true);
+			tallProfStats.classList.add('d-lg-none')
+			tallProfStats.setAttribute('viewBox', '22 0 230 230')
+			tallProfStats
+				.querySelector('[data-testid="rank-circle"]')
+				.setAttribute('transform', 'translate(152, 40)')
+			tallProfStats
+				.querySelector('[data-testid="main-card-body"]')
+				.children[1]
+				.setAttribute('y', '105')
+
+			element.insertAdjacentElement('afterend', wideProfStats)
+			element.insertAdjacentElement('afterend', tallProfStats)
 		} catch {
 			const profStatsImage = document.createElement('img')
 			profStatsImage.src = profStatsURL
