@@ -1,3 +1,5 @@
+import Decimal from './libs/decimal.js';
+
 function htmlToElem(html) {
 	var template = document.createElement('template');
 	template.innerHTML = html.trim();
@@ -24,16 +26,16 @@ export default async function (elements) {
 			+ url
 			+ paramsURL;
 
-		const langStatsURL = gitStatsURL('/top-langs?layout=compact&card_width=345&')
+		const langStatsURL = gitStatsURL('/top-langs?layout=compact&card_width=100&')
 		try {
 			const langsResponse = await fetch(langStatsURL);
 			if (!langsResponse.ok)
 				throw new Error();
 
-			const langStatsPage = htmlToElem(await langsResponse.text());
+			const htmlText = await langsResponse.text();
+			const langStatsPage = htmlToElem(htmlText);
 			langStatsPage.removeAttribute('width')
 			langStatsPage.removeAttribute('height')
-			langStatsPage.setAttribute('viewBox', '24 0 347 85')
 			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
 
 			// Fix Heading Padding
@@ -51,8 +53,39 @@ export default async function (elements) {
 				.replace(".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFFFFF }", ".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: var(--text-color); font-weight: bold; }")
 				.replace("fill: #00AEFF;", "fill: var(--text-color);")
 
+			// WideBox sizing - Length of bar: 315
+			const wideLangBox = langStatsPage.cloneNode(true);
+			wideLangBox.classList.add('d-none')
+			wideLangBox.classList.add('d-lg-block')
+			wideLangBox.setAttribute('viewBox', '24 0 325 85')
+
+			// Until this PR gets merged, we have to manually extract the percent from the inner values themselves
+			// https://github.com/anuraghazra/github-readme-stats/pull/516
+
+			const wideLangItems = wideLangBox
+				.querySelectorAll('[data-testid="lang-name"]')
+
+			let WideBoxBarWidth = new Decimal(0);
+			let WideBoxRectWidth;
+			wideLangBox
+				.querySelectorAll('[data-testid="lang-progress"]')
+				.forEach((r, num) => {
+					//WideBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
+					WideBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(wideLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(3.15);
+
+					r.setAttribute("x", WideBoxBarWidth.toFixed(2));
+					r.setAttribute("width", WideBoxRectWidth.toFixed(2))
+
+					WideBoxBarWidth = WideBoxBarWidth.plus(WideBoxRectWidth);
+				})
+
+			wideLangBox
+				.getElementById("rect-mask")
+				.firstElementChild
+				.setAttribute("width", WideBoxBarWidth)
+
 			let i = 0;
-			langStatsPage
+			wideLangBox
 				.querySelector('[data-testid="lang-items"]')
 				.querySelectorAll('g')
 				.forEach(r => {
@@ -60,8 +93,37 @@ export default async function (elements) {
 					i++;
 				});
 
-			element.insertAdjacentElement('afterend', langStatsPage)
-		} catch {
+			// TallBox sizing - Length of bar: 250
+			const tallLangBox = langStatsPage.cloneNode(true);
+			tallLangBox.classList.add('d-lg-none')
+			tallLangBox.setAttribute('viewBox', '24 0 250 125')
+
+			const tallLangItems = tallLangBox
+				.querySelectorAll('[data-testid="lang-name"]')
+
+			let tallBoxBarWidth = new Decimal(0);
+			let tallBoxRectWidth;
+			tallLangBox
+				.querySelectorAll('[data-testid="lang-progress"]')
+				.forEach((r, num) => {
+					//tallBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
+					tallBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(tallLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(2.4);
+
+					r.setAttribute("x", tallBoxBarWidth.toFixed(2));
+					r.setAttribute("width", tallBoxRectWidth.toFixed(2))
+
+					tallBoxBarWidth = tallBoxBarWidth.plus(tallBoxRectWidth);
+				})
+
+			tallLangBox
+				.getElementById("rect-mask")
+				.firstElementChild
+				.setAttribute("width", tallBoxBarWidth)
+
+			element.insertAdjacentElement('afterend', tallLangBox)
+			element.insertAdjacentElement('afterend', wideLangBox)
+		} catch (e) {
+			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e)
 			const langStatsImage = document.createElement('img')
 			langStatsImage.src = langStatsURL
 			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
