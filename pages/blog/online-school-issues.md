@@ -30,10 +30,10 @@ These schools get funding for large scale building repairs, College Board makes 
 
 Now that uptime relies purely on whether the school building's electricity is available in time for class and not if someone completely outside your life decided to try and DDOS a global service, it's time for the students to connect to the video conference platform you just set up. How is that going to work, when rural communities do not have access in the slightest to fast WiFi? Fiber is a game changer, yet that isn't available to most rural areas.
 
-![](https://gbatemp.net/proxy.php?image=https%3A%2F%2Fwww.speedtest.net%2Fresult%2F9751358092.png&hash=f65543df83ec5556167be8e74474165f)
+![](https://gbatemp.net/proxy.php?image=https%3A%2F%2Fwww.speedtest.net%2Fresult%2F9751358092.png&hash=f65543df83ec5556167be8e74474165f)<br>
 Take Oklahoma for example. A GBAtemp user named sks316 lives there and for the longest time, it's been really difficult for them to even stream basic youtube videos. With an upload speed of 0.88 mbps, I highly doubt she would have been able to even log onto Zoom, with how bloated their software is. Yet, her family paid $65 for speeds like this, so how could we expect low-income families to come to school every day using lesser wifi (if they could even afford wifi in the first place)?
 
-![](http://www.speedtest.net/result/3596210135.png)
+![](https://www.speedtest.net/result/3596210135.png)<br>
 If you don't like this comparison about Oklahoma, then let's take a look at Australia. How is it that in 2014, having a 2.66 Mbps upload speed is faster than 69% of the general population? Fiber literally just got announced on September 23rd, 2020 for Australian users, so for it to actually be usable would take quite a while. By that point, I'm sure we all would have come back to inperson schooling.
 
 ### Connection Issues (Technological-wise and otherwise)
