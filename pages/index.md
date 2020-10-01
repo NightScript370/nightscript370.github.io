@@ -11,13 +11,19 @@ landing: true
 		<h3 noAnchor class="card-title">Latest blog posts</h3>
 		<div class="card-text">
 			<div>
+				<a class="h5" href="/blog/online-school-issues">Online School Issues</a>
+				<div class="mb-0">Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally isn't needed.</div>
+				<a href="/blog/online-school-issues" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
 				<a class="h5" href="/blog/summer-2020">My Summer of 2020</a>
 				<div class="mb-0">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</div>
 				<a href="/blog/summer-2020" style="text-align: right;">Read More...</a>
 			</div>
 			<hr>
 			<div>
-				<a class="h5" href="/blog/edgenuity-issues">Issues with Edgenuity</a>
+				<a class="h5" href="/blog/edgenuity-issues">Edgenuity Issues</a>
 				<div class="mb-0">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</div>
 				<a href="/blog/edgenuity-issues" style="text-align: right;">Read More...</a>
 			</div>
@@ -29,7 +35,7 @@ landing: true
 			</div>
 			<hr>
 			<div>
-				<a class="h5" href="/blog/ownership-issues">Issues with Ownership</a>
+				<a class="h5" href="/blog/ownership-issues">Ownership Issues</a>
 				<div class="mb-0">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</div>
 				<a href="/blog/ownership-issues" style="text-align: right;">Read More...</a>
 			</div>
@@ -50,7 +56,7 @@ landing: true
 {% assign my_array = my_array | push: discord %}
 
 <div class="row">
-	<div class="col-md-5 col-lg-4">
+	<div class="col-md-5 col-lg-4 mb-3">
 		<div style="min-height: 8rem;" class="mb-3">
 			<img src="/assets/images/avatar.png" style="float:right; height: 8rem; line-height:1; border-radius: .5rem;" class="ml-2">
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
