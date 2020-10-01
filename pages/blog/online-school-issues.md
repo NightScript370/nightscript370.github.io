@@ -62,7 +62,8 @@ This is what a global platform titled Edgenuity tried to do. Over the course of 
 
 <li><b>Remove teacher interaction altogether, just have the material grading and if they need extra resources, use someone else</b>
 This seems to be a cleaner option, and in some ways, it is better than my proposed solution which I would list below. It allows students to explore resources, gaining experience with research. Heck, if there were a way to fact check everything on the internet and remove wrong content, this would be my proposed solution. However, the internet is a vast world, filled with many content creators. Unfortunately for teachers, it means that kids would learn that 1+1=3 because Mickey Mouse said so on le funny Youtube video
-<img src="https://tenor.com/view/arthur-internet-tell-lies-buster-lie-gif-4986649"></li>
+<img src="https://media1.tenor.com/images/079ae25325122099ad2546621d7d0edb/tenor.gif?itemid=4986649" /></li>
+</ol>
 
 "Why not have a general platform specifically for educational videos with fact checkers"<br>
 There's no proper way to monitize this in a way that suits everyone.
