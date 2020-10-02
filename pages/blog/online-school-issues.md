@@ -2,6 +2,7 @@
 title: "Online School Issues"
 description: Here's an in depth analysis on the issues pertaining to online schooling due to the COVID-19 pandemic
 permalink: /blog/online-school-issues
+carousel: true
 ---
 
 # Online School Issues
