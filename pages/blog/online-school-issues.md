@@ -7,9 +7,11 @@ permalink: /blog/online-school-issues
 # Online School Issues
 <small class="font-italic font-weight-light font-underline">Published on October 1st, 2020</small>
 
-<!--<div class="d-xl-none" data-toc></div>
+<div class="d-xl-none" data-toc></div>
 <div class="row" markdown="1">
-<div class="col-xl-8" data-content markdown="1">-->
+<div class="col-xl-8" data-content markdown="1">
+
+![Zoom Classes](https://townsquaredelaware.com/wp-content/uploads/2020/03/unnamed.png)
 
 Typically, when a school gets closed, they would try to hault learning or push on a ton of homework. However, the COVID-19 pandemic has led the United States of America into a major lockdown, which has also affected how students would get their information. As such, school managers have been looking to make ways where students could still learn but at the same time, listen to the health experts. The proposed solution right now is to force everyone to use a video streaming service to attend specific classes at a specific time, which is what we used to do when we were in person. However, why keep to such an outdated system in a digital world that clearly does not need this?
 
@@ -38,19 +40,23 @@ If you don't like this comparison about Oklahoma, then let's take a look at Aust
 
 ### Connection Issues (Technological-wise and otherwise)
 
-Say that we somehow get everyone on fast wifi so that they are now able to connect. Oh wait, we now have connection issues and issues with staying in the class.
+Even if we do manage to get people connected in the first place, it's quite difficult to keep everyone in class, whether there are technological issues or life in general. These aren't uncommon; people assume that just because you're working from home means that you are now available 24/7. Whether it's to bring in groceries from the car, taking care of a younger sibling, speaking to others on the phone, people have to do other things because they're in an environment that needs them. In school, your parents are (hopefully) not in the building and as such, wouldn't ask you these dumb questions.
 
-On September 2020, California went under a state of emergency due to a fire started by a Gender Reveal party. The power went off for an hour where I live, which is almost an entire class period. Thankfully, this happened on a weekend with no school, yet what happened if it took place on a school day? Schools would not be understanding of the situation.
+However, even if you're in a proper work mindset, that doesn't mean that nature cannot interfere. Electricity issues happen all the time. In fact, earlier this school year, we had a power outage for an entire hour where I lived, due to wildfires started by a Gender Reveal party. I didn't have class that day, but if it were a school day, I would have gotten disconnected. Schools treat leaving class early worse than not coming to class at all, giving straight up 0s for participation and what is basically a record of anything the student has done wrong.
 
-We got a warning from our English teacher that says "if you leave during class, you're getting an F for that day's participation and you get a double diamond referral". Yet, if you don't connect at all, you just get an "Absent" grade? What's the difference? Just give them the absent and be done. Why penalize someone who at least stayed for a bit harsher than someone who didn't come at all?
+Notice how it only lasted an hour? That's because I live in a more populated area, where people would riot if the electricity were down for more than two hours. In urban places in New York? I stayed there for 5 days, and only one of those days we had power. Clearly we're trying to devote our time and money (because fast internet required by these video conference platforms costs money) to school, yet we can't even use it in the end.
 
 ### Is video-conferencing needed?
-Say we we somehow got everything worked out and everything works out just fine. Now what? We waste our battery watching something we could easily do on our own?
-For example, my English teacher was attempting to stream a movie called Boys State over this service, which is not only piracy aka **illegal**, but the recording is at 5 frames per second which is such an eye sore that I physically cannot watch the movie. I do not expect 120 FPS (let alone 60 FPS) but at the bare minimum, 15fps seems to be better than this.
 
-Do we really need in-person classes 99% of the time? Asyncronous learning means that we are able to bend things to our schedule and give us more control over how we spend our time. We wouldn't have to wait for the rest of your classmates to finish doing an assignment in order to move onto the next lesson. It's perfect when we're at home, as parents are dumb and think they need to call in their child every two second. Yet, for some reason, we have this; forced video conferencing for about 6 hours of your day. I hope you guys have good devices, cause they would run out of power quickly.
+We got every kid a high speed internet, made our own reliable video conferencing service, told nature to not cancel our our electricity flow and now log onto Zoom. What happens now? Do things we could easily do on our own? There are only two reasons I see video-based classes being used: Classes that need teacher-student interaction and for teachers to arbitrarily control students.
 
-We're in the 12th grade. We really don't need spoon-feeding. We could do things on our own, and we fully recognize that if we don't do something, we'd suffer the consequences. If we need help, we could very easily send over a video recording of what we need help with, or setup optional meetings, where students can tune in on their own, rather than forced seeings every day.
+I do not have any issues with video-conferences being used for classes that need it. Learning how to master 5 different a Trumpet or Flute cannot be done by simply watching Youtube videos; it needs the hands-on experience. However, why do math classes need to be on Zoom? All these classes do is just read the fine-print of the book, copy the examples from the book, do the work from the book and then just hand in that blank piece of paper. There does not need to be hands-on student-teacher interaction when the teacher either way just profits off work he never made. The reason? Control.
+
+For example, my English teacher was attempting to stream a movie called Boys State over Zoom, which resulted in a massive frame drop that made me physically unable to watch the movie. I had 3 assignments on what was talked about in the movie, but I would rather take the F then go through serious physical pain just to watch a movie about politics. *As if I needed more reminding that politics isn't anything but comedy and fighting. Thank you Donald Trump, Mike Wallace and Joe Biden.* It didn't even matter in the end, since he either way uploaded the clips to Google Classroom afterwards, so what was the point of forcing us to watch it in class? (I'm still not watching the Google Classroom clips, because they were recorded using Zoom, which just parses what's being sent to the server rather than the host screen itself) The reason is control, because he wants to force us to watch the movie so that we could forcefully do the work.
+
+There is no substancial reason why we have to wear proper school uniform and atire when we are at the confort of our home. There is no one to impress other than "hey, we just love turning these students into robots that are unable to be comfortable". There is no reason why we cannot look away for literally a second without the teacher barking at us to stay focused. It is just about control, and I think this pandemic has finally exposed what schools are there for; not to educate these students into mastering these subjects but to develop these students into following tradition. That's why they do not allow you to look at notes on tests; because their olden-day jobs require you to memorize everything. As a programmer, I can safely say that no programmer would remember every single detail of the language that they would master. This is why we have documentations.
+
+Of course, there could be reasons why we have to use video-conferencing that I am just unaware of. To any school director, please feel free to contact me. I would love to hear a proper response to why we need in-person classes in a world that can do without it. High School kids can figure out things on their own without spoon-feeding. We fully recognize that if we don't do something, we'd suffer the consequences. If we need help, we could very easily send over a video recording of what we need help with, or setup optional meetings, where students can tune in on their own, rather than forced seeings every day.
 
 ### Potential Solutions
 Say we negated video conferencing altogether. That's great, but how would we get the material? There would need to be a way where the teacher does not have to be there in person-form but still deliver the content. However, that's still too vague and not really explicit on how to teach the material successfully to the student.
@@ -61,7 +67,7 @@ In a real classroom, when you are tied to meeting in person, you must listen to 
 This is what a global platform titled Edgenuity tried to do. Over the course of the summer, I felt as if I was an absolute moron learning things I already knew. It made me really feel bad about myself. Is that what school is trying to be about? Making kids feel bad about themselves?</li>
 
 <li><b>Remove teacher interaction altogether, just have the material grading and if they need extra resources, use someone else</b>
-This seems to be a cleaner option, and in some ways, it is better than my proposed solution which I would list below. It allows students to explore resources, gaining experience with research. Heck, if there were a way to fact check everything on the internet and remove wrong content, this would be my proposed solution. However, the internet is a vast world, filled with many content creators. Unfortunately for teachers, it means that kids would learn that 1+1=3 because Mickey Mouse said so on le funny Youtube video
+This seems to be a cleaner option, and in some ways, it is better than my proposed solution which I would list below. It allows students to explore resources, gaining experience with research. Heck, if there were a way to fact check everything on the internet and remove wrong content, this would be my proposed solution. However, the internet is a vast world, filled with many content creators. Unfortunately for teachers, it means that kids would learn that 1+1=3 because Mickey Mouse said so on le funny Youtube video<br>
 <img src="https://media1.tenor.com/images/079ae25325122099ad2546621d7d0edb/tenor.gif?itemid=4986649" /></li>
 </ol>
 
@@ -70,13 +76,26 @@ There's no proper way to monitize this in a way that suits everyone.
 
 ### Recommended Solution
 
+{% assign email = "http://tfln.co/wp-content/uploads/2017/10/student_sends_an_epic_email_to_her_teacher_while_she_was_supra_high_640_high_08.jpg | Teacher responding to email about due dates. No need for this to be in person" | split: ' | ' %}
+{% assign portal = "https://1.bp.blogspot.com/-N3KEZ6QeZeA/XLH2OSvAQJI/AAAAAAAADD0/jQl_exmd9VoA4VPxa6U4TpYf5IKSoNx0gCK4BGAYYCw/s1600/google-classroom-elementary-3.jpg | Class portal, where any announcements can be made, assignments can be posted and others" | split: " | "%}
+{% assign assignments = "https://venturebeat.com/wp-content/uploads/2018/06/Google-Classroom-Classwork.jpg?w=1200&strip=all | Assignment list. No need for constant reminders in class on what to do" | split: " | "%}
+
+{% assign carousel = "" | split: "," | push: email | push: portal | push: assignments %}
+{% include carousel.html pages=carousel id="onlineSchoolProposal" %}
+
 - While we need to be able to talk to a supervisor if we need help, we should not be forced to talk to them through video conferencing
 - We shouldn't be locked down to getting taught just by the course instructor. We have a world filled with resources out there.
 - We need someone that would check our work manually instead of automatic grading. Automated systems have failed
 
 This are a list of what you need to take into account when creating a solution for a huge issue like this. I think I've found one: What if we were to just have a list of assignments that we need to complete, with a pre-recorded video attachment that you could optionally watch if you need it? For human-teacher interaction, the students could reach out to the teacher via email if they need assistance to schedule an appointment and teachers could request of students to make an appointment when they need to talk about grade. Of course, the former is the student-volunteer which means the first issue is solved. The second issue is solved because we could always skip over the attechment.
 
-<!--</div>
+### Conclusion
+
+To understand where I come from, I have always been an advocate of the "learn it yourself" method. When offering support for modding video game consoles, I have never given them an answer that was already answered by guides. I have placed rules against spoon-feeding and even though we've had a few instances where people didn't like it, most were supportive of my way of giving support. This is why we have most of the community understand what they're going through as opposed to the 3DS modding community, which blatantly follow the guide with no explanation at all.
+
+I have also fought hard with schools over matters in regards to teaching style. I do not think I will directly confront school administration with a link to this article, since it seems like most of the world has adopted this format. It doesn't matter in the long run, but for schools that are looking for feedback, feel free to look at this rant.
+
+</div>
 
 <div class="col-xl-4 d-none d-xl-block">
 
@@ -84,4 +103,4 @@ This are a list of what you need to take into account when creating a solution f
 
 </div>
 
-</div>-->
+</div>
