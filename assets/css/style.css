@@ -103,6 +103,7 @@ a {
 	-webkit-box-shadow: 3px 0 5px 0 var(--shadow-color);
 	box-shadow:         3px 0 5px 0 var(--shadow-color); }
 	#sidebar .sidebar-contents {
+		min-height: 100vh;
 		height: 100%;
 		background-color: var(--sidebar-bg-color);
 		display: grid;
