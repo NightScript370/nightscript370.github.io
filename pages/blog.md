@@ -1,6 +1,6 @@
 ---
 title: Blog Posts
-permalink: /blog
+permalink: /blog/
 ---
 
 # NightScript's Domain -- Blog Section
