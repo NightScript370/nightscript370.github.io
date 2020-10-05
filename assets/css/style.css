@@ -89,15 +89,6 @@ a {
 	background-repeat: no-repeat;
 	background-position: center center; }
 
-#gradient-sidebar {
-	position: absolute;
-	background: linear-gradient(var(--gradient-top), rgba(0,0,0,0));
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-
 #sidebar {
 	min-width: 250px;
 	max-width: 250px;
@@ -106,7 +97,6 @@ a {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-	position: relative;
 	min-height: 100vh;
 	z-index: 100;
 
@@ -114,12 +104,11 @@ a {
 	-webkit-box-shadow: 3px 0 5px 0 var(--shadow-color);
 	box-shadow:         3px 0 5px 0 var(--shadow-color); }
 	#sidebar .sidebar-contents {
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		background-color: var(--sidebar-bg-color)}
+		height: 100%;
+		background-color: var(--sidebar-bg-color);
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: 100%;}
 	#sidebar.active {
 		margin-left: -245px; }
 		#sidebar.active .custom-menu {
@@ -177,7 +166,8 @@ a {
 		margin-right: -15px;
 		-webkit-transition: 0.3s;
 		-o-transition: 0.3s;
-		transition: 0.3s; }
+		transition: 0.3s;
+		z-index: 3; }
 		@media (prefers-reduced-motion: reduce) {
 			#sidebar .custom-menu {
 				-webkit-transition: none;
@@ -229,11 +219,21 @@ a {
 #sidebar-logo {
 	position: relative;
 	min-height: 225px;
-	display: flex;
-	justify-content: center;
-	align-items: center; }
+	background: linear-gradient(var(--gradient-top), rgba(0,0,0,0));
+	display: grid;
+	grid-template: 1fr / 1fr;
+	place-items: center; }
+	#sidebar-logo > * {
+		grid-column: 1 / 1;
+		grid-row: 1 / 1;
+	}
 	#sidebar-logo img {
-		width: 180px; }
+		width: 180px;
+		z-index: 2; }
+
+#bubblesCanvas {
+	z-index: 1;
+}
 
 #content {
 	background-color: var(--background-filter);
@@ -302,16 +302,6 @@ a {
 
 .card .card-body .cardShareLinks a .fa {
 	font-size: 2em;
-}
-
-.bottomLinks {
-	bottom: 0;
-	position:absolute;
-	left:0;
-	right:0;
-	margin-left:auto;
-	margin-right:auto;
-	color: var(--text-color);
 }
 
 .mw-25 {

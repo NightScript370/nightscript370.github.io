@@ -8,12 +8,8 @@ const bubblesCanvas = document.createElement("canvas");
 bubblesCanvas.setAttribute('width', sidebarLogo.offsetWidth);
 bubblesCanvas.setAttribute('height', sidebarLogo.offsetHeight);
 bubblesCanvas.setAttribute('id', 'bubblesCanvas');
-bubblesCanvas.style.position = 'absolute';
 
-const gradientDiv = document.getElementById("gradient-sidebar")
-gradientDiv.setAttribute('style', `width:${sidebarLogo.offsetWidth}px;height:${sidebarLogo.offsetHeight}px;`);
-
-gradientDiv.insertAdjacentElement('afterend', bubblesCanvas)
+sidebarLogo.insertAdjacentElement('afterbegin', bubblesCanvas)
 const ctx = bubblesCanvas.getContext("2d");
 
 let circleSpeed = 0.1;

@@ -82,9 +82,10 @@ layout: compress
 		<div class="bg"></div>
 		<nav id="sidebar">
 			<div class="sidebar-contents">
-				<div id="gradient-sidebar"></div>
-				<div id="sidebar-logo"><img src="/assets/images/icon.png"></div>
-				<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
+				<div id="sidebar-logo">
+					<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
+					<img src="/assets/images/icon.png">
+				</div>
 				<ul class="list-unstyled mb-0" id="sidebarLinks">
 					{% for item in site.data.nav.sidebar %}
 						{% if item.url %}
