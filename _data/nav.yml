@@ -2,9 +2,6 @@ sidebar:
   - title: Home
     url: /
     image: /assets/images/icons/home.svg
-  - title: Graphic Design
-    url: /graphic-design
-    image: /assets/images/icons/photo-gallery.png
   - title: Projects
     #notif: 2
     image: /assets/images/icons/folder.svg
@@ -15,6 +12,9 @@ sidebar:
         url: #
       - title: NightScript Domain
         url: /projects/ns-domain
+  - title: Blog
+    image: /assets/images/icons/create.png
+    url: /blog
   - title: Modding Guides
     #notif: 2
     image: /assets/images/icons/wrench.png
@@ -23,9 +23,9 @@ sidebar:
         url: /modding/smm-index
       - title: Nintendo DS(i)
         url: /modding/ds-index
-  - title: Blog
-    image: /assets/images/icons/create.png
-    url: /blog
+  - title: Art Gallery
+    url: /graphic-design
+    image: /assets/images/icons/photo-gallery.png
   - title: Social Links
     image: /assets/images/icons/share.svg
     url: /social

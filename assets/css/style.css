@@ -93,7 +93,6 @@ a {
 	min-width: 250px;
 	max-width: 250px;
 	background: var(--sidebar-image);
-	color: #fff;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
@@ -218,7 +217,7 @@ a {
 
 #sidebar-logo {
 	position: relative;
-	min-height: 225px;
+	min-height: 195px;
 	background: linear-gradient(var(--gradient-top), rgba(0,0,0,0));
 	display: grid;
 	grid-template: 1fr / 1fr;
