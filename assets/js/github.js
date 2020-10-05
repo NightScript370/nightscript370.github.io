@@ -162,7 +162,7 @@ export default async function (elements) {
 							elem.setAttribute('x', '55');
 							elem.classList.remove('bold')
 							break;
-						case 200:
+						case 190:
 							elem.setAttribute('x', '30');
 							elem.classList.add('bold')
 							elem.setAttribute('text-anchor', 'end')
