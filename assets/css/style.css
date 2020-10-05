@@ -567,7 +567,10 @@ img {
 }
 
 .socialPageCard .socialCardContent {
-	background-color: var(--menu-element);
+	background: var(--menu-element);
+	color: var(--menu-element-text-color);
+	box-shadow: 5px 5px 5px var(--shadow-color) !important;
+	border: 1px solid rgba(0,0,0,.125);
 	border-radius: 4px;
 	padding: 10px;
 	width: 100%;
