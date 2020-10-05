@@ -12,8 +12,8 @@ bubblesCanvas.setAttribute('id', 'bubblesCanvas');
 sidebarLogo.insertAdjacentElement('afterbegin', bubblesCanvas)
 const ctx = bubblesCanvas.getContext("2d");
 
-let circleSpeed = 0.1;
-let circleMovement = 0.6;
+let circleSpeed = 0.02;
+let circleMovement = 0.2;
 
 let circles = [];
 const circleMax = random(5, 7);
@@ -28,7 +28,7 @@ while (circles.length < circleMax) {
 }
 
 ctx.globalAlpha = 0;
-setInterval(() => {
+function repeatOften() {
 	ctx.clearRect(0, 0, bubblesCanvas.width, bubblesCanvas.height)
 	for (let circle of circles) {
 		ctx.beginPath();
@@ -44,4 +44,7 @@ setInterval(() => {
 		if (ctx.globalAlpha != 1)
 			ctx.globalAlpha+=0.015;
 	}
-}, 50);
+
+	requestAnimationFrame(repeatOften);
+}
+requestAnimationFrame(repeatOften);
