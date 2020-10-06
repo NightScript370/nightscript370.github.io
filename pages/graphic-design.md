@@ -1,7 +1,6 @@
 ---
 title: Graphic Design
 description: All about the graphic design works I've done over the years
-permalink: /graphic-design
 carousel: true
 ---
 
