@@ -582,3 +582,25 @@ img {
 	bottom: 0px;
 	text-align: right;
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-525 {
+		flex: 0 0 auto;
+		width: 43.75%;
+	}
+
+	.col-md-55 {
+		flex: 0 0 auto;
+		width: 45.833333%;
+	}
+
+	.col-md-65 {
+		flex: 0 0 auto;
+		width: 54.166667%;
+	}
+
+	.col-md-675 {
+		flex: 0 0 auto;
+		width: 56.25%;
+	}
+}
