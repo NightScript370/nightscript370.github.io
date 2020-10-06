@@ -10,6 +10,22 @@ export default async function (elements) {
 	if (!elements.length)
 		return;
 
+	if (!String.prototype.replaceAll)
+		Object.defineProperty(String.prototype, "replaceAll", { value: function replaceAll(search, replacement) {
+			var target = this;
+			let result = target;
+		
+			if (search instanceof Array) {
+				for (var splitvar of search) {
+					result = result.split(splitvar).join(replacement)
+				}
+			} else {
+				result = result.split(search).join(replacement)
+			}
+		
+			return result;
+		}, enumerable: false})
+
 	for (let element of elements) {
 		const iframeData = htmlToElem(element.innerHTML)
 
@@ -19,12 +35,11 @@ export default async function (elements) {
 			'theme': 'algolia',
 			'bg_color': '00000000'
 		}
-		const paramsURL = Object.keys(attributes).map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(attributes[k])).join('&')
 
 		const gitStatsURL = (url) => 'https://cors-anywhere.herokuapp.com/'
 			+ 'https://github-readme-stats.vercel.app/api'
 			+ url
-			+ paramsURL;
+			+ Object.keys(attributes).map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(attributes[k])).join('&');
 
 		const langStatsURL = gitStatsURL('/top-langs?layout=compact&card_width=100&')
 		try {
@@ -200,7 +215,8 @@ export default async function (elements) {
 
 			element.insertAdjacentElement('afterend', wideProfStats)
 			element.insertAdjacentElement('afterend', tallProfStats)
-		} catch {
+		} catch (e) {
+			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e)
 			const profStatsImage = document.createElement('img')
 			profStatsImage.src = profStatsURL
 			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
