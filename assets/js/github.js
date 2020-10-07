@@ -27,7 +27,7 @@ export default async function (elements) {
 		}, enumerable: false})
 
 	for (let element of elements) {
-		const iframeData = htmlToElem(element.innerHTML)
+		const iframeData = htmlToElem(element.innerText)
 
 		const attributes = {
 			'username': (iframeData.src).match(/github\.com\/([^/]+)/)[1],
