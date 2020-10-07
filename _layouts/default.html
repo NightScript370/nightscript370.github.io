@@ -161,5 +161,13 @@ layout: compress
 		</script>
 		<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
 		{% endif %}
+		{% if page.github %}
+		<link rel="stylesheet" href="/assets/css/github-calendar.css" />
+		<script src="/assets/js/libs/github-calendar.js"></script>
+		<script type="module">
+			if (document.getElementsByClassName('gitStats').length)
+				import("/assets/js/github.js").then(async (mod) => await mod.default(document.getElementsByClassName('gitStats')))
+		</script>
+		{% endif %}
 	</body>
 </html>
