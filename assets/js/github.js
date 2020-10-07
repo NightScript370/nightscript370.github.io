@@ -50,7 +50,7 @@ export default async function (elements) {
 			const langStatsPage = htmlToElem(await langsResponse.text());
 			langStatsPage.removeAttribute('width')
 			langStatsPage.removeAttribute('height')
-			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
+			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 
 			// Fix Heading Padding
 			langStatsPage
@@ -140,7 +140,7 @@ export default async function (elements) {
 			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e)
 			const langStatsImage = document.createElement('img')
 			langStatsImage.src = langStatsURL
-			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
+			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 			element.insertAdjacentElement('afterend', langStatsImage)
 		}
 
@@ -153,7 +153,7 @@ export default async function (elements) {
 			const profStatsPage = htmlToElem(await profStatsResponse.text());
 			profStatsPage.removeAttribute('width')
 			profStatsPage.removeAttribute('height')
-			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
+			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 			profStatsPage.classList.add('mb-2')
 
 			// Remove Padding
@@ -219,8 +219,73 @@ export default async function (elements) {
 			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e)
 			const profStatsImage = document.createElement('img')
 			profStatsImage.src = profStatsURL
-			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.75px 1px var(--shadow-color))')
+			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 			element.insertAdjacentElement('afterend', profStatsImage)
+		}
+
+		try {
+			const gitContributeGraph = document.createElement('div')
+			gitContributeGraph.classList.add('gitCalendar')
+			gitContributeGraph.classList.add('mb-3')
+			element.insertAdjacentElement('afterend', gitContributeGraph)
+			await GitHubCalendar(".gitCalendar", attributes.username, { responsive: true, summary_text: "Calender of events" });
+
+			const date = new Date();
+			let yearData = [
+				{ name: 'January', days: 31 },
+				{ name: 'Febuary', days: (date.getFullYear() % 4 != 0 || (date.getFullYear() % 100 == 0 && date.getFullYear() % 400 != 0)) ? 28 : 29 },
+				{ name: 'March', days: 31 },
+				{ name: 'April', days: 30 },
+				{ name: 'May', days: 31 },
+				{ name: 'June', days: 30 },
+				{ name: 'July', days: 31 },
+				{ name: 'August', days: 31 },
+				{ name: 'September', days: 30 },
+				{ name: 'October', days: 31 },
+				{ name: 'November', days: 30 },
+				{ name: 'December', days: 31 }
+			]
+
+			let boxesToKeep = 2;
+			let monthLookup = date.getMonth();
+
+			for (var i = 0; i < 6; i++) {
+				monthLookup--;
+				if (monthLookup < 0)
+					monthLookup = yearData.length - 1;
+
+				if (i !== 5)
+					boxesToKeep += yearData[monthLookup].days
+			}
+
+			boxesToKeep += date.getDay();
+			boxesToKeep += yearData[monthLookup].days - date.getDay();
+
+			while (boxesToKeep % 7 != 0)
+				boxesToKeep++;
+
+			const gitHistoryGraph = gitContributeGraph.getElementsByClassName('js-calendar-graph-svg')[0]
+			const dates = gitHistoryGraph.querySelectorAll('rect.day')
+
+			console.log(boxesToKeep)
+			for (var i = 0; i < dates.length; i++) {
+				if (i == boxesToKeep) break;
+				dates[i].remove();
+			}
+
+			gitHistoryGraph
+				.querySelectorAll('text.wday')
+				.forEach(e => e.setAttribute('dx', 325))
+
+			gitHistoryGraph
+				.querySelectorAll('text.month')
+				.forEach(e => { if (e.getAttribute('x') < 325) e.remove(); })
+
+			gitHistoryGraph
+				.setAttribute('viewBox', '325 0 425 112')
+
+		} catch (error) {
+			console.error('[ERROR] Git Contribution Graph JS', error)
 		}
 
 		try {

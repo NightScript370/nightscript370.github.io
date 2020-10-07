@@ -21,9 +21,6 @@ if (!window.matchMedia("print").matches) {
 		import("./js/autotargetblank.js").then(mod => mod.default(document.querySelectorAll('a')))
 
 	import("./js/table-of-contents.js").then(mod => mod.default('[data-content]', '[data-toc]'))
-
-	if (document.getElementsByClassName('gitStats').length)
-		import("./js/github.js").then(async (mod) => await mod.default(document.getElementsByClassName('gitStats')))
 }
 
 //document.designMode = 'on';

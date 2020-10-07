@@ -3,6 +3,7 @@ title: Home
 description: This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?
 permalink: /
 landing: true
+github: true
 ---
 
 {% capture blog %}
