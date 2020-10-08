@@ -14,7 +14,7 @@ sidebar:
         url: /projects/ns-domain
   - title: Blog
     image: /assets/images/icons/create.png
-    url: /blog
+    url: /blog/
   - title: Modding Guides
     #notif: 2
     image: /assets/images/icons/wrench.png
