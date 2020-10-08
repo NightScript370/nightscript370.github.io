@@ -193,10 +193,12 @@ a {
 				right: 2px; }
 	@media (max-width: 991.98px) {
 		#sidebar {
-			margin-left: -250px;
+			margin-left: -225px;
 			position: fixed; }
 			#sidebar .custom-menu {
-				margin-right: -25px !important; }
+				margin-right: -25px; }
+			#sidebar.active .custom-menu {
+				margin-right: -15px; }
 				#sidebar .custom-menu .btn:before {
 					content: '';
 					background-image: var(--open-menu-arrow);
