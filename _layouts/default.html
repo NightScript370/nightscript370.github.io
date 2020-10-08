@@ -98,7 +98,7 @@ layout: compress
 											<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 										{% endif %}
 									{% elsif item.image %}
-										<img src="{{item.image}}" class="mr-2">
+										<img src="{{item.image}}">
 									{% endif %} {{ item.title }}</a>
 							</li>
 						{% endif %}
@@ -116,7 +116,7 @@ layout: compress
 												<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 											{% endif %}
 										{% elsif item.image %}
-											<img src="{{item.image}}" class="mr-2">
+											<img src="{{item.image}}">
 										{% endif %} {{ item.title }}</a>
 									<ul class="collapse list-unstyled" id="{{ submenu }}">
 										{% for entry in item.items %}
