@@ -122,21 +122,18 @@ a {
 			display: none; }
 	#sidebar ul#sidebarLinks li {
 		font-size: 17.5px; }
+		#sidebar ul#sidebarLinks li > ul {
+			padding-top: 3px;
+		}
 		#sidebar ul#sidebarLinks li > ul li {
 			margin-left: 10px;
-			font-size: 15px; }
+			font-size: 15px;
+			padding-bottom: 3px; }
 		#sidebar ul#sidebarLinks li a {
-			padding: 2.5px 20px;
+			padding: 2.75px 20px;
 			display: flex;
 			align-items: center;
-			color: var(--sidebar-link);
-
-			border-top-width: thin;
-			border-bottom-width: thin;
-			border-left-width: 0;
-			border-right-width: 0;
-			border: thin solid transparent;
-			border-image-slice: 1; }
+			color: var(--sidebar-link); }
 			#sidebar ul#sidebarLinks li a img {
 				width: 17.5px;
 				height: 17.5px;
