@@ -110,9 +110,9 @@ a {
 		grid-template-rows: auto 1fr auto;
 		grid-template-columns: 100%;}
 	#sidebar.active {
-		margin-left: -245px; }
+		margin-left: -225px; }
 		#sidebar.active .custom-menu {
-			margin-right: -45px; }
+			margin-right: -25px; }
 		#sidebar.active .btn:before {
 			content: '';
 			background-image: var(--open-menu-arrow);
@@ -354,12 +354,12 @@ h6:hover .anchor {
 	.page-padding {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
-		padding-left: 6rem;
-		padding-right: 6rem;
+		padding-left: 5rem;
+		padding-right: 5rem;
 	}
 
 	.noAnchorsPadding {
-		padding-left: 3rem;
+		padding-left: 3.5rem;
 		padding-right: 3rem;
 	}
 }
