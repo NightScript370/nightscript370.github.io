@@ -608,3 +608,25 @@ img {
 		width: 56.25%;
 	}
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.col-lg-525 {
+		flex: 0 0 auto;
+		width: 43.75%;
+	}
+
+	.col-lg-55 {
+		flex: 0 0 auto;
+		width: 45.833333%;
+	}
+
+	.col-lg-65 {
+		flex: 0 0 auto;
+		width: 54.166667%;
+	}
+
+	.col-lg-675 {
+		flex: 0 0 auto;
+		width: 56.25%;
+	}
+}

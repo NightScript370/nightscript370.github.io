@@ -70,7 +70,7 @@ export default async function (elements) {
 			// WideBox sizing - Length of bar: 315
 			const wideLangBox = langStatsPage.cloneNode(true);
 			wideLangBox.classList.add('d-none')
-			wideLangBox.classList.add('d-lg-block')
+			wideLangBox.classList.add('d-xl-block')
 			wideLangBox.setAttribute('viewBox', '24 0 325 85')
 
 			// Until this PR gets merged, we have to manually extract the percent from the inner values themselves
@@ -109,7 +109,7 @@ export default async function (elements) {
 
 			// TallBox sizing - Length of bar: 250
 			const tallLangBox = langStatsPage.cloneNode(true);
-			tallLangBox.classList.add('d-lg-none')
+			tallLangBox.classList.add('d-xl-none')
 			tallLangBox.setAttribute('viewBox', '24 0 250 125')
 
 			const tallLangItems = tallLangBox
@@ -194,7 +194,7 @@ export default async function (elements) {
 
 			const wideProfStats = profStatsPage.cloneNode(true);
 			wideProfStats.classList.add('d-none')
-			wideProfStats.classList.add('d-lg-block')
+			wideProfStats.classList.add('d-xl-block')
 			wideProfStats.setAttribute('viewBox', '22 0 355 125')
 
 			// Move circle rank more left
@@ -203,7 +203,7 @@ export default async function (elements) {
 				.setAttribute('transform', 'translate(330, 52)')
 
 			const tallProfStats = profStatsPage.cloneNode(true);
-			tallProfStats.classList.add('d-lg-none')
+			tallProfStats.classList.add('d-xl-none')
 			tallProfStats.setAttribute('viewBox', '22 0 230 230')
 			tallProfStats
 				.querySelector('[data-testid="rank-circle"]')

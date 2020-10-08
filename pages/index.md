@@ -57,7 +57,7 @@ github: true
 {% assign my_array = my_array | push: discord %}
 
 <div class="row">
-	<div class="col-md-525 col-lg-4 mb-3">
+	<div class="col-md-525 col-lg-525 col-xl-4 mb-3">
 		<div style="min-height: 8rem;" class="mb-3">
 			<img src="/assets/images/avatar.png" style="float:right; height: 8rem; line-height:1; border-radius: .5rem;" class="ml-2">
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
@@ -91,10 +91,10 @@ github: true
 			</div>
 		</div>
 	</div>
-	<div class="col-md-675 col-lg-8">
+	<div class="col-md-675 col-lg-675 col-xl-8">
 		<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
 		{% include socialGrid.html pages=my_array grid="mini" %}
-		<div class="d-none d-lg-block">{{ blog }}</div>
+		<div class="d-none d-xl-block">{{ blog }}</div>
 	</div>
 </div>
-<div class="d-lg-none">{{blog}}</div>
+<div class="d-xl-none">{{blog}}</div>
