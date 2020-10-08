@@ -1,5 +1,7 @@
-.gitCalendar {
-	display: grid;
+@media (min-width: 768px) {
+	.gitCalendar {
+		display: grid;
+	}
 }
 
 .gitCalendar .position-relative {
@@ -23,18 +25,13 @@
 }
 
 .contrib-legend {
-	text-align: right;
 	padding: 0 14px 10px 0;
-	display: inline-block;
 	float: right;
 }
 
 .contrib-legend .legend {
 	display: inline-block;
-	list-style: none;
 	margin: 0 5px;
-	position: relative;
-	bottom: -1px;
 	padding: 0;
 }
 
@@ -57,13 +54,18 @@
 .contrib-column {
 	padding: 15px 0;
 	text-align: center;
-	border-left: 1px solid #ddd;
-	border-top: 1px solid #ddd;
 	font-size: 11px;
 }
 
-.contrib-column-first {
-	border-left: 0;
+@media (min-width: 768px) {
+	.contrib-column {
+		border-left: 1px solid #ddd;
+		border-top: 1px solid #ddd;	
+	}
+
+	.contrib-column-first {
+		border-left: 0;
+	}
 }
 
 .table-column {
