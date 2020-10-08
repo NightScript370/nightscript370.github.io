@@ -246,43 +246,72 @@ export default async function (elements) {
 				{ name: 'December', days: 31 }
 			]
 
-			let boxesToKeep = 2;
+			let boxesToKeep = { xl: 2, sm: 2 };
 			let monthLookup = date.getMonth();
+
+			const xlGitHistoryGraph = gitContributeGraph.getElementsByClassName('js-calendar-graph-svg')[0]
+			const smGitHistoryGraph = xlGitHistoryGraph.cloneNode(true)
 
 			for (var i = 0; i < 6; i++) {
 				monthLookup--;
 				if (monthLookup < 0)
 					monthLookup = yearData.length - 1;
 
+				if (i !== 2 && i !== 3 && i !== 4 && i !== 5)
+					boxesToKeep.sm += yearData[monthLookup].days
+
 				if (i !== 5)
-					boxesToKeep += yearData[monthLookup].days
+					boxesToKeep.xl += yearData[monthLookup].days
 			}
 
-			boxesToKeep += date.getDay();
-			boxesToKeep += yearData[monthLookup].days - date.getDay();
+			boxesToKeep.sm += date.getDay();
+			boxesToKeep.sm += yearData[monthLookup].days - date.getDay();
 
-			while (boxesToKeep % 7 != 0)
-				boxesToKeep++;
+			boxesToKeep.xl += date.getDay();
+			boxesToKeep.xl += yearData[monthLookup].days - date.getDay();
 
-			const gitHistoryGraph = gitContributeGraph.getElementsByClassName('js-calendar-graph-svg')[0]
-			const dates = gitHistoryGraph.querySelectorAll('rect.day')
+			while (boxesToKeep.sm % 7 != 0)
+				boxesToKeep.sm++;
 
-			console.log(boxesToKeep)
-			for (var i = 0; i < dates.length; i++) {
-				if (i == boxesToKeep) break;
-				dates[i].remove();
+			while (boxesToKeep.xl % 7 != 0)
+				boxesToKeep.xl++;
+
+			const xlDates = xlGitHistoryGraph.querySelectorAll('rect.day')
+			for (var i = xlDates.length - 1; i >= 0; i--) {
+				if (i < boxesToKeep.xl)
+					xlDates[i].remove();
 			}
 
-			gitHistoryGraph
+			const smDates = smGitHistoryGraph.querySelectorAll('rect.day')
+			console.log(boxesToKeep.sm)
+			for (var i = smDates.length - 1, ri = 0; i >= 0; i--, ri++) {
+				if (ri > boxesToKeep.sm)
+					smDates[i].remove();
+			}
+
+			xlGitHistoryGraph
 				.querySelectorAll('text.wday')
 				.forEach(e => e.setAttribute('dx', 325))
 
-			gitHistoryGraph
+			xlGitHistoryGraph
 				.querySelectorAll('text.month')
 				.forEach(e => { if (e.getAttribute('x') < 325) e.remove(); })
 
-			gitHistoryGraph
-				.setAttribute('viewBox', '325 0 425 112')
+			xlGitHistoryGraph.setAttribute('viewBox', '325 0 400 112')
+			xlGitHistoryGraph.classList.add('d-none')
+			xlGitHistoryGraph.classList.add('d-xl-block')
+
+			smGitHistoryGraph
+				.querySelectorAll('text.wday')
+				.forEach(e => e.setAttribute('dx', 475))
+
+			smGitHistoryGraph
+				.querySelectorAll('text.month')
+				.forEach(e => { if (e.getAttribute('x') < 475) e.remove(); })
+
+			smGitHistoryGraph.setAttribute('viewBox', '475 0 245 112')
+			smGitHistoryGraph.classList.add('d-xl-none')
+			xlGitHistoryGraph.insertAdjacentElement('afterend', smGitHistoryGraph)
 
 		} catch (error) {
 			console.error('[ERROR] Git Contribution Graph JS', error)
