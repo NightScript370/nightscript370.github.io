@@ -90,8 +90,8 @@ a {
 	background-position: center center; }
 
 #sidebar {
-	min-width: 250px;
-	max-width: 250px;
+	min-width: 225px;
+	max-width: 225px;
 	background: var(--sidebar-image);
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
@@ -110,37 +110,34 @@ a {
 		grid-template-rows: auto 1fr auto;
 		grid-template-columns: 100%;}
 	#sidebar.active {
-		margin-left: -245px; }
+		margin-left: -225px; }
 		#sidebar.active .custom-menu {
-			margin-right: -18px; }
+			margin-right: -25px; }
 		#sidebar.active .btn:before {
 			content: '';
 			background-image: var(--open-menu-arrow);
 			background-size: 100% auto;
-			font-family: "ForkAwesome";
 			left: 2px !important; }
 		#sidebar.active .btn:after {
 			display: none; }
 	#sidebar ul#sidebarLinks li {
-		font-size: 18px; }
+		font-size: 17.5px; }
+		#sidebar ul#sidebarLinks li > ul {
+			padding-top: 3px;
+		}
 		#sidebar ul#sidebarLinks li > ul li {
 			margin-left: 10px;
-			font-size: 15px; }
+			font-size: 15px;
+			padding-bottom: 3px; }
 		#sidebar ul#sidebarLinks li a {
-			padding: 5px 20px;
+			padding: 2.75px 20px;
 			display: flex;
 			align-items: center;
-			color: var(--sidebar-link);
-
-			border-top-width: thin;
-			border-bottom-width: thin;
-			border-left-width: 0;
-			border-right-width: 0;
-			border: thin solid transparent;
-			border-image-slice: 1; }
+			color: var(--sidebar-link); }
 			#sidebar ul#sidebarLinks li a img {
-				width: 18px;
-				height: 18px;}
+				width: 17.5px;
+				height: 17.5px;
+				margin-right: .45rem; }
 			#sidebar ul#sidebarLinks li a span.notif {
 				position: relative; }
 				#sidebar ul#sidebarLinks li a span.notif small {
@@ -196,10 +193,12 @@ a {
 				right: 2px; }
 	@media (max-width: 991.98px) {
 		#sidebar {
-			margin-left: -250px;
+			margin-left: -225px;
 			position: fixed; }
 			#sidebar .custom-menu {
-				margin-right: -25px !important; }
+				margin-right: -25px; }
+			#sidebar.active .custom-menu {
+				margin-right: -15px; }
 				#sidebar .custom-menu .btn:before {
 					content: '';
 					background-image: var(--open-menu-arrow);
@@ -218,7 +217,7 @@ a {
 
 #sidebar-logo {
 	position: relative;
-	min-height: 195px;
+	min-height: 165px;
 	background: linear-gradient(var(--gradient-top), rgba(0,0,0,0));
 	display: grid;
 	grid-template: 1fr / 1fr;
@@ -228,7 +227,7 @@ a {
 		grid-row: 1 / 1;
 	}
 	#sidebar-logo img {
-		width: 180px;
+		width: 165px;
 		z-index: 2; }
 
 #bubblesCanvas {
@@ -354,8 +353,13 @@ h6:hover .anchor {
 	.page-padding {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
-		padding-left: 4.5rem;
-		padding-right: 4.5rem;
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.noAnchorsPadding {
+		padding-left: 3.5rem;
+		padding-right: 3rem;
 	}
 }
 

@@ -90,7 +90,7 @@ layout: compress
 					{% for item in site.data.nav.sidebar %}
 						{% if item.url %}
 							<li {% if item.url == page.permalink %}class="active"{% endif %}>
-								<a href="{{ item.url }}" class="proxim">
+								<a href="{{ item.url }}" class="proxim no-not-hover">
 									{% if item.icon %}
 										{% if item.notif %}
 											<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">{{ item.notif }}</small></span>
@@ -98,7 +98,7 @@ layout: compress
 											<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 										{% endif %}
 									{% elsif item.image %}
-										<img src="{{item.image}}" class="mr-2">
+										<img src="{{item.image}}">
 									{% endif %} {{ item.title }}</a>
 							</li>
 						{% endif %}
@@ -106,7 +106,7 @@ layout: compress
 							{% assign submenu = item.title | append: "Submenu" | replace: " ", "" %}
 							<noscript><div class="dropdown"></noscript>
 								<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
-									<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim">
+									<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
 										{% if item.icon %}
 											{% if item.notif %}
 												<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
@@ -116,7 +116,7 @@ layout: compress
 												<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 											{% endif %}
 										{% elsif item.image %}
-											<img src="{{item.image}}" class="mr-2">
+											<img src="{{item.image}}">
 										{% endif %} {{ item.title }}</a>
 									<ul class="collapse list-unstyled" id="{{ submenu }}">
 										{% for entry in item.items %}
