@@ -3,13 +3,14 @@
 	--sidebar-bg-color: #00000FD0;
 	--sidebar-image: url(/assets/images/sheikah.jpg) center top/contain repeat;
 	--menu-element: #02194B;
+	--sidebar-theme-switcher: url(/assets/images/themes/starBG.jpg) center top/cover no-repeat;
 	--darker-menu-element: #01083A;
 	--menu-element-text-color: white;
 	--lighter-menu-element: #132A5C;
 	--gradient-top: #020C49D0;
 	--text-color: white;
 	--background: url(/assets/images/starBG.jpg) center top/cover no-repeat;
-	--background-filter: rgba(0, 0, 15, 0.7);
+	--background-filter: rgba(0, 0, 15, 0.87);
 	--sidebar-link: rgba(255, 255, 255, 0.6);
 	--sidebar-link-active: white;
 	--sidebar-link-active-weight: normal;

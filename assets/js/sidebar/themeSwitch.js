@@ -16,7 +16,7 @@ function setThemePicker() {
 		span.setAttribute('data-tooltip', theme);
 		span.classList.add('themeDot')
 		span.classList.add('nstooltip')
-		span.style.background = r.cssRules[0].cssText.match(/--menu-element: *(.*?);/)[1];
+		span.style.background = r.cssRules[0].cssText.match(/--sidebar-theme-switcher: *(.*?);/)[1];
 		span.onclick = () => themeSet(theme);
 		document.getElementById("themesContainer").prepend(span);
 	});
