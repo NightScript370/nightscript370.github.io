@@ -228,7 +228,7 @@ export default async function (elements) {
 			gitContributeGraph.classList.add('gitCalendar')
 			gitContributeGraph.classList.add('mb-3')
 			element.insertAdjacentElement('afterend', gitContributeGraph)
-			await GitHubCalendar(".gitCalendar", attributes.username, { responsive: true, summary_text: "Calender of events" });
+			await GitHubCalendar(".gitCalendar", attributes.username, { responsive: true, tooltips: false, summary_text: "Calender of events" });
 
 			const date = new Date();
 			let yearData = [

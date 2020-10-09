@@ -17,7 +17,9 @@ sidebar:
     url: /blog/
   - title: Modding Guides
     #notif: 2
-    image: /assets/images/icons/wrench.png
+    image:
+      avif: /assets/images/icons/wrench.avif
+      png: /assets/images/icons/wrench.png
     items:
       - title: Super Mario Maker
         url: /modding/smm-index
@@ -25,7 +27,9 @@ sidebar:
         url: /modding/ds-index
   - title: Art Gallery
     url: /graphic-design
-    image: /assets/images/icons/photo-gallery.png
+    image:
+      avif: /assets/images/icons/photo-gallery.avif
+      png: /assets/images/icons/photo-gallery.png
   - title: Social Links
     image: /assets/images/icons/share.svg
     url: /social

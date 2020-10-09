@@ -75,7 +75,10 @@ layout: compress
 		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 		<script>
 			window.OneSignal = window.OneSignal || [];
-			OneSignal.push(() => OneSignal.init({ appId: "2492bd69-a16e-4fd4-98b6-5b9fbf00ebd4" }));
+			OneSignal.push(() => {
+				OneSignal.init({ appId: "2492bd69-a16e-4fd4-98b6-5b9fbf00ebd4", notifyButton: { enable: true } });
+				OneSignal.showNativePrompt();
+			});
 		</script>
 	</head>
 	<body class="d-flex">
@@ -84,7 +87,10 @@ layout: compress
 			<div class="sidebar-contents">
 				<div id="sidebar-logo">
 					<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
-					<img src="/assets/images/icon.png">
+					<picture>
+						<source srcset="/assets/images/icon.avif" type="image/avif">
+						<img src="/assets/images/icon.png">
+					</picture>
 				</div>
 				<ul class="list-unstyled mb-0" id="sidebarLinks">
 					{% for item in site.data.nav.sidebar %}
@@ -98,13 +104,19 @@ layout: compress
 											<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 										{% endif %}
 									{% elsif item.image %}
-										<img src="{{item.image}}">
-									{% endif %} {{ item.title }}</a>
+										<picture>
+											{% if item.image.avif %}
+												<source srcset="{{ item.image.avif }}" type="image/avif">
+												<img src="{{ item.image.png }}">
+											{% else %}
+												<img src="{{ item.image }}">
+											{% endif %}
+										</picture>
+									{% endif %}<span class="sidebar-text">{{ item.title }}</span></a>
 							</li>
 						{% endif %}
 						{% if item.items %}
 							{% assign submenu = item.title | append: "Submenu" | replace: " ", "" %}
-							<noscript><div class="dropdown"></noscript>
 								<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
 									<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
 										{% if item.icon %}
@@ -116,15 +128,21 @@ layout: compress
 												<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
 											{% endif %}
 										{% elsif item.image %}
-											<img src="{{item.image}}">
-										{% endif %} {{ item.title }}</a>
+											<picture>
+												{% if item.image.avif %}
+													<source srcset="{{ item.image.avif }}" type="image/avif">
+													<img src="{{ item.image.png }}">
+												{% else %}
+													<img src="{{ item.image }}">
+												{% endif %}
+											</picture>
+										{% endif %} <span class="sidebar-text">{{ item.title }}</span></a>
 									<ul class="collapse list-unstyled" id="{{ submenu }}">
 										{% for entry in item.items %}
 											<li {% if entry.url == page.permalink %}class="active"{% endif %}><a href="{{entry.url}}">{{entry.title}}</a></li>
 										{% endfor %}
 									</ul>
 								</li>
-							<noscript></div></noscript>
 						{% endif %}
 					{% endfor %}
 				</ul>
@@ -143,7 +161,12 @@ layout: compress
 		<!-- Page Content  -->
 		<div id="content" class="page-padding">
 			{{ content }}
-			<a href="#" class="bttbtn bg-dark d-flex" id="bttbtn" aria-label="Back to top"><img src="/assets/images/icons/arrow.png"></a>
+			<a href="#" class="bttbtn bg-dark d-flex" id="bttbtn" aria-label="Back to top">
+				<picture>
+					<source srcset="/assets/images/icons/arrow.avif" type="image/avif">
+					<img src="/assets/images/icons/arrow.png">
+				</picture>
+			</a>
 		</div>
 
 		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>

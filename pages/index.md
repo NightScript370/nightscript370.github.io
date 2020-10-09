@@ -59,7 +59,10 @@ github: true
 <div class="row">
 	<div class="col-md-525 col-lg-525 col-xl-4 mb-3">
 		<div style="min-height: 8rem;" class="mb-3">
-			<img src="/assets/images/avatar.png" style="float:right; height: 8rem; line-height:1; border-radius: .5rem;" class="ml-2">
+			<picture style="float: right; width: 8rem; line-height: 1;" class="ml-2">
+				<source srcset="/assets/images/avatar.avif" style="border-radius: .5rem;" type="image/avif">
+				<img src="/assets/images/avatar.png" style="border-radius: .5rem;">
+			</picture>
 			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
 			<div class="row text-center mt-3" id="contactMeButtons">
 				<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
