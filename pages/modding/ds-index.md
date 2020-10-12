@@ -13,7 +13,7 @@ Welcome to the resources for Nintendo DS modding. This will attempt to explain m
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
 	If you need help, ask the <a href="https://discord.gg/yD3spjv" class="alert-link">DS⁽ⁱ⁾ Mode Hacking!</a> or the <a href="https://discord.gg/Ymj3Kex" class="alert-link">NDS(i)Brew Scene</a> Discord servers.
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	</button>
 </div>

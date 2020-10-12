@@ -8,7 +8,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
 	This page is not complete yet. This is not the final design.
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	</button>
 </div>
