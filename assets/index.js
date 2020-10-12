@@ -20,7 +20,8 @@ if (!window.matchMedia("print").matches) {
 	if (document.querySelectorAll('a').length)
 		import("./js/autotargetblank.js").then(mod => mod.default(document.querySelectorAll('a')))
 
-	import("./js/table-of-contents.js").then(mod => mod.default('[data-content]', '[data-toc]'))
+	if (document.querySelectorAll('[data-toc]').length)
+		import("./js/table-of-contents.js").then(mod => mod.default('[data-content]', '[data-toc]'))
 }
 
 //document.designMode = 'on';

@@ -37,8 +37,5 @@ Who to give credits to is actually confusing for the most part. See, Tropical in
 - Samplasion: Helped create the bubble move code.
 - Alexandre Dieulot: Made instant.page, used to speed up page load times.
 - [Bootstrap Team](https://getbootstrap.com/docs/4.4/about/team/): Developing the CSS framework used by the website.
-- thednp: Bootstrap Native (basically, removing jQuery) & being confusing on how to implement tool-tips for div elements.
-- atomiks: Work around to tooltips (I wish I didn't have to use it though, because I'd much rather use the built in solution provided by native bootstrap).
-- [PopperJS team](https://opencollective.com/popperjs): makes tippy work, and I might do something with it later.
 
 Honorable mentions to Tropical#8908 on Discord for the color selection and Catriona Henderson for the original sidebar code used. Both have been changed significantly, but I couldn't have done it without their help.
