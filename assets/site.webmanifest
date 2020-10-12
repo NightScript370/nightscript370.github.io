@@ -1,17 +1,115 @@
 {
-	"short_name": "NS Domain",
-	"name": "NightScript Domain",
-	"description": "Website documenting NightScript's accomplishments",
-	"icons": [
-		{
-			"src": "/assets/images/avatar.png",
-			"type": "image/png",
-			"sizes": "512x512"
-		}
-	],
-	"start_url": "/index.html",
-	"background_color": "#1C9934",
-	"display": "standalone",
-	"scope": "/",
-	"theme_color": "#1C9934"
+    "short_name": "NightScript Domain",
+    "name": "NightScript Domain",
+    "description": "Website documenting NightScript's accomplishments",
+    "icons": [
+        {
+            "src": "/assets/images/manifest/5801ca42-0212-1dd7-9933-49d11c3e13c6.webPlatform.png",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/f5fc8990-73c7-996e-c42d-81168a965037.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/dca27ae4-af04-c116-6457-797aeaae9d1b.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/60bdb020-c342-7118-f63b-5c881e02eca4.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/c5f9ac60-e049-91fd-ea6b-0afbcd54379e.webPlatform.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/2a5f5b8a-e1d6-80ce-dc93-72b1abb22395.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/31d729d4-96c2-c866-9e8f-6c83d3bceebe.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/bc82e525-4703-da45-896e-a62f6a24b92b.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/9f8bbcc3-327b-cc3a-7124-2bc7e8368a90.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/80d8445d-ff03-a4fa-1fa8-074bf4307f78.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/d1811569-f9a6-72a0-0198-b49ac24739e6.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/a89a5259-f901-d009-eb3f-e3e855d44739.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/bf5e2398-77f3-4878-f43c-2c8e4a399be2.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/b87eb2bb-076a-6d68-7499-46494354db3b.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/723cb00d-739c-e7d9-6c37-3996ec159292.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/dfc5feda-ab95-4f5e-b467-d7c3aac59047.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/424456c0-018d-b290-d06c-4b73b2c17c9d.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/31890716-798f-a051-70a9-38a7519aaa20.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/fef00104-4b92-ff64-2290-449a9cf9883c.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/manifest/fed314d0-a5f9-9fc5-b664-3530560a6254.webPlatform.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "https://nightyoshi370.github.io/index.html",
+    "background_color": "#1C9934",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#1C9934",
+    "url": "https://nightyoshi370.github.io",
+    "lang": "English",
+    "orientation": "any"
 }
