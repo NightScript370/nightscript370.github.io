@@ -1,6 +1,6 @@
 :root {
-	--main-bg-color: #00000F;
-	--sidebar-bg-color: #00000FD0;
+	--main-bg-color: #000016;
+	--sidebar-bg-color: #000016C7;
 	--sidebar-image: url(/assets/images/sheikah.jpg) center top/contain repeat;
 	--menu-element: #02194B;
 	--sidebar-theme-switcher: url(/assets/images/themes/starBG.jpg) center top/cover no-repeat;
@@ -9,12 +9,16 @@
 	--lighter-menu-element: #132A5C;
 	--gradient-top: #020C49D0;
 	--text-color: white;
+	--muted-text-color: currentcolor;
 	--background: url(/assets/images/starBG.jpg) center top/cover no-repeat;
-	--background-filter: rgba(0, 0, 15, 0.87);
+	--background-filter: rgba(0, 0, 22, 0.80);
 	--sidebar-link: rgba(255, 255, 255, 0.6);
 	--sidebar-link-active: white;
 	--sidebar-link-active-weight: normal;
 	--shadow-color: black;
 	--hover-color: rgba(255, 255, 255, 0.4);
 	--light-hover-color: rgba(255, 255, 255, 0.2);
+	--bg-filter: blur(2.5px) brightness(.35);
+	--bg-mask: none;
+	--text-shadow: currentcolor;
 }

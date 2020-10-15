@@ -9,12 +9,16 @@
 	--lighter-menu-element: #DAD7D1;
 	--gradient-top: #666;
 	--text-color: black;
+	--muted-text-color: currentcolor;
 	--background: white center top/cover no-repeat;
-	--background-filter: inherit;
+	--background-filter: transparent;
 	--sidebar-link: rgba(0, 0, 0, 0.75);
 	--sidebar-link-active: black;
 	--sidebar-link-active-weight: bold;
 	--shadow-color: #666;
 	--hover-color: rgba(255, 255, 255, 0.4);
 	--light-hover-color: rgba(255, 255, 255, 0.2);
+	--bg-filter: none;
+	--bg-mask: radial-gradient(rgb(128,128,128), transparent 100%);
+	--text-shadow: currentcolor;
 }

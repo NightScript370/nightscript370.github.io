@@ -5,6 +5,7 @@
 
 body {
 	color: var(--text-color);
+	text-shadow: var(--text-shadow);
 	width: 100%;
 	background-color: var(--main-bg-color);}
 
@@ -27,14 +28,14 @@ html {
 	position: fixed;
 	z-index: -2;
 
-	filter: blur(5px) brightness(.75);
-	-webkit-filter: blur(5px) brightness(.75);
+	filter: var(--bg-filter);
+	-webkit-filter: var(--bg-filter);
 }
 
 @media (min-width: 991.98px) {
 	.bg {
-		mask-image: radial-gradient(rgb(128,128,128), transparent 100%);
-		-webkit-mask-image: radial-gradient(rgb(128,128,128), transparent 100%);
+		mask-image: var(--bg-mask);
+		-webkit-mask-image: var(--bg-mask);
 	}
 }
 
@@ -113,7 +114,8 @@ a {
 			position: relative;
 			display: flex;
 			align-items: center;
-			color: var(--sidebar-link); }
+			color: var(--sidebar-link);
+			text-shadow: initial; }
 			#sidebar ul#sidebarLinks li a picture {
 				width: 17.5px;
 				height: 17.5px;
@@ -157,7 +159,6 @@ a {
 		#sidebar .custom-menu .btn {
 			background: var(--menu-element);
 			position: relative;
-			color: var(--menu-element-text-color);
 			border-width: .1rem;
 			border-color: var(--darker-menu-element);
 			width: 30px;
@@ -240,6 +241,7 @@ a {
 .card {
 	background: var(--menu-element);
 	color: var(--menu-element-text-color);
+	text-shadow: var(--text-shadow);
 	box-shadow: 5px 5px 5px var(--shadow-color) !important;
 }
 
@@ -258,6 +260,7 @@ a {
 
 .card .card-body a {
 	color: var(--menu-element-text-color);
+	text-shadow: var(--text-shadow);
 	text-decoration: underline;
 	-webkit-transition: all 0.1s;
 	-o-transition: all 0.1s;
@@ -558,6 +561,7 @@ img {
 .socialPageCard .socialCardContent {
 	background: var(--menu-element);
 	color: var(--menu-element-text-color);
+	text-shadow: var(--text-shadow);
 	box-shadow: 5px 5px 5px var(--shadow-color) !important;
 	border: 1px solid rgba(0,0,0,.125);
 	border-radius: 4px;
@@ -614,4 +618,8 @@ img {
 		flex: 0 0 auto;
 		width: 56.25%;
 	}
+}
+
+.text-muted {
+	color: var(--muted-text-color) !important;
 }

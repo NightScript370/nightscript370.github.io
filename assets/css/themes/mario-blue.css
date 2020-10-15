@@ -1,0 +1,24 @@
+:root {
+	--main-bg-color: #00000F;
+	--sidebar-bg-color: #14157dD0;
+	--sidebar-image: url(/assets/images/themes/mk8d.jpg) center;
+	--menu-element: #0A60C0;
+	--sidebar-theme-switcher: url(/assets/images/themes/mario-blue.png) center top/cover no-repeat;
+	--darker-menu-element: #0760A0;
+	--menu-element-text-color: white;
+	--lighter-menu-element: #3D92F3;
+	--gradient-top: #1f21c1D0;
+	--text-color: white;
+	--muted-text-color: currentcolor;
+	--background: url(/assets/images/themes/mario-blue.png) center;
+	--background-filter: transparent;
+	--sidebar-link: rgba(255, 255, 255, 0.6);
+	--sidebar-link-active: white;
+	--sidebar-link-active-weight: normal;
+	--shadow-color: black;
+	--hover-color: rgba(255, 255, 255, 0.4);
+	--light-hover-color: rgba(255, 255, 255, 0.2);
+	--bg-filter: blur(1px) brightness(.85);
+	--bg-mask: radial-gradient(rgb(128,128,128), transparent 100%);
+	--text-shadow: currentcolor;
+}

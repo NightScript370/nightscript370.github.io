@@ -8,13 +8,17 @@
 	--menu-element-text-color: white;
 	--lighter-menu-element: #2E3136;
 	--gradient-top: #101114;
-	--text-color: #CCC;
+	--text-color: #EEE;
+	--muted-text-color: currentcolor;
 	--background: #000 center top/cover no-repeat;
-	--background-filter: initial;
+	--background-filter: transparent;
 	--sidebar-link: rgba(255, 255, 255, 0.6);
 	--sidebar-link-active: white;
 	--sidebar-link-active-weight: normal;
 	--shadow-color: transparent;
 	--hover-color: rgba(255, 255, 255, 0.4);
 	--light-hover-color: rgba(255, 255, 255, 0.2);
+	--bg-filter: none;
+	--bg-mask: none;
+	--text-shadow: currentcolor;
 }
