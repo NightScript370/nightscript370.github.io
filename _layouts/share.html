@@ -1,0 +1,57 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+	<head>
+		<title>{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+		<meta name="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+		<meta property="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+		<meta name="twitter:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta charset="utf-8">
+		<meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+
+		<meta name="keywords" content="NightScript, NightYoshi, NightYoshi370" />
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta name="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
+		<link rel='icon' href='/assets/images/avatar.png'>
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/avatar.png" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/assets/images/avatar.png">
+		<meta name="og:image" content="/assets/images/avatar.png">
+		<meta property="og:image" content="/assets/images/avatar.png">
+		<meta name="twitter:image" content="/assets/images/avatar.png">
+
+		<meta name="theme-color" content="#1C9934" />
+		<meta name="msapplication-navbutton-color" content="#1C9934">
+		<meta name="twitter:widgets:link-color" content="#1C9934">
+		<meta name="twitter:widgets:border-color" content="#1C9934">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="HandheldFriendly" content="true">
+
+		<link rel="canonical" href="https://nightyoshi370.github.io" />
+		<meta name="og:url" content="https://nightyoshi370.github.io" />
+		<meta property="og:url" content="https://nightyoshi370.github.io" />
+
+		<meta name="og:site_name" content="NightScript Domain" />
+		<meta property="og:site_name" content="NightScript Domain" />
+
+		<meta name="og:type" content="website" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@NightScript" />
+
+		<meta http-equiv="refresh" content="1; url='{{ page.redirectUrl }}'" />
+	</head>
+	<body>
+		You should be redirected to <a href="{{ page.redirectUrl }}">{{page.title}}</a>. If not, click the link.
+	</body>
+</html>
