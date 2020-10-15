@@ -267,7 +267,7 @@ a {
 	transition: all 0.1s;
 }
 
-.card .card-body a.h5:not(.cardShareLinks):not(.card-header-icon):hover {
+.card .card-body a.h5:not(.card-header-icon):hover {
 	text-decoration: underline !important;
 	font-size: 1.3rem;
 }
@@ -276,28 +276,22 @@ a {
 	font-size: 1.3rem;
 }
 
-.card .card-body .cardShareLinks {
+.card .cardShareLinks {
 	justify-content: center;
 	display: flex;
 	align-items: center;
 }
 
-.card .card-body .cardShareLinks a img {
+.card .cardShareLinks a img {
 	width: 2em;
 }
 
-.card .card-body .cardShareLinks a .fa {
+.card .cardShareLinks a .fa {
 	font-size: 2em;
 }
 
 .mw-25 {
 	max-width: 25%;
-}
-
-@media (min-width: 991.98px) {
-	.shareCard {
-		width: 20rem;
-	}
 }
 
 .anchor {

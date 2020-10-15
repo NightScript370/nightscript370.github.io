@@ -59,6 +59,7 @@ export default function (cards) {
 		entrytitle = int.parentElement.firstElementChild.innerHTML;
 
 		socialLinksElement = document.createElement("div");
+		socialLinksElement.classList.add('card-footer');
 		socialLinksElement.classList.add('text-center');
 		socialLinksElement.classList.add('cardShareLinks');
 		for (let socialEntry of sharedLinks.filter(entry => entry.cardview)) {
@@ -79,6 +80,6 @@ export default function (cards) {
 			socialLinksElement.appendChild(linkElement);
 		}
 
-		int.parentElement.appendChild(socialLinksElement);
+		int.parentElement.insertAdjacentElement('afterend', socialLinksElement);
 	}
 }
