@@ -66,14 +66,9 @@ layout: compress
 			</style>
 		{% endif %}
 
-		<link rel="stylesheet" href="/assets/css/themes/mario-yellow.css">
-		<link rel="stylesheet" href="/assets/css/themes/mario-red.css">
-		<link rel="stylesheet" href="/assets/css/themes/mario-blue.css">
-		<link rel="stylesheet" href="/assets/css/themes/mario-green.css">
-		<link rel="stylesheet" href="/assets/css/themes/light.css">
-		<link rel="stylesheet" href="/assets/css/themes/dark.css">
-		<link rel="stylesheet" href="/assets/css/themes/discord.css">
-		<link rel="stylesheet" href="/assets/css/themes/default.css">
+		{% for theme in site.themes %}
+			<link rel="stylesheet" href="/assets/css/themes/{{ theme }}.css">
+		{% endfor %}
 		<script src="/assets/js/sidebar/themeSwitch.js"></script>
 
 		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>

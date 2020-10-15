@@ -4,6 +4,16 @@ repo         : "NightYoshi370/NightYoshi370.github.io"
 description  : "This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?"
 markdown_ext : "markdown,mkdown,mkdn,mkd,md,html"
 
+themes:
+  - 'mario-yellow'
+  - 'mario-red'
+  - 'mario-blue'
+  - 'mario-green'
+  - 'light'
+  - 'dark'
+  - 'discord'
+  - 'default'
+
 defaults:
   - scope:
       path: "pages"
