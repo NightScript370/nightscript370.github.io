@@ -12,10 +12,8 @@ permalink: /modding/ds-index
 Welcome to the resources for Nintendo DS modding. This will attempt to explain most things related to Nintendo DS modding as well as be a basic introduction to the NTR firmware of the Nintendo DS, the TWL firmware of the Nintendo DSi and TWL_FIRM of the Nintendo 3DS
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-	If you need help, ask the <a href="https://discord.gg/yD3spjv" class="alert-link">DS⁽ⁱ⁾ Mode Hacking!</a> or the <a href="https://discord.gg/Ymj3Kex" class="alert-link">NDS(i)Brew Scene</a> Discord servers.
-	<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
-		<span aria-hidden="true">&times;</span>
-	</button>
+	If you need help, ask the <a href="https://discord.gg/yD3spjv" class="alert-link">DS<sup>(i)</sup> Mode Hacking!</a> Discord server.
+	<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </div>
 
 ### WiFi
@@ -40,7 +38,11 @@ Hotspots are usable, so you don't need to change your router configuration
 ### Homebrew
 #### Development
 
-Developing Nintendo DS Homebrew typically uses devKitPro tools, such as devKitARM, libnds, and libfat. There are multiple graphics library, such as NightFox Lib and EasyGL2D. There's also ToolchainGenericDS, made by coto and a port of FatFS, if you don't like how libnds is handled
+Developing Nintendo DS Homebrew typically uses devKitPro tools, such as devKitARM, libnds, and libfat. However, there is the possibility to branch out and use alternative software:
+
+- **SD Card libraries:** devKitPro recommends libfat. We recommend using libslim instead, as it allows usage of different partitions, quicker speeds and non-blocking.
+- **Graphic Library:** We recommend using easyGL2D, which comes shipped with libnds. However, you could use NightFox Lib.
+- **Entire Toolchains:** We recommend using devKitARM and libnds, as it includes DSi compatibility and has a larger ecosystem. However, if your target is exclusively flashcarts on a Nintendo DS, feel free to use ToolchainGenericDS.
 
 #### Flashcards
 
@@ -50,20 +52,16 @@ DS mode flashcards are a slot-1 method of running Nintendo DS applications. Flas
 
 #### DLDI
 
-DLDI (short for Dynamically Linked Device Interface) is a unified interface for libfat made by Chishm that homebrew developers can attach to their projects.
-This was made due to each flashcard having different read/write commands. It was a hassle to code in a read/write function for every card, especially considering there are cards that are unknown to the marker.
-
-In order to patch DLDI, you will need a patcher. Here is a [list](https://www.chishm.com/DLDI#tools) of patchers out there depending on your device
-- nds-bootstrap automatically applies DLDI patches your Homebrew
+Different SD card slots have different hardware (most of the time) and code written for one card won't necessarily work for another card. DLDI (short for Dynamically Linked Device Interface) attempts to solve this by having the SD card handling code patched in externally. Loaders like YSMenu, Wood R4 and TWiLight Menu++ can automatically DLDI patch a homebrew, but if you need to manually patch it in, feel free to use a [DLDI Patcher](https://www.chishm.com/DLDI#tools) depending on your device.
 
 #### Time Bomb
 
 A time bomb is a expiration date on flashcart kernels that manufacturers use to force users to buy a new card. Once your system clock goes beyond a certain date, the kernel will refuse to boot past the expiration screen. Thankfully, a flag is not set anywhere and it's handled in the flashcart firmware, giving us two options for work arounds:
 
-- Since it relies on the system clock, you could set back the date. This will break any game that uses your system clock, but it will allow you to use the current kernel.
+- Since it relies on the system clock, you could set back the date. This will break any game that uses your system clock, but it will allow you to use the default kernel.
 - Since it relies on the kernel and not the firmware, you could switch to an alternative kernel. There are two options available:
   - [YSmenu](https://gbatemp.net/threads/retrogamefan-updates-releases.267243/) -- The menu is quite ugly and only displays `.nds` files, but it has far better game support, cheat support and no memory pak requirement.
-  - [TWiLight Menu++](twilight) with B4DS -- This is useful if you'd like to have all your ROMs in the same menu that you could launch NES, GBA and other console titles too. However, it does require a Memory Expansion Pak for extended game compatibility and does not support cheats.
+  - [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu) with B4DS -- This is useful if you'd like to have all your ROMs in the same menu that you could launch NES, GBA and other console titles too. However, it does require a Memory Expansion Pak for extended game compatibility and does not support cheats.
 
 We recommend YSMenu due to the higher compatibility, cheats and lack of need for a Memory Expansion Pak. If you want to setup YSMenu, DeadSkullzJr has made a [Dropbox repo](https://www.dropbox.com/sh/egadrhxj8gimu5t/AACv2KqWmeXEHkxoYRluobxha?dl=0) with all the primary boot kernels set up for your flashcart. All it requires is a drag and drop to your SD card root and you have completed.
   - You could still lanuch into TWiLight Menu++ for an all-in-one menu for emulators, but you can't launch into YSMenu from TWiLight Menu++.
