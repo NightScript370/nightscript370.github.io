@@ -155,8 +155,10 @@ export default async function (elements) {
 			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e)
 			const langStatsImage = document.createElement('img')
 			langStatsImage.src = langStatsURL
+				.replace(corsURL, '')
+				.replace('card_width=100', 'card_width=250')
 			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
-			element.insertAdjacentElement('afterend', langStatsImage.replace(corsURL, ''))
+			element.insertAdjacentElement('afterend', langStatsImage)
 		}
 
 		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&')
@@ -233,9 +235,9 @@ export default async function (elements) {
 		} catch (e) {
 			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e)
 			const profStatsImage = document.createElement('img')
-			profStatsImage.src = profStatsURL
+			profStatsImage.src = profStatsURL.replace(corsURL, '')
 			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
-			element.insertAdjacentElement('afterend', profStatsImage.replace(corsURL, ''))
+			element.insertAdjacentElement('afterend', profStatsImage)
 		}
 
 		try {
