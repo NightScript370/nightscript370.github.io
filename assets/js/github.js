@@ -94,10 +94,17 @@ export default async function (elements) {
 					WideBoxBarWidth = WideBoxBarWidth.plus(WideBoxRectWidth);
 				})
 
-			wideLangBox
-				.querySelector("mask#rect-mask")
-				.firstElementChild
-				.setAttribute("width", WideBoxBarWidth)
+			try {
+				wideLangBox
+					.getElementById("rect-mask")
+					.firstElementChild
+					.setAttribute("width", WideBoxBarWidth)
+			} catch(e) {
+				wideLangBox
+					.querySelector("mask#rect-mask")
+					.firstElementChild
+					.setAttribute("width", WideBoxBarWidth)
+			}
 
 			let i = 0;
 			wideLangBox
@@ -130,10 +137,17 @@ export default async function (elements) {
 					tallBoxBarWidth = tallBoxBarWidth.plus(tallBoxRectWidth);
 				})
 
-			tallLangBox
-				.querySelector("mask#rect-mask")
-				.firstElementChild
-				.setAttribute("width", tallBoxBarWidth)
+			try {
+				tallLangBox
+					.getElementById("rect-mask")
+					.firstElementChild
+					.setAttribute("width", tallBoxBarWidth)
+			} catch(e) {
+				tallLangBox
+					.querySelector("mask#rect-mask")
+					.firstElementChild
+					.setAttribute("width", tallBoxBarWidth)
+			}
 
 			element.insertAdjacentElement('afterend', tallLangBox)
 			element.insertAdjacentElement('afterend', wideLangBox)
