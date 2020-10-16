@@ -1,4 +1,5 @@
 import Decimal from './libs/decimal.js';
+const corsURL = 'https://cors-anywhere.herokuapp.com/';
 
 function htmlToElem(html) {
 	var template = document.createElement('template');
@@ -36,7 +37,7 @@ export default async function (elements) {
 			'bg_color': '00000000'
 		}
 
-		const gitStatsURL = (url) => 'https://cors-anywhere.herokuapp.com/'
+		const gitStatsURL = (url) => corsURL
 			+ 'https://github-readme-stats.vercel.app/api'
 			+ url
 			+ Object.keys(attributes).map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(attributes[k])).join('&');
@@ -71,7 +72,7 @@ export default async function (elements) {
 			const wideLangBox = langStatsPage.cloneNode(true);
 			wideLangBox.classList.add('d-none')
 			wideLangBox.classList.add('d-xl-block')
-			wideLangBox.setAttribute('viewBox', '24 0 325 85')
+			wideLangBox.setAttribute('viewBox', '24 0 365 85')
 
 			// Until this PR gets merged, we have to manually extract the percent from the inner values themselves
 			// https://github.com/anuraghazra/github-readme-stats/pull/516
@@ -85,7 +86,7 @@ export default async function (elements) {
 				.querySelectorAll('[data-testid="lang-progress"]')
 				.forEach((r, num) => {
 					//WideBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
-					WideBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(wideLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(3.15);
+					WideBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(wideLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(3.5);
 
 					r.setAttribute("x", WideBoxBarWidth.toFixed(2));
 					r.setAttribute("width", WideBoxRectWidth.toFixed(2))
@@ -103,7 +104,7 @@ export default async function (elements) {
 				.querySelector('[data-testid="lang-items"]')
 				.querySelectorAll('g')
 				.forEach(r => {
-					r.setAttribute("transform", "translate(" + (120 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
+					r.setAttribute("transform", "translate(" + (130 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
 					i++;
 				});
 
@@ -141,7 +142,7 @@ export default async function (elements) {
 			const langStatsImage = document.createElement('img')
 			langStatsImage.src = langStatsURL
 			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
-			element.insertAdjacentElement('afterend', langStatsImage)
+			element.insertAdjacentElement('afterend', langStatsImage.replace(corsURL, ''))
 		}
 
 		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&')
@@ -220,7 +221,7 @@ export default async function (elements) {
 			const profStatsImage = document.createElement('img')
 			profStatsImage.src = profStatsURL
 			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
-			element.insertAdjacentElement('afterend', profStatsImage)
+			element.insertAdjacentElement('afterend', profStatsImage.replace(corsURL, ''))
 		}
 
 		try {
@@ -283,7 +284,6 @@ export default async function (elements) {
 			}
 
 			const smDates = smGitHistoryGraph.querySelectorAll('rect.day')
-			console.log(boxesToKeep.sm)
 			for (var i = smDates.length - 1, ri = 0; i >= 0; i--, ri++) {
 				if (ri > boxesToKeep.sm)
 					smDates[i].remove();
@@ -318,7 +318,7 @@ export default async function (elements) {
 		}
 
 		try {
-			let gitActivityResponse = await fetch('https://cors-anywhere.herokuapp.com/' + (iframeData.src).replace('.pibb', '/raw'))
+			let gitActivityResponse = await fetch(corsURL + (iframeData.src).replace('.pibb', '/raw'))
 			if (!gitActivityResponse.ok)
 				throw new Error();
 
