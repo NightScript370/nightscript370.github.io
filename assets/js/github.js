@@ -95,7 +95,7 @@ export default async function (elements) {
 				})
 
 			wideLangBox
-				.querySelector("mask")
+				.querySelector("mask#rect-mask")
 				.firstElementChild
 				.setAttribute("width", WideBoxBarWidth)
 
@@ -131,7 +131,7 @@ export default async function (elements) {
 				})
 
 			tallLangBox
-				.querySelector("mask")
+				.querySelector("mask#rect-mask")
 				.firstElementChild
 				.setAttribute("width", tallBoxBarWidth)
 
