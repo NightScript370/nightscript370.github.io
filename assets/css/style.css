@@ -617,3 +617,20 @@ img {
 .text-muted {
 	color: var(--muted-text-color) !important;
 }
+
+table>:not(caption)>*>* {
+	padding: .5rem .5rem;
+}
+
+th {
+	background-color: var(--lighter-menu-element);
+	padding: 20px;
+}
+
+tbody {
+	background-color: var(--menu-element);
+}
+
+tbody tr:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.15);
+}
