@@ -3,6 +3,11 @@ function random(min, max) { // min and max included
 }
 
 const sidebarLogo = document.getElementById("sidebar-logo");
+/* const sidebarMarginTop = () => {
+	sidebarLogo.style.marginTop = document.documentElement.scrollTop + 'px';
+}
+window.addEventListener('scroll', () => sidebarMarginTop());
+sidebarMarginTop() */
 
 const bubblesCanvas = document.createElement("canvas");
 bubblesCanvas.setAttribute('width', sidebarLogo.offsetWidth);

@@ -15,4 +15,4 @@ function stateCheckAndChange() {
 }
 
 stateCheckAndChange()
-window.onscroll = () => stateCheckAndChange()
+window.addEventListener('scroll', () => stateCheckAndChange())
