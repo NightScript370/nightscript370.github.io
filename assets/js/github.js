@@ -305,13 +305,13 @@ export default async function (elements) {
 
 			xlGitHistoryGraph
 				.querySelectorAll('text.wday')
-				.forEach(e => e.setAttribute('dx', 325))
+				.forEach(e => e.setAttribute('dx', 330))
 
 			xlGitHistoryGraph
 				.querySelectorAll('text.month')
-				.forEach(e => { if (e.getAttribute('x') < 325) e.remove(); })
+				.forEach(e => { if (e.getAttribute('x') < 345) e.remove(); })
 
-			xlGitHistoryGraph.setAttribute('viewBox', '325 0 400 112')
+			xlGitHistoryGraph.setAttribute('viewBox', '335 0 380 112')
 			xlGitHistoryGraph.classList.add('d-none')
 			xlGitHistoryGraph.classList.add('d-xl-block')
 
@@ -321,7 +321,7 @@ export default async function (elements) {
 
 			smGitHistoryGraph
 				.querySelectorAll('text.month')
-				.forEach(e => { if (e.getAttribute('x') < 475) e.remove(); })
+				.forEach(e => { if (e.getAttribute('x') < 495) e.remove(); })
 
 			smGitHistoryGraph.setAttribute('viewBox', '475 0 245 112')
 			smGitHistoryGraph.classList.add('d-xl-none')
@@ -345,6 +345,7 @@ export default async function (elements) {
 			element.insertAdjacentElement('afterend', preElement)
 		} catch {
 			const iframeElement = document.createElement('iframe')
+			iframeElement.style.width = '100%'
 			iframeElement.setAttribute('src', iframeData.src)
 			element.insertAdjacentElement('afterend', iframeElement)
 		}
