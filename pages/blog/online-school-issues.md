@@ -88,7 +88,7 @@ There's no proper way to monitize this in a way that suits everyone.
 {% assign assignments = "https://venturebeat.com/wp-content/uploads/2018/06/Google-Classroom-Classwork.jpg?w=1200&strip=all | Assignment list. No need for constant reminders in class on what to do" | split: " | "%}
 {% assign discussions = "https://www.teq.com/blog/wp-content/uploads/2015/09/Screen-Shot-2015-09-22-at-12.18.40-PM.png | Discussion Board. While the picture shows one-on-one with teacher, other students can reply and knock her claims down"%}
 
-{% assign carousel = "" | split: "," | push: email | push: portal | push: assignments %}
+{% assign carousel = "" | split: "," | push: email | push: portal | push: assignments | push: discussions %}
 {% include carousel.html pages=carousel id="onlineSchoolProposal" %}
 
 - While we need to be able to talk to a supervisor if we need help, we should not be forced to talk to them through video conferencing
