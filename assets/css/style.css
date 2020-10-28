@@ -462,20 +462,26 @@ img {
 @media print {
 	:root {
 		--main-bg-color: white;
+		--sidebar-bg-color: white;
+		--sidebar-image: url(/assets/images/sheikah-invert.jpg) center top/contain repeat;
 		--menu-element: #EEE;
-		--darker-menu-element: #EEE;
+		--darker-menu-element: #DDD;
 		--menu-element-text-color: black;
 		--lighter-menu-element: #DAD7D1;
 		--gradient-top: #666;
 		--text-color: black;
+		--muted-text-color: currentcolor;
 		--background: white center top/cover no-repeat;
-		--background-filter: white;
+		--background-filter: transparent;
 		--sidebar-link: rgba(0, 0, 0, 0.75);
 		--sidebar-link-active: black;
 		--sidebar-link-active-weight: bold;
-		--shadow-color: #DDD;
+		--shadow-color: #AAA;
 		--hover-color: rgba(255, 255, 255, 0.4);
 		--light-hover-color: rgba(255, 255, 255, 0.2);
+		--bg-filter: none;
+		--bg-mask: radial-gradient(rgb(128,128,128), transparent 100%);
+		--text-shadow: currentcolor;
 	}
 
 	.page-padding {
@@ -494,7 +500,7 @@ img {
 	}
 
 	.bttbtn {
-		display: none;
+		display: none !important;
 	}
 }
 

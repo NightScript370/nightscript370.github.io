@@ -50,6 +50,11 @@ layout: compress
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@NightScript" />
 
+		{% for theme in site.themes %}
+			<link rel="stylesheet" href="/assets/css/themes/{{ theme }}.css">
+		{% endfor %}
+		<script src="/assets/js/sidebar/themeSwitch.js"></script>
+
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
 		{% if page.syntax-highlight %}
@@ -65,11 +70,6 @@ layout: compress
 				}
 			</style>
 		{% endif %}
-
-		{% for theme in site.themes %}
-			<link rel="stylesheet" href="/assets/css/themes/{{ theme }}.css">
-		{% endfor %}
-		<script src="/assets/js/sidebar/themeSwitch.js"></script>
 
 		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 		<script>
