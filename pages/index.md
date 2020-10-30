@@ -12,6 +12,12 @@ github: true
 		<h3 noAnchor class="card-title">Latest blog posts</h3>
 		<div class="card-text">
 			<div>
+				<a class="h5" href="/blog/effects-of-9th-grade">The Effects of my 9th grade</a>
+				<div class="mb-0">Most of my personality can be traced back to key moments that occured to me in 9th grade, between hacked software, rap battles and teachers.</div>
+				<a href="/blog/effects-of-9th-grade" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
 				<a class="h5" href="/blog/online-school-issues">Online School Issues</a>
 				<div class="mb-0">Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally isn't needed.</div>
 				<a href="/blog/online-school-issues" style="text-align: right;">Read More...</a>
@@ -35,10 +41,8 @@ github: true
 				<a href="/blog/sonic-return-of-infinite" style="text-align: right;">Read More...</a>
 			</div>
 			<hr>
-			<div>
-				<a class="h5" href="/blog/ownership-issues">Ownership Issues</a>
-				<div class="mb-0">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</div>
-				<a href="/blog/ownership-issues" style="text-align: right;">Read More...</a>
+			<div style="text-align: center;">
+				<a href="/blog" type="button" class="btn btn-primary">Read more articles!</a>
 			</div>
 		</div>
 	</div>

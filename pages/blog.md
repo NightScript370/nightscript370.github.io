@@ -10,8 +10,17 @@ I like to write a lot so I thought I might as well write things in a blog. These
 	<div class="col">
 		<div class="card shareCard h-100">
 			<div class="card-body">
+				<a class="h5 card-title" href="/blog/effects-of-9th-grade">Effects of my 9th grade</a>
+				<p class="card-text">Most of my personality can be traced back to key moments that occured to me in 9th grade.</p>
+				<noscript class="card-text noShare"></noscript>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card shareCard h-100">
+			<div class="card-body">
 				<a class="h5 card-title" href="/blog/online-school-issues">Online School Issues</a>
-				<p class="card-text">Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally isn't needed.</p>
+				<p class="card-text">Debating whether video-conferencing is about inclusion or control.</p>
 				<noscript class="card-text noShare"></noscript>
 			</div>
 		</div>
@@ -20,7 +29,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 		<div class="card shareCard h-100">
 			<div class="card-body">
 				<a class="h5 card-title" href="/blog/summer-2020">My summer of 2020</a>
-				<p class="card-text">Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).</p>
+				<p class="card-text">A summer where everything is supposed to go wrong ended up being the best summer of my life (so far).</p>
 				<noscript class="card-text noShare"></noscript>
 			</div>
 		</div>
@@ -29,7 +38,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 		<div class="card shareCard h-100">
 			<div class="card-body">
 				<a class="h5 card-title" href="/blog/edgenuity-issues">Edgenuity Issues</a>
-				<p class="card-text">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</p>
+				<p class="card-text">Edgenuity's failure at adapting learning into the digital age.</p>
 				<noscript class="card-text noShare"></noscript>
 			</div>
 		</div>
