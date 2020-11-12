@@ -60,48 +60,61 @@ github: true
 {% assign my_array = my_array | push: paypal %}
 {% assign my_array = my_array | push: discord %}
 
-<div class="row">
-	<div class="col-md-525 col-lg-525 col-xl-4 mb-3">
-		<div style="min-height: 8rem;" class="mb-3">
-			<picture style="float: right; width: 8rem; line-height: 1;" class="ml-2">
-				<source srcset="/assets/images/avatar.avif" style="border-radius: .5rem;" type="image/avif">
-				<img src="/assets/images/avatar.png" style="border-radius: .5rem;">
-			</picture>
-			I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
-			<div class="row text-center mt-3" id="contactMeButtons">
-				<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
-				<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
-				<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
-			</div>
+<div class="landing-style">
+	<div class="bgAvatar"><img src="/assets/images/avatar-3d.png"></div>
+	<div class="landingText">
+		<h1 noAnchor>Welcome to the NightScript Domain!</h1>
+		<h4 noAnchor>I'm NightScript, a 17 year old open-source developer with a love for Nintendo Modding</h4>
+		<div class="text-center mt-3" id="contactMeButtons">
+			<a class="nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
+			<a class="nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
+			<a class="nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
 		</div>
-		<div class="card mb-3">
-			<div class="card-body">
-				<a class="h5 card-title card-header-icon" href="https://github.com/NightYoshi370" style="text-decoration: none;"><img src="/assets/images/icons/github.svg" style="height: 1.5em;"> <u>Github Profile stats</u></a>
-				<noscript class="gitStats">
-					<iframe src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.pibb"></iframe>
-				</noscript>
-				<!-- <img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
-					<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))"> -->
-			</div>
-			<div class="card-footer"><small class="text-muted">Stats made using <a href="https://github.com/anuraghazra/github-readme-stats">Github Readme Stats</a> & <a href="https://github.com/Bloggify/github-calendar">Github Calendar</a></small></div>
-		</div>
-		<div class="card mb-2">
-			<div class="card-body">
-				<h5 noAnchor class="card-title">My abilities</h5>
-				<ul class="card-text">
-					<li>Graphic Design (using Photoshop CS6 + Paint.NET)</li>
-					<li>Website Design (using HTML, CSS and JavaScript)</li>
-					<li>DS Homebrew Development (using devKitARM and libnds)</li>
-					<li>Leadership + Community Management</li>
-					<li>Comprehensive story writting (and other writting in general)</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-675 col-lg-675 col-xl-8">
-		<h3 noAnchor class="card-title">Previous Contributions of mine</h3>
-		{% include socialGrid.html pages=my_array grid="mini" %}
-		<div class="d-none d-xl-block">{{ blog }}</div>
 	</div>
 </div>
-<div class="d-xl-none">{{blog}}</div>
+<div class="page-padding pt-5" style="background-color: var(--background-filter);">
+	<h3 noAnchor>Previous Contributions of mine</h3>
+	{% include socialGrid.html pages=my_array %}
+	<div class="row mt-5">
+		<div class="col-md-525 col-lg-525 col-xl-4 mb-3">
+			<!--<div style="min-height: 8rem;" class="mb-3">
+				<picture style="float: right; width: 8rem; line-height: 1;" class="ml-2">
+					<source srcset="/assets/images/avatar.avif" style="border-radius: .5rem;" type="image/avif">
+					<img src="/assets/images/avatar.png" style="border-radius: .5rem;">
+				</picture>
+				I'm NightScript, a 16 year old open-source developer with a love for Nintendo modding.
+				<div class="row text-center mt-3" id="contactMeButtons">
+					<a class="col nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
+					<a class="col nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
+					<a class="col nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
+				</div>
+			</div> -->
+			<div class="card mb-3">
+				<div class="card-body">
+					<a class="h5 card-title card-header-icon" href="https://github.com/NightYoshi370" style="text-decoration: none;"><img src="/assets/images/icons/github.svg" style="height: 1.5em;"> <u>Github Profile stats</u></a>
+					<noscript class="gitStats">
+						<iframe src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.pibb"></iframe>
+					</noscript>
+					<!-- <img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
+						<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))"> -->
+				</div>
+				<div class="card-footer"><small class="text-muted">Stats made using <a href="https://github.com/anuraghazra/github-readme-stats">Github Readme Stats</a> & <a href="https://github.com/Bloggify/github-calendar">Github Calendar</a></small></div>
+			</div>
+		</div>
+		<div class="col-md-675 col-lg-675 col-xl-8">
+			<div class="card mb-4">
+				<div class="card-body">
+					<h5 noAnchor class="card-title">My abilities</h5>
+					<ul class="card-text">
+						<li>Graphic Design (using Photoshop CS6 + Paint.NET)</li>
+						<li>Website Design (using HTML, CSS and JavaScript)</li>
+						<li>DS Homebrew Development (using devKitARM and libnds)</li>
+						<li>Leadership + Community Management</li>
+						<li>Comprehensive story writting (and other writting in general)</li>
+					</ul>
+				</div>
+			</div>
+			{{ blog }}
+		</div>
+	</div>
+</div>

@@ -508,6 +508,36 @@ Different game styles have a different number of tracks and channels. Refer to t
 
 ### Editing mRideCloudScale & mRideClownScale For Enemies, Items & Objects
 
+<table>
+<thead><tr style="text-align: center;">
+	<th>Node</th>
+	<th>What it represents</th>
+	<th>Value Explainations + Options</th>
+</tr></thead>
+<tbody>
+	<tr>
+		<td style="text-align: center;">1b7484e8</td>
+		<td>mRideCloudScale</td>
+		<td>Changes the enemy scale when inserted into a Cloud<br>
+			Default: 1.00000</td>
+	</tr>
+	<tr>
+		<td style="text-align: center;">543aade0</td>
+		<td>mRideClownScale</td>
+		<td>Changes the enemy scale when inserted into a Clown Car<br>
+			Default: 1.00000</td>
+	</tr>
+	<tr>
+		<td style="text-align: center;">bc95a216</td>
+		<td>mFlag</td>
+		<td>This changes the behavior of the enemy's texture when they collide with a wall:<ul>
+			<li><code>0</code> makes the enemy's texture flip when they collide with a wall</li>
+			<li><code>1</code> makes the enemy's texture <b>not</b> flip when they collide with a wall</li>
+		</ul>The default value depends on the enemy.</td>
+	</tr>
+</tbody>
+</table>
+
 1. Within [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/releases), open the `romfs:/Pack/Static.pack` file.
 2. Dock the search list ("View" -> "Dock Search List")
 3. Search for the file you want to edit (Example: `M1_Enemy_kutsu_kuriboA.byml`)
@@ -544,10 +574,9 @@ Different game styles have a different number of tracks and channels. Refer to t
        !h fea17fb7: 8.00000
      </code></pre>
 5. Expand the tree once and click the "`dcbddcb8 : <Dictionary> 0`" node.
-6. On the far right of the window, you should see the contents of that node; the `1b7484e8` is the `mRideCloudScale` and the `543aade0` is the `mRideClownScale`, both of which are `1.0` by default.
-7. Right-click on the node you want to edit, then click "Edit".
-8. Edit the value as you like, then hit Ok.
-9. Click the "Save" button in the `File Editor` display to save the byml file, then hit `CTRL + S` to save the archive.
+6. Right-click on the node you want to edit, then click "Edit".
+7. Edit the value as you like, then hit Ok.
+8. Click the "Save" button in the `File Editor` display to save the byml file, then hit `CTRL + S` to save the archive.
 
 ## Old Wii U FS Doc
 

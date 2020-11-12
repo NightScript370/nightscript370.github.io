@@ -25,7 +25,8 @@ export default function (elements) {
 	}
 
 	if (!anchorsMade) {
-		let bodyElement = document.getElementById("content")
-		bodyElement.classList.add('noAnchorsPadding')
+		const paddingDivs = document.getElementsByClassName("page-padding")
+		for(let paddingDiv of paddingDivs)
+			paddingDiv.classList.add('noAnchorsPadding')
 	}
 }

@@ -17,7 +17,7 @@ export default function (content, target, options) {
 		levels: 'h2, h3, h4, h5, h6',
 		heading: 'Table of Contents',
 		headingLevel: 'h2',
-		listType: 'ul',
+		listType: 'unnumbered', // Options Available: Numbered, Un-Numbered, Detailed
 		idPrefix: 'toc_'
 	};
 	let settings = {};
@@ -58,7 +58,17 @@ export default function (content, target, options) {
 	const getIndent = (count) => {
 		let html = '';
 		for (let i = 0; i < count; i++) {
-			html += '<' + settings.listType + '>';
+			switch (settings.listType) {
+				case 'numbered':
+					html += '<ol>';
+					break;
+				case 'unnumbered':
+					html += '<ul>';
+					break;
+				case 'detail':
+					html += '<details>'
+					break;
+			}
 		}
 		return html;
 	};
@@ -71,7 +81,17 @@ export default function (content, target, options) {
 	const getOutdent = (count) => {
 		let html = '';
 		for (let i = 0; i < count; i++) {
-			html += '</' + settings.listType + '></li>';
+			switch (settings.listType) {
+				case 'numbered':
+					html += '</ol>';
+					break;
+				case 'unnumbered':
+					html += '</ul>';
+					break;
+				case 'detail':
+					html += '</details>'
+					break;
+			}
 		}
 		return html;
 	};
@@ -90,7 +110,7 @@ export default function (content, target, options) {
 			return getOutdent(Math.abs(diff));
 
 		// If it's not the first item and there's no difference
-		if (index && !diff)
+		if (index && !diff && settings.listType !== 'detail')
 			return '</li>';
 
 		return '';
@@ -112,7 +132,18 @@ export default function (content, target, options) {
 		headerElement.setAttribute('noAnchor', '');
 		headerElement.innerHTML = settings.heading;
 
-		const tocCode = document.createElement(settings.listType);
+		let tocCode;
+		switch (settings.listType) {
+			case 'numbered':
+				tocCode = document.createElement('ol');
+				break;
+			case 'unnumbered':
+				tocCode = document.createElement('ul');
+				break;
+			case 'detail':
+				tocCode = document.createElement('details');
+				break;
+		}
 		tocCode.innerHTML = Array.prototype.map.call(headings, (heading, index) => {
 			// Add an ID if one is missing
 			createID(heading);
@@ -128,7 +159,15 @@ export default function (content, target, options) {
 				element.remove();
 
 			// Generate the HTML
-			html += `<li><a href="#${encodeURIComponent(heading.getAttribute("id"))}">${tempheading.innerHTML.trim()}</a>`;
+			switch (settings.listType) {
+				case 'numbered':
+				case 'unnumbered':
+					html += `<li><a href="#${encodeURIComponent(heading.getAttribute("id"))}">${tempheading.innerHTML.trim()}</a>`;
+					break;
+				case 'detail':
+					html += `<summary><a href="#${encodeURIComponent(heading.getAttribute("id"))}">${tempheading.innerHTML.trim()}</a></summary>`;
+					break;
+			}
 
 			// If the last item, close it all out
 			if (index === len)

@@ -211,20 +211,21 @@ a {
 		grid-column: 1 / 1;
 		grid-row: 1 / 1;
 	}
+	#sidebar-logo #bubblesCanvas {
+		z-index: 1; }
 	#sidebar-logo picture {
 		width: 165px;
 		z-index: 2; }
-
-#bubblesCanvas {
-	z-index: 1;
-}
 
 #content {
 	background-color: var(--background-filter);
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-	min-height: 100vh; }
+	min-height: 100vh;
+	width: 100%; }
+	#content.noBG {
+		background-color: transparent; }
 
 .bttbtn {
 	width: 40px;
@@ -463,7 +464,7 @@ img {
 	:root {
 		--main-bg-color: white;
 		--sidebar-bg-color: white;
-		--sidebar-image: url(/assets/images/sheikah-invert.jpg) center top/contain repeat;
+		--sidebar-image: white;
 		--menu-element: #EEE;
 		--darker-menu-element: #DDD;
 		--menu-element-text-color: black;
@@ -480,7 +481,7 @@ img {
 		--hover-color: rgba(255, 255, 255, 0.4);
 		--light-hover-color: rgba(255, 255, 255, 0.2);
 		--bg-filter: none;
-		--bg-mask: radial-gradient(rgb(128,128,128), transparent 100%);
+		--bg-mask: none;
 		--text-shadow: currentcolor;
 	}
 
@@ -505,7 +506,9 @@ img {
 }
 
 #contactMeButtons a img {
-	height: 2rem;
+	height: 4rem;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .dropdown:hover .collapse {
@@ -640,3 +643,25 @@ tbody {
 tbody tr:nth-child(even) {
 	background-color: rgba(0, 0, 0, 0.15);
 }
+
+.landing-style {
+	background: linear-gradient(transparent, var(--background-filter));
+	height: 55vh;
+	display: grid;
+	grid-template: 1fr / 1fr; }
+	.landing-style > * {
+		grid-column: 1 / 1;
+		grid-row: 1 / 1;
+	}
+	.landing-style .bgAvatar {
+		z-index: 1;
+		overflow: hidden; }
+		.landing-style .bgAvatar img {
+			height: 55vh;
+			float: right;
+			-webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+			mask-image: linear-gradient(to top, transparent 5%, black 100%); }
+	.landing-style .landingText {
+		z-index: 2;
+		margin-top: 27.5vh;
+		text-align: center; }

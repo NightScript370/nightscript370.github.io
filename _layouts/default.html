@@ -158,7 +158,13 @@ layout: compress
 		</nav>
 
 		<!-- Page Content  -->
-		<div id="content" class="page-padding">
+		<div id="content" class="{% if page.landing %} noBG {% else %} page-padding {% endif %}">
+			{% if page.unfinished %}
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+					Keep in mind that this is an unfinished article. Thoughts shown here may not be reflective of my final arguments, and I request that this is not shared anywhere.
+					<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+			{% endif %}
 			{{ content }}
 			<a href="#" class="bttbtn bg-dark d-flex" id="bttbtn" aria-label="Back to top">
 				<picture>
