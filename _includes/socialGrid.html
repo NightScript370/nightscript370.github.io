@@ -7,9 +7,11 @@
 		<div class="col">
 			<div class="socialPageCard">
 				<div class="socialCardContent">
-					<a class="socialCardImage" href="{{page[0]}}" alt="{{page[1]}}"><img src="/assets/images/{{page[2]}}"></a>
-					<a class="h2 socialCardTitle" href="{{page[0]}}">{{page[1]}}</a>
-					<p class="socialCardNote">{{page[3]}}</p>
+					<div class="socialCardOffsetGrid">
+						<a class="socialCardImage {% if page[3] != "" %}multiRowGrid{%endif%}" href="{{page[0]}}" alt="{{page[1]}}"><img src="/assets/images/{{page[2]}}"></a>
+						<a class="h2 socialCardTitle" href="{{page[0]}}">{{page[1]}}</a>
+						{% if page[3] != "" %}<p class="socialCardNote">{{page[3]}}</p> {% endif %}
+					</div>
 					<p class="socialCardText">{{page[4]}}</p>
 					<div class="socialCardButtons"><a href="{{page[0]}}" type="button" class="btn btn-primary">{{page[5]}}</a></div>
 				</div>

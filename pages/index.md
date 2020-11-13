@@ -49,7 +49,7 @@ github: true
 </div>
 {% endcapture %}
 
-{% assign twitter = "/projects/ns-domain | NightScript Domain | projects/ns-domain.png |  | <br>A website I made to document my accomplishments | Visit its history" | split: ' | ' %}
+{% assign twitter = "/projects/ns-domain | NightScript Domain | projects/ns-domain.png |  | A website I made to document my accomplishments | Visit its history" | split: ' | ' %}
 {% assign github = "# | Yamamura | projects/yamamura.png | Pages coming soon | A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available | See what it was" | split: ' | ' %}
 {% assign paypal = "https://github.com/DS-Homebrew/TWiLightMenu | TWiLight Menu++ | projects/twilight.png | Though I'm not the leader, I'm an active contributor | An all in one menu for launching title launchers (such as emulators, hypervisors and how would I explain nds-bootstrap :P). Works on all NTR/TWL environments | View Source Code" | split: ' | ' %}
 {% assign discord = "/projects/dsi-guide | dsi.cfw.guide | projects/dsi-guide-icon.png | A community-oriented project | dsi.cfw.guide is a website made to guide users through modding their Nintendo DSi (XL) systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings). | See what I've changed" | split: ' | ' %}
