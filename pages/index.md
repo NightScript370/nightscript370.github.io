@@ -49,22 +49,36 @@ github: true
 </div>
 {% endcapture %}
 
-{% assign twitter = "/projects/ns-domain | NightScript Domain | projects/ns-domain.png |  | A website I made to document my accomplishments | Visit its history" | split: ' | ' %}
-{% assign github = "# | Yamamura | projects/yamamura.png | Pages coming soon | A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available | See what it was" | split: ' | ' %}
-{% assign paypal = "https://github.com/DS-Homebrew/TWiLightMenu | TWiLight Menu++ | projects/twilight.png | Though I'm not the leader, I'm an active contributor | An all in one menu for launching title launchers (such as emulators, hypervisors and how would I explain nds-bootstrap :P). Works on all NTR/TWL environments | View Source Code" | split: ' | ' %}
-{% assign discord = "/projects/dsi-guide | dsi.cfw.guide | projects/dsi-guide-icon.png | A community-oriented project | dsi.cfw.guide is a website made to guide users through modding their Nintendo DSi (XL) systems. Originally made by emiyl and jerbear64, I have decided to rewrite it to bring along a few improvements (mostly in wordings). | See what I've changed" | split: ' | ' %}
+{% assign nsdomain = "/projects/ns-domain | NightScript Domain | projects/ns-domain.png |  | A website I made to document my accomplishments | Visit its history" | split: ' | ' %}
+{% assign yamamura = "# | Yamamura | projects/yamamura.png |  | A discord bot focused on modding communities. Discontinued in January 2020 but the source code is still available | See what it was (Coming Soon)" | split: ' | ' %}
+{% assign twilight = "https://github.com/DS-Homebrew/TWiLightMenu | TWiLight Menu++ | projects/twilight.png |  | An all in one menu for launching any application that works on the NTR/TWL environment | View Source Code" | split: ' | ' %}
+{% assign dsi = "/projects/dsi-guide | dsi.cfw.guide | projects/dsi-guide-icon.png | The guide to softmodding your DSi | A site originally led by emiyl and jerbear64 now has the backing of the community (mostly myself). | See changes made since power-shift" | split: ' | ' %}
+{% assign mmm = "# | Mario Making Mods | projects/mmm.png |  | The community for modding games in the Super Mario Maker series. | Visit its archive (coming soon)" | split: ' | ' %}
+{% assign uu = "https://universal-team.net/projects/universal-updater.html | Universal Updater | projects/universal-updater.png |  | An application for downloading homebrew onto your Nintendo 3DS. | Visit its webpage" | split: ' | ' %}
 
 {% assign my_array = "" | split: ',' %}
-{% assign my_array = my_array | push: twitter %}
-{% assign my_array = my_array | push: github %}
-{% assign my_array = my_array | push: paypal %}
-{% assign my_array = my_array | push: discord %}
+{% assign my_array = my_array | push: dsi %}
+{% assign my_array = my_array | push: yamamura %}
+{% assign my_array = my_array | push: twilight %}
+{% assign my_array = my_array | push: nsdomain %}
+{% assign my_array = my_array | push: mmm %}
+{% assign my_array = my_array | push: uu %}
 
 <div class="landing-style">
-	<div class="bgAvatar"><img src="/assets/images/avatar-3d.png"></div>
-	<div class="landingText">
-		<h1 noAnchor>Welcome to the NightScript Domain!</h1>
-		<h4 noAnchor>I'm NightScript, a 17 year old open-source developer with a love for Nintendo Modding</h4>
+	<div class="bgAvatar"></div>
+	<div class="landingText container">
+		<h1 noAnchor class="text-center" style="margin-top: 5vh;">Welcome to the NightScript Domain!</h1>
+		<h4 noAnchor class="text-center" id="characterDescription">
+			I'm <img src="/assets/images/avatar.png" style="width: 1em; border-radius: 50%;"> NightScript, a 17 year old open-source developer with a love for Nintendo Modding.<br>
+			I also specialize in these aspects:
+		</h4>
+		<ul>
+			<li>Graphic Design (using Photoshop CS6 + Paint.NET)</li>
+			<li>Website Design (using HTML, CSS and JavaScript)</li>
+			<li>DS Homebrew Development (using devKitARM and libnds)</li>
+			<li>Leadership + Community Management</li>
+			<li>Comprehensive story writing (and other writing in general)</li>
+		</ul>
 		<div class="text-center mt-3" id="contactMeButtons">
 			<a class="nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
 			<a class="nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
@@ -72,10 +86,12 @@ github: true
 		</div>
 	</div>
 </div>
-<div class="page-padding pt-5" style="background-color: var(--background-filter);">
-	<h3 noAnchor>Previous Contributions of mine</h3>
-	{% include socialGrid.html pages=my_array %}
-	<div class="row mt-5">
+<div class="noAnchorsPadding pt-5" style="background-color: var(--background-filter);">
+	<h3 noAnchor>Projects I've contributed to</h3>
+	{% include socialGrid.html pages=my_array grid="3" %}
+</div>
+<div class="noAnchorsPadding pt-5" style="background-color: var(--background-filter);">
+	<div class="row">
 		<div class="col-md-525 col-lg-525 col-xl-4 mb-3">
 			<!--<div style="min-height: 8rem;" class="mb-3">
 				<picture style="float: right; width: 8rem; line-height: 1;" class="ml-2">
@@ -93,27 +109,15 @@ github: true
 				<div class="card-body">
 					<a class="h5 card-title card-header-icon" href="https://github.com/NightYoshi370" style="text-decoration: none;"><img src="/assets/images/icons/github.svg" style="height: 1.5em;"> <u>Github Profile stats</u></a>
 					<noscript class="gitStats">
-						<iframe src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.pibb"></iframe>
+						<iframe src="https://gist.github.com/NightYoshi370/9430c9b83c3b5482295115982c843520.pibb" style="width: 100%; height: 100%;"></iframe>
+						<img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
+						<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
 					</noscript>
-					<!-- <img src="https://github-readme-stats.vercel.app/api?username=NightYoshi370&hide_title=true&hide_border=true&theme=algolia&show_icons=true&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))">
-						<img src="https://github-readme-stats.vercel.app/api/top-langs?username=NightYoshi370&hide_border=true&theme=algolia&layout=compact&bg_color=00000000" style="width: 100%; filter: drop-shadow(0px 2.5px 1px var(--shadow-color))"> -->
 				</div>
 				<div class="card-footer"><small class="text-muted">Stats made using <a href="https://github.com/anuraghazra/github-readme-stats">Github Readme Stats</a> & <a href="https://github.com/Bloggify/github-calendar">Github Calendar</a></small></div>
 			</div>
 		</div>
 		<div class="col-md-675 col-lg-675 col-xl-8">
-			<div class="card mb-4">
-				<div class="card-body">
-					<h5 noAnchor class="card-title">My abilities</h5>
-					<ul class="card-text">
-						<li>Graphic Design (using Photoshop CS6 + Paint.NET)</li>
-						<li>Website Design (using HTML, CSS and JavaScript)</li>
-						<li>DS Homebrew Development (using devKitARM and libnds)</li>
-						<li>Leadership + Community Management</li>
-						<li>Comprehensive story writting (and other writting in general)</li>
-					</ul>
-				</div>
-			</div>
 			{{ blog }}
 		</div>
 	</div>

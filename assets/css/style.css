@@ -52,22 +52,24 @@ a {
 .btn {
 	position: relative;
 	overflow: hidden; }
-	.btn .hamon {
-		position: absolute; 
-		border-radius: 50%; 
-		/* To make it round */
-		background-color: rgba(0, 0, 0, 0.3); 
-
-		width: 100px; 
-		height: 100px; 
-		transform: translate(-50%, -50%) scale(0);
-		animation: hamon 0.5s ease-out; }
-		@keyframes hamon {
-			to {
-				transform: translate(-50%, -50%) scale(3);
-				opacity: 0;
-			}
-		}
+	.btn:before {
+		content: '';
+		position: absolute;
+		display: block;
+		background: var(--ripple-background, white);
+		border-radius: 50%;
+		pointer-events: none;
+		top: calc(var(--y) * 1px);
+		left: calc(var(--x) * 1px);
+		width: calc(var(--d) * 1px);
+		height: calc(var(--d) * 1px);
+		opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+		-webkit-transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+		transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+		-webkit-transform: translate(-50%, -50%) scale(var(--s, 1));
+				transform: translate(-50%, -50%) scale(var(--s, 1));
+		-webkit-transform-origin: center;
+				transform-origin: center; }
 
 #sidebar {
 	min-width: 225px;
@@ -652,7 +654,6 @@ tbody tr:nth-child(even) {
 
 .landing-style {
 	background: linear-gradient(transparent, var(--background-filter));
-	height: 55vh;
 	display: grid;
 	grid-template: 1fr / 1fr; }
 	.landing-style > * {
@@ -661,16 +662,15 @@ tbody tr:nth-child(even) {
 	}
 	.landing-style .bgAvatar {
 		z-index: 1;
-		overflow: hidden; }
-		.landing-style .bgAvatar img {
-			height: 55vh;
-			float: right;
-			-webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
-			mask-image: linear-gradient(to top, transparent 5%, black 100%); }
+		overflow: hidden;
+		background-image: url("/assets/images/avatar-3d.png");
+		background-position: right; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: contain; /* Resize the background image to cover the entire container */
+		-webkit-mask-image: linear-gradient(to top, transparent 5%, rgba(0,0,0,.4) 100%);
+		mask-image: linear-gradient(to top, transparent 5%, rgba(0,0,0,.4) 100%); }
 	.landing-style .landingText {
-		z-index: 2;
-		margin-top: 27.5vh;
-		text-align: center; }
+		z-index: 2; }
 
 .transparent-color {
 	color: transparent;

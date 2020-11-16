@@ -1,16 +1,14 @@
 export default function (elementArray) {
-	elementArray.forEach(element => element.onclick = function (e) {
+	elementArray.forEach(element => element.addEventListener('click', function (e) {
 		if (!e.isTrusted) return;
+		console.log("clicked")
 
-		const hamon = document.createElement("span");
-		hamon.classList.add("hamon");
-		this.appendChild(hamon);
+		e = e.touches ? e.touches[0] : e;
 
-		// Position the hamon
-		hamon.style.left = e.offsetX + "px"; 
-		hamon.style.top = e.offsetY + "px"; 
-
-		// CEEEESAR (sorry for those who hadn't seen JoJo part 2)
-		setTimeout(() => hamon.remove(), 3000);
-	});
+		const r = element.getBoundingClientRect();
+		const d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2;
+		element.style.cssText = "--s: 0; --o: 1;";
+		element.offsetTop;
+		element.style.cssText = "--t: 1; --o: 0; --d: " + d + "; --x:" + (e.clientX - r.left) + "; --y:" + (e.clientY - r.top) + ";";
+	}));
 }
