@@ -85,11 +85,8 @@ layout: compress
 		<nav id="sidebar">
 			<div class="sidebar-contents">
 				<div id="sidebar-logo">
-					<div class="custom-menu"><button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button></div>
-					<picture>
-						<source srcset="/assets/images/icon.avif" type="image/avif">
-						<img src="/assets/images/icon.png">
-					</picture>
+					<button type="button" id="sidebarCollapse" class="btn" aria-label="Toggle Sidebar"></button>
+					<div id="logoImage"><img src="/assets/images/icon.png"></div>
 				</div>
 				<ul class="list-unstyled mb-0" id="sidebarLinks">
 					{% for item in site.data.nav.sidebar %}
