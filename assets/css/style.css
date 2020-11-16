@@ -103,11 +103,13 @@ a {
 		#sidebar:not(.active) #sidebarCollapse {
 			margin-right: -15px; }
 	@media (max-width: 991.98px) {
-		#sidebar:not(.active) {
+		#sidebar {
 			margin-left: -225px;
 			position: fixed; }
 			#sidebar:not(.active) #sidebarCollapse {
 				margin-right: -25px; }
+		#sidebar.active {
+			margin-left: 0; }
 			#sidebar.active #sidebarCollapse {
 				margin-right: -15px; }
 	}
