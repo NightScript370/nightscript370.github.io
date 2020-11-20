@@ -1,4 +1,6 @@
 import Decimal from './libs/decimal.js';
+
+const ringProfileStats = false;
 const corsURL = 'https://cors-anywhere.herokuapp.com/';
 
 function htmlToElem(html) {
@@ -159,77 +161,106 @@ export default async function (elements) {
 			element.insertAdjacentElement('afterend', langStatsImage)
 		}
 
-		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&')
+		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&disable_animations=true&' + (ringProfileStats ? '' : 'hide_rank=true&'))
+		console.log(profStatsURL)
 		try {
 			const profStatsResponse = await fetch(profStatsURL)
 			if (!profStatsResponse.ok)
 				throw new Error();
 
 			const profStatsPage = htmlToElem(await profStatsResponse.text());
-			profStatsPage.removeAttribute('width')
-			profStatsPage.removeAttribute('height')
-			profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
-			profStatsPage.classList.add('mb-2')
+			if (ringProfileStats) {
+				profStatsPage.removeAttribute('width')
+				profStatsPage.removeAttribute('height')
+				profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
+				profStatsPage.classList.add('mb-2')
 
-			// Remove Padding
-			profStatsPage
-				.querySelector('[data-testid="main-card-body"]')
-				.removeAttribute('transform')
+				// Remove Padding
+				profStatsPage
+					.querySelector('[data-testid="main-card-body"]')
+					.removeAttribute('transform')
 
-			let style = profStatsPage.querySelector('style')
-			style.innerHTML = style.innerHTML
-				.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
+				let style = profStatsPage.querySelector('style')
+				style.innerHTML = style.innerHTML
+					.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
 
-			profStatsPage
-				.querySelectorAll('[data-testid="icon"]')
-				.forEach(iconElem => iconElem.setAttribute('x', '35'))
+				profStatsPage
+					.querySelectorAll('[data-testid="icon"]')
+					.forEach(iconElem => iconElem.setAttribute('x', '35'))
 
-			profStatsPage
-				.querySelectorAll('text')
-				.forEach(elem => {
-					switch (parseInt(elem.getAttribute('x'))) {
-						case 25:
-							elem.setAttribute('x', '55');
-							elem.classList.remove('bold')
-							break;
-						case 190:
-							elem.setAttribute('x', '30');
-							elem.classList.add('bold')
-							elem.setAttribute('text-anchor', 'end')
-							break;
-					}
+				profStatsPage
+					.querySelectorAll('text')
+					.forEach(elem => {
+						switch (parseInt(elem.getAttribute('x'))) {
+							case 25:
+								elem.setAttribute('x', '55');
+								elem.classList.remove('bold')
+								break;
+							case 190:
+								elem.setAttribute('x', '30');
+								elem.classList.add('bold')
+								elem.setAttribute('text-anchor', 'end')
+								break;
+						}
 
-					elem.innerHTML = elem.innerHTML
-						.replace('Total Stars', 'Stars Gained')
-						.replace('Total Commits', 'Commits Pushed')
-						.replace('Total PRs', 'PRs sent')
-						.replace('Total Issues', 'Issues Opened')
-						.replace(':', '')
-				})
+						elem.innerHTML = elem.innerHTML
+							.replace('Total Stars', 'Stars Gained')
+							.replace('Total Commits', 'Commits Pushed')
+							.replace('Total PRs', 'PRs sent')
+							.replace('Total Issues', 'Issues Opened')
+							.replace(':', '')
+					})
 
-			const wideProfStats = profStatsPage.cloneNode(true);
-			wideProfStats.classList.add('d-none')
-			wideProfStats.classList.add('d-xl-block')
-			wideProfStats.setAttribute('viewBox', '22 0 355 125')
+				const wideProfStats = profStatsPage.cloneNode(true);
+				wideProfStats.classList.add('d-none')
+				wideProfStats.classList.add('d-xl-block')
+				wideProfStats.setAttribute('viewBox', '22 0 355 125')
 
-			// Move circle rank more left
-			wideProfStats
-				.querySelector('[data-testid="rank-circle"]')
-				.setAttribute('transform', 'translate(330, 52)')
+				// Move circle rank more left
+				wideProfStats
+					.querySelector('[data-testid="rank-circle"]')
+					.setAttribute('transform', 'translate(330, 52)')
 
-			const tallProfStats = profStatsPage.cloneNode(true);
-			tallProfStats.classList.add('d-xl-none')
-			tallProfStats.setAttribute('viewBox', '22 0 230 230')
-			tallProfStats
-				.querySelector('[data-testid="rank-circle"]')
-				.setAttribute('transform', 'translate(152, 40)')
-			tallProfStats
-				.querySelector('[data-testid="main-card-body"]')
-				.children[1]
-				.setAttribute('y', '105')
+				const tallProfStats = profStatsPage.cloneNode(true);
+				tallProfStats.classList.add('d-xl-none')
+				tallProfStats.setAttribute('viewBox', '22 0 230 230')
+				tallProfStats
+					.querySelector('[data-testid="rank-circle"]')
+					.setAttribute('transform', 'translate(152, 40)')
+				tallProfStats
+					.querySelector('[data-testid="main-card-body"]')
+					.children[1]
+					.setAttribute('y', '105')
 
-			element.insertAdjacentElement('afterend', wideProfStats)
-			element.insertAdjacentElement('afterend', tallProfStats)
+				element.insertAdjacentElement('afterend', wideProfStats)
+				element.insertAdjacentElement('afterend', tallProfStats)
+			} else {
+				element.insertAdjacentHTML('afterend', `
+					<div class="gitGrid mb-3">
+						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="stars"]').innerHTML}</div>
+						<img src="/assets/images/icons/star.png">
+						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Stars')).innerHTML.replaceAll('Total Stars', 'Stars Gained').replace(':', '')}</div>
+
+						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="commits"]').innerHTML}</div>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+							<path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
+						</svg>
+						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Commits')).innerHTML.replaceAll('Total Commits', 'Commits Pushed').replace(':', '')}</div>
+
+						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="prs"]').innerHTML}</div>
+						<img src="/assets/images/icons/prs.png">
+						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total PRs')).innerHTML.replaceAll('Total PRs', 'PRs sent').replace(':', '')}</div>
+
+						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="issues"]').innerHTML}</div>
+						<img src="/assets/images/icons/info.svg" style="transform: rotate(180deg)">
+						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Issues')).innerHTML.replaceAll('Total Issues', 'Issues Opened').replace(':', '')}</div>
+
+						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="contribs"]').innerHTML}</div>
+						<img src="/assets/images/icons/repo.png">
+						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Contributed to')).innerHTML.replace(':', '')}</div>
+					</div>
+				`)
+			}
 		} catch (e) {
 			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e)
 			const profStatsImage = document.createElement('img')

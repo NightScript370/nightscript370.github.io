@@ -19,7 +19,7 @@ github: true
 			<hr>
 			<div>
 				<a class="h5" href="/blog/online-school-issues">Online School Issues</a>
-				<div class="mb-0">Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally isn't needed.</div>
+				<div class="mb-0">Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally is not needed.</div>
 				<a href="/blog/online-school-issues" style="text-align: right;">Read More...</a>
 			</div>
 			<hr>
@@ -64,10 +64,10 @@ github: true
 {% assign my_array = my_array | push: mmm %}
 {% assign my_array = my_array | push: uu %}
 
-<div class="landing-style">
+<div class="landing-style pb-5">
 	<div class="bgAvatar"></div>
 	<div class="landingText container">
-		<h1 noAnchor class="text-center" style="margin-top: 5vh;">Welcome to the NightScript Domain!</h1>
+		<h1 noAnchor class="text-center page-padding-top">Welcome to the NightScript Domain!</h1>
 		<h4 noAnchor class="text-center" id="characterDescription">
 			I'm <img src="/assets/images/avatar.png" style="width: 1em; border-radius: 50%;"> NightScript, a 17 year old open-source developer with a love for Nintendo Modding.<br>
 			I also specialize in these aspects:
@@ -86,7 +86,7 @@ github: true
 		</div>
 	</div>
 </div>
-<div class="noAnchorsPadding pt-5" style="background-color: var(--background-filter);">
+<div class="noAnchorsPadding" style="background-color: var(--background-filter);">
 	<h3 noAnchor>Projects I've contributed to</h3>
 	{% include socialGrid.html pages=my_array grid="3" %}
 </div>

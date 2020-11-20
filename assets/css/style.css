@@ -318,6 +318,10 @@ h6:hover .anchor {
 	margin-right: .25ex;
 }
 
+.page-padding-top {
+	padding-top: 0.5rem;
+}
+
 .page-padding {
 	width:100%;
 	padding-top: 0.5rem;
@@ -331,6 +335,10 @@ h6:hover .anchor {
 }
 
 @media (min-width: 991.98px) {
+	.page-padding-top {
+		padding-top: 1.5rem;
+	}
+
 	.page-padding {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
@@ -670,4 +678,23 @@ tbody tr:nth-child(even) {
 
 .transparent-color {
 	color: transparent;
+}
+
+.gitGrid {
+	display: grid;
+	grid-template-columns: auto auto 1fr;
+	grid-auto-rows: min-content;
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.gitGrid .rightAlign {
+	text-align: right;
+	font-weight: bold;
+}
+
+.gitGrid img, .gitGrid svg {
+	width: 1em;
+	height: 1em;
+	fill: white;
 }
