@@ -6,6 +6,7 @@ listinnumber: true
 ---
 
 # Edgenuity Issues
+{:.mb-0}
 <small class="font-italic font-weight-light font-underline">Published on July 6th, 2020 - Edited on July 9th, 2020</small>
 
 My 10th grade had an interesting mix of teachers. By the time I was done with the year, almost all the teachers I had at the beginning were replaced, one of which being an English teacher that was unable to properly handle an English class. He joined my private school mid-nineth grade, and I've spent two semesters with him. I loathed him so much that back in 9th grade, I wrote a 10 page essay on why he was bad and why he shouldn't be invited for the following year. However, before I could escape him, I got a D as a grade (which is around 65%), due to not properly assisting us with the Frakenstein book (which we have had to read for half the semester). Since then, I have had other English teachers and I left the school, but the D still stuck with me. I have considerably improved my reading and writting skills since then and I wanted to prove it. That's why I was looking into ways I could make up the grade.

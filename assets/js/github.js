@@ -1,4 +1,4 @@
-import Decimal from './libs/decimal.js';
+// import Decimal from './libs/decimal.js';
 
 const ringProfileStats = false;
 const corsURL = 'https://cors-anywhere.herokuapp.com/';
@@ -51,7 +51,28 @@ export default async function (elements) {
 				throw new Error();
 
 			const langStatsPage = htmlToElem(await langsResponse.text());
-			langStatsPage.removeAttribute('width')
+			const langItems = langStatsPage.querySelectorAll('[data-testid="lang-name"]')
+
+			const langBar = document.createElement("div")
+			langBar.classList.add("gitLangBar")
+
+			const langElementList = document.createElement("div")
+			langElementList.classList.add("gitLangGrid")
+
+			let barItemSize, barItemColor;
+			langItems
+				.forEach(r => {
+					barItemSize = /(\d+(?:.\d+)?)/.exec(r.innerHTML)[1]
+					barItemColor = r.previousElementSibling.getAttribute("fill")
+
+					langBar.innerHTML += `<div style="width: ${barItemSize}%; background: ${barItemColor};"></div>`
+					langElementList.innerHTML += `<div><div class="gitLangIcon" style="background: ${barItemColor};"></div> ${r.innerHTML}</div>`
+				})
+
+			element.insertAdjacentElement('afterend', langElementList);
+			element.insertAdjacentElement('afterend', langBar);
+			element.insertAdjacentHTML('afterend', '<h4 class="mb-0">Most Used Languages</h4>')
+			/* langStatsPage.removeAttribute('width')
 			langStatsPage.removeAttribute('height')
 			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 
@@ -150,7 +171,7 @@ export default async function (elements) {
 			}
 
 			element.insertAdjacentElement('afterend', tallLangBox)
-			element.insertAdjacentElement('afterend', wideLangBox)
+			element.insertAdjacentElement('afterend', wideLangBox) */
 		} catch (e) {
 			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e)
 			const langStatsImage = document.createElement('img')
@@ -238,7 +259,7 @@ export default async function (elements) {
 				element.insertAdjacentHTML('afterend', `
 					<div class="gitGrid mb-3">
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="stars"]').innerHTML}</div>
-						<img src="/assets/images/icons/star.png">
+						<img src="/assets/images/icons/star.svg">
 						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Stars')).innerHTML.replaceAll('Total Stars', 'Stars Gained').replace(':', '')}</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="commits"]').innerHTML}</div>
@@ -252,7 +273,7 @@ export default async function (elements) {
 						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total PRs')).innerHTML.replaceAll('Total PRs', 'PRs sent').replace(':', '')}</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="issues"]').innerHTML}</div>
-						<img src="/assets/images/icons/info.svg" style="transform: rotate(180deg)">
+						<img src="/assets/images/icons/info.svg">
 						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Issues')).innerHTML.replaceAll('Total Issues', 'Issues Opened').replace(':', '')}</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="contribs"]').innerHTML}</div>

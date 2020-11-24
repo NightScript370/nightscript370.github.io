@@ -6,6 +6,7 @@ carousel: true
 ---
 
 # Online School Issues
+{:.mb-0}
 <small class="font-italic font-weight-light font-underline">Published on October 1st, 2020 - Edited on October 25th, 2020</small>
 
 <div class="d-xl-none" data-toc></div>

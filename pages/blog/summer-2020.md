@@ -5,6 +5,7 @@ permalink: /blog/summer-2020
 ---
 
 # NightScript's Summer of 2020
+{:.mb-0}
 <small class="font-italic font-weight-light font-underline">Published on August 31st, 2020 - Updated on October 28th, 2020</small>
 
 <div class="d-xl-none" data-toc></div>

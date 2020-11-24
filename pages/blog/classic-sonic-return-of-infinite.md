@@ -5,7 +5,7 @@ permalink: /blog/sonic-return-of-infinite
 ---
 # Classic Sonic: Return of Infinite
 {:.mb-0}
-<small class="font-italic font-weight-light font-underline">Published on May 21st, 2020 -- Edited on November 18th, 2020</small>
+<small class="font-italic font-weight-light font-underline">Published on May 21st, 2020 -- Edited on November 22nd, 2020</small>
 
 So with the Mania's success and Forces's failure, it is no doubt about it that SEGA would be looking to appealing the classic fans. However, a simple rehash of the old games would not work a third time. At a certain point, people will become sick of it and want something original. Besides, there's still a lot of potential in the Phantom Ruby and Infinite too, so it'd be cool if we could continue the saga.
 
@@ -40,16 +40,15 @@ Similar of Knuckles' playthrough of Sonic 3, Sky Sanctuary is the final zone of 
 - Failing to collect the 7 chaos emeralds shows the place crumbling, you escaping into the tornado as Infinite laughs at you from behind.
 
 ### Characters
-This game will have 7 playable characters, two more from Sonic Mania Plus. You'll start off with your traditional 3 but earn more as you progress in the game.
-- Sonic would have the drop dash.
-- Tails would have the power of flight.
-- Knuckles would have a glide and the ability to climb up walls.
-- Metal Sonic has a homing attack.
-- Amy Rose would have a moveset similar to the one she had in Sonic Advance.
-- Mighty would have the ground pound.
-- Ray would have the cape mechanic from SMW, like he did in Sonic Mania Plus.
+This game will have 7 playable characters, two more from Sonic Mania Plus. As you progress in the game, you will unlock more characters, but feel free to play those characters in earlier stages once you've unlocked them to find the other routes you could take. Also, each character now gets an additional move.
 
-Each would have their own individual routes they would be able to take, similar to Sonic 3 & Knuckles.
+- Sonic's drop dash returns from Sonic Mania, but the Super Peel Out from Sonic CD makes a return. Sonic is unlocked from the very start.
+- Tails now has an upwards flight that has more power, but doesn't have much horizontal movement possibilities and dies out quicker. It's also a momentum killer.
+- Knuckles can now has a spin attack while running, only losing slight momentum compared to Fan Game's punch moves. The glide can now be jumped out of, allowing you to defend yourself when you go to the ground. However, when trying to cling onto walls, staying on the wall for too long would wear knuckles out and he'll start to slip.
+- Metal Sonic has a homing attack but using it not near an ememy would work the same way it works in Sonic 4, as opposed to the way Sonic homing attacks in Sonic 06, Unleashed, Colors & Generations.
+- Amy Rose would have a moveset similar to the one she had in Sonic Advance, and is unlocked after Ghost Valley Zone.
+- Mighty's armadillo shell can now have an insta-shield, similar to Sonic's from Sonic 3 & Knuckles.
+- Ray now has a spin attack which propells him into the air, similar to SM3DW's move.
 
 ### Structure
 As we can see, it would be a 7 zone'd game with 3 acts each. The first act would be the main theme, the second act would be a remix and the third act would be a autorunner stage, similar to the Mock Speed sections from 06.
@@ -59,9 +58,8 @@ Instead of having multiple campaigns, you'd be able to select your character bef
 In Sonic Adventure, you have treasure hunting, racing, fishing, shooting, etc..not really consistent. I plan to go the Sonic 3 & Knuckles style, where they have the same gameplay except they each have their own routes.
 
 ### Bonus Games
-Honestly, having blue spheres as the bonus games itself was quite lame. It didn't really benefit the campaign itself.<br>
-Instead, bonus games would be a combination of Sonic 3 & Knuckles's and the Encore Mode of Sonic Mania Plus.<br>
-Those benefit the main game, giving you items, rings and others...
+
+Sonic Mania's bonus games didn't really feel like bonuses. We first had the Blue Spheres which unlocked tokens, but they don't benefit the main campaign itself. Sonic Mania Plus's Bonus Game was a pinball machine, but didn't have any skill and the visual style was inconsistent with the main games. Also, if you knew how to time things right, you could stay there forever. Instead, we'll port over the bonus games from Sonic 3 + Sonic & Knuckles, which has rewards you could benefit from in the main campaign and uses the main game's engine.
 
 ### Special Stage
 
@@ -75,9 +73,11 @@ Yeah, in case you couldn't tell, I'm saying it stray's away way too much. In my 
 
 Instead, it would be much more fun if it were an extension of the current game structure. Maybe a race between you and Infinite to get the chaos emerald first while traversing a gauntlet of platforms?
 
-
 ### Presentation
-Art style plays a key role on how a game should be played out. However, does it really need a change from Mania? If you think about it, the 32x style is the best art style a true Classic Sonic game has ever seen. Plus, we're supposed to be returning from Forces back to Mania's world, so why would we present it in a new way.
+
+{% include youtube.html url="https://www.youtube-nocookie.com/embed/DqZc6L77rIU" %}
+
+Sonic Mania's art style worked because the games focus was "let's look at past content and make it the best it could be". We've gotten a really nice evolution for Sonic and Friends of the Sonic 2 artstyle, a classic look. The 32x art style also makes sense because it was supposed to try and match if a 2D Saturn game was made. However, for this new game with new zones, I feel like it's time we got an art style that didn't have a new color every pixel, and that's where Sonic Uprising comes in. Looking at Mighty the Armadillo alone should tell you how much of a modern take on a classic art style this feels like.
 
 -----
 

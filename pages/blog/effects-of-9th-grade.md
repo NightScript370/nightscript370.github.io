@@ -5,6 +5,7 @@ permalink: /blog/effects-of-9th-grade
 ---
 
 # The Effects of my 9th grade
+{:.mb-0}
 <small class="font-italic font-weight-light font-underline">Published on October 29th, 2020</small>
 
 <div class="d-xl-none" data-toc></div>
@@ -22,7 +23,7 @@ Also, this is more-so aimed towards a younger generation of students just enteri
 
 Spitting out straight fire and acting rebellious seems to be "cool" and "popular", even when it amounts to literally nothing. Add in a math teacher that officially endorsed it and the time spent in class would contain 25% of actual rapping and the other 75% being overly hyped for these (mediocre) battles. While it was limited to that one class (other teachers being too kind and the ultimate edge-lord teacher found rapping to be "low-level edge"), these songs struct the ears of the passerby students.
 
-I was no stranger to rapping, having done 3 songs myself (one of which being on my middle school principle 😂). The class would not like to hear that I had moved on, so I was frequently summoned. Of course, being ***ultimate edgelord*** via plagiarizing Infinite from Sonic Forces quotes, I was viewed as a "worthy competitor" and a way to knock the teacher off the rapping throne he sat on. However, as I said above, I had a very different mindset from the rest of my class. I viewed it as "can we just move on" and "why do teachers go so far to connect with these students that would make him be treated like a joke"? But hey, I was respected across my peers; this is what got me popular in middle school so surely it'll get me popular in high school, right?
+I was no stranger to rapping, having done 4 songs myself (one of which being on my middle school principle 😂). The class would not like to hear that I had moved on, so I was frequently summoned. Of course, being ***ultimate edgelord*** via plagiarizing Infinite from Sonic Forces quotes, I was viewed as a "worthy competitor" and a way to knock the teacher off the rapping throne he sat on. However, as I said above, I had a very different mindset from the rest of my class. I viewed it as "can we just move on" and "why do teachers go so far to connect with these students that would make him be treated like a joke"? But hey, I was respected across my peers; this is what got me popular in middle school so surely it'll get me popular in high school, right?
 
 ![](https://media.giphy.com/media/oBwOba7cOph4I/source.gif)
 
@@ -30,7 +31,7 @@ Turns out I was quite wrong. The people I actually looked up viewed me as immatu
 
 The reason I don't like being recorded is due to preservation. When you post things online, there is a permanent record of it. Downloading videos is quite the norm (I pirate JoJo music using NewPipe all the time, so I would know), so a record of me being cringy will always exist. I guess a problem with me when discussing online is that I'd like to maintain a serious record, so looking up my name wouldn't show any dumb things I used to do. I place little faith in anyone to properly handle my online identity (I even suspected this event would occur but looked past it for "funs sake"), and this event here is proof: the video of the RAP battle has been published, with my real life first name and last name. My response was not pretty.
 
-With this teacher, I had done two RAP battles. The first one was published online without my knowledge while I caught the second rap battle being recorded. It was only a week after my second battle and three weeks after my first battle where I was informed, which left me in tears the day I was made aware. After an argument occured, my bags were packed and I switched into the 9th grade honors math class rather than the regular. It taught a completely different subject and I needed to have the class I was currently in to go to this new class, but I thought it was simply a record. Unfortunately, it was also the knowledge of that class which was required, and not simply the record.
+With this teacher, I had done two RAP battles. The first one was published online without my knowledge while I caught the second rap battle during its recording process. It was only a week after my second battle and three weeks after my first battle where I was informed, which left me in tears the day I was made aware. After an argument occured, my bags were packed and I switched into the 9th grade honors math class rather than the regular. It taught a completely different subject and I needed to have the class I was currently in to go to this new class, but I thought it was simply a record. Unfortunately, it was also the knowledge of that class which was required, and not simply the record.
 
 The way I learn is by jumping straight into experimentation rather than looking at the docs. It has led to many issues (which Evie always ends up fixing), but it allows me to grasp a concept better than being taught normally. It's how I learned that in C++, switch cases are limited to integers as opposed to other languages which can have any value there. I figured I can do that here as well, but jumping into Geometry without knowing Algebra led me into getting a lot of issues.
 

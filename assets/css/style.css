@@ -684,7 +684,7 @@ tbody tr:nth-child(even) {
 	display: grid;
 	grid-template-columns: auto auto 1fr;
 	grid-auto-rows: min-content;
-	grid-gap: 5px;
+	grid-gap: 0 6px;
 	align-items: center;
 }
 
@@ -697,4 +697,37 @@ tbody tr:nth-child(even) {
 	width: 1em;
 	height: 1em;
 	fill: white;
+}
+
+.gitLangBar div {
+	height: 10px;
+	display: inline-block
+}
+
+.gitLangBar div:first-child {
+	border-radius: 5px 0 0 5px;
+}
+
+.gitLangBar div:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
+.gitLangGrid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 4px 0;
+}
+
+@media (max-width: 991px) {
+	.gitLangGrid {
+		grid-template-columns: auto auto;
+	}
+}
+
+.gitLangIcon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	vertical-align: text-bottom;
+	border-radius: 50%;
 }

@@ -5,6 +5,7 @@ permalink: /blog/gaming
 ---
 
 # My take on Gaming
+{:.mb-0}
 <small class="font-italic font-weight-light font-underline">This is a Work In Progress</small>
 
 Gaming is something I do quite rarely, but I enjoy it when I do. Whether it's couch multiplayer with my family (where we play filthy casual games) or single player heavy games, I feel inveloped into the world of the game. I might sound as if I'm looking too deep into this, and maybe I am. However, deep compelling stories has always been what drove me onwards to play. In fact anything deep with complexity is something I prefer, such as wave dashing in Super Smash Bros and gaining momentum with Classic Sonic in a game that isn't Forces.
