@@ -225,17 +225,20 @@ a {
 	#content.noBG {
 		background-color: transparent; }
 
-.bttbtn {
+#bttbtn {
 	width: 40px;
 	height: 40px;
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
 	border-radius: 50%;
-	color: #FFF;
-	padding: 8px; }
-	.bttbtn:hover {
-		color: #FFF; }
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center;
+	padding: 8px;
+	background-color: var(--menu-element); }
+	#bttbtn:hover {
+		background-color: var(--darker-menu-element); }
 
 .card {
 	background: var(--menu-element);

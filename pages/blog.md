@@ -10,6 +10,15 @@ I like to write a lot so I thought I might as well write things in a blog. These
 	<div class="col">
 		<div class="card shareCard h-100">
 			<div class="card-body">
+				<a class="h5 card-title" href="/blog/progressive-development">Progressive Development</a>
+				<p class="card-text">The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?</p>
+				<noscript class="card-text noShare"></noscript>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card shareCard h-100">
+			<div class="card-body">
 				<a class="h5 card-title" href="/blog/effects-of-9th-grade">Effects of my 9th grade</a>
 				<p class="card-text">Most of my personality can be traced back to key moments that occured to me in 9th grade.</p>
 				<noscript class="card-text noShare"></noscript>

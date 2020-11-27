@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30" version="1.1">
-<defs>
-<linearGradient id="linear0" gradientTransform="rotate(45)">
-<stop offset="0" style="stop-color:rgb(3.921569%,52.156866%,85.09804%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(20%,74.509805%,94.117647%);stop-opacity:1;"/>
-</linearGradient>
-</defs>
-  <circle cx="50%" cy="50%" r="50%" fill="url('#linear0')" />
-  <text x="50%" y="50%" text-anchor="middle" stroke="#00000011" fill="white" stroke-width=".2em" dy=".3em">!</text>  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" version="1.1">
+	<defs>
+		<linearGradient id="linear0" gradientTransform="rotate(45)">
+			<stop offset="0" stop-color="#33BEF0"/>
+			<stop offset="1" stop-color="#0A85D9"/>
+		</linearGradient>
+	</defs>
+	<circle cx="50%" cy="50%" r="50%" fill="url('#linear0')" />
+	<text x="50%" y="50%" text-anchor="middle" stroke="#00000011" fill="white" stroke-width=".1em" dy=".3em">!</text>  
 </svg>

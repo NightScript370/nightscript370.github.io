@@ -12,6 +12,12 @@ github: true
 		<h3 noAnchor class="card-title">Latest blog posts</h3>
 		<div class="card-text">
 			<div>
+				<a class="h5" href="/blog/progressive-development">Progressive Development</a>
+				<div class="mb-0">The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?</div>
+				<a href="/blog/progressive-development" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
 				<a class="h5" href="/blog/effects-of-9th-grade">The Effects of my 9th grade</a>
 				<div class="mb-0">Most of my personality can be traced back to key moments that occured to me in 9th grade, between hacked software, rap battles and teachers.</div>
 				<a href="/blog/effects-of-9th-grade" style="text-align: right;">Read More...</a>
@@ -82,7 +88,6 @@ github: true
 		<div class="text-center mt-3" id="contactMeButtons">
 			<a class="nstooltip" data-tooltip="Donate on PayPal" href="https://paypal.me/maorninja"><img src="/assets/images/icons/paypal.svg"></a>
 			<a class="nstooltip" data-tooltip="Join my Discord Server" href="https://discord.gg/vbYZCRZ"><img src="/assets/images/icons/discord.svg"></a>
-			<a class="nstooltip" data-tooltip="Follow me on Twitter" href="https://twitter.com/NightScript"><img src="/assets/images/icons/twitter.svg"></a>
 		</div>
 	</div>
 </div>
