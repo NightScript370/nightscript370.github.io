@@ -40,7 +40,7 @@ export default async function (elements) {
 		}
 
 		const gitStatsURL = (url) => corsURL
-			+ 'https://github-readme-stats.vercel.app/api'
+			+ 'https://github-readme-stats.nightyoshi370.vercel.app/api'
 			+ url
 			+ Object.keys(attributes).map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(attributes[k])).join('&');
 
@@ -215,25 +215,25 @@ export default async function (elements) {
 					ProfileStatsHTML = `<div class="gitProfileStatsGrid ${gitStatsDisplay == 'bar' ? 'mb-3' : ''}">
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="stars"]').innerHTML}</div>
 						<img src="/assets/images/icons/star.svg">
-						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Stars')).innerHTML.replaceAll('Total Stars', 'Stars Gained').replace(':', '')}</div>
+						<div>Stars Gained</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="commits"]').innerHTML}</div>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16">
 							<path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
 						</svg>
-						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Commits')).innerHTML.replaceAll('Total Commits', 'Commits Pushed').replace(':', '')}</div>
+						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Commits Pushed')).innerHTML}</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="prs"]').innerHTML}</div>
 						<img src="/assets/images/icons/prs.png">
-						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total PRs')).innerHTML.replaceAll('Total PRs', 'PRs sent').replace(':', '')}</div>
+						<div>PRs Sent</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="issues"]').innerHTML}</div>
 						<img src="/assets/images/icons/info.svg">
-						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Issues')).innerHTML.replaceAll('Total Issues', 'Issues Opened').replace(':', '')}</div>
+						<div>Total Isues</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="contribs"]').innerHTML}</div>
 						<img src="/assets/images/icons/repo.png">
-						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Contributed to')).innerHTML.replace(':', '')}</div>
+						<div>Contributed To</div>
 					</div>`
 
 					if (gitStatsDisplay == 'bar')
@@ -253,33 +253,6 @@ export default async function (elements) {
 					let style = profStatsPage.querySelector('style')
 					style.innerHTML = style.innerHTML
 						.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
-
-					profStatsPage
-						.querySelectorAll('[data-testid="icon"]')
-						.forEach(iconElem => iconElem.setAttribute('x', '35'))
-
-					profStatsPage
-						.querySelectorAll('text')
-						.forEach(elem => {
-							switch (parseInt(elem.getAttribute('x'))) {
-								case 25:
-									elem.setAttribute('x', '55');
-									elem.classList.remove('bold')
-									break;
-								case 190:
-									elem.setAttribute('x', '30');
-									elem.classList.add('bold')
-									elem.setAttribute('text-anchor', 'end')
-									break;
-							}
-
-							elem.innerHTML = elem.innerHTML
-								.replace('Total Stars', 'Stars Gained')
-								.replace('Total Commits', 'Commits Pushed')
-								.replace('Total PRs', 'PRs sent')
-								.replace('Total Issues', 'Issues Opened')
-								.replace(':', '')
-						})
 
 					const wideProfStats = profStatsPage.cloneNode(true);
 					wideProfStats.classList.add('d-none')
