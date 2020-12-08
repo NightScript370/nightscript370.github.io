@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="497px" height="498px" viewbox="0 0 497 498" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="myGradient" gradientTransform="rotate(90)">
+			<stop offset="0%"   stop-color="#33bef0" />
+			<stop offset="100%" stop-color="#0a85d9" />
+		</linearGradient>
+	</defs>
+	<path d="M20.729 150.99C13.5208 150.99 6.52108 147.24 2.71031 140.532C-2.94327 130.613 0.537607 117.96 10.457 112.283L202.607 2.73792C212.526 -2.95738 225.18 0.523499 230.856 10.4808C236.509 20.4002 233.029 33.0534 223.109 38.7298L30.9555 148.275C27.7249 150.118 24.2061 150.99 20.729 150.99L20.729 150.99Z" transform="translate(131.38322 87.571594)" id="Shape" fill="#64717c" stroke="none" />
+	<path d="M212.838 150.986C209.357 150.986 205.838 150.114 202.608 148.271L10.4541 38.7257C0.534756 33.0721 -2.94233 20.4188 2.71125 10.4767C8.34209 0.538378 21.0143 -2.96146 30.9564 2.73384L223.11 112.279C233.03 117.933 236.507 130.586 230.853 140.528C227.023 147.236 220.024 150.986 212.838 150.986L212.838 150.986Z" transform="translate(131.40503 258.41943)" id="Shape" fill="#64717c" stroke="none" />
+	<path d="M0 88C0 39.3989 39.3989 0 88 0C136.601 0 176 39.3989 176 88C176 136.601 136.601 176 88 176C39.3989 176 0 136.601 0 88Z" transform="translate(13 160.5)" id="Ellipse" fill="url(#myGradient)" stroke="none" />
+	<path d="M0 90.5C0 40.5182 39.3989 0 88 0C136.601 0 176 40.5182 176 90.5C176 140.482 136.601 181 88 181C39.3989 181 0 140.482 0 90.5Z" transform="translate(305 0)" id="Ellipse-2" fill="url(#myGradient)" stroke="none" />
+	<path d="M0 90.5C0 40.5182 39.3989 0 88 0C136.601 0 176 40.5182 176 90.5C176 140.482 136.601 181 88 181C39.3989 181 0 140.482 0 90.5Z" transform="translate(305 316.5)" id="Ellipse-3" fill="url(#myGradient)" stroke="none" />
+</svg>

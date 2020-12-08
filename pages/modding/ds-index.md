@@ -11,10 +11,7 @@ permalink: /modding/ds-index
 
 Welcome to the resources for Nintendo DS modding. This will attempt to explain most things related to Nintendo DS modding as well as be a basic introduction to the NTR firmware of the Nintendo DS, the TWL firmware of the Nintendo DSi and TWL_FIRM of the Nintendo 3DS
 
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-	If you need help, ask the <a href="https://discord.gg/yD3spjv" class="alert-link">DS<sup>(i)</sup> Mode Hacking!</a> Discord server.
-	<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
+{% include alert.html alert-type="warning" alert-text='If you need help, ask the <a href="https://discord.gg/yD3spjv" class="alert-link">DS<sup>(i)</sup> Mode Hacking!</a> Discord server.' %}
 
 ### WiFi
 

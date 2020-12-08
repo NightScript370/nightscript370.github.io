@@ -26,25 +26,25 @@ This guide was made possible by all the folks over at the [Mario Making Mods dis
 3. Inside the Title ID folder, make yet another new folder. Name this folder the folder of the mod.
 4. Make a folder called `content` inside it and extract the mod files into it.
    - If your mod comes with a `content` folder, place the file of that folder in the new `content` folder
-5. Boot the Homebrew Launcher using your preffered method, and then load SDCafiine.
+5. Boot the Homebrew Launcher using your preferred method, and then load SDCafiine.
    - In order to get the Homebrew Launcher, please follow [the Wii U hacking Guide](https://wiiu.hacks.guide/).
 6. Launch Super Mario Maker.
 
 ### Playing Mods (CEMU)
 
-1. Open `cemu:/graphicspack` and create a new folder. The folder would need to be called SuperMarioMaker_xxxxx, where xxxxx would be replaced with the name of the mod without spaces.
-2. Create a file called `rules.txt` and copy the following inside:
-   <pre><code class="language-ini">[Definition]
+1. Open `cemu:/graphicspack` and create a new folder titled "SuperMarioMaker_" and the name of the mod following, **without spaces**
+2. Create a file called `rules.txt` and copy the following inside (use any text editor to edit):
+   ```ini
+   [Definition]
    titleIds = 0x500001010ec00,0x5000e1010ed00,0x5000e1010eb00
-   name = "A Super Mario Maker Mod"
-   path = "Super Mario Maker/Mods/Infinite Level Height"
-   description = "A cool Super Mario Maker Mod"
    version = 4
-   </code></pre>Obviously change the name to match your mod.
-3. Create a new directory titled `content` and place the modified files there.
-   - If your mod comes with a `content` folder, place the file of that folder in the new `content` folder
-4. The next time you launch CEMU, right click on your Super Mario Maker copy and hit "Open Graphics Pack".
-5. Go through the path made above and enable your mod.
+   ```
+3. Add a new row to the file contents starting with `name = ` and then type the name of the mod, surrounded in double quotes
+4. Save the `rules.txt` file
+5. Create a new directory titled `content` and place the modified files there.
+   - If your mod comes with a `content` folder, merge it with the newly created one
+6. The next time you launch CEMU, right click on your Super Mario Maker copy and hit "Open Graphics Pack".
+7. Go through the path made above and enable your mod.
 
 ### Editing Sprites & Tilesets
 
@@ -486,10 +486,7 @@ Different game styles have a different number of tracks and channels. Refer to t
 
 #### Making Prefetch Files
 
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-	You will need a Windows machine in order to follow this part.
-	<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
+{% include alert.html alert-type="warning" alert-text='A Windows machine is required to run this tool.' %}
 
 1. Drag your file onto [`BWAVPrefetchGen.exe`](https://github.com/Gota7/BWAV-Prefetch-Generator/releases/latest/download/BWAVPrefetchGen.exe) to create the prefetch file.
 2. Within [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/releases), open the `romfs:/Pack/StaticHighFreqSound.pack` file.
@@ -543,7 +540,8 @@ Different game styles have a different number of tracks and channels. Refer to t
 3. Search for the file you want to edit (Example: `M1_Enemy_kutsu_kuriboA.byml`)
 4. Select the file, and you should see the contents appear in the `File Editor` display on the right of the window.
    - Here is an example of the decoded byml file `M1_Enemy_Kuribo.byml`:
-     <pre><code class="language-yaml">Version: 4
+     ```yaml
+     Version: 4
      IsBigEndian: False
      SupportPaths: False
      HasReferenceNodes: False
@@ -572,7 +570,8 @@ Different game styles have a different number of tracks and channels. Refer to t
        !h e534b05e: -36.00000
        !h f677511e: -50.00000
        !h fea17fb7: 8.00000
-     </code></pre>
+     ```
+
 5. Expand the tree once and click the "`dcbddcb8 : <Dictionary> 0`" node.
 6. Right-click on the node you want to edit, then click "Edit".
 7. Edit the value as you like, then hit Ok.

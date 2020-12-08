@@ -1,6 +1,6 @@
-// import Decimal from './libs/decimal.js';
+import Decimal from './libs/decimal.js';
 
-const ringProfileStats = false;
+const gitStatsDisplay = 'piechart';
 const corsURL = 'https://cors-anywhere.herokuapp.com/';
 
 function htmlToElem(html) {
@@ -45,6 +45,17 @@ export default async function (elements) {
 			+ Object.keys(attributes).map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(attributes[k])).join('&');
 
 		const langStatsURL = gitStatsURL('/top-langs?layout=compact&card_width=100&')
+
+		const gridContainer = document.createElement('div')
+		gridContainer.classList.add('gitGrid')
+
+		const langBar = document.createElement("div")
+		langBar.classList.add(gitStatsDisplay == 'piechart' ? "gitLangPie" : "gitLangBar")
+
+		const langElementList = document.createElement("div")
+		langElementList.classList.add("gitLangGrid")
+
+		let ProfileStatsHTML;
 		try {
 			const langsResponse = await fetch(langStatsURL);
 			if (!langsResponse.ok)
@@ -53,125 +64,134 @@ export default async function (elements) {
 			const langStatsPage = htmlToElem(await langsResponse.text());
 			const langItems = langStatsPage.querySelectorAll('[data-testid="lang-name"]')
 
-			const langBar = document.createElement("div")
-			langBar.classList.add("gitLangBar")
+			switch (gitStatsDisplay) {
+				case 'piechart':
+				case 'bar':
+					let barItemSize, barItemColor;
+					let previousSize = new Decimal(0)
+					langItems
+						.forEach(r => {
+							barItemColor = r.previousElementSibling.getAttribute("fill")
+							langElementList.innerHTML += `<div><div class="gitLangIcon" style="background: ${barItemColor};"></div> ${r.innerHTML}</div>`
 
-			const langElementList = document.createElement("div")
-			langElementList.classList.add("gitLangGrid")
+							barItemSize = /(\d+(?:.\d+)?)/.exec(r.innerHTML)[1]
 
-			let barItemSize, barItemColor;
-			langItems
-				.forEach(r => {
-					barItemSize = /(\d+(?:.\d+)?)/.exec(r.innerHTML)[1]
-					barItemColor = r.previousElementSibling.getAttribute("fill")
+							if (gitStatsDisplay == 'piechart') {
+								langBar.innerHTML += `<div class="pie__segment" style="--offset: ${previousSize}; --value: ${barItemSize}; --bg: ${barItemColor};"></div>`;
+								previousSize = previousSize.plus(barItemSize)
+							} else
+								langBar.innerHTML += `<div style="width: ${barItemSize}%; background: ${barItemColor};"></div>`
+						})
 
-					langBar.innerHTML += `<div style="width: ${barItemSize}%; background: ${barItemColor};"></div>`
-					langElementList.innerHTML += `<div><div class="gitLangIcon" style="background: ${barItemColor};"></div> ${r.innerHTML}</div>`
-				})
+					if (gitStatsDisplay == 'bar') {
+						element.insertAdjacentElement('afterend', langElementList);
+						element.insertAdjacentElement('afterend', langBar);
+						element.insertAdjacentHTML('afterend', '<h4 class="mb-0">Most Used Languages</h4>')
+					}
+					break;
+				case 'imagemanipulate':
+					langStatsPage.removeAttribute('width')
+					langStatsPage.removeAttribute('height')
+					langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 
-			element.insertAdjacentElement('afterend', langElementList);
-			element.insertAdjacentElement('afterend', langBar);
-			element.insertAdjacentHTML('afterend', '<h4 class="mb-0">Most Used Languages</h4>')
-			/* langStatsPage.removeAttribute('width')
-			langStatsPage.removeAttribute('height')
-			langStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
+					// Fix Heading Padding
+					langStatsPage
+						.querySelector('[data-testid="card-title"]')
+						.setAttribute('transform', 'translate(25, 20)')
 
-			// Fix Heading Padding
-			langStatsPage
-				.querySelector('[data-testid="card-title"]')
-				.setAttribute('transform', 'translate(25, 20)')
+					// Fix body padding
+					langStatsPage
+						.querySelector('[data-testid="main-card-body"]')
+						.setAttribute('transform', 'translate(0, 30)')
 
-			// Fix body padding
-			langStatsPage
-				.querySelector('[data-testid="main-card-body"]')
-				.setAttribute('transform', 'translate(0, 30)')
+					const style = langStatsPage.querySelector('style')
+					style.innerHTML = style.innerHTML
+						.replace(".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFFFFF }", ".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: var(--text-color); font-weight: bold; }")
+						.replace("fill: #00AEFF;", "fill: var(--text-color);")
 
-			const style = langStatsPage.querySelector('style')
-			style.innerHTML = style.innerHTML
-				.replace(".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFFFFF }", ".lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: var(--text-color); font-weight: bold; }")
-				.replace("fill: #00AEFF;", "fill: var(--text-color);")
+					// WideBox sizing - Length of bar: 315
+					const wideLangBox = langStatsPage.cloneNode(true);
+					wideLangBox.classList.add('d-none')
+					wideLangBox.classList.add('d-xl-block')
+					wideLangBox.setAttribute('viewBox', '24 0 365 85')
 
-			// WideBox sizing - Length of bar: 315
-			const wideLangBox = langStatsPage.cloneNode(true);
-			wideLangBox.classList.add('d-none')
-			wideLangBox.classList.add('d-xl-block')
-			wideLangBox.setAttribute('viewBox', '24 0 365 85')
+					// Until this PR gets merged, we have to manually extract the percent from the inner values themselves
+					// https://github.com/anuraghazra/github-readme-stats/pull/516
 
-			// Until this PR gets merged, we have to manually extract the percent from the inner values themselves
-			// https://github.com/anuraghazra/github-readme-stats/pull/516
+					const wideLangItems = wideLangBox
+						.querySelectorAll('[data-testid="lang-name"]')
 
-			const wideLangItems = wideLangBox
-				.querySelectorAll('[data-testid="lang-name"]')
+					let WideBoxBarWidth = new Decimal(0);
+					let WideBoxRectWidth;
+					wideLangBox
+						.querySelectorAll('[data-testid="lang-progress"]')
+						.forEach((r, num) => {
+							//WideBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
+							WideBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(wideLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(3.5);
 
-			let WideBoxBarWidth = new Decimal(0);
-			let WideBoxRectWidth;
-			wideLangBox
-				.querySelectorAll('[data-testid="lang-progress"]')
-				.forEach((r, num) => {
-					//WideBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
-					WideBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(wideLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(3.5);
+							r.setAttribute("x", WideBoxBarWidth.toFixed(2));
+							r.setAttribute("width", WideBoxRectWidth.toFixed(2))
 
-					r.setAttribute("x", WideBoxBarWidth.toFixed(2));
-					r.setAttribute("width", WideBoxRectWidth.toFixed(2))
+							WideBoxBarWidth = WideBoxBarWidth.plus(WideBoxRectWidth);
+						})
 
-					WideBoxBarWidth = WideBoxBarWidth.plus(WideBoxRectWidth);
-				})
+					try {
+						wideLangBox
+							.getElementById("rect-mask")
+							.firstElementChild
+							.setAttribute("width", WideBoxBarWidth)
+					} catch(e) {
+						wideLangBox
+							.querySelector("mask#rect-mask rect")
+							.setAttribute("width", WideBoxBarWidth)
+					}
 
-			try {
-				wideLangBox
-					.getElementById("rect-mask")
-					.firstElementChild
-					.setAttribute("width", WideBoxBarWidth)
-			} catch(e) {
-				wideLangBox
-					.querySelector("mask#rect-mask rect")
-					.setAttribute("width", WideBoxBarWidth)
+					let i = 0;
+					wideLangBox
+						.querySelector('[data-testid="lang-items"]')
+						.querySelectorAll('g')
+						.forEach(r => {
+							r.setAttribute("transform", "translate(" + (130 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
+							i++;
+						});
+
+					// TallBox sizing - Length of bar: 250
+					const tallLangBox = langStatsPage.cloneNode(true);
+					tallLangBox.classList.add('d-xl-none')
+					tallLangBox.setAttribute('viewBox', '24 0 250 125')
+
+					const tallLangItems = tallLangBox
+						.querySelectorAll('[data-testid="lang-name"]')
+
+					let tallBoxBarWidth = new Decimal(0);
+					let tallBoxRectWidth;
+					tallLangBox
+						.querySelectorAll('[data-testid="lang-progress"]')
+						.forEach((r, num) => {
+							//tallBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
+							tallBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(tallLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(2.4);
+
+							r.setAttribute("x", tallBoxBarWidth.toFixed(2));
+							r.setAttribute("width", tallBoxRectWidth.toFixed(2))
+
+							tallBoxBarWidth = tallBoxBarWidth.plus(tallBoxRectWidth);
+						})
+
+					try {
+						tallLangBox
+							.getElementById("rect-mask")
+							.firstElementChild
+							.setAttribute("width", tallBoxBarWidth)
+					} catch(e) {
+						tallLangBox
+							.querySelector("mask#rect-mask rect")
+							.setAttribute("width", tallBoxBarWidth)
+					}
+
+					element.insertAdjacentElement('afterend', tallLangBox)
+					element.insertAdjacentElement('afterend', wideLangBox)
+					break;
 			}
-
-			let i = 0;
-			wideLangBox
-				.querySelector('[data-testid="lang-items"]')
-				.querySelectorAll('g')
-				.forEach(r => {
-					r.setAttribute("transform", "translate(" + (130 * (i % 3)) + "," + (20 + 20 * Math.floor(i / 3)) + ")");
-					i++;
-				});
-
-			// TallBox sizing - Length of bar: 250
-			const tallLangBox = langStatsPage.cloneNode(true);
-			tallLangBox.classList.add('d-xl-none')
-			tallLangBox.setAttribute('viewBox', '24 0 250 125')
-
-			const tallLangItems = tallLangBox
-				.querySelectorAll('[data-testid="lang-name"]')
-
-			let tallBoxBarWidth = new Decimal(0);
-			let tallBoxRectWidth;
-			tallLangBox
-				.querySelectorAll('[data-testid="lang-progress"]')
-				.forEach((r, num) => {
-					//tallBoxRectWidth = new Decimal(r.getAttribute("width")).toDecimalPlaces(2).times(2);
-					tallBoxRectWidth = new Decimal(/(\d+(?:.\d+)?)/.exec(tallLangItems[num].innerHTML)[1]).toDecimalPlaces(2).times(2.4);
-
-					r.setAttribute("x", tallBoxBarWidth.toFixed(2));
-					r.setAttribute("width", tallBoxRectWidth.toFixed(2))
-
-					tallBoxBarWidth = tallBoxBarWidth.plus(tallBoxRectWidth);
-				})
-
-			try {
-				tallLangBox
-					.getElementById("rect-mask")
-					.firstElementChild
-					.setAttribute("width", tallBoxBarWidth)
-			} catch(e) {
-				tallLangBox
-					.querySelector("mask#rect-mask rect")
-					.setAttribute("width", tallBoxBarWidth)
-			}
-
-			element.insertAdjacentElement('afterend', tallLangBox)
-			element.insertAdjacentElement('afterend', wideLangBox) */
 		} catch (e) {
 			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e)
 			const langStatsImage = document.createElement('img')
@@ -182,82 +202,17 @@ export default async function (elements) {
 			element.insertAdjacentElement('afterend', langStatsImage)
 		}
 
-		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&disable_animations=true&' + (ringProfileStats ? '' : 'hide_rank=true&'))
-		console.log(profStatsURL)
+		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&disable_animations=true&' + (gitStatsDisplay == 'imagemanipulate' ? '' : 'hide_rank=true&'))
 		try {
 			const profStatsResponse = await fetch(profStatsURL)
 			if (!profStatsResponse.ok)
 				throw new Error();
 
 			const profStatsPage = htmlToElem(await profStatsResponse.text());
-			if (ringProfileStats) {
-				profStatsPage.removeAttribute('width')
-				profStatsPage.removeAttribute('height')
-				profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
-				profStatsPage.classList.add('mb-2')
-
-				// Remove Padding
-				profStatsPage
-					.querySelector('[data-testid="main-card-body"]')
-					.removeAttribute('transform')
-
-				let style = profStatsPage.querySelector('style')
-				style.innerHTML = style.innerHTML
-					.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
-
-				profStatsPage
-					.querySelectorAll('[data-testid="icon"]')
-					.forEach(iconElem => iconElem.setAttribute('x', '35'))
-
-				profStatsPage
-					.querySelectorAll('text')
-					.forEach(elem => {
-						switch (parseInt(elem.getAttribute('x'))) {
-							case 25:
-								elem.setAttribute('x', '55');
-								elem.classList.remove('bold')
-								break;
-							case 190:
-								elem.setAttribute('x', '30');
-								elem.classList.add('bold')
-								elem.setAttribute('text-anchor', 'end')
-								break;
-						}
-
-						elem.innerHTML = elem.innerHTML
-							.replace('Total Stars', 'Stars Gained')
-							.replace('Total Commits', 'Commits Pushed')
-							.replace('Total PRs', 'PRs sent')
-							.replace('Total Issues', 'Issues Opened')
-							.replace(':', '')
-					})
-
-				const wideProfStats = profStatsPage.cloneNode(true);
-				wideProfStats.classList.add('d-none')
-				wideProfStats.classList.add('d-xl-block')
-				wideProfStats.setAttribute('viewBox', '22 0 355 125')
-
-				// Move circle rank more left
-				wideProfStats
-					.querySelector('[data-testid="rank-circle"]')
-					.setAttribute('transform', 'translate(330, 52)')
-
-				const tallProfStats = profStatsPage.cloneNode(true);
-				tallProfStats.classList.add('d-xl-none')
-				tallProfStats.setAttribute('viewBox', '22 0 230 230')
-				tallProfStats
-					.querySelector('[data-testid="rank-circle"]')
-					.setAttribute('transform', 'translate(152, 40)')
-				tallProfStats
-					.querySelector('[data-testid="main-card-body"]')
-					.children[1]
-					.setAttribute('y', '105')
-
-				element.insertAdjacentElement('afterend', wideProfStats)
-				element.insertAdjacentElement('afterend', tallProfStats)
-			} else {
-				element.insertAdjacentHTML('afterend', `
-					<div class="gitGrid mb-3">
+			switch (gitStatsDisplay) {
+				case 'bar':
+				case 'piechart':
+					ProfileStatsHTML = `<div class="gitProfileStatsGrid ${gitStatsDisplay == 'bar' ? 'mb-3' : ''}">
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="stars"]').innerHTML}</div>
 						<img src="/assets/images/icons/star.svg">
 						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Total Stars')).innerHTML.replaceAll('Total Stars', 'Stars Gained').replace(':', '')}</div>
@@ -279,8 +234,77 @@ export default async function (elements) {
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="contribs"]').innerHTML}</div>
 						<img src="/assets/images/icons/repo.png">
 						<div>${Array.from(profStatsPage.querySelectorAll('text')).find(f => f.innerHTML.includes('Contributed to')).innerHTML.replace(':', '')}</div>
-					</div>
-				`)
+					</div>`
+
+					if (gitStatsDisplay == 'bar')
+						element.insertAdjacentHTML('afterend', ProfileStatsHTML);
+					break;
+				case 'imagemanipulate':
+					profStatsPage.removeAttribute('width')
+					profStatsPage.removeAttribute('height')
+					profStatsPage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
+					profStatsPage.classList.add('mb-2')
+
+					// Remove Padding
+					profStatsPage
+						.querySelector('[data-testid="main-card-body"]')
+						.removeAttribute('transform')
+
+					let style = profStatsPage.querySelector('style')
+					style.innerHTML = style.innerHTML
+						.replaceAll("fill: #FFFFFF;", "fill: var(--text-color);")
+
+					profStatsPage
+						.querySelectorAll('[data-testid="icon"]')
+						.forEach(iconElem => iconElem.setAttribute('x', '35'))
+
+					profStatsPage
+						.querySelectorAll('text')
+						.forEach(elem => {
+							switch (parseInt(elem.getAttribute('x'))) {
+								case 25:
+									elem.setAttribute('x', '55');
+									elem.classList.remove('bold')
+									break;
+								case 190:
+									elem.setAttribute('x', '30');
+									elem.classList.add('bold')
+									elem.setAttribute('text-anchor', 'end')
+									break;
+							}
+
+							elem.innerHTML = elem.innerHTML
+								.replace('Total Stars', 'Stars Gained')
+								.replace('Total Commits', 'Commits Pushed')
+								.replace('Total PRs', 'PRs sent')
+								.replace('Total Issues', 'Issues Opened')
+								.replace(':', '')
+						})
+
+					const wideProfStats = profStatsPage.cloneNode(true);
+					wideProfStats.classList.add('d-none')
+					wideProfStats.classList.add('d-xl-block')
+					wideProfStats.setAttribute('viewBox', '22 0 355 125')
+
+					// Move circle rank more left
+					wideProfStats
+						.querySelector('[data-testid="rank-circle"]')
+						.setAttribute('transform', 'translate(330, 52)')
+
+					const tallProfStats = profStatsPage.cloneNode(true);
+					tallProfStats.classList.add('d-xl-none')
+					tallProfStats.setAttribute('viewBox', '22 0 230 230')
+					tallProfStats
+						.querySelector('[data-testid="rank-circle"]')
+						.setAttribute('transform', 'translate(152, 40)')
+					tallProfStats
+						.querySelector('[data-testid="main-card-body"]')
+						.children[1]
+						.setAttribute('y', '105')
+
+					element.insertAdjacentElement('afterend', wideProfStats)
+					element.insertAdjacentElement('afterend', tallProfStats)
+					break;
 			}
 		} catch (e) {
 			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e)
@@ -288,6 +312,16 @@ export default async function (elements) {
 			profStatsImage.src = profStatsURL.replace(corsURL, '')
 			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 			element.insertAdjacentElement('afterend', profStatsImage)
+		}
+
+		if (gitStatsDisplay == 'piechart') {
+			element.insertAdjacentElement('afterend', gridContainer)
+			gridContainer.insertAdjacentHTML('beforeend', ProfileStatsHTML);
+
+			langBar.innerHTML = `<div class="pie" style="--size: ${Math.min(gridContainer.clientHeight, gridContainer.clientWidth)}">` + langBar.innerHTML + '</div>';
+			gridContainer.insertAdjacentElement('beforeend', langBar);
+
+			gridContainer.insertAdjacentElement('beforeend', langElementList);
 		}
 
 		try {

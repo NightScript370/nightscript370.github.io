@@ -157,10 +157,7 @@ layout: compress
 		<!-- Page Content  -->
 		<div id="content" class="{% if page.landing %} noBG {% else %} page-padding {% endif %}">
 			{% if page.unfinished %}
-				<div class="alert alert-warning alert-dismissible fade show" role="alert">
-					Keep in mind that this is an unfinished article. Thoughts shown here may not be reflective of my final arguments, and I request that this is not shared anywhere.
-					<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				</div>
+				{% include alert.html alert-type="warning" alert-text="Keep in mind that this is an unfinished article. Thoughts shown here may not be reflective of my final arguments, and I request that this is not shared anywhere." %}
 			{% endif %}
 			{{ content }}
 
@@ -168,9 +165,6 @@ layout: compress
 		</div>
 
 		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-		{% if page.syntax-highlight %}
-			<script src="/assets/js/syntaxHighlight.js"></script>
-		{% endif %}
 		<script src="/assets/index.js" type="module"></script>
 		<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 		{% if page.landing %}
