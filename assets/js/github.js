@@ -213,7 +213,15 @@ export default async function (elements) {
 				case 'bar':
 				case 'piechart':
 					let CommitsPushedTitle;
-					try { CommitsPushedTitle = profStatsPage.querySelector('text[data-testlabel="commits"]').innerHTML } catch (e) { console.error('Taking advantage of fallback', e); CommitsPushedTitle = 'Commits Pushed (2020)' }
+					try {
+						CommitsPushedTitle = Array.from(profStatsPage.querySelectorAll('text'))
+							.find(elem => elem.hasAttribute('data-testlabel') && elem.getAttribute('data-testlabel') == 'commits')
+							.innerHTML
+					} catch (e) {
+						console.error('Taking advantage of fallback', e);
+						CommitsPushedTitle = 'Commits Pushed (2020)'
+					}
+
 					ProfileStatsHTML = `<div class="gitProfileStatsGrid ${gitStatsDisplay == 'bar' ? 'mb-3' : ''}">
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="stars"]').innerHTML}</div>
 						<img src="/assets/images/icons/star.svg">
@@ -231,7 +239,7 @@ export default async function (elements) {
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="issues"]').innerHTML}</div>
 						<img src="/assets/images/icons/info.svg">
-						<div>Total Isues</div>
+						<div>Total Issues</div>
 
 						<div class="rightAlign">${profStatsPage.querySelector('text[data-testid="contribs"]').innerHTML}</div>
 						<img src="/assets/images/icons/repo.png">
