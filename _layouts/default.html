@@ -95,9 +95,9 @@ layout: compress
 								<a href="{{ item.url }}" class="proxim no-not-hover">
 									{% if item.icon %}
 										{% if item.notif %}
-											<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">{{ item.notif }}</small></span>
+											<span class="fa fa-fw fa-{{ item.icon }} me-1 notif"><small class="badge badge-pill badge-danger d-flex justify-content-center">{{ item.notif }}</small></span>
 										{% else %}
-											<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
+											<span class="fa fa-fw fa-{{ item.icon }} me-1"></span>
 										{% endif %}
 									{% elsif item.image %}
 										<picture>
@@ -117,11 +117,11 @@ layout: compress
 									<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
 										{% if item.icon %}
 											{% if item.notif %}
-												<span class="fa fa-fw fa-{{ item.icon }} mr-1 notif">
+												<span class="fa fa-fw fa-{{ item.icon }} me-1 notif">
 													<small class="badge rounded-pill bg-danger d-flex justify-content-center">{{ item.notif }}</small>
 												</span>
 											{% else %}
-												<span class="fa fa-fw fa-{{ item.icon }} mr-1"></span>
+												<span class="fa fa-fw fa-{{ item.icon }} me-1"></span>
 											{% endif %}
 										{% elsif item.image %}
 											<picture>

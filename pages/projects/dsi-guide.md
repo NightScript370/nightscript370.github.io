@@ -27,7 +27,7 @@ How it is now handled is that it uses Memory Pit as the main guide but if the us
 
 <!-- You can't put markdown inside a div, so I'm leaving this as HTML -->
 <div class="mb-2 d-flex align-top">
-	<img class="rounded mw-25 mr-2" src="/assets/images/projects/dsi-guide.png" alt="DSi Guide">
+	<img class="rounded mw-25 me-2" src="/assets/images/projects/dsi-guide.png" alt="DSi Guide">
 	<span>After these changes and other general changes (mostly rewords), emiyl has approached me in my discord DMs congratulating me on my work and thanking me for maintaining the guide while she couldn't due to IRL activities. I was given push access to the repository and am now considered the main manager of the website. Ironic how all this happened despite me not even owning a DSi.</span>
 </div>
 
