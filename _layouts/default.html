@@ -114,7 +114,7 @@ layout: compress
 						{% if item.items %}
 							{% assign submenu = item.title | append: "Submenu" | replace: " ", "" %}
 								<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
-									<a href="#{{ submenu }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
+									<a href="#{{ submenu }}" aria-controls="{{ submenu }}" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
 										{% if item.icon %}
 											{% if item.notif %}
 												<span class="fa fa-fw fa-{{ item.icon }} me-1 notif">
