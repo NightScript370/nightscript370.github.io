@@ -1,0 +1,35 @@
+{% if include.feature == "latest" %}
+{% assign cardTitle = "Progressive Development" %}
+{% assign cardDescription = "The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?" %}
+{% assign cardLink = "/blog/progressive-development" %}
+{% else %}
+{% assign cardTitle = include.cardTitle %}
+{% assign cardDescription = include.cardDescription %}
+{% assign cardLink = include.cardLink %}
+{% endif %}
+
+{% assign ShareText = 'Look at this cool blog entry I found on NightScript Domain - "$title$"' | replace: "$title$", cardTitle | url_encode %}
+
+{% assign FaceBook = "FaceBook | /assets/images/icons/facebook.svg | https://www.facebook.com/sharer/sharer.php?u=$cardLink$" | split: " | " %}
+{% assign Twitter = "Twitter | /assets/images/icons/twitter.svg | https://twitter.com/intent/tweet?url=$cardLink$&text=$ShareText$" | split: " | " %}
+{% assign Pinterest = "Pinterest | /assets/images/icons/pinterest.svg | http://pinterest.com/pin/create/button/?url=$cardLink$&description=$ShareText$" | split: " | " %}
+{% assign LinkedIn = "LinkedIn | /assets/images/icons/linkedin.png | http://www.linkedin.com/shareArticle?mini=true&title=$ShareText$&url=$cardLink$" | split: " | " %}
+{% assign WhatsApp = "WhatsApp | /assets/images/icons/whatsapp.svg | https://wa.me/?text=$ShareText$:%20$cardLink$" | split: " | " %}
+{% assign Reddit = "Reddit | /assets/images/icons/reddit.svg | http://www.reddit.com/submit?title=$ShareText$&url=$cardLink$" | split: " | " %}
+{% assign Tumblr = "Tumblr |  | http://www.tumblr.com/share?v=3&t=$ShareText$&u=$cardLink$" | split: " | " %}
+
+{% assign CardShareLinks = "" | split: "," | push: FaceBook | push: Twitter | push: WhatsApp | push: Reddit %}
+
+<div class="card shareCard h-100">
+	<div class="card-body">
+		<a class="h5 card-title" href="{{ cardLink }}">{{ cardTitle }}</a>
+		<p class="card-text">{{ cardDescription }}</p>
+	</div>
+	<noscript class="card-footer text-center cardShareLinks">
+		{% for CardShareLink in CardShareLinks %}
+			<a class="card-link nstooltip" data-tooltip="Share this on {{ CardShareLink[0] }}" href="{{ CardShareLink[2] | replace: "$cardLink$", cardLink | replace: "$ShareText$", ShareText }}">
+				<img src="{{ CardShareLink[1] }}">
+			</a>
+		{% endfor %}
+	</noscript>
+</div>

@@ -264,6 +264,11 @@ a {
 	filter: invert(100%)
 }
 
+.card .card-body a.univShare {
+	float: right; }
+	.card .card-body a.univShare img {
+		max-height: 2.5em;}
+
 .card .card-body a {
 	color: var(--menu-element-text-color);
 	text-shadow: var(--text-shadow);

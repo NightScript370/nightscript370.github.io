@@ -1,85 +1,49 @@
-/* Share Links button for cards */
-const sharedLinks = [
-	{
-		"title": "FaceBook",
-		"image": "/assets/images/icons/facebook.svg",
-		"baselink": "https://www.facebook.com/sharer/sharer.php?u=",
-		"cardview": true
-	},
-	{
-		"title": "Twitter",
-		"image": "/assets/images/icons/twitter.svg",
-		"baselink": "https://twitter.com/intent/tweet?text=",
-		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": ',
-		"cardview": true
-	},
-	{
-		"title": "Pinterest",
-		"image": "/assets/images/icons/pinterest.svg",
-		"baselink": "http://pinterest.com/pin/create/button/?description=''$TEXT$''&url=",
-		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
-		"cardview": true
-	},
-	{
-		"title": "LinkedIn",
-		"image": "/assets/images/icons/linkedin.png",
-		"baselink": "http://www.linkedin.com/shareArticle?mini=true&title=''$TEXT$''&url=",
-		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
-		"cardview": true
-	},
-	{
-		"title": "WhatsApp",
-		"image": "/assets/images/icons/whatsapp.svg",
-		"baselink": "https://wa.me/?text=",
-		"text": 'Look at this cool blog entry I found on NightScript Domain - "$title$": ',
-		"cardview": true
-	},
-	{
-		"title": "Reddit",
-		"image": "/assets/images/icons/reddit.svg",
-		"baselink": "http://www.reddit.com/submit?title=''$TEXT$''&url=",
-		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
-		"cardview": true
-	},
-	{
-		"title": "Tumblr",
-		"icon": "tumblr",
-		"baselink": "http://www.tumblr.com/share?v=3&t=''$TEXT$''&u=",
-		"separateText": 'Look at this cool blog entry I found on NightScript Domain - "$title$"',
-	}
-];
+function hardcodedShare (noShareElem) {
+	const replacementElem = document.createElement("div");
+	replacementElem.innerHTML = noShareElem.innerHTML;
 
-export default function (cards) {
-	if (!cards.length)
+	for (let index = noShareElem.attributes.length - 1; index >= 0; --index) {
+		replacementElem.attributes.setNamedItem(noShareElem.attributes[index].cloneNode());
+	}
+
+	noShareElem.parentNode.replaceChild(replacementElem, noShareElem);
+}
+
+export default function (noShareElements) {
+	if (!noShareElements.length)
 		return;
 
-	let entrylink, entrytitle, socialLinksElement, linkElement;
-	for (let int of cards) {
-		entrylink = int.parentElement.firstElementChild.getAttribute("href");
-		entrytitle = int.parentElement.firstElementChild.innerHTML;
+	let noShareElement;
+	if (!navigator.share) {
+		for (noShareElement of noShareElements)
+			hardcodedShare(noShareElement);
+	} else {
+		const shareElementBase = document.createElement("a")
+		shareElementBase.classList.add("univShare");
 
-		socialLinksElement = document.createElement("div");
-		socialLinksElement.classList.add('card-footer');
-		socialLinksElement.classList.add('text-center');
-		socialLinksElement.classList.add('cardShareLinks');
-		for (let socialEntry of sharedLinks.filter(entry => entry.cardview)) {
-			linkElement = document.createElement('a');
-			linkElement.classList.add('card-link');
-			linkElement.classList.add('nstooltip');
-			linkElement.setAttribute('data-tooltip', `Share this on ${socialEntry.title}`);
-			linkElement.innerHTML = (socialEntry.image ? `<img src="${socialEntry.image}">` : `<i class="fa fa-${socialEntry.icon} fa-2x"></i>`);
+		const univShareImage = document.createElement("img")
+		univShareImage.setAttribute("src", "/assets/images/icons/share-traditional.svg")
 
-			let link = socialEntry.baselink;
-			if (link.includes("''$TEXT$''") && socialEntry.separateText)
-				link = link.replace("''$TEXT$''", encodeURI(socialEntry.separateText.replace("$title$", entrytitle)))
-			if (socialEntry.text)
-				link += encodeURI(socialEntry.text.replace("$title$", entrytitle))
-			link += encodeURI(window.location.protocol + "//" + window.location.hostname + entrylink)
+		shareElementBase.appendChild(univShareImage);
 
-			linkElement.setAttribute('href', link)
-			socialLinksElement.appendChild(linkElement);
+		let cardBody, shareElement;
+		for (noShareElement of noShareElements) {
+			cardBody = noShareElement.previousElementSibling;
+
+			shareElement = shareElementBase.cloneNode(true);
+			shareElement.addEventListener('click', () => navigator.share({
+					title: `Look at this cool blog entry I found on NightScript Domain - "${cardBody.firstElementChild.innerText}"`,
+					text: cardBody.firstElementChild.nextElementSibling.innerText,
+					url: cardBody.firstElementChild.getAttribute("href"),
+				})
+				.then(() => console.log('Successful share'))
+				.catch((error) => {
+					console.error('Error sharing', error);
+					hardcodedShare(noShareElement)
+				})
+			)
+
+			cardBody.insertAdjacentElement('afterbegin', shareElement)
 		}
-
-		int.parentElement.insertAdjacentElement('afterend', socialLinksElement);
 	}
 }

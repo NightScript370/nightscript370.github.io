@@ -8,8 +8,8 @@ if (!window.matchMedia("print").matches) {
 	if (localStorage['particles'] == 'on')
 		import('./js/particles.js');
 
-	if (document.getElementsByClassName('noShare').length)
-		import("./js/sharelinks.js").then(mod => mod.default(document.getElementsByClassName('noShare')))
+	if (document.getElementsByClassName('cardShareLinks').length)
+		import("./js/sharelinks.js").then(mod => mod.default(document.getElementsByClassName('cardShareLinks')))
 
 	if (document.querySelectorAll('h1, h2, h3, h4, h5, h6').length)
 		import("./js/anchorlinks.js").then(mod => mod.default(document.querySelectorAll('h1, h2, h3, h4, h5, h6')))

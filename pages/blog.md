@@ -7,67 +7,11 @@ permalink: /blog/
 I like to write a lot so I thought I might as well write things in a blog. These posts are mearly expressing my viewpoints, opinions and thoughts. Please keep an open mind when reading this.
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4">
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/progressive-development">Progressive Development</a>
-				<p class="card-text">The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/effects-of-9th-grade">Effects of my 9th grade</a>
-				<p class="card-text">Most of my personality can be traced back to key moments that occured to me in 9th grade.</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/online-school-issues">Online School Issues</a>
-				<p class="card-text">Debating whether video-conferencing is about inclusion or control.</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/summer-2020">My summer of 2020</a>
-				<p class="card-text">A summer where everything is supposed to go wrong ended up being the best summer of my life (so far).</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/edgenuity-issues">Edgenuity Issues</a>
-				<p class="card-text">Edgenuity's failure at adapting learning into the digital age.</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/sonic-return-of-infinite">Classic Sonic: Return of Infinite</a>
-				<p class="card-text">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card shareCard h-100">
-			<div class="card-body">
-				<a class="h5 card-title" href="/blog/ownership-issues">What is considered Ownership</a>
-				<p class="card-text">The true definition of ownership is complicated. Does it mean what you made, or does it mean power?</p>
-				<noscript class="card-text noShare"></noscript>
-			</div>
-		</div>
-	</div>
+	<div class="col">{% include articleCard.html cardTitle="Progressive Development" cardLink="/blog/progressive-development" cardDescription="The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?" %}</div>
+	<div class="col">{% include articleCard.html cardTitle="Effects of my 9th grade" cardLink="/blog/effects-of-9th-grade" cardDescription="Most of my personality can be traced back to key moments that occured to me in 9th grade." %}</div>
+	<div class="col">{% include articleCard.html cardTitle="Online School Issues" cardLink="/blog/online-school-issues" cardDescription="Debating whether video-conferencing is about inclusion or control." %}</div>
+	<div class="col">{% include articleCard.html cardTitle="My Summer of 2020" cardLink="/blog/summer-2020" cardDescription="A summer where everything is supposed to go wrong ended up being the best summer of my life (so far)." %}</div>
+	<div class="col">{% include articleCard.html cardTitle="Edgenuity Issues" cardLink="/blog/edgenuity-issues" cardDescription="Edgenuity's failure at adapting learning into the digital age." %}</div>
+	<div class="col">{% include articleCard.html cardTitle="Classic Sonic: Return of Infinite" cardLink="/blog/sonic-return-of-infinite" cardDescription="Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?" %}</div>
+	<div class="col">{% include articleCard.html cardTitle="What is considered ownership" cardLink="/blog/ownership-issues" cardDescription="How are you the owner of something? Is it based on if you're the author, or can that be ripped out of you?" %}</div>
 </div>
