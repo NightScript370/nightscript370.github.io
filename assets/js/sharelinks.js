@@ -32,7 +32,7 @@ export default function (noShareElements) {
 			shareObject = {
 				title: `Look at this cool blog entry I found on NightScript Domain - "${cardBody.firstElementChild.innerText}"`,
 				text: cardBody.firstElementChild.nextElementSibling.innerText,
-				url: window.location.protocol + "://" + window.location.host + cardBody.firstElementChild.getAttribute("href"),
+				url: window.location.protocol + "//" + window.location.host + cardBody.firstElementChild.getAttribute("href"),
 			};
 
 			shareElement = shareElementBase.cloneNode(true);
