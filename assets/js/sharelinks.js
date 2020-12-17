@@ -26,28 +26,24 @@ export default function (noShareElements) {
 
 		shareElementBase.appendChild(univShareImage);
 
-		let cardBody, shareElement, shareObject;
+		let shareElement;
 		for (noShareElement of noShareElements) {
-			cardBody = noShareElement.previousElementSibling;
-			shareObject = {
-				title: `Look at this cool blog entry I found on NightScript Domain - "${cardBody.firstElementChild.innerText}"`,
-				text: cardBody.firstElementChild.nextElementSibling.innerText,
-				url: window.location.protocol + "//" + window.location.host + cardBody.firstElementChild.getAttribute("href"),
-			};
-
 			shareElement = shareElementBase.cloneNode(true);
-			shareElement.onclick = async () => {
+			noShareElement.previousElementSibling.insertAdjacentElement('afterbegin', shareElement)
+
+			shareElement.onclick = async function () {
 				try {
-					console.log(shareObject)
-					await navigator.share(shareObject)
+					await navigator.share({
+						title: `Look at this cool blog entry I found on NightScript Domain - "${this.nextElementSibling.innerText}"`,
+						text: this.nextElementSibling.nextElementSibling.innerText,
+						url: window.location.protocol + "//" + window.location.host + this.nextElementSibling.getAttribute("href"),
+					})
 					console.log('Share Successful');
 				} catch (error) {
 					console.error('Error Sharing', error);
 					hardcodedShare(noShareElement)
 				}
 			}
-
-			cardBody.insertAdjacentElement('afterbegin', shareElement)
 		}
 	}
 }
