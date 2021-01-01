@@ -180,9 +180,19 @@ For those of you who want to start taking a stand against your privacy, here is 
 
 - "But I have nothing to hide"           
   As pointed out in Step #1 of my Privacy Guide, Facebook-based applications can look at your credentials, which means that they can grab login informations. To make it more understandable in a human way, would you give me all your login credentials for all the services you use? Just like you wouldn't trust some random 17-year old on the internet, why are you trusting mega corporations that are known to sell your data? (and if your answer is yes, feel free to leave all the windows open in your house and yell every conversation you have)
-- "My data is collected to help me"       
-  I can see the push for this. Personally, I also find it useful to see where I took a picture for memory purposes. Yet, it benefits them moreso than it benefits you, because they make profit over your data. That's why they only show content tailored to your liking on social media; If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> It's unhealthy too, since you aren't ever being open-minded. To clarify, watch this video from Vox:<br>
+- "Why care? My data is collected to help me!"            
+  There are many reasons to care about big brother watching you. They frequently sell your data to other companies, meaning that it's now not just the service that you use (and are fine with their privacy policy) but also a service that you're not using (and have a much more questionable privacy policy). If that company's data ever leaks, your identity is put out for the entire public to see, including people that have wrong intentions.
+
+  The more data people have on you, the easier it is to manipulate you. In Vox's video (embedded below), they describe how social media applications are able to manipulate you to stay on their platform by showing you only what you like. If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> This is worrying outside privacy reasons too, as it doesn't allow you to be open minded.<br>
   {% include youtube.html url="wZSRxfHMr5s" %}
+
+  The more time you spend on the platform, the more you appreciate things from them. Soon, you want to do things such as donate or buy products from them, meaning that they easily profitted. Other companies are also interested in ways they can profit off you, so they ask the original company to sell you their data. The more data they have on you, the higher the price. Your data is inevitably sold, because the original company thinks that you are entirely loyal and would use their company's product more than the competitors.
+
+  <blockquote>
+    <img src="https://www.washingtonpost.com/news/morning-mix/wp-content/uploads/sites/21/2017/03/toiletsB.jpg" />
+    <footer>Image Source: The Washington Post</footer>
+  </blockquote>
+  In terms of control, just note that your data could be used against you. It's like a school bully that tells you that he won't tell the other kids what he saw you do unless you follow his every command. That leads you to use their product even more, which increases the ways they can manipulate you which increases the way you use the product more, rinse and repeat, which ends up making the threat much bigger. Just note that in China, there is a limit on how much toilet paper you could use in public bathrooms, recorded via a facial recognition software. It has no Privacy Policy, meaning that the data could be stored for months on end. The threat of a random person going to a public bathroom isn't too grand (like, who cares), yet it could be use as part of a grander sceme to stock your every move.
 - "It's probably already too late"      
   It's never too late to start taking action against something. You can't get your data back if it was already sold, so the best way to get revenge is to not give it any new data.
 - "I use a VPN so my data should be safe already"      
