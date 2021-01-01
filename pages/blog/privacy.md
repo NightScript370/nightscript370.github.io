@@ -55,6 +55,8 @@ permalink: /blog/privacy
 3. Steps in bettering our privacy:
    1. [Look at what's donated](#infoAnalysis)
    2. [Seek alternatives](#alternatives)
+   3. [Limit your Actions](#actionsLimit)
+4. [Frequent Responses](#frequent-responses)
 {% endcapture %}
 
 # Privacy Issues
@@ -160,7 +162,7 @@ For those of you who want to start taking a stand against your privacy, here is 
 		</div>
 	</li>
 	<li>
-		<b>Limit your actions</b>
+		<b id="actionsLimit">Limit your actions</b>
 		<p>I can't just abandon people cause they don't understand something; this isn't teenagers on prom after their spouse said no! So unfortunately, I'm stuck on platforms which aren't secure and have huge privacy issues. Schools all over the world are currently using corporate video streaming platforms for classes due to the COVID-19 pandemic, so unless we want to get Fs or your teacher is super cool, there's no way to pass high school and avoid giving Zoom your data. So how would you manage?</p>
 		<p>Feel free to check an application's privacy setting. Personalization could be disabled, meaning you could appear to be a first time user as you travel the web. Giving precise location access often times isn't needed for things such as weather. Many other things about you are given away with a simple toggle-in app could shut it all down.</p>
 		<blockquote>
