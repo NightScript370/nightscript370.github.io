@@ -2,17 +2,16 @@
 title: "Personal Notes on Trump's Administration"
 description: A former president unable to cope with the loss
 permalink: /blog/notes-on-trump
-twitter: true
 ---
 
-A presidential election has ended, and Joe Biden was pronounced the 46th president of the USA. Starting his first term in 2021, the former vice president promises to enhance the environment and to bring an end to the COVID-19 pandemic. This is a moment of celebration for the rest of the world, but the man currently behind the oval office doesn't think as the rest of us.<br>
+A presidential election has ended, and Joe Biden was pronounced the 46th president of the USA. Starting his first term on January 20th 2021, the former vice president promises to enhance the environment and to bring an end to the COVID-19 pandemic. This is a moment of celebration for the rest of the world, but the man currently behind the oval office doesn't think as the rest of us.<br>
 Donald J Trump, the 45th president of the United States of America, is unable to accept the results that the American public has rejected him. Rather than admit defeat, the claimed the results are rigged against him, just like how he does anytime he loses anything. This pattern was called out back in a presidential debate with Hillary Clinton, but 4 years has passed since then. Surely, then, after being president, he would have learned to accept that some things aren't in his hand and that not everything is about him. Yet, as time advanced, my viewpoints on him has remained relatively the same.
 
 Rather than dry-humping stuffed animals [like others in his country](http://www.brevardtimes.com/2019/10/florida-man-arrested-for-having-sex-with-olaf-toy-at-target/), he invested in business and adopted an economic viewpoint, helping millions of Americans find jobs during the first three years of his single-term presidency. Running as a Republican and fighting against the media's biased views amongst many more were things I would have never even thought a president can do. The video from Vox about how Trump is making what used to be unthinkable to be considered boring is quite descriptive of the presidents plans:
 
-{% include youtube.html url="https://www.youtube-nocookie.com/embed/_v-hzc6blGI" %}
+{% include youtube.html url="_v-hzc6blGI" %}
 
-Unfortunately, he However, as impressive as it is, it is quite dangerous when 47% of Americans agree with his views. During the past 4 years, hate speech rates have skyrocketted (including a [literal Hitler speech](https://www.reddit.com/r/PublicFreakout/comments/jqdddl/maga_crowd_cheers_for_a_guy_giving_a_literal/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)) and the contrast between the left-wingers and right-wingers is much bigger than it was before. There are now Liberals, Republicans and Trump-Republicans, leaving our country very devided. One of the areas of devision is the COVID-19 pandemic.
+As described in the video, though, this has ushered in a far-right era. During the past 4 years, hate speech rates have skyrocketted (including a [literal Hitler speech](https://www.reddit.com/r/PublicFreakout/comments/jqdddl/maga_crowd_cheers_for_a_guy_giving_a_literal/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)) and the contrast between the left-wingers and right-wingers is much bigger than it was before. There are now Liberals, Republicans and Trump-Republicans, leaving our country very devided. One of the areas of devision is the COVID-19 pandemic.
 
 ### COVID-19
 

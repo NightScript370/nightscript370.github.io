@@ -7,6 +7,7 @@ permalink: /blog/
 I like to write a lot so I thought I might as well write things in a blog. These posts are mearly expressing my viewpoints, opinions and thoughts. Please keep an open mind when reading this.
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4">
+	<div class="col">{% include articleCard.html cardTitle="Privacy Issues" cardLink="/blog/privacy" cardDescription="Where's the fine line of how much info you have on someone? How do you even get that person's info?" %}</div>
 	<div class="col">{% include articleCard.html cardTitle="Progressive Development" cardLink="/blog/progressive-development" cardDescription="The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?" %}</div>
 	<div class="col">{% include articleCard.html cardTitle="Effects of my 9th grade" cardLink="/blog/effects-of-9th-grade" cardDescription="Most of my personality can be traced back to key moments that occured to me in 9th grade." %}</div>
 	<div class="col">{% include articleCard.html cardTitle="Online School Issues" cardLink="/blog/online-school-issues" cardDescription="Debating whether video-conferencing is about inclusion or control." %}</div>

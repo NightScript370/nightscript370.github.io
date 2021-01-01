@@ -12,6 +12,12 @@ github: true
 		<h3 noAnchor class="card-title">Latest blog posts</h3>
 		<div class="card-text">
 			<div>
+				<a class="h5" href="/blog/privacy">Privacy Issues</a>
+				<div class="mb-0">Where's the fine line of how much info you have on someone? How do you even get that person's info?</div>
+				<a href="/blog/privacy" style="text-align: right;">Read More...</a>
+			</div>
+			<hr>
+			<div>
 				<a class="h5" href="/blog/progressive-development">Progressive Development</a>
 				<div class="mb-0">The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?</div>
 				<a href="/blog/progressive-development" style="text-align: right;">Read More...</a>
@@ -39,12 +45,6 @@ github: true
 				<a class="h5" href="/blog/edgenuity-issues">Edgenuity Issues</a>
 				<div class="mb-0">Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.</div>
 				<a href="/blog/edgenuity-issues" style="text-align: right;">Read More...</a>
-			</div>
-			<hr>
-			<div>
-				<a class="h5" href="/blog/sonic-return-of-infinite">Classic Sonic: Return of Infinite</a>
-				<div class="mb-0">Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?</div>
-				<a href="/blog/sonic-return-of-infinite" style="text-align: right;">Read More...</a>
 			</div>
 			<hr>
 			<div style="text-align: center;">

@@ -75,7 +75,7 @@ Instead, it would be much more fun if it were an extension of the current game s
 
 ### Presentation
 
-{% include youtube.html url="https://www.youtube-nocookie.com/embed/DqZc6L77rIU" %}
+{% include youtube.html url="DqZc6L77rIU" %}
 
 Sonic Mania's art style worked because the games focus was "let's look at past content and make it the best it could be". We've gotten a really nice evolution for Sonic and Friends of the Sonic 2 artstyle, a classic look. The 32x art style also makes sense because it was supposed to try and match if a 2D Saturn game was made. However, for this new game with new zones, I feel like it's time we got an art style that didn't have a new color every pixel, and that's where Sonic Uprising comes in. Looking at Mighty the Armadillo alone should tell you how much of a modern take on a classic art style this feels like.
 
