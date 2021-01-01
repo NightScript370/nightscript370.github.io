@@ -50,6 +50,8 @@ permalink: /blog/privacy
 </style>
 
 {% capture TOC %}
+<h2 noAnchor>Table of Contents</h2>
+
 1. [History of Privacy Breach](#historyOfPrivacyBreach)
 2. [Our Lax Behavior](#ourLaxBehavior)
 3. Steps in bettering our privacy:
@@ -59,8 +61,7 @@ permalink: /blog/privacy
 4. [Frequent Responses](#frequent-responses)
 {% endcapture %}
 
-# Privacy Issues
-{:.mb-0}
+<h1 class="mb-0" noAnchor>Privacy Issues</h1>
 <small class="font-italic font-weight-light font-underline">Published on December 31st, 2020</small>
 
 <div class="d-xxl-none">{{ TOC | markdownify }}</div>
@@ -80,7 +81,7 @@ permalink: /blog/privacy
 
 <div class="d-md-flex mb-2">
 	<div id="bushingImage"><img class="rounded" src="/assets/articles/ben.png" alt="Ben “bushing” Byer (RIP)"></div>
-	<p class="ms-md-2">Thankfully, a former undocumented altercation was not as creepy (but still a bit creepy), being communicated to via a private work phone number as opposed to face to face. This is what happened with Ben “bushing” Byer, one of the public faces of team twiizers (a team that found Wii exploits and wrote The Homebrew Channel). After trying to responsibly disclose an exploit, a former director/lawyer at Nintendo of America phoned him as a intimidatory tactic. In both of these cases, they were contacted in ways that aren't accessible to the public. Yet, what happened to going from mildly creepy to stalkery? Thankfully they fixed this in 2015 when hiring Hector Martin, yet who knows how many other hackers were contacted with similar experiences?</p>
+	<p class="ms-md-2">Thankfully, a former undocumented altercation was not as creepy (but still a bit creepy), being communicated to via a private work phone number as opposed to face to face. This is what happened with Ben “bushing” Byer, one of the public faces of Team Twiizers (group of hackers that discovered Wii exploits and wrote <a href="https://github.com/fail0verflow/hbc">The Homebrew Channel</a>). After trying to responsibly disclose an exploit, a former director/lawyer at Nintendo of America phoned him as a intimidatory tactic. In both of these cases, they were contacted in ways that aren't accessible to the public. Yet, what happened to going from mildly creepy to stalkery? Thankfully they fixed this in 2015 when hiring Hector Martin, yet who knows how many other hackers were contacted with similar experiences?</p>
 </div>
 
 <div class="d-md-flex">
@@ -99,16 +100,16 @@ In all three cases, private information was found about the victim. This is the 
 
 Yet, privacy isn't really a concern in our modern day, and those of us who are concerned just have to put up with it. Anytime you even sneeze at google, they'll update their data about you to add more food to the obese database. It's inevitable that you'll be forced to use privacy-leaking software either for school, work or general every-day life. Zoom has over 300 million users and their data has been leaked on the dark web for all the stalkers to start traveling across the country to spy on. Yet, schools distance from it as much as it distances from a non-social environment learning during a pandemic, which means its not distancing itself from Zoom at all.
 
-Even then, some of us don't even know when our data is being taken. We over react when we figure out that our favorite applications might not be as clean as it seems, yet they scream their privacy violations in a document that no one reads. One example is Wexos' Toolbox, the tool Wii U modders used to use before Switch Toolbox came out. Multiple servers "exposed" the app sending the IP address and name of the PC to the creator, recommending people to either firewall it or uninstall it. However, if people just took a look at what they're downloading and read the ReadME, they would know it is [already stated](https://cdn.discordapp.com/attachments/742488001296334888/783453475690119178/EoFiKQOXEAAM2jZ.png)
+Even then, some of us don't even know when our data is being taken. We over react when we figure out that our favorite applications might not be as clean as it seems, yet they scream their privacy violations in a document that no one reads. One example is Wexos' Toolbox, the tool Wii U modders used to use before Switch Toolbox came out. Multiple servers "exposed" the app sending the IP address and name of the PC to the creator, recommending people to either firewall it or uninstall it. However, if people just read privacy policies or the window that pops up when you first use the app, Wexos makes it [already stated](https://cdn.discordapp.com/attachments/742488001296334888/783453475690119178/EoFiKQOXEAAM2jZ.png) what he does; there was no need to disassemble the application.
 
 For those of you who want to start taking a stand against your privacy, here is a list of steps I + antoine62 (a privacy advocate who demonstrated just how much information has been and could be collected about me) I made so that you can take better care of your privacy:
 
 <ol>
 	<li>
 		<b id="infoAnalysis">Look at what's donated</b>
-		<p>If you want to stop giving, you should look at what you give in the first place. Take notes of the content received throughout the day, whether it's news, advertisements or others. If you use a "Find my Product" service, then take note that it stores your location. Google's Privacy Policy states that it won't use your health data to influence advertisements, implying that they store data about health. The best place to look at this is a services Privacy Policy, which is required according to GDPR rules.</p>
+		<p>If you want to stop giving, you should look at what you give in the first place. Take notes of the content received throughout the day, whether it's news, advertisements or others. If you use a "Find my Product" service, then take note that it stores your location. Discord bots that don't use slash commands are looking at your every message to find what to respond to. Google's Privacy Policy states that it won't use your health data to influence advertisements, implying that they store data about health. The best place to look at this is a services Privacy Policy, which is required according to GDPR rules.</p>
 		<p>For Android users, I want you to go and download <a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a>, an alternative client to Google's Play Store. It has a specific button at the end of the app view that reveals which permissions an app use, such as Facebook looking at your biometrics (Fingerprint Scanner, Face Unlock) or WhatsApp using credentials. The tracker view is also quite important.</p>
-		<p>For the people living in the USA, I especially would like you to take off the political glasses for a bit and look at everything the same. Our current president has made TikTok and other China-based applications' privacy violation political, yet apps made in the United States of America are just as guilty, if not moreso.</p>
+		<p>For the people living in the USA, I especially would like you to take off the political glasses for a bit and look at everything the same. Our current president has made TikTok and other China-based applications' privacy violation political, yet apps made in the United States of America are just as guilty, if not moreso. In fact, <a href="https://www.privacytools.io/providers/#ukusa">no UK/USA based product should be used</a>.</p>
 		<blockquote>
 			<img style="width: 105px; height: 300px;" src="https://cdn.discordapp.com/attachments/671781268299710469/794300215787520020/Screenshot_20201231-122454_Aurora_Store.jpg"><img style="width: 135px; height: 300px;" src="https://cdn.discordapp.com/attachments/671781268299710469/794403884831473675/Screenshot_20201231-191657_Aurora_Store.jpg">
 			<footer>Comparison of permissions screen between FaceBook (on the left) and TikTok (on the right). Notice how FaceBook asks for so many permissions that the screen had to be scrolled to contain it all.</footer>
@@ -130,7 +131,7 @@ For those of you who want to start taking a stand against your privacy, here is 
 			<div id="torImage"><img src="https://privacytools.io/assets/img/svg/3rd-party/tor_browser.svg" alt="Tor"></div>
 			<div class="ms-md-2">
 				<p>But how would you surf the web and use Searx without a browser? Enter Tor for Android and Desktop. Tor is a network <a href="https://www.torproject.org/about/history/">written</a> by Roger Dingledine and Nick Metthewson with the funding from the Naval research lab. By connecting through a series of tunnels (or the technical term Node) rather than making direct connections, not a single party would know the entire path of who you are and which website you're visiting. Your <a href="https://www.privacytools.io/browsers/#fingerprint">fingerprint</a> is the same as other tor users, meaning you blend right in with the crowd.</p>
-				<video width="500" height="281" controls="" preload="none">
+				<video class="videoEmbeds" controls="" preload="none">
 					<source src="https://www.torproject.org/videos/Tor_Animation_en.mp4" type="video/mp4">
 					<track label="English" kind="captions" src="https://www.torproject.org/videos/en.vtt" srclang="en" default="">
 				</video>
@@ -150,11 +151,11 @@ For those of you who want to start taking a stand against your privacy, here is 
 		</div>
 		<div class="d-md-flex mb-2">
 			<div id="giteaImage"><img src="https://s.gitea.com/img/logo.svg" alt="Gitea"></div>
-			<p class="ms-md-2">With Microsoft's aquisition of GitHub, many developers feared what would happen to the freedom. This fear was justified with the takedown of youtube-dl by RIAA back in October 2020. <a href="https://gitea.com/">Gitea</a> is a lightweight open-source Git service written in Go. Feel free to either self-host or use the main instance.</p>
+			<p class="ms-md-2">Microsoft (a monopoly that sells software) owning GitHub (a website where open-source companies store their free software) was a fear shared among many developers. This fear was justified when RIAA took down youtube-dl back in October 2020. Although the EFF reverted the app's removal, the damage has already been done and this event stood as one of the biggest threats to open-source. Thankfully, you could host your own Git service via <a href="https://gitea.com/">Gitea</a>, a lightweight open-source Git service written in Go. Feel free to either self-host or use the main instance.</p>
 		</div>
 		<div class="d-md-flex mb-2">
 			<div id="messagingIcon"><img src="/assets/images/icons/messaging.png" alt="Messaging"></div>
-			<p class="me-md-2">Communication is a bit trickier since it requires the cooporation of others, but feel free to share this article to them so that they could be using their minds too, just like yourself ;P. Once you both are willing to switch, it's as easy as facilitating your needs. Any user that currently uses <a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a> has no limitation to switch to <a href="https://signal.org/">Signal</a>, an application with End-To-End encryption. Signal is also great for <a href="https://tosdr.org/#discord">Discord</a> users who either a) only use groups or b) hosts single-channel servers. For Discord servers with multiple channels, look into the <a href="https://matrix.org/">Matrix</a> platform. You can either join another user's home-server (such as "chat.privacytools.io", "nitro.chat" and others, but whatever you do, don't use Matrix's default home server), buy a pre-hosted server for $5 a month using EMS (yes, cheaper than Discord's Nitro subscription service) or self-host your own server. For SMS users, understand the risks posed (interception, redirection amongst others).</p>
+			<p class="me-md-2">Communication requires both sides to cooporate, both in terms of willingness to have discussions and which platform to use. Once both parties are willing to switch, it's as easy as facilitating your needs. Any user that currently uses <a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a> has no limitation to switch to <a href="https://signal.org/">Signal</a>, an application with End-To-End encryption. Signal is also great for <a href="https://tosdr.org/#discord">Discord</a> users who either a) only use groups or b) hosts single-channel servers. For Discord servers with multiple channels, look into the <a href="https://matrix.org/">Matrix</a> platform. You can either join another user's home-server (such as "chat.privacytools.io", "nitro.chat" and others, but whatever you do, don't use Matrix's default home server), buy a pre-hosted server using <a href="https://element.io/matrix-services">Element Matrix Services</a> or self-host your own server.</p>
 		</div>
 		<div class="d-md-flex mb-2">
 			<div id="ptImage"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" alt="PrivacyTools"></div>
@@ -169,23 +170,23 @@ For those of you who want to start taking a stand against your privacy, here is 
 			<img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sf91b3285d9193eec/image/i9d401b7d547c33dd/version/1508251369/image.jpg" />
 			<footer>Screenshot of Windows10Privacy</footer>
 		</blockquote>
-		<p>If you can't disable everything from the app itself, perhaps check if an external tool can modify the program or install a modified version of the program. Windows 10 has <a href="https://www.winprivacy.de/english-home/">Windows10Privacy</a>, an application which disables specific elements of Windows 10. <a href="https://vancedapp.com/">Youtube Vanced</a> removes all advertisements from videos, meaning Google won't show you the personalization.</p>
+		<p>If you can't disable everything from the app itself, perhaps check if an external tool can modify the program or install a modified version of the program. Windows 10 has <a href="https://www.winprivacy.de/english-home/">Windows10Privacy</a>, an application which disables specific elements of Windows 10. <a href="https://vancedapp.com/">Youtube Vanced</a> removes all advertisements from videos, meaning Google won't show you the personalization. While not as good as NewPipe is for priacy, it uses MicroOG so it's still better than Stock Youtube.</p>
 		<p>Sharing photos with friends can be super braggy, and I totally understand that sensation when you just want to randomly tell your friends that you're somewhere enjoying yourself, breaking all the COVID rules when they're stuck at home. So how about instead of not uploading images because you just love that attention, instead just put it through an EXIF stripper? Windows can <abbr title='Right Click on Image File -> "Properties" -> "Details" -> "Remove Properties and Personal Information" -> "Create a copy with all possible properties removed" -> "OK"'>remove a file's metadata</abbr> and iOS has a way to <abbr title='"Settings" -> "Privacy" -> "Location Services" -> "Camera" -> "Never"'>disable the capture</abbr> from pictures taken from the Camera app.</p>
 		<p>Don't trust an app you have to install? Don't install it on your main operating system but instead, setup a contained environment titled a Virtual Machine. If anything infectious happens, the damage would be limited to the elements you give your virtual machine access to. It won't be able to escape, yet you are always in control.</p>
 	</li>
 </ol>
 
-### Frequent Responses
+<h3 noAnchor id="frequent-responses">Frequent Responses</h3>
 
 - "But I have nothing to hide"           
-  As I have pointed out in step 1 of my guide to privacy, Facebook-based applications can look at your credentials. You are basically giving away all your passwords to Microsoft. To make it more understandable in a human way, feel free to email maorninja@outlook.com with all your logins and passwords for all the services you use. Just like you wouldn't trust some random 17-year old on the internet, why are you trusting mega corporations that are known to sell your data?
+  As pointed out in Step #1 of my Privacy Guide, Facebook-based applications can look at your credentials, which means that they can grab login informations. To make it more understandable in a human way, would you give me all your login credentials for all the services you use? Just like you wouldn't trust some random 17-year old on the internet, why are you trusting mega corporations that are known to sell your data? (and if your answer is yes, feel free to leave all the windows open in your house and yell every conversation you have)
 - "My data is collected to help me"       
-  I can see the push for this. Personally, I also find it useful to see where I took a picture for memory purposes. Yet, they do this so they can keep you as long on their app as possible, so that they can collect money off you. That's why they only show content tailored to your liking on social media; If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> It's unhealthy too, since you aren't ever being open-minded. To clarify, watch this video from Vox:<br>
+  I can see the push for this. Personally, I also find it useful to see where I took a picture for memory purposes. Yet, it benefits them moreso than it benefits you, because they make profit over your data. That's why they only show content tailored to your liking on social media; If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> It's unhealthy too, since you aren't ever being open-minded. To clarify, watch this video from Vox:<br>
   {% include youtube.html url="wZSRxfHMr5s" %}
 - "It's probably already too late"      
   It's never too late to start taking action against something. You can't get your data back if it was already sold, so the best way to get revenge is to not give it any new data.
 - "I use a VPN so my data should be safe already"      
-  VPNs are only useful for additional privacy from Internet Service Providers or public Wi-Fi network accross non-secure HTTP connections. However, in no way do they keep your browser habits anonymous or add security. If the website you're visiting supports HTTPS (which is most of the web), your non-DNS traffic is safe regardless if you use a VPS. By using a VPS, all you're doing is shifting who can see it; from your ISP to the VPN company, which has no way to verify their "no logging" policy. To explain this in a video form, feel free to watch Tom Scott's video:<br>
+  VPNs are only useful for additional privacy from Internet Service Providers or public Wi-Fi network accross non-secure HTTP connections. However, in no way do they keep your browser habits anonymous or add security. If the website you're visiting supports HTTPS (which is most of the web), your non-DNS traffic is safe regardless if you use a VPN. By using a VPN, all you're doing is shifting who can see it; from your ISP to the VPN company, which has no way to verify their "no logging" policy. To explain this in a video form, feel free to watch Tom Scott's video:<br>
   {% include youtube.html url="WVDQEoe6ZWY" %}
 
 As we install new apps on our phones or browse new websites, keep note that you are being watched. Whether it's your IP address, EXIF data, cookies and much more, corporations are on a hunt to make you their extra dollar. The way to solve this is if you stop feeding them. Take a stand against your privacy. Keep yourself from the exposure of others.
@@ -195,7 +196,6 @@ As we install new apps on our phones or browse new websites, keep note that you 
 <div class="col-xxl-3 d-none d-xxl-block">
 
 <div class="sticky-top">
-	<h2>Table of Contents</h2>
 	{{ TOC | markdownify }}
 </div>
 

@@ -792,3 +792,10 @@ tbody tr:nth-child(even) {
 	.gitGrid .gitLangGrid {
 		grid-row: 2;
 		grid-column: 1 / span 2;}
+
+.videoEmbeds {
+	width: 640px;
+	height: 360px;
+	max-width: 100%;
+	max-height: auto;
+}
