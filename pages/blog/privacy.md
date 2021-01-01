@@ -120,7 +120,7 @@ For those of you who want to start taking a stand against your privacy, here is 
 		<b id="alternatives">Seek alternatives</b>
 		<div class="d-md-flex mb-2">
 			<div id="mastodonImage"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/mastodon.svg" alt="Mastodon"></div>
-			<p class="ms-md-2">Although not as popular as commercial products, alternative products can be just as useful or even better at times. Whereas FaceBook and Twitter is a general platform, <a href="https://web.dev/">web.dev</a> is a great platform for developers (& doesn't have a character limit). If you want a purely general platform, Mastodon is an open-source microblogging platforms where the instances are interconnected realms. Just like email, you don't need to be on the same server in order to communicate with others.</p>
+			<p class="ms-md-2">Although not as popular as commercial products, alternative products can be just as useful or even better at times. Whereas FaceBook and Twitter is a general platform, <a href="https://dev.to/">dev.to</a> is a great platform for developers (& doesn't have a character limit). If you want a purely general platform, Mastodon is an open-source microblogging platforms where the instances are interconnected realms. Just like email, you don't need to be on the same server in order to communicate with others.</p>
 		</div>
 		<div class="d-md-flex mb-2">
 			<div id="searxImage"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/searx.svg" alt="Searx"></div>

@@ -16,3 +16,16 @@ I like to write a lot so I thought I might as well write things in a blog. These
 	<div class="col">{% include articleCard.html cardTitle="Classic Sonic: Return of Infinite" cardLink="/blog/sonic-return-of-infinite" cardDescription="Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?" %}</div>
 	<div class="col">{% include articleCard.html cardTitle="What is considered ownership" cardLink="/blog/ownership-issues" cardDescription="How are you the owner of something? Is it based on if you're the author, or can that be ripped out of you?" %}</div>
 </div>
+
+## Statistics
+
+- Most recent article with a broad topic: [Progressive Development](/blog/progressive-development)
+- Most recent article with a specific yet broad topic: [Privacy Issues](/blog/privacy)
+- Tallest article (images and layouts included): [My Summer of 2020](/blog/summer-2020)
+- Tallest article (purely text): [What is considered ownership](/blog/ownership-issues)
+- Shortest article: [Progressive Development](/blog/progressive-development)
+- Most recent personal event: [My Summer of 2020](/blog/summer-2020)
+- Most recent article describing a personal event: [Effects of 9th grade](/blog/effects-of-9th-grade)
+- Most recent rant: [Edgenuity Issues](/blog/edgenuity-issues)
+- Most recent constructive analysis at issue: [Online School Issues](/blog/online-school-issues)
+- Most recent video game related article: [Classic Sonic: Return of Infinite](/blog/sonic-return-of-infinite)
