@@ -64,28 +64,28 @@ permalink: /blog/privacy
 <h1 class="mb-0" noAnchor>Privacy Issues</h1>
 <small class="font-italic font-weight-light font-underline">Published on December 31st, 2020</small>
 
-<div class="d-xxl-none">{{ TOC | markdownify }}</div>
+<div class="d-xxl-none d-print-none">{{ TOC | markdownify }}</div>
 <div class="row" markdown="1">
 <div class="col-xxl-9" markdown="1">
 
-<div class="d-md-flex" id="historyOfPrivacyBreach">
-	<div id="zammisImage"><img class="rounded" src="/assets/articles/zammis.jpg" alt="Zammis Clark"></div>
+<div class="d-md-flex d-print-block" id="historyOfPrivacyBreach">
+	<div id="zammisImage" class="d-print-none"><img class="rounded" src="/assets/articles/zammis.jpg" alt="Zammis Clark"></div>
 	<p class="ms-md-2">Zammis Clark, a 24-year old security researcher, had access to all of Nintendo's files from mid-March to late-May of 2018. After going through the file server and getting everything he wanted (including Software Development Kits, unreleased titles and source code for popular titles), different things were sent to different individuals (likely all of them being in the SUXXORS scene release group) in May of 2018. The damages that Nintendo estimates are between 700K euros and 1.4 million euros. However, despite his pleading in court as guilty, this hasn't stopped his friends from leaking these files to the public themselves. Within one of the latest leaks, it was revealed that Nintendo was once contracting hackers by visiting them in person, something I consider to be a privacy breach.</p>
 </div>
 
-<div class="d-md-flex mb-2">
-	<div id="neimodImage"><img class="rounded" src="/assets/articles/neimod.jpg" alt="Mr. Domien"></div>
+<div class="d-md-flex d-print-block mb-2">
+	<div id="neimodImage" class="d-print-none"><img class="rounded" src="/assets/articles/neimod.jpg" alt="Mr. Domien"></div>
 	<p class="me-md-2">
 	In 2012, Nintendo setup a meeting with neimod, a hacker for the Nintendo 3DS handheld device. In the meeting, they persuaded him to distance himself from hacking Nintendo system/products and to join Nintendo. But how did they get the information necessary to set up the meeting? Instead of setting up the email via an IRC chatbox or email, it was revealed through the leaked documents that the Nintendo Ninjas has been stocking neimod, documenting all his personal information including his home address and personal activities. They even found it worthy to note that he goes to restaurants <i>alone</i>, in an absolute savage move. This was all done to find the proper time for said meeting, yet the same effect could have been achieved via an email confrontation.</p>
 </div>
 
-<div class="d-md-flex mb-2">
-	<div id="bushingImage"><img class="rounded" src="/assets/articles/ben.png" alt="Ben “bushing” Byer (RIP)"></div>
+<div class="d-md-flex d-print-block mb-2">
+	<div id="bushingImage" class="d-print-none"><img class="rounded" src="/assets/articles/ben.png" alt="Ben “bushing” Byer (RIP)"></div>
 	<p class="ms-md-2">Thankfully, a former undocumented altercation was not as creepy (but still a bit creepy), being communicated to via a private work phone number as opposed to face to face. This is what happened with Ben “bushing” Byer, one of the public faces of Team Twiizers (group of hackers that discovered Wii exploits and wrote <a href="https://github.com/fail0verflow/hbc">The Homebrew Channel</a>). After trying to responsibly disclose an exploit, a former director/lawyer at Nintendo of America phoned him as a intimidatory tactic. In both of these cases, they were contacted in ways that aren't accessible to the public. Yet, what happened to going from mildly creepy to stalkery? Thankfully they fixed this in 2015 when hiring Hector Martin, yet who knows how many other hackers were contacted with similar experiences?</p>
 </div>
 
-<div class="d-md-flex">
-	<div id="nightScriptImage"><img class="rounded" src="/assets/images/avatar.png" alt="NightScript"></div>
+<div class="d-md-flex d-print-block">
+	<div id="nightScriptImage" class="d-print-none"><img class="rounded" src="/assets/images/avatar.png" alt="NightScript"></div>
 	<div class="me-md-2">
 		<p>I have quite the experience with privacy breaches, seeing as how I acted worse than Nintendo back in April 2018. After months of trying to fix a relationship with someone (which already fell apart twice at that point), I was told to never join their group again because I was "ignoring" them. Due to being afraid of being trash-talked about behind my back in front of friends, I wanted to leave them with a warning: change or you won't find people to talk with. The warning was given in the form of a semi-private PasteBin document (due to WhatsApp's character limit), but I had included their personal information, making it seem extremely creepy. Since then, I had taken down the official PasteBin document and have no plans of reuploading it, largely due to my regret of doing those actions. I can only imagine the fear he must have gone through, worrying through the night in case anyone wanted to do physical harm to him.</p>
 		<p>The difference in the victims in the stories is while Nintendo was doing it for a confrontational purpose, I was doing it solely for antigonazing purposes. Also, the information I received was at a time when the person trusted me with the information and that trust was broken. Neimod and bushing had not provided Nintendo with any of their information, but they got it through surveilance.</p>
@@ -119,46 +119,46 @@ For those of you who want to start taking a stand against your privacy, here is 
 	</li>
 	<li>
 		<b id="alternatives">Seek alternatives</b>
-		<div class="d-md-flex mb-2">
-			<div id="mastodonImage"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/mastodon.svg" alt="Mastodon"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="mastodonImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/mastodon.svg" alt="Mastodon"></div>
 			<p class="ms-md-2">Although not as popular as commercial products, alternative products can be just as useful or even better at times. Whereas FaceBook and Twitter is a general platform, <a href="https://dev.to/">dev.to</a> is a great platform for developers (& doesn't have a character limit). If you want a purely general platform, Mastodon is an open-source microblogging platforms where the instances are interconnected realms. Just like email, you don't need to be on the same server in order to communicate with others.</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="searxImage"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/searx.svg" alt="Searx"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="searxImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/searx.svg" alt="Searx"></div>
 			<p class="me-md-2">Need to search something on the web? The popular tracker-free search engine is DuckDuckGo, but that code is proprietary and serve advertisements (based on the current search query, not based on previous data collected about you because there is no previous data collected about you). If you want someting truly open source, feel free to look into <a href="https://searx.me/">Searx</a>. There is <a href="https://searx.space/">a list of public instances</a>, but you could also self-host it yourself.</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="torImage"><img src="https://privacytools.io/assets/img/svg/3rd-party/tor_browser.svg" alt="Tor"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="torImage" class="d-print-none"><img src="https://privacytools.io/assets/img/svg/3rd-party/tor_browser.svg" alt="Tor"></div>
 			<div class="ms-md-2">
 				<p>But how would you surf the web and use Searx without a browser? Enter Tor for Android and Desktop. Tor is a network <a href="https://www.torproject.org/about/history/">written</a> by Roger Dingledine and Nick Metthewson with the funding from the Naval research lab. By connecting through a series of tunnels (or the technical term Node) rather than making direct connections, not a single party would know the entire path of who you are and which website you're visiting. Your <a href="https://www.privacytools.io/browsers/#fingerprint">fingerprint</a> is the same as other tor users, meaning you blend right in with the crowd.</p>
-				<video class="videoEmbeds" controls="" preload="none">
+				<video class="videoEmbeds d-print-none" controls="" preload="none">
 					<source src="https://www.torproject.org/videos/Tor_Animation_en.mp4" type="video/mp4">
 					<track label="English" kind="captions" src="https://www.torproject.org/videos/en.vtt" srclang="en" default="">
 				</video>
 			</div>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="firefoxImage"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/firefox_browser.svg" alt="FireFox"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="firefoxImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/firefox_browser.svg" alt="FireFox"></div>
 			<p class="me-md-2">iOS users are a bit lucked out though, since some of Tor's traffic would route via your normal connection and not Tor due to <a href="https://github.com/OnionBrowser/OnionBrowser/wiki/Traffic-that-leaks-outside-of-Tor-due-to-iOS-limitations">restrictions</a> imposed by Apple. Mozilla's FireFox is thankfully here to save your privacy day, with its <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-ios">Enhanced Tracking Protection feature</a> that can identify and block trackers as well as cryptominers and fingerprinters. It has all the functions that Apple's safari browser has + a widget for iOS 14 users, allowing you to open new (private) tabs right from the home screen.</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="ytImage"><img src="/assets/articles/youtube.png" alt="Youtube"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="ytImage" class="d-print-none"><img src="/assets/articles/youtube.png" alt="Youtube"></div>
 			<p class="ms-md-2">Other times, if you must use the service, you should try and look for an alternative front end. Want to watch a YouTube video? Try <a href="https://invidious.snopyta.org/">Invidious</a>, a self-hosted youtube frontend that doesn't give your IP to Google. On Android, I recommend <a href="https://newpipe.net/">NewPipe</a>, an alternative frontend to YouTube that does not use Google's Play Services. There is a tradeoff of not seeing comment replies, but you get privacy and functionality in return (one app for YouTube, SoundCloud and other services + audio only functionality).</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="fedoraImage"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/fedora.svg" alt="Fedora"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="fedoraImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/fedora.svg" alt="Fedora"></div>
 			<p class="me-md-2">Microsoft's latest version of Windows is considered to be a <a href="https://www.privacytools.io/operating-systems/#win10">privacy nightmare</a>, especially with Cortana enabled. For those of you who are developers, it might be worth it to look into a Linux distro + WINE, a program that allows you to run Windows (<code>exe</code>) programs on Linux devices. Although the most popular distro is Ubuntu, it's littered with bloatware that doesn't play nicely with lower end devices. <a href="https://getfedora.org/">Fedora</a>, on the other hand, comes with much less applications on first install.</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="giteaImage"><img src="https://s.gitea.com/img/logo.svg" alt="Gitea"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="giteaImage" class="d-print-none"><img src="https://s.gitea.com/img/logo.svg" alt="Gitea"></div>
 			<p class="ms-md-2">Microsoft (a monopoly that sells software) owning GitHub (a website where open-source companies store their free software) was a fear shared among many developers. This fear was justified when RIAA took down youtube-dl back in October 2020. Although the EFF reverted the app's removal, the damage has already been done and this event stood as one of the biggest threats to open-source. Thankfully, you could host your own Git service via <a href="https://gitea.com/">Gitea</a>, a lightweight open-source Git service written in Go. Feel free to either self-host or use the main instance.</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="messagingIcon"><img src="/assets/images/icons/messaging.png" alt="Messaging"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="messagingIcon" class="d-print-none"><img src="/assets/images/icons/messaging.png" alt="Messaging"></div>
 			<p class="me-md-2">Communication requires both sides to cooporate, both in terms of willingness to have discussions and which platform to use. Once both parties are willing to switch, it's as easy as facilitating your needs. Any user that currently uses <a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a> has no limitation to switch to <a href="https://signal.org/">Signal</a>, an application with End-To-End encryption. Signal is also great for <a href="https://tosdr.org/#discord">Discord</a> users who either a) only use groups or b) hosts single-channel servers. For Discord servers with multiple channels, look into the <a href="https://matrix.org/">Matrix</a> platform. You can either join another user's home-server (such as "chat.privacytools.io", "nitro.chat" and others, but whatever you do, don't use Matrix's default home server), buy a pre-hosted server using <a href="https://element.io/matrix-services">Element Matrix Services</a> or self-host your own server.</p>
 		</div>
-		<div class="d-md-flex mb-2">
-			<div id="ptImage"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" alt="PrivacyTools"></div>
+		<div class="d-md-flex d-print-block mb-2">
+			<div id="ptImage" class="d-print-none"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" alt="PrivacyTools"></div>
 			<p class="ms-md-2">Overall, there's probably something that would facilitate your needs. I definitely recommend checking <a href="https://www.privacytools.io/providers/">PrivacyTools</a>, a site which lists mainstream services alongside alternatives. When looking for alternatives, though, please don't automatically assume that decentralized or open-source means that it is secure. A good example of this is IRC, Personally, I watch videos on NewPipe, microblog on discord, chat on discord and use SMS for communicating with people unwilling to move to Signal. Wait, didn't I just disrecommend Discord and SMS?</p>
 		</div>
 	</li>
@@ -183,7 +183,7 @@ For those of you who want to start taking a stand against your privacy, here is 
 - "Why care? My data is collected to help me!"            
   There are many reasons to care about big brother watching you. They frequently sell your data to other companies, meaning that it's now not just the service that you use (and are fine with their privacy policy) but also a service that you're not using (and have a much more questionable privacy policy). If that company's data ever leaks, your identity is put out for the entire public to see, including people that have wrong intentions.
 
-  The more data people have on you, the easier it is to manipulate you. In Vox's video (embedded below), they describe how social media applications are able to manipulate you to stay on their platform by showing you only what you like. If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> This is worrying outside privacy reasons too, as it doesn't allow you to be open minded.<br>
+  The more data people have on you, the easier it is to manipulate you. In Vox's video (<span class="d-none d-print-inline-block">found at https://invidious.snopyta.org/watch?v=wZSRxfHMr5s</span><span class="d-print-none">embedded below</span>), they describe how social media applications are able to manipulate you to stay on their platform by showing you only what you like. If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> This is worrying outside privacy reasons too, as it doesn't allow you to be open minded.<br>
   {% include youtube.html url="wZSRxfHMr5s" %}
 
   The more time you spend on the platform, the more you appreciate things from them. Soon, you want to do things such as donate or buy products from them, meaning that they easily profitted. Other companies are also interested in ways they can profit off you, so they ask the original company to sell you their data. The more data they have on you, the higher the price. Your data is inevitably sold, because the original company thinks that you are entirely loyal and would use their company's product more than the competitors.
@@ -196,7 +196,7 @@ For those of you who want to start taking a stand against your privacy, here is 
 - "It's probably already too late"      
   It's never too late to start taking action against something. You can't get your data back if it was already sold, so the best way to get revenge is to not give it any new data.
 - "I use a VPN so my data should be safe already"      
-  VPNs are only useful for additional privacy from Internet Service Providers or public Wi-Fi network accross non-secure HTTP connections. However, in no way do they keep your browser habits anonymous or add security. If the website you're visiting supports HTTPS (which is most of the web), your non-DNS traffic is safe regardless if you use a VPN. By using a VPN, all you're doing is shifting who can see it; from your ISP to the VPN company, which has no way to verify their "no logging" policy. To explain this in a video form, feel free to watch Tom Scott's video:<br>
+  VPNs are only useful for additional privacy from Internet Service Providers or public Wi-Fi network accross non-secure HTTP connections. However, in no way do they keep your browser habits anonymous or add security. If the website you're visiting supports HTTPS (which is most of the web), your non-DNS traffic is safe regardless if you use a VPN. By using a VPN, all you're doing is shifting who can see it; from your ISP to the VPN company, which has no way to verify their "no logging" policy. To explain this in a video form, feel free to watch Tom Scott's video: <span class="d-none d-print-block">found at https://invidious.snopyta.org/watch?v=WVDQEoe6ZWY</span><br>
   {% include youtube.html url="WVDQEoe6ZWY" %}
 
 As we install new apps on our phones or browse new websites, keep note that you are being watched. Whether it's your IP address, EXIF data, cookies and much more, corporations are on a hunt to make you their extra dollar. The way to solve this is if you stop feeding them. Take a stand against your privacy. Keep yourself from the exposure of others.
