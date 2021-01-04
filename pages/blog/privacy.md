@@ -2,6 +2,7 @@
 title: "Privacy Issues"
 description: Where's the fine line of how much info you have on someone? How do you even get that person's info?
 permalink: /blog/privacy
+plyr: true
 ---
 
 <style>
@@ -131,10 +132,10 @@ For those of you who want to start taking a stand against your privacy, here is 
 			<div id="torImage" class="d-print-none"><img src="https://privacytools.io/assets/img/svg/3rd-party/tor_browser.svg" alt="Tor"></div>
 			<div class="ms-md-2">
 				<p>But how would you surf the web and use Searx without a browser? Enter Tor for Android and Desktop. Tor is a network <a href="https://www.torproject.org/about/history/">written</a> by Roger Dingledine and Nick Metthewson with the funding from the Naval research lab. By connecting through a series of tunnels (or the technical term Node) rather than making direct connections, not a single party would know the entire path of who you are and which website you're visiting. Your <a href="https://www.privacytools.io/browsers/#fingerprint">fingerprint</a> is the same as other tor users, meaning you blend right in with the crowd.</p>
-				<video class="videoEmbeds d-print-none" controls="" preload="none">
+				<div class="videoEmbedsWrap"><video class="videoEmbeds d-print-none" controls="" preload="none">
 					<source src="https://www.torproject.org/videos/Tor_Animation_en.mp4" type="video/mp4">
 					<track label="English" kind="captions" src="https://www.torproject.org/videos/en.vtt" srclang="en" default="">
-				</video>
+				</video></div>
 			</div>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">

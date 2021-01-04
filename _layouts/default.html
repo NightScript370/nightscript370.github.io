@@ -55,6 +55,9 @@ layout: compress
 		{% endfor %}
 		<script src="/assets/js/sidebar/themeSwitch.js"></script>
 
+		{% if page.plyr %}
+			<link rel="stylesheet" href="/assets/css/plyr.css">
+		{% endif %}
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
 		{% if page.syntax-highlight %}
@@ -175,6 +178,21 @@ layout: compress
 			document.body.appendChild(el);
 		</script>
 		<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
+		{% endif %}
+		{% if page.plyr %}
+			<script type="module">
+				import Plyr from "/assets/js/libs/plyr.min.mjs";
+				Plyr.setup('.videoEmbeds');
+
+				setTimeout(() => {
+					console.log(document.querySelectorAll('.plyr__volume').length);
+					document.querySelectorAll('.plyr__volume').forEach(elem => {
+						console.log(elem);
+						elem.addEventListener('mouseover', () => elem.querySelector('input[data-plyr="volume"]').style.opacity = 1);
+						elem.addEventListener('mouseout', () => elem.querySelector('input[data-plyr="volume"]').style.opacity = 0);
+					});
+				}, 5000)
+			</script>
 		{% endif %}
 		{% if page.github %}
 		<link rel="stylesheet" href="/assets/css/github-calendar.css" />
