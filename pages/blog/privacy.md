@@ -60,10 +60,11 @@ plyr: true
    2. [Seek alternatives](#alternatives)
    3. [Limit your Actions](#actionsLimit)
 4. [Frequent Responses](#frequent-responses)
+5. [Apple's Praise](#apples-praise)
 {% endcapture %}
 
 <h1 class="mb-0" noAnchor>Privacy Issues</h1>
-<small class="font-italic font-weight-light font-underline">Published on December 31st, 2020</small>
+<small class="font-italic font-weight-light font-underline">Published on December 31st, 2020 - Edited on January 4th, 2021</small>
 
 <div class="d-xxl-none d-print-none">{{ TOC | markdownify }}</div>
 <div class="row" markdown="1">
@@ -184,7 +185,7 @@ For those of you who want to start taking a stand against your privacy, here is 
 - "Why care? My data is collected to help me!"            
   There are many reasons to care about big brother watching you. They frequently sell your data to other companies, meaning that it's now not just the service that you use (and are fine with their privacy policy) but also a service that you're not using (and have a much more questionable privacy policy). If that company's data ever leaks, your identity is put out for the entire public to see, including people that have wrong intentions.
 
-  The more data people have on you, the easier it is to manipulate you. In Vox's video (<span class="d-none d-print-inline-block">found at https://invidious.snopyta.org/watch?v=wZSRxfHMr5s</span><span class="d-print-none">embedded below</span>), they describe how social media applications are able to manipulate you to stay on their platform by showing you only what you like. If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> This is worrying outside privacy reasons too, as it doesn't allow you to be open minded.<br>
+  The more data people have on you, the easier it is to manipulate you. In Vox's video (<span class="d-none d-print-inline-block">found at https://invidious.snopyta.org/watch?v=wZSRxfHMr5s</span><span class="d-print-none">embedded below</span>), they describe how social media applications are able to manipulate you to stay on their platform by showing you only what you like. If you were a republican, you wouldn't be on a website where both republican and democratic comments are shown. The same thing applies vice versa, <s>although there wouldn't be random posts calling it fake news.</s> This is worrying outside privacy reasons too, as it doesn't allow you to be open minded, or ads could be displayed with misinformation.<br>
   {% include youtube.html url="wZSRxfHMr5s" %}
 
   The more time you spend on the platform, the more you appreciate things from them. Soon, you want to do things such as donate or buy products from them, meaning that they easily profitted. Other companies are also interested in ways they can profit off you, so they ask the original company to sell you their data. The more data they have on you, the higher the price. Your data is inevitably sold, because the original company thinks that you are entirely loyal and would use their company's product more than the competitors.
@@ -199,6 +200,24 @@ For those of you who want to start taking a stand against your privacy, here is 
 - "I use a VPN so my data should be safe already"      
   VPNs are only useful for additional privacy from Internet Service Providers or public Wi-Fi network accross non-secure HTTP connections. However, in no way do they keep your browser habits anonymous or add security. If the website you're visiting supports HTTPS (which is most of the web), your non-DNS traffic is safe regardless if you use a VPN. By using a VPN, all you're doing is shifting who can see it; from your ISP to the VPN company, which has no way to verify their "no logging" policy. To explain this in a video form, feel free to watch Tom Scott's video: <span class="d-none d-print-block">found at https://invidious.snopyta.org/watch?v=WVDQEoe6ZWY</span><br>
   {% include youtube.html url="WVDQEoe6ZWY" %}
+
+<h3 noAnchor id="apples-praise">Apple's Praise</h3>
+
+For those of you who are tech enthusiasts that care enough to read through these 8 pages, you would know how locked down Apple's mobile operating system is. However, as much as I bash them and think that [lockdown does not equal better security](/blog/effects-of-9th-grade#anti-iphone-gone-legal), they have been better than Google in terms of privacy. Not only do they not do [as I described above](#infoAnalysis), but they are advocates for user rights in regards to privacy (unfortunately, not in regards to anything else). [Privacy labels](https://developer.apple.com/news/?id=3wann9gh) are now required and [prompts are now shown](https://forums.macrumors.com/threads/ios-14-4-beta-1-bug-fixes-changes-and-improvements.2275786/page-8?post=29425742#post-29425742) before any sort of tracking goes. To quote an official statement made by an apple employee:
+
+> We believe that this is a simple matter of standing up for our users. Users should know when their data is being collected and shared across other apps and websites — and they should have the choice to allow that or not. App Tracking Transparency in iOS 14 does not require Facebook to change its approach to tracking users and creating targeted advertising, it simply requires they give users a choice.
+
+When iOS 14 was announced and open for beta testers, apps found to act invasive were leaked. [TikTok](https://www.forbes.com/sites/zakdoffman/2020/06/26/warning-apple-suddenly-catches-tiktok-secretly-spying-on-millions-of-iphone-users/), [Reddit](https://www.forbes.com/sites/daveywinder/2020/07/05/reddit-latest-to-get-caught-by-apple-ios-14-clipboard-data-copying-alerts-iphone-privacy/?sh=1840f2b27de6), [LinkedIn](https://www.forbes.com/sites/daveywinder/2020/07/04/apple-ios-14-catches-microsofts-linkedin-spying-on-clipboard-tiktok-apps-privacy-iphone-ipad-macbook/) amongst 53 other apps was caught being a keylogger, which means accessing the clipboard data. While LinkedIn & Reddit were quick to push a fix and get ignored, TikTok was a Chinese company and the United States was already sour from the things COVID-19 did to its economy. This prompted Donald Trump to try and ban it, which hey, isn't a bad thing if we stop getting the cringe memes and bigotry on the platform. I'm mentioning TikTok's issue because that was the only country which had a legitimate reason to retaliate, yet FaceBook had none. However, it was FaceBook that was trying to block this.
+
+Full page advertisements were [bought](https://www.theverge.com/2020/12/16/22178068/facebook-apple-newspaper-ads-ios-privacy-changes) in *The New York Times*, *The Washington Post* and *The Wall Street Journal* with the headline of "We're standing up to Apple for small businesses everywhere". To quote the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2020/12/facebooks-laughable-campaign-against-apple-really-against-users-and-small), “Make no mistake: this latest campaign from Facebook is one more direct attack against our privacy and, despite its slick packaging, it’s also an attack against other businesses, both large and small.” Facebook isn't telling you the whole story; it only benefits those who already benefit from surveilance-powered advertising (so neither users or small-businesses). Facebook has been serving [eerily accurate ads](https://www.eff.org/deeplinks/2018/04/facebook-doesnt-need-listen-through-your-microphone-serve-you-creepy-ads) which mainly profit them; not the publisher of whomst they're taking the ads from.
+
+In the end, even Facebook's own employee's [call this hypocritical](https://www.buzzfeednews.com/article/craigsilverman/facebook-apple-fight-self-serving). Apple has been praised by everyone including the EFF, and they also encourage Google to follow in their footsteps. As well as expose other apps, they've even cut down on the things they do themselves. Just take a look at the comparison between iMessage and FaceBook Messenger:
+
+![](https://specials-images.forbesimg.com/imageserve/5ff07f779f9392c3af404599/960x0.png){:.img-thumbnail}
+
+Of course, I don't think anyone would be able to beat Signal, yet I found it amazing that iMessage could work with as little as an Apple Account and yet people still use WhatsApp. Please consider where you're putting you're trust; the company whos own employees call hypocrisy or someone fighting for others.
+
+-----
 
 As we install new apps on our phones or browse new websites, keep note that you are being watched. Whether it's your IP address, EXIF data, cookies and much more, corporations are on a hunt to make you their extra dollar. The way to solve this is if you stop feeding them. Take a stand against your privacy. Keep yourself from the exposure of others.
 
