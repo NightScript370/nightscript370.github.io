@@ -771,6 +771,15 @@ tbody tr:nth-child(even) {
 	transition: all 0.2s;
 }
 
+.mdc-select {
+	background-color: var(--lighter-menu-element); }
+	.mdc-select:not(.mdc-select--disabled) .mdc-select__selected-text {
+		color: var(--menu-element-text-color); }
+	.mdc-select:not(.mdc-select--disabled) .mdc-floating-label,
+	.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+		color: var(--menu-element-text-color);
+		opacity: .65; }
+
 @media print {
 	:root {
 		--main-bg-color: white;

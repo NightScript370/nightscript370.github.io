@@ -59,6 +59,9 @@ layout: compress
 			<link rel="stylesheet" href="/assets/css/plyr.css">
 		{% endif %}
 		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+		{% if page.material %}
+			<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+		{% endif %}
 		<link rel="stylesheet" href="/assets/css/style.css">
 		{% if page.syntax-highlight %}
 			<link rel="stylesheet" href="/assets/css/syntax.css">
@@ -185,9 +188,7 @@ layout: compress
 				Plyr.setup('.videoEmbeds');
 
 				setTimeout(() => {
-					console.log(document.querySelectorAll('.plyr__volume').length);
 					document.querySelectorAll('.plyr__volume').forEach(elem => {
-						console.log(elem);
 						elem.addEventListener('mouseover', () => elem.querySelector('input[data-plyr="volume"]').style.opacity = 1);
 						elem.addEventListener('mouseout', () => elem.querySelector('input[data-plyr="volume"]').style.opacity = 0);
 					});
@@ -201,6 +202,12 @@ layout: compress
 			if (document.getElementsByClassName('gitStats').length)
 				import("/assets/js/github.js").then(async (mod) => await mod.default(document.getElementsByClassName('gitStats')))
 		</script>
+		{% endif %}
+		{% if page.material %}
+			<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+			<script>
+				Array.from(document.getElementsByClassName("mdc-select")).forEach(elem => new mdc.select.MDCSelect(elem));
+			</script>
 		{% endif %}
 	</body>
 </html>
