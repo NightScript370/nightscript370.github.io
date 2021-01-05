@@ -54,7 +54,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 					<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Sort</span></span>
 					<span class="mdc-notched-outline__trailing"></span>
 				</span>
-				<span class="mdc-select__selected-text-container"><span id="sortSelected" class="mdc-select__selected-text">Date</span></span>
+				<span class="mdc-select__selected-text-container"><span id="sortSelected" class="mdc-select__selected-text">Initial Publishing Date</span></span>
 				<span class="mdc-select__dropdown-icon">
 					<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
 						<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
@@ -66,7 +66,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 				<ul class="mdc-list" role="listbox" aria-label="Type">
 					<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="date" role="option">
 						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Date</span>
+						<span class="mdc-list-item__text">Initial Publishing Date</span>
 					</li>
 					<li class="mdc-list-item" aria-selected="false" data-value="length" role="option">
 						<span class="mdc-list-item__ripple"></span>
@@ -135,16 +135,16 @@ I like to write a lot so I thought I might as well write things in a blog. These
 	const articleListContainer = document.getElementById("articleList");
 	const filter = {
 		'All/No Filter': {
-			'Date (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Date (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
+			'Initial Publishing Date (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
+			'Initial Publishing Date (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
 			'Length (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
 			'Length (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
 		},
 		'Educational/School': {
-			'Date (Ascending)': [...articleListContainer.children]
+			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Date (Descending)': [...articleListContainer.children]
+			'Initial Publishing Date (Descending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
 			'Length (Ascending)': [...articleListContainer.children]
@@ -155,10 +155,10 @@ I like to write a lot so I thought I might as well write things in a blog. These
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
 		},
 		'Personal Stories': {
-			'Date (Ascending)': [...articleListContainer.children]
+			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Date (Descending)': [...articleListContainer.children]
+			'Initial Publishing Date (Descending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
 			'Length (Ascending)': [...articleListContainer.children]
@@ -169,10 +169,10 @@ I like to write a lot so I thought I might as well write things in a blog. These
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
 		},
 		'Video Gaming': {
-			'Date (Ascending)': [...articleListContainer.children]
+			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Date (Descending)': [...articleListContainer.children]
+			'Initial Publishing Date (Descending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
 			'Length (Ascending)': [...articleListContainer.children]
