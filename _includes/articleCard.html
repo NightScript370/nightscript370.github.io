@@ -20,7 +20,7 @@
 
 {% assign CardShareLinks = "" | split: "," | push: FaceBook | push: Twitter | push: WhatsApp | push: Reddit %}
 
-<div class="card shareCard h-100">
+<div class="card shareCard h-100" {% if include.articleDate %}articleDate="{{ include.articleDate }}"{% endif %} {% if include.articleLength %}articleLength="{{ include.articleLength }}"{% endif %}>
 	<div class="card-body">
 		<a class="h5 card-title" href="{{ cardLink }}">{{ cardTitle }}</a>
 		<p class="card-text">{{ cardDescription }}</p>

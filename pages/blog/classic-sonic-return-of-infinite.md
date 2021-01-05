@@ -2,6 +2,7 @@
 title: "Classic Sonic: Return of Infinite"
 description: How could a potential original classic sonic game play out?
 permalink: /blog/sonic-return-of-infinite
+plyr: true
 ---
 # Classic Sonic: Return of Infinite
 {:.mb-0}
