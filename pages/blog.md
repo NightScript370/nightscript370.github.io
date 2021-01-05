@@ -72,6 +72,10 @@ I like to write a lot so I thought I might as well write things in a blog. These
 						<span class="mdc-list-item__ripple"></span>
 						<span class="mdc-list-item__text">Length</span>
 					</li>
+					<li class="mdc-list-item" aria-selected="false" data-value="title" role="option">
+						<span class="mdc-list-item__ripple"></span>
+						<span class="mdc-list-item__text">Title</span>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -139,6 +143,8 @@ I like to write a lot so I thought I might as well write things in a blog. These
 			'Initial Publishing Date (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
 			'Length (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
 			'Length (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
+			'Title (Ascending)': [...articleListContainer.children].sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
+			'Title (Descending)': [...articleListContainer.children].sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
 		},
 		'Educational/School': {
 			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
@@ -153,6 +159,12 @@ I like to write a lot so I thought I might as well write things in a blog. These
 			'Length (Descending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
+			'Title (Ascending)': [...articleListContainer.children]
+				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
+				.sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
+			'Title (Descending)': [...articleListContainer.children]
+				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
+				.sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
 		},
 		'Personal Stories': {
 			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
@@ -167,6 +179,12 @@ I like to write a lot so I thought I might as well write things in a blog. These
 			'Length (Descending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
+			'Title (Ascending)': [...articleListContainer.children]
+				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
+				.sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
+			'Title (Descending)': [...articleListContainer.children]
+				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
+				.sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
 		},
 		'Video Gaming': {
 			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
@@ -181,6 +199,12 @@ I like to write a lot so I thought I might as well write things in a blog. These
 			'Length (Descending)': [...articleListContainer.children]
 				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
 				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
+			'Title (Ascending)': [...articleListContainer.children]
+				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
+				.sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
+			'Title (Descending)': [...articleListContainer.children]
+				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
+				.sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
 		},
 	};
 
