@@ -150,11 +150,7 @@ a {
 			-webkit-box-shadow: 0 0 5px 0 var(--shadow-color);
 			box-shadow:         0 0 5px 0 var(--shadow-color);
 
-			background-color: var(--menu-element);
-
-			-webkit-transition: 0.3s;
-			-o-transition: 0.3s;
-			transition: 0.3s; }
+			background-color: var(--menu-element); }
 			@media (prefers-reduced-motion: reduce) {
 				#sidebar #sidebarCollapse {
 					-webkit-transition: none;
