@@ -32,55 +32,28 @@ I like to write a lot so I thought I might as well write things in a blog. These
 
 <script>
 	const articleListContainer = document.getElementById("articleList");
+	const sort = {
+		'Date (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
+		'Date (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
+		'Length (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
+		'Length (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
+	};
 
-	let sort = {};
-	['length-ascending', 'length-descending', 'date-ascending', 'date-descending'].forEach(elem => sort[elem] = {button: document.createElement("button"), elements: Array.from(articleListContainer.children)});
+	const buttonBase = document.createElement("button");
+	buttonBase.classList.add('btn');
+	buttonBase.classList.add('btn-primary');
+	buttonBase.classList.add('m-3');
 
-	sort['length-ascending']['elements']
-		.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) + parseInt(y.firstElementChild.getAttribute("articlelength")));
+	for (const [key, value] of Object.entries(sort)) {
+		let button = buttonBase.cloneNode(true);
+		button.innerHTML = key;
 
-	sort['length-ascending'].button.innerHTML = 'Length (Ascending)';
-	sort['length-ascending'].button.addEventListener('click', () => {
-		Array.prototype.slice.call(articleListContainer.children, 0).forEach(e => e.remove());
-		console.log(sort['length-ascending'].button.innerHTML, sort['length-ascending'].elements.map(e=>e.firstElementChild));
-		sort['length-ascending']['elements'].forEach(e => articleListContainer.appendChild(e));
-	});
+		button.addEventListener('click', () => {
+			Array.prototype.slice.call(articleListContainer.children, 0).forEach(e => e.remove());
+			console.log(key, value);
+			value.forEach(e => articleListContainer.appendChild(e));
+		});
 
-	sort['length-descending']['elements']
-		.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength")));
-
-	sort['length-descending'].button.innerHTML = 'Length (Descending)';
-	sort['length-descending'].button.addEventListener('click', () => {
-		Array.prototype.slice.call(articleListContainer.children, 0).forEach(e => e.remove());
-		console.log(sort['length-descending'].button.innerHTML, sort['length-descending'].elements.map(e=>e.firstElementChild));
-		sort['length-descending']['elements'].forEach(e => articleListContainer.appendChild(e));
-	});
-
-	sort['date-descending']['elements']
-		.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate")));
-
-	sort['date-descending'].button.innerHTML = 'Date (Descending)';
-	sort['date-descending'].button.addEventListener('click', () => {
-		Array.prototype.slice.call(articleListContainer.children, 0).forEach(e => e.remove());
-		console.log(sort['date-descending'].button.innerHTML, sort['date-descending'].elements.map(e=>e.firstElementChild));
-		sort['date-descending']['elements'].forEach(e => articleListContainer.appendChild(e));
-	});
-
-	sort['date-ascending']['elements']
-		.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate")));
-
-	sort['date-ascending'].button.innerHTML = 'Date (Ascending)';
-	sort['date-ascending'].button.addEventListener('click', () => {
-		Array.prototype.slice.call(articleListContainer.children, 0).forEach(e => e.remove());
-		console.log(sort['date-ascending'].button.innerHTML, sort['date-ascending'].elements.map(e=>e.firstElementChild));
-		sort['date-ascending']['elements'].forEach(e => articleListContainer.appendChild(e));
-	});
-
-	Object.values(sort).forEach(({button}) => {
-		button.classList.add('btn');
-		button.classList.add('btn-primary');
-
-		button.classList.add('m-3');
 		articleListContainer.insertAdjacentElement('afterend', button);
-	})
+	}
 </script>
