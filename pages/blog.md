@@ -2,8 +2,71 @@
 title: Blog Posts
 permalink: /blog/
 material: true
+noBG: true
 ---
 
+<style>
+	.carousel-item img {
+		height: 100vh;
+		padding: 15vh;
+		opacity: .75;
+	}
+
+	.imageFadeGradient::after {
+		display: block;
+		position: relative;
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, var(--background-filter) 100%);
+		margin-top: -25vh;
+		height: 25vh;
+		width: 100%;
+		content: '';
+	}
+
+	.carousel-caption {
+		right: 0;
+		text-align: left;
+	}
+</style>
+
+<div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<div class="imageFadeGradient"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" class="d-block ms-auto me-auto" alt="..."></div>
+			<div class="carousel-caption d-none d-md-block">
+				<a href="/blog/privacy" class="h1">Privacy Issues</a>
+				<h4 noAnchor>Where's the fine line of how much info you have on someone? How do you even get that person's info?</h4>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="imageFadeGradient"><img src="https://www.woodtv.com/wp-content/uploads/sites/51/2020/03/zoom-school-pic.jpg" class="d-block" style="height: 100vh;" alt="..."></div>
+			<div class="carousel-caption d-none d-md-block">
+				<a href="/blog/online-school-issues" class="h1">Online School Issues</a>
+				<h4 noAnchor>Debating whether video-conferencing is about inclusion or control.</h4>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="imageFadeGradient"><img src="https://sc-manage.com/wp-content/uploads/2020/07/Covid-Safety-1080x675.png" class="d-block" style="height: 100vh;" alt="..."></div>
+			<div class="carousel-caption d-none d-md-block">
+				<a href="/blog/summer-2020" style="h1">My summer of 2020</a>
+				<h4 noAnchor>A summer where everything is supposed to go wrong ended up being the best summer of my life (so far).</h4>
+			</div>
+		</div>
+	</div>
+	<a class="carousel-control-prev" href="#blogCarousel" role="button" data-bs-slide="prev">
+		<picture style="width: 4em;">
+			<source srcset="/assets/images/icons/icons8-back-48.png" type="image/avif">
+			<img src="/assets/images/icons/icons8-back-48.png">
+		</picture>
+	</a>
+	<a class="carousel-control-next" href="#blogCarousel" role="button" data-bs-slide="next">
+		<picture style="width: 4em;">
+			<source srcset="/assets/images/icons/icons8-forward-48.png" type="image/avif">
+			<img src="/assets/images/icons/icons8-forward-48.png">
+		</picture>
+	</a>
+</div>
+
+<div class="page-padding" style="background-color: var(--background-filter);" markdown="1">
 # NightScript's Domain -- Blog Section
 I like to write a lot so I thought I might as well write things in a blog. These posts are mearly expressing my viewpoints, opinions and thoughts. Please keep an open mind when reading this.
 
@@ -134,6 +197,7 @@ I like to write a lot so I thought I might as well write things in a blog. These
 - Most recent rant: [Edgenuity Issues](/blog/edgenuity-issues)
 - Most recent constructive analysis at issue: [Online School Issues](/blog/online-school-issues)
 - Most recent video game related article: [Classic Sonic: Return of Infinite](/blog/sonic-return-of-infinite)
+</div>
 
 <script>
 	const articleListContainer = document.getElementById("articleList");

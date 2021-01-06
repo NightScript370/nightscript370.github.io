@@ -161,7 +161,7 @@ layout: compress
 		</nav>
 
 		<!-- Page Content  -->
-		<div id="content" class="{% if page.landing %} noBG {% else %} page-padding {% endif %}">
+		<div id="content" class="{% if page.noBG %} noBG {% else %} page-padding {% endif %}">
 			{% if page.unfinished %}
 				{% include alert.html alert-type="warning" alert-text="Keep in mind that this is an unfinished article. Thoughts shown here may not be reflective of my final arguments, and I request that this is not shared anywhere." %}
 			{% endif %}

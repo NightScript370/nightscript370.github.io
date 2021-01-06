@@ -4,6 +4,7 @@ description: This website was made to document things I've accomplished over the
 permalink: /
 landing: true
 github: true
+noBG: true
 ---
 
 {% capture blog %}
