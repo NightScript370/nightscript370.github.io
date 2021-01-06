@@ -7,9 +7,23 @@ noBG: true
 
 <style>
 	.carousel-item img {
-		height: 100vh;
 		padding: 15vh;
 		opacity: .75;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media (max-width: 1399px) {
+		.carousel-item img {
+			height: 50vh;
+			width: 100vw;
+		}
+	}
+	@media (min-width: 1400px) {
+		.carousel-item img {
+			height: 100vh;
+		}
 	}
 
 	.imageFadeGradient::after {
@@ -31,22 +45,22 @@ noBG: true
 <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<div class="imageFadeGradient"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" class="d-block ms-auto me-auto" alt="..."></div>
-			<div class="carousel-caption d-none d-md-block">
+			<div class="imageFadeGradient"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" alt="..."></div>
+			<div class="carousel-caption">
 				<a href="/blog/privacy" class="h1">Privacy Issues</a>
 				<h4 noAnchor>Where's the fine line of how much info you have on someone? How do you even get that person's info?</h4>
 			</div>
 		</div>
 		<div class="carousel-item">
-			<div class="imageFadeGradient"><img src="https://www.woodtv.com/wp-content/uploads/sites/51/2020/03/zoom-school-pic.jpg" class="d-block" style="height: 100vh;" alt="..."></div>
-			<div class="carousel-caption d-none d-md-block">
+			<div class="imageFadeGradient"><img src="https://www.woodtv.com/wp-content/uploads/sites/51/2020/03/zoom-school-pic.jpg" alt="..."></div>
+			<div class="carousel-caption">
 				<a href="/blog/online-school-issues" class="h1">Online School Issues</a>
 				<h4 noAnchor>Debating whether video-conferencing is about inclusion or control.</h4>
 			</div>
 		</div>
 		<div class="carousel-item">
-			<div class="imageFadeGradient"><img src="https://sc-manage.com/wp-content/uploads/2020/07/Covid-Safety-1080x675.png" class="d-block" style="height: 100vh;" alt="..."></div>
-			<div class="carousel-caption d-none d-md-block">
+			<div class="imageFadeGradient"><img src="https://sc-manage.com/wp-content/uploads/2020/07/Covid-Safety-1080x675.png" alt="..."></div>
+			<div class="carousel-caption">
 				<a href="/blog/summer-2020" class="h1">My summer of 2020</a>
 				<h4 noAnchor>A summer where everything is supposed to go wrong ended up being the best summer of my life (so far).</h4>
 			</div>
