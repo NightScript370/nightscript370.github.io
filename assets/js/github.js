@@ -77,7 +77,7 @@ export default async function (elements) {
 							barItemSize = /(\d+(?:.\d+)?)/.exec(r.innerHTML)[1]
 
 							if (gitStatsDisplay == 'piechart') {
-								langBar.innerHTML += `<div class="pie__segment" style="--offset: ${previousSize}; --value: ${barItemSize}; --bg: ${barItemColor};"></div>`;
+								langBar.innerHTML += `<div class="pie__segment" style="--offset: ${previousSize}; --value: ${barItemSize}; --bg: ${barItemColor}; ${parseInt(barItemSize) > 50 ? '--over50: 1;' : ''}"></div>`;
 								previousSize = previousSize.plus(barItemSize)
 							} else
 								langBar.innerHTML += `<div style="width: ${barItemSize}%; background: ${barItemColor};"></div>`
@@ -219,7 +219,7 @@ export default async function (elements) {
 							.innerHTML
 					} catch (e) {
 						console.error('Taking advantage of fallback', e);
-						CommitsPushedTitle = 'Commits Pushed (2020)'
+						CommitsPushedTitle = 'Commits Pushed (2021)'
 					}
 
 					ProfileStatsHTML = `<div class="gitProfileStatsGrid ${gitStatsDisplay == 'bar' ? 'mb-3' : ''}">
