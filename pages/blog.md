@@ -47,7 +47,7 @@ noBG: true
 		<div class="carousel-item">
 			<div class="imageFadeGradient"><img src="https://sc-manage.com/wp-content/uploads/2020/07/Covid-Safety-1080x675.png" class="d-block" style="height: 100vh;" alt="..."></div>
 			<div class="carousel-caption d-none d-md-block">
-				<a href="/blog/summer-2020" style="h1">My summer of 2020</a>
+				<a href="/blog/summer-2020" class="h1">My summer of 2020</a>
 				<h4 noAnchor>A summer where everything is supposed to go wrong ended up being the best summer of my life (so far).</h4>
 			</div>
 		</div>
