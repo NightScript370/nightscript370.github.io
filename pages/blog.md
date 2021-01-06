@@ -70,7 +70,7 @@ noBG: true
 # NightScript's Domain -- Blog Section
 I like to write a lot so I thought I might as well write things in a blog. These posts are mearly expressing my viewpoints, opinions and thoughts. Please keep an open mind when reading this.
 
-<div class="mb-3 d-flex" style="justify-content: space-between;">
+<div class="mb-3 d-md-flex" style="justify-content: space-between;">
 	<div>
 		<div class="mdc-select mdc-select--outlined rounded">
 			<div class="mdc-select__anchor">
