@@ -39,6 +39,7 @@ noBG: true
 	.carousel-caption {
 		right: 0;
 		text-align: left;
+		color: var(--text-color);
 	}
 </style>
 
