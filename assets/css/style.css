@@ -744,13 +744,6 @@ tbody tr:nth-child(even) {
 		grid-row: 2;
 		grid-column: 1 / span 2;}
 
-.videoEmbedsWrap {
-	width: 640px;
-	height: 360px;
-	max-width: 100%;
-	max-height: auto;
-}
-
 .plyr__volume {
 	max-width: initial;
 	min-width: initial;

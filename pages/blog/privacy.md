@@ -6,47 +6,20 @@ plyr: true
 ---
 
 <style>
-#neimodImage, #nightScriptImage, #searxImage, #messagingIcon, #firefoxImage, #fedoraImage { order: 2; }
+#neimodImage, #nightScriptImage, #searxImage, #messagingIcon, #fedoraImage, #cryptImage { order: 2; }
 
 @media (max-width: 767px) {
-	#zammisImage img,
-	#neimodImage img,
-	#bushingImage img,
-	#nightScriptImage img,
-	#mastodonImage img,
-	#searxImage img,
-	#ytImage img,
-	#messagingIcon img,
-	#ptImage img,
-	#torImage img,
-	#firefoxImage img,
-	#fedoraImage img,
-	#giteaImage img {
-		max-width: 25vh;
+	.gridImage {
+		max-width: 25vw;
 	}
 }
 
 @media (min-width: 768px) {
-	#zammisImage { flex-basis: 95%; }
-	#nightScriptImage { flex-basis: 112.5%; }
-	#neimodImage, #bushingImage, #messagingIcon { flex-basis: 90%; }
-	#ytImage, #mastodonImage, #ptImage, #searxImage { flex-basis: 70%; }
-	#torImage, #firefoxImage, #fedoraImage {flex-basis: 75%;}
-	#giteaImage { flex-basis: 50%; }
-}
+	.gridText { flex: 1 1 auto; }
+	.gridImage { object-fit: contain; align-self: flex-start; }
 
-@media (min-width: 992px) {
-	#zammisImage { flex-basis: 155%; }
-	#nightScriptImage { flex-basis: 172.5%; }
-	#neimodImage, #bushingImage, #messagingIcon { flex-basis: 140%; }
-	#ytImage, #mastodonImage, #ptImage, #searxImage { flex-basis: 70%; }
-}
-
-@media (min-width: 1400px) {
-	#zammisImage { flex-basis: 45%; }
-	#nightScriptImage { flex-basis: 47.5%; }
-	#neimodImage, #bushingImage, #messagingIcon { flex-basis: 40%; }
-	#ytImage, #mastodonImage, #ptImage, #searxImage, #torImage, #firefoxImage, #giteaImage, #fedoraImage { flex-basis: 20%; }
+	.gridImage { width: 5em; }
+	#zammisImage, #neimodImage, #bushingImage, #nightScriptImage { width: 7em; }
 }
 </style>
 
@@ -64,31 +37,30 @@ plyr: true
 {% endcapture %}
 
 <h1 class="mb-0" noAnchor>Privacy Issues</h1>
-<small class="font-italic font-weight-light font-underline">Published on December 31st, 2020 - Edited on January 4th, 2021</small>
+<small class="font-italic font-weight-light font-underline">Published on December 31st, 2020 - Edited on January 8th, 2021</small>
 
 <div class="d-xxl-none d-print-none">{{ TOC | markdownify }}</div>
 <div class="row" markdown="1">
 <div class="col-xxl-9" markdown="1">
 
 <div class="d-md-flex d-print-block" id="historyOfPrivacyBreach">
-	<div id="zammisImage" class="d-print-none"><img class="rounded" src="/assets/articles/zammis.jpg" alt="Zammis Clark"></div>
-	<p class="ms-md-2">Zammis Clark, a 24-year old security researcher, had access to all of Nintendo's files from mid-March to late-May of 2018. After going through the file server and getting everything he wanted (including Software Development Kits, unreleased titles and source code for popular titles), different things were sent to different individuals (likely all of them being in the SUXXORS scene release group) in May of 2018. The damages that Nintendo estimates are between 700K euros and 1.4 million euros. However, despite his pleading in court as guilty, this hasn't stopped his friends from leaking these files to the public themselves. Within one of the latest leaks, it was revealed that Nintendo was once contracting hackers by visiting them in person, something I consider to be a privacy breach.</p>
+	<img id="zammisImage" class="rounded d-print-none gridImage" src="/assets/articles/zammis.jpg" alt="Zammis Clark">
+	<p class="ms-md-2 gridText">Zammis Clark, a 24-year old security researcher, had access to all of Nintendo's files from mid-March to late-May of 2018. After going through the file server and getting everything he wanted (including Software Development Kits, unreleased titles and source code for popular titles), different things were sent to different individuals (likely all of them being in the SUXXORS scene release group) in May of 2018. The damages that Nintendo estimates are between 700K euros and 1.4 million euros. However, despite his pleading in court as guilty, this hasn't stopped his friends from leaking these files to the public themselves. Within one of the latest leaks, it was revealed that Nintendo was once contracting hackers by visiting them in person, something I consider to be a privacy breach.</p>
 </div>
 
 <div class="d-md-flex d-print-block mb-2">
-	<div id="neimodImage" class="d-print-none"><img class="rounded" src="/assets/articles/neimod.jpg" alt="Mr. Domien"></div>
-	<p class="me-md-2">
-	In 2012, Nintendo setup a meeting with neimod, a hacker for the Nintendo 3DS handheld device. In the meeting, they persuaded him to distance himself from hacking Nintendo system/products and to join Nintendo. But how did they get the information necessary to set up the meeting? Instead of setting up the email via an IRC chatbox or email, it was revealed through the leaked documents that the Nintendo Ninjas has been stocking neimod, documenting all his personal information including his home address and personal activities. They even found it worthy to note that he goes to restaurants <i>alone</i>, in an absolute savage move. This was all done to find the proper time for said meeting, yet the same effect could have been achieved via an email confrontation.</p>
+	<img id="neimodImage" class="rounded d-print-none gridImage" src="/assets/articles/neimod.jpg" alt="Mr. Domien">
+	<p class="me-md-2 gridText">In 2012, Nintendo setup a meeting with neimod, a hacker for the Nintendo 3DS handheld device. In the meeting, they persuaded him to distance himself from hacking Nintendo system/products and to join Nintendo. But how did they get the information necessary to set up the meeting? Instead of setting up the email via an IRC chatbox or email, it was revealed through the leaked documents that the Nintendo Ninjas has been stocking neimod, documenting all his personal information including his home address and personal activities. They even found it worthy to note that he goes to restaurants <i>alone</i>, in an absolute savage move. This was all done to find the proper time for said meeting, yet the same effect could have been achieved via an email confrontation.</p>
 </div>
 
 <div class="d-md-flex d-print-block mb-2">
-	<div id="bushingImage" class="d-print-none"><img class="rounded" src="/assets/articles/ben.png" alt="Ben “bushing” Byer (RIP)"></div>
-	<p class="ms-md-2">Thankfully, a former undocumented altercation was not as creepy (but still a bit creepy), being communicated to via a private work phone number as opposed to face to face. This is what happened with Ben “bushing” Byer, one of the public faces of Team Twiizers (group of hackers that discovered Wii exploits and wrote <a href="https://github.com/fail0verflow/hbc">The Homebrew Channel</a>). After trying to responsibly disclose an exploit, a former director/lawyer at Nintendo of America phoned him as a intimidatory tactic. In both of these cases, they were contacted in ways that aren't accessible to the public. Yet, what happened to going from mildly creepy to stalkery? Thankfully they fixed this in 2015 when hiring Hector Martin, yet who knows how many other hackers were contacted with similar experiences?</p>
+	<img id="bushingImage" class="rounded d-print-none gridImage" src="/assets/articles/ben.png" alt="Ben “bushing” Byer (RIP)">
+	<p class="ms-md-2 gridText">Thankfully, a former undocumented altercation was not as creepy (but still a bit creepy), being communicated to via a private work phone number as opposed to face to face. This is what happened with Ben “bushing” Byer, one of the public faces of Team Twiizers (group of hackers that discovered Wii exploits and wrote <a href="https://github.com/fail0verflow/hbc">The Homebrew Channel</a>). After trying to responsibly disclose an exploit, a former director/lawyer at Nintendo of America phoned him as a intimidatory tactic. In both of these cases, they were contacted in ways that aren't accessible to the public. Yet, what happened to going from mildly creepy to stalkery? Thankfully they fixed this in 2015 when hiring Hector Martin, yet who knows how many other hackers were contacted with similar experiences?</p>
 </div>
 
 <div class="d-md-flex d-print-block">
-	<div id="nightScriptImage" class="d-print-none"><img class="rounded" src="/assets/images/avatar.png" alt="NightScript"></div>
-	<div class="me-md-2">
+	<img id="nightScriptImage" class="d-print-none rounded gridImage" src="/assets/images/avatar.png" alt="NightScript">
+	<div class="me-md-2 gridText">
 		<p>I have quite the experience with privacy breaches, seeing as how I acted worse than Nintendo back in April 2018. After months of trying to fix a relationship with someone (which already fell apart twice at that point), I was told to never join their group again because I was "ignoring" them. Due to being afraid of being trash-talked about behind my back in front of friends, I wanted to leave them with a warning: change or you won't find people to talk with. The warning was given in the form of a semi-private PasteBin document (due to WhatsApp's character limit), but I had included their personal information, making it seem extremely creepy. Since then, I had taken down the official PasteBin document and have no plans of reuploading it, largely due to my regret of doing those actions. I can only imagine the fear he must have gone through, worrying through the night in case anyone wanted to do physical harm to him.</p>
 		<p>The difference in the victims in the stories is while Nintendo was doing it for a confrontational purpose, I was doing it solely for antigonazing purposes. Also, the information I received was at a time when the person trusted me with the information and that trust was broken. Neimod and bushing had not provided Nintendo with any of their information, but they got it through surveilance.</p>
 	</div>
@@ -122,59 +94,87 @@ For those of you who want to start taking a stand against your privacy, here is 
 	<li>
 		<b id="alternatives">Seek alternatives</b>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="mastodonImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/mastodon.svg" alt="Mastodon"></div>
-			<p class="ms-md-2">Although not as popular as commercial products, alternative products can be just as useful or even better at times. Whereas FaceBook and Twitter is a general platform, <a href="https://dev.to/">dev.to</a> is a great platform for developers (& doesn't have a character limit). If you want a purely general platform, Mastodon is an open-source microblogging platforms where the instances are interconnected realms. Just like email, you don't need to be on the same server in order to communicate with others.</p>
+			<img id="mastodonImage" class="d-print-none gridImage" src="https://www.privacytools.io/assets/img/svg/3rd-party/mastodon.svg" alt="Mastodon">
+			<p class="ms-md-2 gridText">Although not as popular as commercial products, alternative products can be just as useful or even better at times. Whereas FaceBook and Twitter is a general platform, <a href="https://dev.to/">dev.to</a> is a great platform for developers (& doesn't have a character limit). If you want a purely general platform, Mastodon is an open-source microblogging platforms where the instances are interconnected realms. Just like email, you don't need to be on the same server in order to communicate with others.</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="searxImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/searx.svg" alt="Searx"></div>
-			<p class="me-md-2">Need to search something on the web? The popular tracker-free search engine is DuckDuckGo, but that code is proprietary and serve advertisements (based on the current search query, not based on previous data collected about you because there is no previous data collected about you). If you want someting truly open source, feel free to look into <a href="https://searx.me/">Searx</a>. There is <a href="https://searx.space/">a list of public instances</a>, but you could also self-host it yourself.</p>
+			<img id="searxImage" class="d-print-none gridImage" src="https://www.privacytools.io/assets/img/svg/3rd-party/searx.svg" alt="Searx">
+			<p class="me-md-2 gridText">Need to search something on the web? The popular tracker-free search engine is DuckDuckGo, but that code is proprietary and serve advertisements (based on the current search query, not based on previous data collected about you because there is no previous data collected about you). If you want someting truly open source, feel free to look into <a href="https://searx.me/">Searx</a>. There is <a href="https://searx.space/">a list of public instances</a>, but you could also self-host it yourself.</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="torImage" class="d-print-none"><img src="https://privacytools.io/assets/img/svg/3rd-party/tor_browser.svg" alt="Tor"></div>
-			<div class="ms-md-2">
+			<img id="torImage" class="d-print-none gridImage" src="/assets/articles/tor.png" alt="Tor">
+			<div class="ms-md-2 gridText">
 				<p>But how would you surf the web and use Searx without a browser? Enter Tor for Android and Desktop. Tor is a network <a href="https://www.torproject.org/about/history/">written</a> by Roger Dingledine and Nick Metthewson with the funding from the Naval research lab. By connecting through a series of tunnels (or the technical term Node) rather than making direct connections, not a single party would know the entire path of who you are and which website you're visiting. Your <a href="https://www.privacytools.io/browsers/#fingerprint">fingerprint</a> is the same as other tor users, meaning you blend right in with the crowd.</p>
+				<ul><li>iOS users have a version of tor in the form of the Onion Browser, yet some traffic may be routed via your normal connection and not Tor due to <a href="https://github.com/OnionBrowser/OnionBrowser/wiki/Traffic-that-leaks-outside-of-Tor-due-to-iOS-limitations">restrictions</a> imposed by Apple.</li></ul>
 				<div class="videoEmbedsWrap"><video class="videoEmbeds d-print-none" controls="" preload="none">
 					<source src="https://www.torproject.org/videos/Tor_Animation_en.mp4" type="video/mp4">
-					<track label="English" kind="captions" src="https://www.torproject.org/videos/en.vtt" srclang="en" default="">
 				</video></div>
 			</div>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="firefoxImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/firefox_browser.svg" alt="FireFox"></div>
-			<p class="me-md-2">iOS users are a bit lucked out though, since some of Tor's traffic would route via your normal connection and not Tor due to <a href="https://github.com/OnionBrowser/OnionBrowser/wiki/Traffic-that-leaks-outside-of-Tor-due-to-iOS-limitations">restrictions</a> imposed by Apple. Mozilla's FireFox is thankfully here to save your privacy day, with its <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-ios">Enhanced Tracking Protection feature</a> that can identify and block trackers as well as cryptominers and fingerprinters. It has all the functions that Apple's safari browser has + a widget for iOS 14 users, allowing you to open new (private) tabs right from the home screen.</p>
+			<img id="fedoraImage" class="d-print-none gridImage" src="https://www.privacytools.io/assets/img/svg/3rd-party/fedora.svg" alt="Fedora">
+			<p class="me-md-2 gridText">Microsoft's latest version of Windows is a <a href="https://www.privacytools.io/operating-systems/#win10">privacy nightmare</a>, especially with Cortana enabled. Consider looking into a Linux distribution, with a WINE setup so you could still run most Windows programs on your new setup. Although the most popular distribution is Ubuntu, I instead recommend <a href="https://getfedora.org/">Fedora</a>, due to the bloatless installation. It comes default with a desktop environment matching Windows's, so there should be no new learning curve (except for installation Linux applications, yet even then, it's much more sophisticated than Windows's.)</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="ytImage" class="d-print-none"><img src="/assets/articles/youtube.png" alt="Youtube"></div>
-			<p class="ms-md-2">Other times, if you must use the service, you should try and look for an alternative front end. Want to watch a YouTube video? Try <a href="https://invidious.snopyta.org/">Invidious</a>, a self-hosted youtube frontend that doesn't give your IP to Google. On Android, I recommend <a href="https://newpipe.net/">NewPipe</a>, an alternative frontend to YouTube that does not use Google's Play Services. There is a tradeoff of not seeing comment replies, but you get privacy and functionality in return (one app for YouTube, SoundCloud and other services + audio only functionality).</p>
+			<img id="giteaImage" class="d-print-none gridImage" src="https://s.gitea.com/img/logo.svg" alt="Gitea">
+			<p class="ms-md-2 gridText">Microsoft (a monopoly that sells software) owning GitHub (a website where open-source companies store their free software) was a fear shared among many developers. This fear was justified when RIAA took down youtube-dl back in October 2020. Although the EFF reverted the app's removal, the damage has already been done and this event stood as one of the biggest threats to open-source. Thankfully, you could host your own Git service via <a href="https://gitea.com/">Gitea</a>, a lightweight open-source Git service written in Go. Feel free to either self-host or use the main instance.</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="fedoraImage" class="d-print-none"><img src="https://www.privacytools.io/assets/img/svg/3rd-party/fedora.svg" alt="Fedora"></div>
-			<p class="me-md-2">Microsoft's latest version of Windows is considered to be a <a href="https://www.privacytools.io/operating-systems/#win10">privacy nightmare</a>, especially with Cortana enabled. For those of you who are developers, it might be worth it to look into a Linux distro + WINE, a program that allows you to run Windows (<code>exe</code>) programs on Linux devices. Although the most popular distro is Ubuntu, it's littered with bloatware that doesn't play nicely with lower end devices. <a href="https://getfedora.org/">Fedora</a>, on the other hand, comes with much less applications on first install.</p>
+			<img id="cryptImage" class="d-print-none gridImage" src="https://www.privacytools.io/assets/img/svg/3rd-party/cryptpad.svg" alt="Cryptpad">
+			<p class="ms-md-2">Did you perhaps use GitHub's gist feature to store text documents? Or are you using something like Microsoft Word? Why not try using <a href="https://cryptpad.fr/pad/">CryptPad</a> instead?<br>
+			Cryptpad is an open-source and real-time collaborative editor, <a href="https://cryptpad.fr/about.html">authored</a> by Aaron MacSween and Yann Flory. Although they do collect data provided by the HTTP protocal for improvement purposes, they will not furnish it to third parties (unless legally required to). If that doesn't sound right with you, feel free to <a href="https://github.com/xwiki-labs/cryptpad/wiki/Installation-guide">host your own instance</a>.</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="giteaImage" class="d-print-none"><img src="https://s.gitea.com/img/logo.svg" alt="Gitea"></div>
-			<p class="ms-md-2">Microsoft (a monopoly that sells software) owning GitHub (a website where open-source companies store their free software) was a fear shared among many developers. This fear was justified when RIAA took down youtube-dl back in October 2020. Although the EFF reverted the app's removal, the damage has already been done and this event stood as one of the biggest threats to open-source. Thankfully, you could host your own Git service via <a href="https://gitea.com/">Gitea</a>, a lightweight open-source Git service written in Go. Feel free to either self-host or use the main instance.</p>
+			<img id="ytImage" class="d-print-none gridImage" src="/assets/articles/youtube.png" alt="Youtube">
+			<p class="ms-md-2 gridText">Other times, if you must use the service, you should try and look for an alternative front end. Want to watch a YouTube video? Try <a href="https://invidious.snopyta.org/">Invidious</a>, a self-hosted youtube frontend that doesn't give your IP to Google. On Android, I recommend <a href="https://newpipe.net/">NewPipe</a>, an alternative frontend to YouTube that does not use Google's Play Services. There is a tradeoff of not seeing comment replies, but you get privacy and functionality in return (one app for YouTube, SoundCloud and other services + audio only functionality).</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="messagingIcon" class="d-print-none"><img src="/assets/images/icons/messaging.png" alt="Messaging"></div>
-			<p class="me-md-2">Communication requires both sides to cooporate, both in terms of willingness to have discussions and which platform to use. Once both parties are willing to switch, it's as easy as facilitating your needs. Any user that currently uses <a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a> has no limitation to switch to <a href="https://signal.org/">Signal</a>, an application with End-To-End encryption. Signal is also great for <a href="https://tosdr.org/#discord">Discord</a> users who either a) only use groups or b) hosts single-channel servers. For Discord servers with multiple channels, look into the <a href="https://matrix.org/">Matrix</a> platform. You can either join another user's home-server (such as "chat.privacytools.io", "nitro.chat" and others, but whatever you do, don't use Matrix's default home server), buy a pre-hosted server using <a href="https://element.io/matrix-services">Element Matrix Services</a> or self-host your own server.</p>
+			<img id="messagingIcon" class="d-print-none gridImage" src="/assets/images/icons/messaging.png" alt="Messaging">
+			<p class="me-md-2 gridText">Communication requires both sides to cooporate, both in terms of willingness to have discussions and which platform to use. Once both parties are willing to switch, it's as easy as facilitating your needs. Any user that currently uses <a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a> has no limitation to switch to <a href="https://signal.org/">Signal</a>, an application with End-To-End encryption. Signal is also great for <a href="https://tosdr.org/#discord">Discord</a> users who either a) only use groups or b) hosts single-channel servers. For Discord servers with multiple channels, look into the <a href="https://matrix.org/">Matrix</a> platform. You can either join another user's home-server (such as "chat.privacytools.io", "nitro.chat" and others, but whatever you do, don't use Matrix's default home server), buy a pre-hosted server using <a href="https://element.io/matrix-services">Element Matrix Services</a> or self-host your own server.</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
-			<div id="ptImage" class="d-print-none"><img src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" alt="PrivacyTools"></div>
-			<p class="ms-md-2">Overall, there's probably something that would facilitate your needs. I definitely recommend checking <a href="https://www.privacytools.io/providers/">PrivacyTools</a>, a site which lists mainstream services alongside alternatives. When looking for alternatives, though, please don't automatically assume that decentralized or open-source means that it is secure. A good example of this is IRC, Personally, I watch videos on NewPipe, microblog on discord, chat on discord and use SMS for communicating with people unwilling to move to Signal. Wait, didn't I just disrecommend Discord and SMS?</p>
+			<img id="ptImage" class="d-print-none gridImage" src="https://raw.githubusercontent.com/privacytools/brand/master/shield/shield.svg" alt="PrivacyTools">
+			<p class="ms-md-2 gridText">Overall, there's probably something that would facilitate your needs. I definitely recommend checking <a href="https://www.privacytools.io/providers/">PrivacyTools</a>, a site which lists mainstream services alongside alternatives. When looking for alternatives, though, please don't automatically assume that decentralized or open-source means that it is secure. A good example of this is IRC, Personally, I watch videos on NewPipe, microblog on discord, chat on discord and use SMS for communicating with people unwilling to move to Signal. Wait, didn't I just disrecommend Discord and SMS?</p>
 		</div>
 	</li>
 	<li>
 		<b id="actionsLimit">Limit your actions</b>
 		<p>I can't just abandon people cause they don't understand something; this isn't teenagers on prom after their spouse said no! So unfortunately, I'm stuck on platforms which aren't secure and have huge privacy issues. Schools all over the world are currently using corporate video streaming platforms for classes due to the COVID-19 pandemic, so unless we want to get Fs or your teacher is super cool, there's no way to pass high school and avoid giving Zoom your data. So how would you manage?</p>
-		<p>Feel free to check an application's privacy setting. Personalization could be disabled, meaning you could appear to be a first time user as you travel the web. Giving precise location access often times isn't needed for things such as weather. Many other things about you are given away with a simple toggle-in app could shut it all down.</p>
-		<blockquote>
-			<img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sf91b3285d9193eec/image/i9d401b7d547c33dd/version/1508251369/image.jpg" />
-			<footer>Screenshot of Windows10Privacy</footer>
-		</blockquote>
-		<p>If you can't disable everything from the app itself, perhaps check if an external tool can modify the program or install a modified version of the program. Windows 10 has <a href="https://www.winprivacy.de/english-home/">Windows10Privacy</a>, an application which disables specific elements of Windows 10. <a href="https://vancedapp.com/">Youtube Vanced</a> removes all advertisements from videos, meaning Google won't show you the personalization. While not as good as NewPipe is for priacy, it uses MicroOG so it's still better than Stock Youtube.</p>
-		<p>Sharing photos with friends can be super braggy, and I totally understand that sensation when you just want to randomly tell your friends that you're somewhere enjoying yourself, breaking all the COVID rules when they're stuck at home. So how about instead of not uploading images because you just love that attention, instead just put it through an EXIF stripper? Windows can <abbr title='Right Click on Image File -> "Properties" -> "Details" -> "Remove Properties and Personal Information" -> "Create a copy with all possible properties removed" -> "OK"'>remove a file's metadata</abbr> and iOS has a way to <abbr title='"Settings" -> "Privacy" -> "Location Services" -> "Camera" -> "Never"'>disable the capture</abbr> from pictures taken from the Camera app.</p>
-		<p>Don't trust an app you have to install? Don't install it on your main operating system but instead, setup a contained environment titled a Virtual Machine. If anything infectious happens, the damage would be limited to the elements you give your virtual machine access to. It won't be able to escape, yet you are always in control.</p>
+		<ul>
+			<li>Your app's configuration probably contains a few toggles that could let you be as anonymous as possible. Per Eurpoean law, non-mandatory cookies must be toggleable, so be sure to look out for that when you see a cookie pop-up (our site doesn't use cookies so you won't find that here). Personalization and "send data to improve service" should also be options you could disable. Giving precise location access often times isn't needed for things such as weather. Many other things about you are given away with a simple toggle-in app could shut it all down.</li>
+			<li>
+				<blockquote>
+					<img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sf91b3285d9193eec/image/i9d401b7d547c33dd/version/1508251369/image.jpg" />
+					<footer>Screenshot of Windows10Privacy</footer>
+				</blockquote>
+				<p>If you can't disable everything from the app itself, perhaps check if an external tool can modify the program or install a modified version of the program. Windows 10 has <a href="https://www.winprivacy.de/english-home/">Windows10Privacy</a>, an application which disables specific elements of Windows 10. <a href="https://vancedapp.com/">Youtube Vanced</a> removes all advertisements from videos, meaning Google won't show you the personalization. While not as good as NewPipe is for priacy, it uses MicroOG so it's still better than Stock Youtube.</p>
+			</li>
+			<li>
+				Speaking of Google applications, what if you're restricted to their bloated browser? Or what if you're using standard FireFox instead of using the fork which includes <a href="#torImage">Tor</a>? Well, as long as you're not using Internet Explorer or Safari (and if you are, you have bigger issues than privacy), there should be extensions to help you keep your browsing history incognito:
+				<ul>
+					<li><a href="https://tosdr.org/">TOSDR</a>, while not a privacy addon in and of itself, is helpful to describe Terms of Services and shorten them, for those of us who don't read. It even gives scores depending on how much rights you lose. Chances are, if you're still reading this, you can manage fine without this plugin.</li>
+					<li>
+						<p>Behavioral profiling is nothing new, and even exists in our real world. During the second world war, British intelligence operators made anonymous profiles of the German's signaling the morse code by looking at the speed and errors. Years later, that underlying principle has been used on the web, to identify things such as gender and attackers who own user credentials using keystrokes as opposed to morse code. The first time this was <a href="https://web.archive.org/web/20160311163053/https://www.schneier.com/blog/archives/2007/04/keystroke_biome.html">considered</a> was 14 years ago, on April 23rd 2007 by Bruce Schneier. Professor Christophe Rosenberger (the man who identified based on gender) made a talk about it here: <span class="d-none d-print-inline-block">found at https://invidious.snopyta.org/watch?v=ZzQrP4x0u2M</span></p>
+						{% include youtube.html url="ZzQrP4x0u2M" %}
+						<p>To show how dangerous this is, <a href="http://behaviosec.com/">BehavioSec</a> is a Swedish bank company that made a website simulating a login page and bank transfer. After signing up on their site that looks like any other login site, you're asked to simulate a bank transfer by typing exactly 44 characters. The speed of the characters type is recorded, and is then used to give you a score:</p>
+						<blockquote>
+							<img src="https://paul.reviews/content/images/2015/07/4_green.PNG" />
+							<footer>80% confident that they're the same user with a session score of 99%</footer>
+						</blockquote>
+						<p>A chromium extension is here to fix it. When you use <a href="https://chrome.google.com/webstore/detail/keyboard-privacy/aoeboeflhhnobfjkafamelopfeojdohk">Keyboard Privacy</a>, your keystrokes will be cached for a few miliseconds before entering it into the device at a consistent pace. All the keystrokes will appear equal, meaning that there won't be any timing based on how laggy you are. To demonstrate it, the authors have made a video using BehavioSec's website: <span class="d-none d-print-inline-block">found at https://invidious.snopyta.org/watch?v=rAYz7uWPN_8</span></p>
+						{% include youtube.html url="rAYz7uWPN_8" %}
+					</li>
+					<li>Have you been sharing Amazon products with your friends, questioning if you should buy toilet paper (which is apparently a life necessity now over food and shelter)? Well, you probably notice that the search results url is quite long, which contains things like what keyword you used to search for it, what language you're using and such. <a href="https://gitlab.com/KevinRoebert/ClearUrls">ClearURLs</a> can remove the extra fluff, meaning you no longer need to split your messages in two due to a dumb character limit.</li>
+					<li>Must use Google on Firefox? Right click a search result entry and copy the link down. Notice how it isn't the site you're trying to visit. The reason is because instead of not tracking the links you click acrross its search engine or tracking you via JavaScript's onclick, Google adds a redirection layer in between the link you click and the site. "<a href="https://addons.mozilla.org/en-US/firefox/addon/remove-google-redirections/">Remove Google Redirects</a>" seeks to do as the name implies, by making all the links in the search results point directly to the website you wish to browse.</li>
+					<li>Thankfully, advertisements shown on Google's page don't cause the browser to jump but they have annoyingly implemented it on YouTube videos to interrupt your watching session. They also own a service titled Google AdSense which provide these advertisements to other websites. Google AdSense's moto is that you put their advertisement on your page, describe how your page is like so that they can see what type of content you're interested in and sell you related advertisements. Blocking them is quite common, but everyone seems to use AdBlocker (Plus) when they are being paid to not block certain advertisements. <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/">uBlock Origin</a>, on the other hand, is not influenced by money and blocks all the advertisements out there. It's also based on newer memory-efficient technology, which should make slowdowns less noticible.
+					<ul><li>It's worth noting, though, that although the portion given to content creators is small, it's still profit removed from them. Please be respectful when asked why you have an AdBlocker, as it could be looked as robbing. Perhaps use an alternative to support them, such as sharing the content with friends or giving a donation.</li></ul>
+					</li>
+					<li>Google has a system to report bad advertisements, yet the user needs to first come into contact with the bad advert in order to report it in the first place. One of the unacceptable advertisements are redirection advertisements, which would take you to an entirely separate page on load. These pages often hijack the "Previous" button, which means no matter how many times you hit it, you'll still find yourself on that page unless they didn't hijack it enough so that you could right click on the button and find the previous website. If you happen to stumble upon a link that does just this, you can prevent the hijack ability by using FireFox's <a href="https://addons.mozilla.org/en-US/firefox/addon/dont-touch-my-tabs/">Don't touch my tabs</a> addon.</li>
+				</ul>
+			</li>
+			<li>Sharing photos with friends can be super braggy, and I totally understand that sensation when you just want to randomly tell your friends that you're somewhere enjoying yourself, breaking all the COVID rules when they're stuck at home confining to the ""communist"" government. So how about instead of not uploading images because you just love that attention or staying home to prevent the COVID spread, instead just put it through an EXIF stripper? Windows can <abbr title='Right Click on Image File -> "Properties" -> "Details" -> "Remove Properties and Personal Information" -> "Create a copy with all possible properties removed" -> "OK"'>remove a file's metadata</abbr> and iOS has a way to <abbr title='"Settings" -> "Privacy" -> "Location Services" -> "Camera" -> "Never"'>disable the capture</abbr> from pictures taken from the Camera app.</li>
+			<li>Don't trust an app you have to install? Don't install it on your main operating system but instead, setup a contained environment titled a Virtual Machine. If anything infectious happens, the damage would be limited to the elements you give your virtual machine access to. It won't be able to escape, yet you are always in control.</li>
+		</ul>
 	</li>
 </ol>
 
