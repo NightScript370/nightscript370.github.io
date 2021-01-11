@@ -170,6 +170,13 @@ For those of you who want to start taking a stand against your privacy, here is 
 					<ul><li>It's worth noting, though, that although the portion given to content creators is small, it's still profit removed from them. Please be respectful when asked why you have an AdBlocker, as it could be looked as robbing. Perhaps use an alternative to support them, such as sharing the content with friends or giving a donation.</li></ul>
 					</li>
 					<li>Google has a system to report bad advertisements, yet the user needs to first come into contact with the bad advert in order to report it in the first place. One of the unacceptable advertisements are redirection advertisements, which would take you to an entirely separate page on load. These pages often hijack the "Previous" button, which means no matter how many times you hit it, you'll still find yourself on that page unless they didn't hijack it enough so that you could right click on the button and find the previous website. If you happen to stumble upon a link that does just this, you can prevent the hijack ability by using FireFox's <a href="https://addons.mozilla.org/en-US/firefox/addon/dont-touch-my-tabs/">Don't touch my tabs</a> addon.</li>
+					<li>
+						<blockquote>
+							<img src="https://unshorten.link/assets/img/howitworks.png">
+							<footer>Analysis page example from unshorten.link</footer>
+						</blockquote>
+						Often times, content creators think that they own links and want to make profit out of them, so they hide them behind a bit.ly shortener. These shorteners also make it difficult to see where you'd be landing, but not if you use the <a href="https://unshorten.link">unshorten.link</a> addon. This addon can also tell you if the page has malware and the pro version comes with features such as destination screenshot & filtering history.
+					</li>
 				</ul>
 			</li>
 			<li>Sharing photos with friends can be super braggy, and I totally understand that sensation when you just want to randomly tell your friends that you're somewhere enjoying yourself, breaking all the COVID rules when they're stuck at home confining to the ""communist"" government. So how about instead of not uploading images because you just love that attention or staying home to prevent the COVID spread, instead just put it through an EXIF stripper? Windows can <abbr title='Right Click on Image File -> "Properties" -> "Details" -> "Remove Properties and Personal Information" -> "Create a copy with all possible properties removed" -> "OK"'>remove a file's metadata</abbr> and iOS has a way to <abbr title='"Settings" -> "Privacy" -> "Location Services" -> "Camera" -> "Never"'>disable the capture</abbr> from pictures taken from the Camera app.</li>
