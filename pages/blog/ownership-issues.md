@@ -1,7 +1,13 @@
 ---
 title: "Ownership Issues"
-description: Here's an in depth analysis on the word ownership; what's yours and what isn't
+description: How are you the owner of something? Is it based on if you're the author, or can that be ripped out of you?
 permalink: /blog/ownership-issues
+
+blog: true
+initialPublishDate: "May 12 2020"
+editDate: "December 7 2020"
+articleType: "Educational/School"
+length: 5
 ---
 
 # Ownership Issues

@@ -1,6 +1,6 @@
 import Decimal from './libs/decimal.js';
 
-const gitStatsDisplay = 'piechart';
+const gitStatsDisplay = 'piecard';
 const corsURL = 'https://cors-anywhere.herokuapp.com/';
 
 function htmlToElem(html) {
@@ -50,7 +50,7 @@ export default async function (elements) {
 		gridContainer.classList.add('gitGrid')
 
 		const langBar = document.createElement("div")
-		langBar.classList.add(gitStatsDisplay == 'piechart' ? "gitLangPie" : "gitLangBar")
+		langBar.classList.add(gitStatsDisplay == 'piechart' || gitStatsDisplay == 'piecard' ? "gitLangPie" : "gitLangBar")
 
 		const langElementList = document.createElement("div")
 		langElementList.classList.add("gitLangGrid")
@@ -66,6 +66,7 @@ export default async function (elements) {
 
 			switch (gitStatsDisplay) {
 				case 'piechart':
+				case 'piecard':
 				case 'bar':
 					let barItemSize, barItemColor;
 					let previousSize = new Decimal(0)
@@ -76,7 +77,7 @@ export default async function (elements) {
 
 							barItemSize = /(\d+(?:.\d+)?)/.exec(r.innerHTML)[1]
 
-							if (gitStatsDisplay == 'piechart') {
+							if (gitStatsDisplay == 'piechart' || gitStatsDisplay == 'piecard') {
 								langBar.innerHTML += `<div class="pie__segment" style="--offset: ${previousSize}; --value: ${barItemSize}; --bg: ${barItemColor}; ${parseInt(barItemSize) > 50 ? '--over50: 1;' : ''}"></div>`;
 								previousSize = previousSize.plus(barItemSize)
 							} else
@@ -212,6 +213,7 @@ export default async function (elements) {
 			switch (gitStatsDisplay) {
 				case 'bar':
 				case 'piechart':
+				case 'piecard':
 					let CommitsPushedTitle;
 					try {
 						CommitsPushedTitle = Array.from(profStatsPage.querySelectorAll('text'))
@@ -298,13 +300,31 @@ export default async function (elements) {
 		}
 
 		if (gitStatsDisplay == 'piechart') {
-			element.insertAdjacentElement('afterend', gridContainer)
+			element.insertAdjacentElement('afterend', gridContainer);
 			gridContainer.insertAdjacentHTML('beforeend', ProfileStatsHTML);
 
 			langBar.innerHTML = `<div class="pie" style="--size: ${Math.min(gridContainer.clientHeight, gridContainer.clientWidth)}">` + langBar.innerHTML + '</div>';
 			gridContainer.insertAdjacentElement('beforeend', langBar);
 
 			gridContainer.insertAdjacentElement('beforeend', langElementList);
+		} else if (gitStatsDisplay == 'piecard') {
+			element.insertAdjacentHTML('afterend', ProfileStatsHTML);
+			element.parentElement.parentElement.insertAdjacentHTML('afterend', `
+				<div class="socialPageCard">
+					<div class="socialCardContent">
+						<div class="socialCardOffsetGrid">
+							<span class="socialCardImage" alt="Language Pie"><div class="pie" style="--size: 96">${langBar.innerHTML}</div></span>
+							<span class="h2 socialCardTitle">Most Used languages</a>
+						</div>
+						${langElementList.outerHTML}
+					</div>
+				</div>
+			`);
+
+/*			langBar.innerHTML = `<div class="pie" style="--size: ${Math.min(gridContainer.clientHeight, gridContainer.clientWidth)}">` + langBar.innerHTML + '</div>';
+			gridContainer.insertAdjacentElement('beforeend', langBar);
+
+			gridContainer.insertAdjacentElement('beforeend', langElementList);*/
 		}
 
 		try {

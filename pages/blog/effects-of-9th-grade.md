@@ -1,12 +1,18 @@
 ---
 title: "The effects of my 9th grade"
-description: This is the story of my 9th grade, and how it led to a bizzare adventure
+description: Most of my personality can be traced back to key moments that occured to me in 9th grade, between hacked software, rap battles and teachers.
 permalink: /blog/effects-of-9th-grade
+
+blog: true
+initialPublishDate: "October 29 2020"
+editDate: "January 15 2021"
+articleType: "Personal Stories"
+length: 3
 ---
 
 # The Effects of my 9th grade
 {:.mb-0}
-<small class="font-italic font-weight-light font-underline">Published on October 29th, 2020 - Modified on January 15th, 2020</small>
+<small class="font-italic font-weight-light font-underline">Published on October 29th, 2020 - Modified on January 15th, 2021</small>
 
 <div class="d-xl-none" data-toc></div>
 <div class="row" markdown="1">

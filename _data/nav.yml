@@ -15,16 +15,6 @@ sidebar:
   - title: Blog
     image: /assets/images/icons/create.png
     url: /blog/
-  - title: Modding Guides
-    #notif: 2
-    image:
-      avif: /assets/images/icons/wrench.avif
-      png: /assets/images/icons/wrench.png
-    items:
-      - title: Super Mario Maker
-        url: /modding/smm-index
-      - title: Nintendo DS(i)
-        url: /modding/ds-index
   - title: Art Gallery
     url: /graphic-design
     image:

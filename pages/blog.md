@@ -7,23 +7,13 @@ noBG: true
 
 <style>
 	.carousel-item img {
-		padding: 15vh;
-		opacity: .75;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
+		height: 75vh;
+		width: 100vw;
+		object-fit: cover;
 	}
 
-	@media (max-width: 1399px) {
-		.carousel-item img {
-			height: 50vh;
-			width: 100vw;
-		}
-	}
-	@media (min-width: 1400px) {
-		.carousel-item img {
-			height: 100vh;
-		}
+	.carousel-item a.h1 {
+		color: var(--text-color);
 	}
 
 	.imageFadeGradient::after {
@@ -81,214 +71,162 @@ noBG: true
 	</a>
 </div>
 
-<div class="page-padding" style="background-color: var(--background-filter);" markdown="1">
-# NightScript's Domain -- Blog Section
-I like to write a lot so I thought I might as well write things in a blog. These posts are mearly expressing my viewpoints, opinions and thoughts. Please keep an open mind when reading this.
-
-<div class="mb-3 d-md-flex" style="justify-content: space-between;">
-	<div>
-		<div class="mdc-select mdc-select--outlined rounded">
-			<div class="mdc-select__anchor">
+<div class="page-padding" style="background-color: var(--background-filter);">
+	<div class="mb-3 d-md-flex" style="justify-content: space-between;">
+		<div>
+			<div class="mdc-select mdc-select--outlined rounded">
+				<div class="mdc-select__anchor">
+					<span class="mdc-notched-outline">
+						<span class="mdc-notched-outline__leading"></span>
+						<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Type</span></span>
+						<span class="mdc-notched-outline__trailing"></span>
+					</span>
+					<span class="mdc-select__selected-text-container"><span id="filterSelected" class="mdc-select__selected-text">All/No Filter</span></span>
+					<span class="mdc-select__dropdown-icon">
+						<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+							<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
+							<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+						</svg>
+					</span>
+				</div>
+				<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+					<ul class="mdc-list" role="listbox" aria-label="Type">
+						<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="all" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">All/No Filter</span>
+						</li>
+						{% assign all_categories = site.pages | map: "articleType" | sort_natural %}
+						{% assign filteredCategory = " " | split: " " %}
+						{% for item in all_categories %}
+							{% if filteredCategory contains item or item == blank or item == nil %}{%else%}{% assign filteredCategory = filteredCategory | push: item %}{% endif %}
+						{% endfor %}
+						{% for item in filteredCategory %}
+							<li class="mdc-list-item" aria-selected="false" data-value="{{ item }}" role="option">
+								<span class="mdc-list-item__ripple"></span>
+								<span class="mdc-list-item__text">{{ item }}</span>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<label class="mdc-text-field mdc-text-field--outlined">
 				<span class="mdc-notched-outline">
 					<span class="mdc-notched-outline__leading"></span>
-					<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Type</span></span>
+					<span class="mdc-notched-outline__notch"><span class="mdc-floating-label" id="searchFilterNotch">Filter by Title</span></span>
 					<span class="mdc-notched-outline__trailing"></span>
 				</span>
-				<span class="mdc-select__selected-text-container"><span id="filterSelected" class="mdc-select__selected-text">All/No Filter</span></span>
-				<span class="mdc-select__dropdown-icon">
-					<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
-						<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
-						<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
-					</svg>
-				</span>
+				<input id="titleFilterField" type="text" class="mdc-text-field__input" aria-labelledby="searchFilterNotch">
+			</label>
+		</div>
+		<div>
+			<div class="mdc-select mdc-select--outlined rounded">
+				<div class="mdc-select__anchor">
+					<span class="mdc-notched-outline">
+						<span class="mdc-notched-outline__leading"></span>
+						<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Sort</span></span>
+						<span class="mdc-notched-outline__trailing"></span>
+					</span>
+					<span class="mdc-select__selected-text-container"><span id="sortSelected" class="mdc-select__selected-text">Initial Publishing Date</span></span>
+					<span class="mdc-select__dropdown-icon">
+						<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+							<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
+							<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+						</svg>
+					</span>
+				</div>
+				<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+					<ul class="mdc-list" role="listbox" aria-label="Type">
+						<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="date" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">Initial Publishing Date</span>
+						</li>
+						<li class="mdc-list-item" aria-selected="false" data-value="editDate" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">Last Edited Date</span>
+						</li>
+						<li class="mdc-list-item" aria-selected="false" data-value="length" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">Length</span>
+						</li>
+						<li class="mdc-list-item" aria-selected="false" data-value="title" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">Title</span>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-				<ul class="mdc-list" role="listbox" aria-label="Type">
-					<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="all" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">All/No Filter</span>
-					</li>
-					<li class="mdc-list-item" aria-selected="false" data-value="education" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Educational/School</span>
-					</li>
-					<li class="mdc-list-item" aria-selected="false" data-value="personal" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Personal Stories</span>
-					</li>
-					<li class="mdc-list-item" aria-selected="false" data-value="vgames" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Video Gaming</span>
-					</li>
-				</ul>
+			<div class="mdc-select mdc-select--outlined rounded">
+				<div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
+					<span class="mdc-notched-outline">
+						<span class="mdc-notched-outline__leading"></span>
+						<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Direction</span></span>
+						<span class="mdc-notched-outline__trailing"></span>
+					</span>
+					<span class="mdc-select__selected-text-container"><span id="directionSelected" class="mdc-select__selected-text">Descending</span></span>
+					<span class="mdc-select__dropdown-icon">
+						<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+							<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
+							<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+						</svg>
+					</span>
+				</div>
+				<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+					<ul class="mdc-list" role="listbox" aria-label="Type">
+						<li class="mdc-list-item" aria-selected="false" data-value="education" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">Ascending</span>
+						</li>
+						<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="all" role="option">
+							<span class="mdc-list-item__ripple"></span>
+							<span class="mdc-list-item__text">Descending</span>
+						</li>
+					</ul>
+				</div>
 			</div>
+			<button class="btn btn-primary" onclick="refreshListing()">Submit</button>
 		</div>
 	</div>
-	<div>
-		<div class="mdc-select mdc-select--outlined rounded">
-			<div class="mdc-select__anchor">
-				<span class="mdc-notched-outline">
-					<span class="mdc-notched-outline__leading"></span>
-					<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Sort</span></span>
-					<span class="mdc-notched-outline__trailing"></span>
-				</span>
-				<span class="mdc-select__selected-text-container"><span id="sortSelected" class="mdc-select__selected-text">Initial Publishing Date</span></span>
-				<span class="mdc-select__dropdown-icon">
-					<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
-						<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
-						<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
-					</svg>
-				</span>
-			</div>
-			<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-				<ul class="mdc-list" role="listbox" aria-label="Type">
-					<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="date" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Initial Publishing Date</span>
-					</li>
-					<li class="mdc-list-item" aria-selected="false" data-value="length" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Length</span>
-					</li>
-					<li class="mdc-list-item" aria-selected="false" data-value="title" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Title</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="mdc-select mdc-select--outlined rounded">
-			<div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
-				<span class="mdc-notched-outline">
-					<span class="mdc-notched-outline__leading"></span>
-					<span class="mdc-notched-outline__notch"><span id="outlined-select-label" class="mdc-floating-label mdc-floating-label--float-above">Direction</span></span>
-					<span class="mdc-notched-outline__trailing"></span>
-				</span>
-				<span class="mdc-select__selected-text-container"><span id="directionSelected" class="mdc-select__selected-text">Descending</span></span>
-				<span class="mdc-select__dropdown-icon">
-					<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
-						<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
-						<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
-					</svg>
-				</span>
-			</div>
-			<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-				<ul class="mdc-list" role="listbox" aria-label="Type">
-					<li class="mdc-list-item" aria-selected="false" data-value="education" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Ascending</span>
-					</li>
-					<li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="all" role="option">
-						<span class="mdc-list-item__ripple"></span>
-						<span class="mdc-list-item__text">Descending</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<button class="btn btn-primary" onclick="refreshListing()">Submit</button>
+	<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 mb-3" id="articleList">
+		{% for articlePage in site.pages %}
+			{% if articlePage.blog %}
+				<div class="col">
+					{% include articleCard.html cardTitle=articlePage.title cardLink=articlePage.permalink cardDescription=articlePage.description articleDate=articlePage.initialPublishDate articleLength=articlePage.length articleType=articlePage.articleType articleEditDate=articlePage.editDate %}
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
-</div>
-
-<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 mb-3" id="articleList">
-	<div class="col">{% include articleCard.html cardTitle="Privacy Issues" cardLink="/blog/privacy" cardDescription="Where's the fine line of how much info you have on someone? How do you even get that person's info?" articleDate="8" articleLength="2" articleType="school" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="Progressive Development" cardLink="/blog/progressive-development" cardDescription="The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?" articleDate="7" articleLength="8" articleType="school" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="Effects of my 9th grade" cardLink="/blog/effects-of-9th-grade" cardDescription="Most of my personality can be traced back to key moments that occured to me in 9th grade." articleDate="6" articleLength="3" articleType="personal" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="Online School Issues" cardLink="/blog/online-school-issues" cardDescription="Debating whether video-conferencing is about inclusion or control." articleDate="5" articleLength="4" articleType="school" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="My Summer of 2020" cardLink="/blog/summer-2020" cardDescription="A summer where everything is supposed to go wrong ended up being the best summer of my life (so far)." articleDate="4" articleLength="1" articleType="personal" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="Edgenuity Issues" cardLink="/blog/edgenuity-issues" cardDescription="Edgenuity's failure at adapting learning into the digital age." articleDate="3" articleLength="7" articleType="school" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="Classic Sonic: Return of Infinite" cardLink="/blog/sonic-return-of-infinite" cardDescription="Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?" articleDate="2" articleLength="6" articleType="game" %}</div>
-	<div class="col">{% include articleCard.html cardTitle="What is considered ownership" cardLink="/blog/ownership-issues" cardDescription="How are you the owner of something? Is it based on if you're the author, or can that be ripped out of you?" articleDate="1" articleLength="5" articleType="school" %}</div>
-</div>
-
-## Statistics
-
-- Most recent article with a broad topic: [Progressive Development](/blog/progressive-development)
-- Most recent article with a specific yet broad topic: [Privacy Issues](/blog/privacy)
-- Tallest article (images and layouts included): [My Summer of 2020](/blog/summer-2020)
-- Tallest article (purely text): [What is considered ownership](/blog/ownership-issues)
-- Shortest article: [Progressive Development](/blog/progressive-development)
-- Most recent personal event: [My Summer of 2020](/blog/summer-2020)
-- Most recent article describing a personal event: [Effects of 9th grade](/blog/effects-of-9th-grade)
-- Most recent rant: [Edgenuity Issues](/blog/edgenuity-issues)
-- Most recent constructive analysis at issue: [Online School Issues](/blog/online-school-issues)
-- Most recent video game related article: [Classic Sonic: Return of Infinite](/blog/sonic-return-of-infinite)
 </div>
 
 <script>
 	const articleListContainer = document.getElementById("articleList");
-	const filter = {
+	let filter = {
 		'All/No Filter': {
-			'Initial Publishing Date (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Initial Publishing Date (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Length (Ascending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
+			'Initial Publishing Date (Descending)': [...articleListContainer.children].sort((x, y) => new Date(y.firstElementChild.getAttribute("articledate")) - new Date(x.firstElementChild.getAttribute("articledate"))),
+			'Initial Publishing Date (Ascending)': [...articleListContainer.children].sort((x, y) => new Date(x.firstElementChild.getAttribute("articledate")) - new Date(y.firstElementChild.getAttribute("articledate"))),
+			'Last Edited Date (Descending)': [...articleListContainer.children].sort((x, y) => new Date(y.firstElementChild.getAttribute("articleeditdate")) - new Date(x.firstElementChild.getAttribute("articleeditdate"))),
+			'Last Edited Date (Ascending)': [...articleListContainer.children].sort((x, y) => new Date(x.firstElementChild.getAttribute("articleeditdate")) - new Date(y.firstElementChild.getAttribute("articleeditdate"))),
 			'Length (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
-			'Title (Ascending)': [...articleListContainer.children].sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
 			'Title (Descending)': [...articleListContainer.children].sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
-		},
-		'Educational/School': {
-			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Initial Publishing Date (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Length (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
-			'Length (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
-			'Title (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
-				.sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
-			'Title (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'school')
-				.sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
-		},
-		'Personal Stories': {
-			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Initial Publishing Date (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Length (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
-			'Length (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
-			'Title (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
-				.sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
-			'Title (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'personal')
-				.sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
-		},
-		'Video Gaming': {
-			'Initial Publishing Date (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) - parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Initial Publishing Date (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articledate")) + parseInt(y.firstElementChild.getAttribute("articledate"))),
-			'Length (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))).reverse(),
-			'Length (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
-				.sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
-			'Title (Ascending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
-				.sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
-			'Title (Descending)': [...articleListContainer.children]
-				.filter(elem => elem.firstElementChild.getAttribute("articletype") == 'game')
-				.sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
+			'Title (Ascending)': [...articleListContainer.children].sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
 		},
 	};
+	filter['All/No Filter']['Length (Ascending)'] = [...filter['All/No Filter']['Length (Descending)']].reverse();
+
+	const allTypes = [{% for item in filteredCategory %}"{{item}}",{% endfor %}];
+	allTypes.forEach(type => {
+		filter[type] = {};
+		for (const [key, value] of Object.entries(filter["All/No Filter"]))
+			filter[type][key] = [...value].filter(elem => elem.firstElementChild.getAttribute("articletype") == type);
+	});
 
 	const refreshListing = () => {
 		Array.prototype.slice.call(articleListContainer.children, 0).forEach(e => e.remove());
-		filter[document.getElementById("filterSelected").innerHTML][document.getElementById("sortSelected").innerHTML + ` (${document.getElementById("directionSelected").innerHTML})`].forEach(e => articleListContainer.appendChild(e));
+		let searchResults = [...filter[document.getElementById("filterSelected").innerHTML][document.getElementById("sortSelected").innerHTML + ` (${document.getElementById("directionSelected").innerHTML})`]];
+
+		if (document.getElementById("titleFilterField").value != "")
+			searchResults = searchResults.filter(elem => elem.getElementsByClassName('card-title')[0].innerText.includes(document.getElementById("titleFilterField").value));
+
+		searchResults.forEach(e => articleListContainer.appendChild(e));
 	};
+	refreshListing();
 </script>

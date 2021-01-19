@@ -1,8 +1,14 @@
 ---
 title: "Classic Sonic: Return of Infinite"
-description: How could a potential original classic sonic game play out?
+description: Could a potential sequel to Mania include Forces and its story, while being simultaneously fresh and original?
 permalink: /blog/sonic-return-of-infinite
 plyr: true
+
+blog: true
+initialPublishDate: "May 21 2020"
+editDate: "November 22 2020"
+articleType: "Video Gaming"
+length: 5
 ---
 # Classic Sonic: Return of Infinite
 {:.mb-0}

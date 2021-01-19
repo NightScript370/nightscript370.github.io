@@ -1,8 +1,14 @@
 ---
 title: "Online School Issues"
-description: Here's an in depth analysis on the issues pertaining to online schooling due to the COVID-19 pandemic
+description: Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally is not needed.
 permalink: /blog/online-school-issues
 carousel: true
+
+blog: true
+initialPublishDate: "October 1 2020"
+editDate: "October 25 2020"
+articleType: "Educational/School"
+length: 4
 ---
 
 # Online School Issues

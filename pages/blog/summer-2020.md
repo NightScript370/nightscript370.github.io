@@ -1,7 +1,13 @@
 ---
 title: "NightScript's Summer of 2020"
-description: This is the story of my summer experiences
+description: Despite being in a year where everything is supposed to go wrong and generally disliking summer, this summer managed to be the best summer of my life (so far).
 permalink: /blog/summer-2020
+
+blog: true
+initialPublishDate: "August 31 2020"
+editDate: "October 28 2020"
+articleType: "Personal Stories"
+length: 2
 ---
 
 # NightScript's Summer of 2020

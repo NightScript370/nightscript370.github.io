@@ -38,7 +38,6 @@ layout: compress
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="HandheldFriendly" content="true">
 
-		<link rel="canonical" href="https://nightyoshi370.github.io" />
 		<meta name="og:url" content="https://nightyoshi370.github.io" />
 		<meta property="og:url" content="https://nightyoshi370.github.io" />
 
@@ -120,7 +119,7 @@ layout: compress
 						{% if item.items %}
 							{% assign submenu = item.title | append: "Submenu" | replace: " ", "" %}
 								<li {% for entry in item.items %}{% if entry.url == page.permalink %}class="active"{% endif %}{% endfor %}>
-									<a href="#{{ submenu }}" aria-controls="{{ submenu }}" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
+									<a href="javascript:void(0);" data-bs-target="#{{ submenu }}" aria-controls="{{ submenu }}" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle proxim no-not-hover">
 										{% if item.icon %}
 											{% if item.notif %}
 												<span class="fa fa-fw fa-{{ item.icon }} me-1 notif">
@@ -207,6 +206,7 @@ layout: compress
 			<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 			<script>
 				Array.from(document.getElementsByClassName("mdc-select")).forEach(elem => new mdc.select.MDCSelect(elem));
+				Array.from(document.getElementsByClassName('mdc-text-field')).forEach(elem => new mdc.textField.MDCTextField(elem));
 			</script>
 		{% endif %}
 	</body>

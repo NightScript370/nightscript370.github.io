@@ -3,10 +3,16 @@ title: "Privacy Issues"
 description: Where's the fine line of how much info you have on someone? How do you even get that person's info?
 permalink: /blog/privacy
 plyr: true
+
+blog: true
+initialPublishDate: "December 31 2020"
+editDate: "January 18 2021"
+articleType: "Educational/School"
+length: 1
 ---
 
 <style>
-#neimodImage, #nightScriptImage, #searxImage, #messagingIcon, #fedoraImage, #cryptImage { order: 2; }
+#neimodImage, #nightScriptImage, #searxImage, #messagingIcon, #fedoraImage, #cryptImage, #FDroidImage { order: 2; }
 
 @media (max-width: 767px) {
 	.gridImage {
@@ -34,6 +40,7 @@ plyr: true
    3. [Limit your Actions](#actionsLimit)
 4. [Frequent Responses](#frequent-responses)
 5. [Apple's Praise](#apples-praise)
+6. [Fighting a losing battle](#fighting-a-losing-battle)
 {% endcapture %}
 
 <h1 class="mb-0" noAnchor>Privacy Issues</h1>
@@ -80,15 +87,15 @@ For those of you who want to start taking a stand against your privacy, here is 
 
 <ol>
 	<li>
-		<b id="infoAnalysis">Look at what's donated</b>
-		<p>If you want to stop giving, you should look at what you give in the first place. Take notes of the content received throughout the day, whether it's news, advertisements or others. If you use a "Find my Product" service, then take note that it stores your location. Discord bots that don't use slash commands are looking at your every message to find what to respond to. Google's Privacy Policy states that it won't use your health data to influence advertisements, implying that they store data about health. The best place to look at this is a services Privacy Policy, which is required according to GDPR rules.</p>
-		<p>For Android users, I want you to go and download <a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a>, an alternative client to Google's Play Store. It has a specific button at the end of the app view that reveals which permissions an app use, such as Facebook looking at your biometrics (Fingerprint Scanner, Face Unlock) or WhatsApp using credentials. The tracker view is also quite important.</p>
-		<p>For the people living in the USA, I especially would like you to take off the political glasses for a bit and look at everything the same. Our current president has made TikTok and other China-based applications' privacy violation political, yet apps made in the United States of America are just as guilty, if not moreso. In fact, <a href="https://www.privacytools.io/providers/#ukusa">no UK/USA based product should be used</a>.</p>
+		<b id="infoAnalysis">Analyse what's given in the first place</b>
+		<p>Looking at what's given is the first step to not giving. Thankfully, some of it stares at our face so there's no need to read a Privacy Policy containing the same generic text we see on every website or application. Social Media Platforms and Advertisements are tailored to your personal tates (except for those that come from the Samsung Store app, as those are useless and tailor to literally no one) just to keep you on the site for longer and longer. Others are disguised as helpful tools, such as "Find my Product" and Discord Bots not using Slash Commands (meaning they're looking at every message to see what triggers it). Other's are hidden behind implications in Privacy Policies, such as Google's Privacy Policy stating that it won't use your health data to influence advertisements.</p>
+		<p>Unfortunately, not every place has a privacy policy that's available before your data was already vulnerable. Google's Play Store used to have a pop-up showing which permission an app wants before downloading it, but they don't seem to do that anymore. Thankfully, the app data still exists and can be exposed with an alternative client titled <a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a>. No app is safe from the store's exposure, regardless of which country it originated from.</p>
+		<p>I used the application to expose the political biasness regarding privacy and user data in relations to where our data is being sent. The current president of the United States (as of the time of initial publishing) has politicized China-based applications such as TikTok for sending over data. However, companies based on the United States are even more guilty, to the point where <a href="https://www.privacytools.io/providers/#ukusa">no UK/USA based product should be used</a>.</p>
 		<blockquote>
 			<img style="width: 210px; height: 600px;" src="https://cdn.discordapp.com/attachments/671781268299710469/794300215787520020/Screenshot_20201231-122454_Aurora_Store.jpg"><img style="width: 270px; height: 600px;" src="https://cdn.discordapp.com/attachments/671781268299710469/794403884831473675/Screenshot_20201231-191657_Aurora_Store.jpg">
 			<footer>Comparison of permissions screen between FaceBook (on the left) and TikTok (on the right). Notice how FaceBook asks for so many permissions that the screen had to be scrolled to contain it all.</footer>
 		</blockquote>
-		<p>I also want you to request a copy of all your data of all the services that you use. According to GDPR rules, sites are forced to provide data it stores on request, meaning you get to see all the memes you sent when you were just a teenager. You'll also find things about you that you weren't even aware about yourself.</p>
+		<p>European-laws, on the other hand, has been much more supportive of user privacy and requires companies to provide user-data on-request of whom they collect from. Beyond permission scope, this should tell you what they actually store, as permissions doesn't necessarily imply that they'll use it. Some of what's stored here could be things from years ago, including memes you've sent when you thought that it wouldn't come back to bite. It might even tell you things you weren't aware of yourself.</p>
 		<p>Ever since 2017, I have been using an Android device (which at the time, was a Blackberry Priv). In 2018, I took a trip with a few friends to Utah and I brought my phone along. Not once did I consider that I was also bringing Google's trackers along, yet looking at <a href="https://support.google.com/maps/answer/6258979">Google Maps' timeline</a>, I am now finding out in which areas I slept, what way I went to go there and my stops along the way. I am also learning that apparently, I went to a different part of California without even realizing it. My friend figured out they went to some random McDonalds store in Wisconsin back in 2015. You could very much learn something about your travel history by visiting this website.</p>
 	</li>
 	<li>
@@ -121,8 +128,16 @@ For those of you who want to start taking a stand against your privacy, here is 
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
 			<img id="cryptImage" class="d-print-none gridImage" src="https://www.privacytools.io/assets/img/svg/3rd-party/cryptpad.svg" alt="Cryptpad">
-			<p class="ms-md-2">Did you perhaps use GitHub's gist feature to store text documents? Or are you using something like Microsoft Word? Why not try using <a href="https://cryptpad.fr/pad/">CryptPad</a> instead?<br>
+			<p class="me-md-2 gridText">Did you perhaps use GitHub's gist feature to store text documents? Or are you using something like Microsoft Word? Why not try using <a href="https://cryptpad.fr/pad/">CryptPad</a> instead?<br>
 			Cryptpad is an open-source and real-time collaborative editor, <a href="https://cryptpad.fr/about.html">authored</a> by Aaron MacSween and Yann Flory. Although they do collect data provided by the HTTP protocal for improvement purposes, they will not furnish it to third parties (unless legally required to). If that doesn't sound right with you, feel free to <a href="https://github.com/xwiki-labs/cryptpad/wiki/Installation-guide">host your own instance</a>.</p>
+		</div>
+		<div class="d-md-flex d-print-block mb-2">
+			<img id="denoImage" class="d-print-none gridImage" src="/assets/articles/deno.png" alt="Deno">
+			<p class="ms-md-2 gridText">Another thing GitHub recently bought was npm, a repository for node.js modules. While you could always manually download and include these modules, there's something conveniant about being able to run <code>npm update</code> to download the latest versions of modules. Deno, an alternative to node.js, aims to solve the centralization of modules by being able to directly import modules from the internet. This is beneficial as now, they can be hosted anywhere. Deno is also just a better browser-less JavaScript environment, by being able to support TypeScript out of the box and top-level async.</p>
+		</div>
+		<div class="d-md-flex d-print-block mb-2">
+			<img id="FDroidImage" class="d-print-none gridImage" src="/assets/articles/f-droid.png" alt="F-Droid">
+			<p class="me-md-2 gridText">Aurora Store is great as a Google Play Store as you don't need to sign into Google, but we're still directly accessing a platform that's rather known to be a privacy hog. Thankfully, for those of you who use Cydia on iOS or Universal-Updater on Nintendo 3DS, you would understand the concept of stores. Stores are basically miniature databases where people can have their own listing to be accessed from a frontend combining them all. F-Droid is basically that for Android, and it has garnered the support of thousands of developers.</p>
 		</div>
 		<div class="d-md-flex d-print-block mb-2">
 			<img id="ytImage" class="d-print-none gridImage" src="/assets/articles/youtube.png" alt="Youtube">
@@ -189,6 +204,10 @@ For those of you who want to start taking a stand against your privacy, here is 
 
 - "But I have nothing to hide"           
   As pointed out in Step #1 of my Privacy Guide, Facebook-based applications can look at your credentials, which means that they can grab login informations. To make it more understandable in a human way, would you give me all your login credentials for all the services you use? Just like you wouldn't trust some random 17-year old on the internet, why are you trusting mega corporations that are known to sell your data? (and if your answer is yes, feel free to leave all the windows open in your house and yell every conversation you have)
+- "Nothing is private either way, with archive.org, screenshots, screen recorders, etc"       
+  There is merit to this. Online, there will never be a way to be 100% private. Your Internet Service Provider would be aware of the fact that you're trying to connect, so trying to keep the fact that there is activity private will never work. Environments would always require you to use tools that may involve giving up privacy. However, our goal is to try our best. No human is perfect, but we don't see everyone become criminals. Just like privacy advocates; we want to have as much control as possible, even if it's ultimately in the fate of ISPs.
+
+  Going back to the comment about screen recorders, my goal of writting this was not to protect from user privacy-invasions. Ultimately, that's up to who you contact. However, your human brain would be able to identify who you should reveal your data towards and who you shouldn't. For people that you meet online, you really shouldn't tell them your social security card (unless it's to stop Gygas, which for some reason seems to be part of a copy pasta trend). My goal of writting this was to protect from corporate privacy-invasions. Despite having humans control them, they see things via numbers rather than the value.
 - "Why care? My data is collected to help me!"            
   There are many reasons to care about big brother watching you. They frequently sell your data to other companies, meaning that it's now not just the service that you use (and are fine with their privacy policy) but also a service that you're not using (and have a much more questionable privacy policy). If that company's data ever leaks, your identity is put out for the entire public to see, including people that have wrong intentions.
 
@@ -223,6 +242,16 @@ In the end, even Facebook's own employee's [call this hypocritical](https://www.
 ![](https://specials-images.forbesimg.com/imageserve/5ff07f779f9392c3af404599/960x0.png){:.img-thumbnail}
 
 Of course, I don't think anyone would be able to beat Signal, yet I found it amazing that iMessage could work with as little as an Apple Account and yet people still use WhatsApp. Please consider where you're putting you're trust; the company whos own employees call hypocrisy or someone fighting for others.
+
+<h3 noAnchor id="fighting-a-losing-battle">Fighting a losing battle</h3>
+
+As I've noted in my communications section, it requires the active effort of everyone. Unfortunately, people have been relunctant to change due to it being the norm.
+
+But does it have to be the norm? Why not fight for change? We have much more power than we think. If we stop using their application, they have a risk of falling into irrelevancy. WhatsApp is trying desperately to prove itself from their new Privacy Policy changes, as users switch to other platforms (like Signal or Telegram). They've clearly adapted to the concerns of its users, as the change is delayed.
+
+In 2019, I became increasingly suspicious of a fan-game by the title of Mario Multiverse. The game was trying to write to System32 when I gave it limited permissions and detected file path changes. When I confronted neoarc about it, he said a Privacy Policy was not needed. A Privacy Policy implies strict laws of what the game can and can't do, and the owner would be liable if it was broken. The best solution to this was to not have one, since you wouldn't need to expose what your app did. bunten & I wrote out a PasteBin document describing our weird occurences, and it spread throughout the fangame community (largely due to it being posted on Blue Television Game's server). Neoarc responded with finally making a Privacy Policy, debunking all the misinformation spread about the game.
+
+There clearly is a concern and there is a listener. We just need to voice the concerns to the listener.
 
 -----
 

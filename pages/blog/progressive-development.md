@@ -1,7 +1,13 @@
 ---
 title: "Progressive Development"
-description: Standard evolution, style improvements, but how does that all work?
+description: The true definition of progressive development, when you realize your newer work is better than your old one. How did that happen? What process is taking place?
 permalink: /blog/progressive-development
+
+blog: true
+initialPublishDate: "November 26 2020"
+editDate: "November 26 2020"
+articleType: "Educational/School"
+length: 8
 ---
 
 # Progressive Development

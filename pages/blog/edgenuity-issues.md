@@ -1,8 +1,14 @@
 ---
 title: "Edgenuity issues"
-description: Here's an in depth analysis of the system titled Edgenuity
+description: Edgenuity is a platform designed to replace traditional teaching with video watching and quizes. The problem is that it fails to make a platform where students would actually learn.
 permalink: /blog/edgenuity-issues
 listinnumber: true
+
+blog: true
+initialPublishDate: "July 6 2020"
+editDate: "July 9 2020"
+articleType: "Educational/School"
+length: 7
 ---
 
 # Edgenuity Issues
