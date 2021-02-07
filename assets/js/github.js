@@ -1,7 +1,7 @@
 import Decimal from './libs/decimal.js';
 
 const gitStatsDisplay = 'piecard';
-const corsURL = 'https://ns-cors-redirect.glitch.me/';
+const corsURL = '';
 
 function htmlToElem(html) {
 	var template = document.createElement('template');
@@ -55,7 +55,7 @@ export default async function (elements) {
 		const langElementList = document.createElement("div")
 		langElementList.classList.add("gitLangGrid")
 
-		let ProfileStatsHTML;
+		/* let ProfileStatsHTML;
 		try {
 			const langsResponse = await fetch(langStatsURL);
 			if (!langsResponse.ok)
@@ -194,17 +194,17 @@ export default async function (elements) {
 					break;
 			}
 		} catch (e) {
-			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e)
+			console.error("[ERROR] Lang Insert error. RESORTING TO IMAGE", e) */
 			const langStatsImage = document.createElement('img')
 			langStatsImage.src = langStatsURL
 				.replace(corsURL, '')
 				.replace('card_width=100', 'card_width=250')
 			langStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 			element.insertAdjacentElement('afterend', langStatsImage)
-		}
+		// }
 
 		const profStatsURL = gitStatsURL('?hide_title=true&show_icons=true&disable_animations=true&' + (gitStatsDisplay == 'imagemanipulate' ? '' : 'hide_rank=true&'))
-		try {
+		/* try {
 			const profStatsResponse = await fetch(profStatsURL)
 			if (!profStatsResponse.ok)
 				throw new Error();
@@ -292,14 +292,14 @@ export default async function (elements) {
 					break;
 			}
 		} catch (e) {
-			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e)
+			console.error("[ERROR] Profile Insert error. RESORTING TO IMAGE", e) */
 			const profStatsImage = document.createElement('img')
 			profStatsImage.src = profStatsURL.replace(corsURL, '')
 			profStatsImage.setAttribute('style', 'width: 100%; filter: drop-shadow(0px 1.25px 1px var(--shadow-color))')
 			element.insertAdjacentElement('afterend', profStatsImage)
-		}
+		//}
 
-		if (gitStatsDisplay == 'piechart') {
+		/* if (gitStatsDisplay == 'piechart') {
 			element.insertAdjacentElement('afterend', gridContainer);
 			gridContainer.insertAdjacentHTML('beforeend', ProfileStatsHTML);
 
@@ -320,12 +320,7 @@ export default async function (elements) {
 					</div>
 				</div>
 			`);
-
-/*			langBar.innerHTML = `<div class="pie" style="--size: ${Math.min(gridContainer.clientHeight, gridContainer.clientWidth)}">` + langBar.innerHTML + '</div>';
-			gridContainer.insertAdjacentElement('beforeend', langBar);
-
-			gridContainer.insertAdjacentElement('beforeend', langElementList);*/
-		}
+		} */
 
 		try {
 			const gitContributeGraph = document.createElement('div')
@@ -420,7 +415,7 @@ export default async function (elements) {
 			console.error('[ERROR] Git Contribution Graph JS', error)
 		}
 
-		try {
+		/* try {
 			let gitActivityResponse = await fetch(corsURL + (iframeData.src).replace('.pibb', '/raw'))
 			if (!gitActivityResponse.ok)
 				throw new Error();
@@ -432,11 +427,11 @@ export default async function (elements) {
 			const preElement = document.createElement('pre')
 			preElement.appendChild(codeElement)
 			element.insertAdjacentElement('afterend', preElement)
-		} catch {
+		} catch { */
 			const iframeElement = document.createElement('iframe')
 			iframeElement.style.width = '100%'
 			iframeElement.setAttribute('src', iframeData.src)
 			element.insertAdjacentElement('afterend', iframeElement)
-		}
+		// }
 	}
 }
