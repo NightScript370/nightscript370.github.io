@@ -3,7 +3,6 @@ title: Home
 description: This website was made to document things I've accomplished over the years. Maybe you'll find something interesting here?
 permalink: /
 landing: true
-github: true
 noBG: true
 ---
 
@@ -32,7 +31,7 @@ noBG: true
 <div class="noAnchorsPadding" style="background-color: var(--background-filter);">
 	<div class="row">
 		<div class="col-md-525 col-lg-525 col-xl-4 mb-3">
-			<div class="card mb-3">
+			<!-- <div class="card mb-3">
 				<div class="card-body">
 					<a class="h5 card-title card-header-icon" href="https://github.com/NightYoshi370" style="text-decoration: none;"><img src="/assets/images/icons/github.svg" style="height: 1.5em;"> <u>Github Profile stats</u></a>
 					<noscript class="gitStats">
@@ -42,14 +41,47 @@ noBG: true
 					</noscript>
 				</div>
 				<div class="card-footer"><small class="text-muted">Stats made using <a href="https://github.com/anuraghazra/github-readme-stats">Github Readme Stats</a> & <a href="https://github.com/Bloggify/github-calendar">Github Calendar</a></small></div>
+			</div> -->
+			{% assign filteredCategory = " " | split: " " %}
+			{% for articlePage in site.pages %}
+				{% if articlePage.blog %}
+					{% assign filteredCategory = filteredCategory | push: articlePage %}
+				{% endif %}
+			{% endfor %}
+			<div class="card mb-2">
+				<div class="card-body">
+					<h3 noAnchor class="card-title">Latest blog posts <noscript>(Order requires JS)</noscript></h3>
+					<div class="card-text">
+						<div id="blogList">
+							{% for articlePage in filteredCategory %}
+								<div articleDate="{{ articlePage.initialPublishDate }}">
+									<a class="h5" href="{{articlePage.permalink}}">{{articlePage.title}}</a>
+									<div class="mb-0">{{articlePage.description}}</div>
+									<a href="{{articlePage.permalink}}" style="text-align: right;">Read More...</a>
+									<hr>
+								</div>
+							{% endfor %}
+						</div>
+						<div style="text-align: center;">
+							<a href="/blog" type="button" class="btn btn-primary">Read more articles!</a>
+						</div>
+					</div>
+					<script>
+						let blogList = [...document.getElementById("blogList").children]
+							.sort((x, y) => new Date(y.getAttribute("articledate")) - new Date(x.getAttribute("articledate")))
+							.slice(0, 3);
+						Array.from(document.getElementById("blogList").children).forEach(e=>e.remove());
+						blogList.forEach(article => document.getElementById("blogList").appendChild(article));
+					</script>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-675 col-lg-675 col-xl-8">
 			<a class="h3" href="/projects">Projects I've contributed to</a>
 			<style>
 				.carousel-item img {
-					height: 400px;
-					width: 400px;
+					height: 512px;
+					width: 512px;
 					display: block;
 					margin-left: auto;
 					margin-right: auto;
@@ -61,8 +93,8 @@ noBG: true
 					display: block;
 					position: relative;
 					background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(0,0,0,1) 100%);
-					margin-top: -200px;
-					height: 200px;
+					margin-top: -256px;
+					height: 256px;
 					width: 100%;
 					content: '';
 				}
@@ -108,39 +140,6 @@ noBG: true
 						<img src="/assets/images/icons/icons8-forward-48.png">
 					</picture>
 				</a>
-			</div>
-			{% assign filteredCategory = " " | split: " " %}
-			{% for articlePage in site.pages %}
-				{% if articlePage.blog %}
-					{% assign filteredCategory = filteredCategory | push: articlePage %}
-				{% endif %}
-			{% endfor %}
-			<div class="card mb-2">
-				<div class="card-body">
-					<h3 noAnchor class="card-title">Latest blog posts <noscript>(Order requires JS)</noscript></h3>
-					<div class="card-text">
-						<div id="blogList">
-							{% for articlePage in filteredCategory %}
-								<div articleDate="{{ articlePage.initialPublishDate }}">
-									<a class="h5" href="{{articlePage.permalink}}">{{articlePage.title}}</a>
-									<div class="mb-0">{{articlePage.description}}</div>
-									<a href="{{articlePage.permalink}}" style="text-align: right;">Read More...</a>
-									<hr>
-								</div>
-							{% endfor %}
-						</div>
-						<div style="text-align: center;">
-							<a href="/blog" type="button" class="btn btn-primary">Read more articles!</a>
-						</div>
-					</div>
-					<script>
-						let blogList = [...document.getElementById("blogList").children]
-							.sort((x, y) => new Date(y.getAttribute("articledate")) - new Date(x.getAttribute("articledate")))
-							.slice(0, 3);
-						Array.from(document.getElementById("blogList").children).forEach(e=>e.remove());
-						blogList.forEach(article => document.getElementById("blogList").appendChild(article));
-					</script>
-				</div>
 			</div>
 		</div>
 	</div>
