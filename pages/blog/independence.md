@@ -1,38 +1,52 @@
-<!--
+---
+title: "Online School Issues"
+description: Due to the COVID-19 pandemic, there has been a move to online school. However, the video-conference aspect of it brings issues and generally is not needed.
+permalink: /blog/independence
+---
 
-Organization:
+# Independence
+{:.mb-0}
+<small class="font-italic font-weight-light font-underline">Published on January 20th, 2021</small>
 
-##### Introduction
+<div class="d-xl-none" data-toc></div>
+<div class="row" markdown="1">
+<div class="col-xl-8" data-content markdown="1">
 
-PG1: First Independent story
-PG2:
-PG2: Current state of independence
-PG3: Why I do what I do
-PG4: Basic Helicoptering
-PG5: Full Parental Helicoptering
-PG6: Extent of how far I stay silent
-PG7: The issue on why I cannot just branch out and become fully independent
-PG8: Christopher McCandless
-PG3: Lack of trust in parents
-PG4: Me vs 17 year olds
-PG5: Me vs
-PG4: Reason of lack of trust
-PG5: My young age
-PG6: How PG5 does not apply to me
-PG7: Parentalhood
-PG7: A look at the life of Christopher McCandless
+Independence is when you are no longer tied to others, being completely responsible for yourself. The legal age where a child can be independent here in the United States is 18 years old, which for most people is post-high school graduation. Afterwards, they're just one summer away from going to college, some of which offers dormings. You're no longer told which classes to go to, as you are now trusted to pick them out for yourself. Within the years post-high school, you're expected to finally find your own footing in life and get a job, raise your own income and provide for yourself. No more parents to pack sandwhiches, tuck you into bed or cover up for tax evasion!
 
--->
+Just like Privacy, it is not possible to have a life that is completely unreliant on anything. Otherwise, who knows where we'd be living, in both the metaphorical sense and literal sense. Our bodies were not designed to live without air flowing in our lungs, food flowing through our throats and being held by a mother for 9 months. We also need government protection because without it, everyone would just act wild towards eachother. The only good thing about that would be that crime rates would drop down to zero, since there wouldn't be a definition of crime! :P
 
-My first moments of independence was when I was 10 years old, back in 2014. Without my parents' permission, I was scrolling through YouTube when I found a video showcasing how to make custom New Super Mario Bros Wii levels~sorry, I mean [*courses*](https://cdn.discordapp.com/attachments/708423907731832882/799507169291665418/unknown.png). The video described things such as loading the Homebrew Channel and Riivolutions, two channels I did not own. Despite that, I still wanted to be involved because of how interesting it was to be getting more out of what I considered at the time to be the best video game ever. The description linked to the NSMBW Level Depot, which was just one section of the RVLution website. The main part was the forums, which I signed up on (and then later had to remake when they switched from phpBB to BlargBoard).
+There's also merit to having bosses control you beyond visible benefits (such as protection). Even if you were a perfect human being who never made a wrong thought, that doesn't mean that no one else is like you. Just by taking a look at the COVID-19 pandemic, we cannot trust everyone to willingly cooporate without throwing a petty excuse such as "it discomforts me". This is mostly true in the United States, but we have our own problem of having the right to own a gun. Just because you're not thinking to shoot up a school filled with innocent children that might have just been brainwashed doesn't mean that no one else is doing that. The only reason that no school shootings occured in the past year is because there has been no schools to shoot in the first place!
 
-My goal was to make a full hack, which had a time travel mechanic. The rules on the site said I couldn't make a thread for things I didn't have progress on, so I setup my own blargboard forums. Rather than focus on the hack itself, though, I was busy being a bad moderator and shitposting. This was fine when it was just my brother and I playing around, but this was online, which means it was public for the world to see. Also, my brother was a year and a half younger than me, meaning he was 8. Either way, both of us were underage and lacked a level of maturity needed to be online.
+However, this does not extend to everything. Children should not be shunned away from jobs because the law wants them to go to prison for 6 hours of their life every day. I should be allowed to pick which person I want to marry, even if it is the same sex (not implying that I would do it, but it should be allowed). If there's any health problems, I should be able to decide for myself if it's worth taking the risk instead of requiring government approval. Rights are a common thing to wish for, especially for people at a young age who feels like they're at the mercy of their parents.
 
-The community rejected me, as I got banned on every website in the area. Even my co-owner and the one who helped make I was inexperienced, and often times made a fool out of myself. RVLution members knew me as moron322, and I was banned everywhere I went. This did not make me change, seeing as how I fit right in with other rejects. We tried so hard to get ourselves accepted in communities, yet we ended up making the same mistakes that got us banned originally. We were pushed away to our own corner of the internet, where we just made what they called derpboards using their own software. Even then, our sites would always get vandalized by these animals and 
+### Internet
 
-7 years later, I still find myself joining new networks and groups, often times hoping to contribute. My contributions to the DS(i) Mode Hacking Discord Server reserved me a spot in Nintendo Modding History, alongside famous modders like RocketRobz & Evie. Through my time moderating that server, I've met amazing friends who have stuck with me ever since, such as Lanya, Kodtiz3D, Kaisaan, Evie and MUCH more. Wanting to stick this group alongside my other friends, I made a personal hub called the NightScript Domain. The response to articles like these keep me motivated to write more, and to contribute more. The community is always growing, so much so that last week, I added in a Matrix bridge for the Discord server (which I find myself using more than Discord). My social life is, as a result, primarily found online.
+<p>Enter the Internet, the place which in 2020, we could not live without. What do you expect kids to do without it? Have social interactions?<br>
+It's just a magical place where people are exposed to a lot of external media, good and bad. Blogs, Galleries, News Networks, Dating, you name it; it's on the internet (but please make sure that last one stays buried in the dark web). <span style="float: right; width: 4em; height: 4em; margin-left: 10px;"><img src="https://cdn.discordapp.com/attachments/699540999072120923/801541863152418856/bruhRoo.png"></span>The freedom of speech exercised on the internet means that cursed creations could be made without reprocautions, such as bruhRoo from YourKalamity. Outside of memes, there's two other free speech areas on the internet; journalism and communication</p>
 
-I love to contribute to the social surroundings I find myself in, seeing as how that's what true love is really about. Love isn't about what you love benefitting you, but how you can benefit it. Yamamura was something I loved, but what I really loved was all the time I found myself coding and managing to solve bugs with Samplasion. Rewritting articles on this website proves to be a tedious task (every single article on this website got an update since initial publish date), yet I constantly want to make sure they are of their utmost quality. It's why I've developed a workoholic behavior, but it doesn't bother me. Unfortunately, most of the teenagers in my social surroundings look at it different.
+The informational part of the internet means that we no longer need to waste hours trying to do something only to fail, as someone has already done that and got generous enough to donate the final product. Misinformation is quickly called out ([MOST OF THE TIME](https://legendary-archive.tumblr.com/post/189857810354/hey-there-princey-nerdy-as-heck-m-pennanti)), which means it's reliable enough as long as you go on good websites. Now, what defines a good website? According to school, anything except Wikipedia which doesn't make much sense seeing as how just like how anyone can sign up on Wikipedia and edit whatever, anyone can make their own website and write whatever. Well, this comes down to my point of independence, which we should be able to determine for ourselves what is reliable information and what is misinformation. Unfortunately, the world is filled with idiots and just like the former United States president, misinformation would spread. At first, sites didn't care Of course, we cannot  The enterntainment possibilities on this are also amazing; I always wanted to stream Grovert Cleveland's history, and now I can using Netflix! People have made both funny and cringy images, such as bruhRoo by YourKalamity (WHY)
+
+However, it is also a communication platform, where this year, a lot of people migrated their physical interactivity to the digital space. This is where I found my own thoughtfulness and became independently thinking from my parents, seeing as how I was basically raised here. I was prepared to not be too trusting of people online, and the physical safety of both my family and I would not be compromised by my actions. There is no face attached to my online identity that can match with my real one. My first name is public, yet my last isn't. My birthday is public, yet not my birthplace. My mental safety, though, was not expecting the harsh negative actions of online communities.
+
+#### Communication on the Internet Independence
+##### Growing Up into a world where I managed for myself
+
+The COPPA rules prevent young ones to go on the internet without parental supervision, yet my parents were trusting. We didn't have things such as time limits or filters growing up, and one of my favorite games was a social platform (Club Penguin). My intentions were always to stay in the kids realm, since I wasn't really interested in things like violent video games or dating. However, the one thing we need to learn about the internet is that one link can lead to another, such as YouTube video descriptions.
+
+After booting up and playing New Super Mario Bros Wii for probably hundreds of time, I was getting tired of the default stages~sorry, I mean [*courses*](https://cdn.discordapp.com/attachments/708423907731832882/799507169291665418/unknown.png). The game engine had so much to offer, and I was hoping to see if I could do any cool tricks beyond what was shown in the "Super Guide" videos of Princess Peach's castle. I stumbled upon a video of NSMBW, but something was off about the terrain and the title said "Custom Level". I was blown away; I could make my own custom creations? This was before Super Mario Maker was a thing, and I guess I never knew what fan games were, so this was my first exposure. I was curious about this, so the rabbit hole went deeper as I found another video on how to make my own "custom levels".
+
+The video, sadly, was not something I could follow along. It didn't specify how to mod your Wii, and creating the folders described simply wasn't going to cut it. I needed two channels, both of which I didn't own; The Homebrew Channel & Riivolution. Still, I wanted to see more of what the community had to offer so a quick Google search linked to the NSMBW Level Depot, containing thousands of custom creations. The intended place to talk about these, though, was the Forums linked on the sidebar. A new account was made and I was ready to be involved in NSMBW modding.
+
+I was too overambitious despite having no skills, which made a new hack announcement from me seem like a joke. My goal was to imitate Newer Super Mario Bros. Wii, a hack that took 3 years to make by multiple professionals that were over at least the age of 15. Despite that, I felt like I had what it took to do so, and made a new website to talking about it. The forum was ran by myself and my brother, who was eight years old and jealous that I was allowed on these places and he wasn't. We had a lot of fun on this forum of ours, and since no one really took us seriously, we were just trash-posting away. Family drama also got involved, like that one time I wanted to ban him for something that happened in-person. However, we started to forget what the forum was really about, and since it was being advertised as its initial purpose, it was clickbait for immaturity-display.
+
+The community disliked us, and we were constantly banned. My brother's ban was put into effect the month after he joined the official NSMBW hacking forums, while my time was gradual and I got unbanned and rebanned multiple times. Even the co-owner who helped me initially make the website turned on me, and took control of my own site to mock me. I was pushed away into a "derp"-corner and I ended up bonding with people who were also rejects. The same song-and-dance happened for years, never really ending until 2018 when I finally took a good look at who I was surrounding myself with.
+
+##### Living on my own in the internet realm right now
+
+Seven years later, I find myself surrounded with much better people which has really improved my acceptance level in these communities. My contributions to the DS(i) Mode Hacking Discord Server reserved me a spot in Nintendo Modding History, alongside famous modders like RocketRobz & Evie. Through my time moderating that server, I've met amazing friends who have stuck with me ever since, such as Lanya, Kodtiz3D, Kaisaan, Evie and MUCH more. Wanting to stick this group alongside my other friends, I made a personal hub called the NightScript Domain. The response to articles like these keep me motivated to write more, and to contribute more. The community is always growing, so much so that last week, I added in a Matrix bridge for the Discord server (which I find myself using more than Discord). My social life is, as a result, primarily found online.
+
+I love to contribute to the social surroundings I find myself in, seeing as how that's what true love is really about. Love isn't about what you love benefitting you, but how you can benefit it. Yamamura was something I loved, but what I really loved was all the time I found myself coding and managing to solve bugs with Samplasion. Rewritting articles on this website proves to be a tedious task (every single article on this website got an update since initial publish date), yet I constantly want to make sure they are of their utmost quality. It's why I've developed a workoholic behavior, but it doesn't bother me. Unfortunately, most of the people in my social surroundings look at it different.
 
 My parents are currently the most dismissive people of my creative potential, which is bad when I want my privacy. A """helicopter""" hovers over my physical actions at all times, watching my every move (such as where I am, why I'm leaving, etc). I often discouraged from doing what I do, even when it has proven to be successful. When I started tutoring children, I was told "well, do you know your stuff? Maybe you should let a proffessional do it". Once the kid ended up completing his project better than how a proffessional would have taught them, my parents would tell others about how *their* "marvelous-son" did these actions. Other times, they take credit for decisions I make, such as clothes I buy. What's worst is when I find myself being refused things I like "just because".
 
@@ -75,3 +89,13 @@ This website is not the first time I have tried to make my own voice be heard. T
 -----
 
 After the disaster that was "Boys State", my teacher wanted us to read a book titled "Into the Wild" by John Krackaur. The tale describes a college-graduateI am ever grateful for this website and all those who helped me develop it. Evie, Samplasion, amongst many others have allowed me to express myself and make this website be my home. The feedback received here is helpful into further development of 
+
+</div>
+
+<div class="col-xl-4 d-none d-xl-block">
+
+<div class="sticky-top" data-toc></div>
+
+</div>
+
+</div>

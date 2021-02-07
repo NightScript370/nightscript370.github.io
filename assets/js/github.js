@@ -1,7 +1,7 @@
 import Decimal from './libs/decimal.js';
 
 const gitStatsDisplay = 'piecard';
-const corsURL = 'https://cors-anywhere.herokuapp.com/';
+const corsURL = 'https://ns-cors-redirect.glitch.me/';
 
 function htmlToElem(html) {
 	var template = document.createElement('template');

@@ -199,17 +199,19 @@ noBG: true
 
 <script>
 	const articleListContainer = document.getElementById("articleList");
-	let filter = {
-		'All/No Filter': {
-			'Initial Publishing Date (Descending)': [...articleListContainer.children].sort((x, y) => new Date(y.firstElementChild.getAttribute("articledate")) - new Date(x.firstElementChild.getAttribute("articledate"))),
-			'Initial Publishing Date (Ascending)': [...articleListContainer.children].sort((x, y) => new Date(x.firstElementChild.getAttribute("articledate")) - new Date(y.firstElementChild.getAttribute("articledate"))),
-			'Last Edited Date (Descending)': [...articleListContainer.children].sort((x, y) => new Date(y.firstElementChild.getAttribute("articleeditdate")) - new Date(x.firstElementChild.getAttribute("articleeditdate"))),
-			'Last Edited Date (Ascending)': [...articleListContainer.children].sort((x, y) => new Date(x.firstElementChild.getAttribute("articleeditdate")) - new Date(y.firstElementChild.getAttribute("articleeditdate"))),
-			'Length (Descending)': [...articleListContainer.children].sort((x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength"))),
-			'Title (Descending)': [...articleListContainer.children].sort((a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText)),
-			'Title (Ascending)': [...articleListContainer.children].sort((a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText)),
-		},
+	const sortFunctions = {
+		'Initial Publishing Date (Descending)': (x, y) => new Date(y.firstElementChild.getAttribute("articledate")) - new Date(x.firstElementChild.getAttribute("articledate")),
+		'Initial Publishing Date (Ascending)': (x, y) => new Date(x.firstElementChild.getAttribute("articledate")) - new Date(y.firstElementChild.getAttribute("articledate")),
+		'Last Edited Date (Descending)': (x, y) => new Date(y.firstElementChild.getAttribute("articleeditdate")) - new Date(x.firstElementChild.getAttribute("articleeditdate")),
+		'Last Edited Date (Ascending)': (x, y) => new Date(x.firstElementChild.getAttribute("articleeditdate")) - new Date(y.firstElementChild.getAttribute("articleeditdate")),
+		'Length (Descending)': (x, y) => parseInt(x.firstElementChild.getAttribute("articlelength")) - parseInt(y.firstElementChild.getAttribute("articlelength")),
+		'Title (Descending)': (a, b) => b.getElementsByClassName('card-title')[0].innerText.localeCompare(a.getElementsByClassName('card-title')[0].innerText),
+		'Title (Ascending)': (a, b) => a.getElementsByClassName('card-title')[0].innerText.localeCompare(b.getElementsByClassName('card-title')[0].innerText),
 	};
+	let filter = { 'All/No Filter': {} };
+
+	for (const [sortTitle, sortFunction] of Object.entries(sortFunctions))
+		filter['All/No Filter'][sortTitle] = [...articleListContainer.children].sort(sortFunction);
 	filter['All/No Filter']['Length (Ascending)'] = [...filter['All/No Filter']['Length (Descending)']].reverse();
 
 	const allTypes = [{% for item in filteredCategory %}"{{item}}",{% endfor %}];

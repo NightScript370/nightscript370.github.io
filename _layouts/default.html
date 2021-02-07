@@ -5,16 +5,16 @@ layout: compress
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+		<meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+		<link rel="manifest" href="/assets/site.webmanifest">
+
 		<title>{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 		<meta name="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
 		<meta property="og:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
 		<meta name="twitter:title" content="{% if site.title != page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
-
-		<link rel="manifest" href="/assets/site.webmanifest">
-		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<meta charset="utf-8">
-		<meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 
 		<meta name="keywords" content="NightScript, NightYoshi, NightYoshi370" />
 		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
