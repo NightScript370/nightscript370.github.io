@@ -1,0 +1,36 @@
+---
+title: "Proposition of shifting the time for finals"
+description: "Isn't there an easier way of having finals without an overaccumulation of stress for students with 4 finals"
+permalink: /blog/shifting-final-timeslot
+
+blog: true
+initialPublishDate: "December 7 2022"
+editDate: "December 7 2022"
+articleType: "Educational/School"
+length: 9
+---
+# Proposition: Move Finals
+{:.mb-0}
+<small class="font-italic font-weight-light font-underline">Published on December 7th, 2022</small>
+
+#### Introduction – Observing the Problem
+
+As the clock winds down for the school semester, the stress levels of both teachers and students alike raise at higher rates than before. Due to a need of a written reference of how the student were performing, teachers will scramble to put together assignments and tests regardless of whether that was the structure of the class during the actual course time. Meanwhile, due to wanting to give a complete overview of what they did throughout the year, they cram in the sections from the entire school semester, whether or not students evaluated that it was important previously. On top of there not being enough time for even a singular class, students are expected to do this for each course they take, often times at the expense of their sleep and mental awareness (which ends up impacting the test they were using said sleep to study for in the first place). At the end, what the school body is left with during these breaks are students that are fatigued due to overwork and teachers that had to grade said unnecessary assignments. By the time they return, neither parties are satisfied with how they utilized their limited time in comparison to how much they worked to get to that spot. This happens twice every school year, for around twenty years when college is included.
+
+Although this problem could be adapted to any scale (such as weekly tests and weekends to re-energize), finals are where this issue is prominent due to the specific attention given to them by means of schedule changes. Furthermore, since these take place immediately prior to the class’ conclusion, it also means that people who have to catch up on their workload needs to divide up their time, potentially putting their Final at risk of not having been prepared hard enough. Furthermore, because a final is intended to be the final representation of one’s activity in the class, failing a final often time indicates that one would also fail the rest of the course. As such, I would like to propose a new resolution for finals to be permanently canceled, with its benefits being outlined rather than just a simple “not having the faults above”.
+
+#### Push towards having a send-off moment
+
+Although the grades are the recorded aspect of the class, there is a second aspect of most classes that exists out of the books. While some courses may be entirely asynchronous, most are either on Zoom (as of March 2020-onwards) or entirely in-person. Thereby, there is a social presence from not only the classmates (who either way spend time with each other in other courses), but also the instructor who may only have this course as their way to talk to their students. Even though teachers are not friends, there is still a bond that develops enough to the point where there should be a proper farewell. For this social aspect, it could be reflections of the best moments in the class, the most worthwhile lesson in the course or even just a simple message of appreciation. Despite what some teachers portray themselves when it comes to how strict they are with their work, they are humans deep down who appreciate events such as “Teacher Appreciation week”. However, even if not for the teachers of the system, the point of a school is really for the students, of whom would also receive a benefit from this switch.
+
+With the lack of a focus during the break, it leaves many students ignorant on what they could be doing on this period outside school. In such a send-off moment, the teacher could instead potentially prepare them for the next class by informing them of stuff they should be expected to learn. Thereby, they have the option to focus on said topic and use the period to study if they so desire. If this is the last class of the topic, this could just be an overview from the basics to give them confidence in how far they’ve come, or an overview of the recent few months on parts they’d use most often for the future. Either way, those who despise the course or the subject altogether could just walk out at this point (which thereby allows them to subconsciously appreciate it), considering that attendance is entirely optional for these extra sessions.
+
+#### Extra Credit – Optional Chance for a last-minute fix-up
+
+Beyond the existence of an attendance grade for this send-off moment being extra credit, there might be a desire to accomplish more in the course, especially for those who had their final destroy their grade. In such a case, extra credit assignments are often the indicator that their ability in the class is not based on memorization skills through a limited time session, but rather their ability to work through the course’s workload. That opposite claim explicitly stated above is a common occurrence when it comes to those who are not perfect students and were simply confused for the final. However, extra credit is often a thing that isn’t viewed as important until it would be the make-or-break moment, which is why it wouldn’t work prior to the final.
+
+Perhaps the school might frown upon this, due to its encourage-ness of laziness and only working once there is a grade to make. However, the optimistic viewpoint is the more likely outcome of switching to this new system; F-tier students would be encouraged to work harder and take up any extra opportunity. If this is combined with the previous section of teaching students future topics early, then perhaps it might flip the schedule, as these lower students would feel special and ready. If the argument against this is that it wouldn’t cater towards who the school is for (A+ students), then teachers have not only missed the boat on what their system is supposed to accomplish, but they also fail to realize that there is a number that exists beyond “100.”
+
+#### Summary – Purpose
+
+School Revision suggestions have all existed for years, each at their own degree of radicalness. Despite this article largely working within the typical “Finals” system instead of calling for its abolishment, this is still something that this outside of tradition and as such, this idea will not go into light through them. The COVID-19 pandemic has proven through Zoom courses & Edgenuity that what they think works will be the insisted way and will continue to be imposed as long as the school system sticks to its retro ways. My attempts to change either of them have resulted in one workaround grade, and an ignored essay. However, this does not impact the message I propose, as school administrators were never my target audience. Instead, this is directed towards teachers who are able to maintain their class, as well as students who are able to persuade said teachers. Eventually, it will work its way up to the school administrators if it is heard well enough, but for now, there is the potential to lessen stress with just a simple number swap.
