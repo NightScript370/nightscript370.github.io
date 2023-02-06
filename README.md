@@ -1,2 +1,2 @@
-# nightscript.github.io
+# nightscri.pt
 Website for all my work

@@ -104,12 +104,12 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://nightyoshi370.github.io/index.html",
+    "start_url": "https://nightscri.pt/index.html",
     "background_color": "#1C9934",
     "display": "standalone",
     "scope": "/",
     "theme_color": "#1C9934",
-    "url": "https://nightyoshi370.github.io",
+    "url": "https://nightscri.pt",
     "lang": "English",
     "orientation": "any"
 }
