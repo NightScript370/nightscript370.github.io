@@ -158,10 +158,11 @@ noBG: true
 	let dynamicCounter = 0;
 
 	let intervalSet;
-	const intervalFunction = () => {
-		dynamicAgeElement.innerText = ++dynamicCounter;
+	function intervalFunction () {
+		dynamicCounter++;
+		dynamicAgeElement.innerText = dynamicCounter.toString();
 		if (dynamicCounter == age)
 			clearInterval(intervalSet);
-	}
+	};
 	intervalSet = setInterval(intervalFunction, 50);
 </script>
