@@ -146,5 +146,22 @@ noBG: true
 </div>
 
 <script>
+	const dob = new Date("10/22/2003");
+	const month_diff = Date.now() - dob.getTime();  
+	const age_dt = new Date(month_diff);
+	const year = age_dt.getUTCFullYear();  
+	const age = Math.abs(year - 1970);
 
+	const hardcodeAgeElement = document.getElementById("age");
+	const dynamicAgeElement = document.createElement("span");
+	hardcodeAgeElement.insertAdjacentElement("afterend", dynamicAgeElement);
+	let dynamicCounter = 0;
+
+	let intervalSet;
+	const intervalFunction = () => {
+		dynamicAgeElement.innerText = ++dynamicCounter;
+		if (dynamicCounter == age)
+			clearInterval(intervalSet);
+	}
+	intervalSet = setInterval(intervalFunction, 50);
 </script>
