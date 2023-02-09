@@ -11,7 +11,7 @@ noBG: true
 	<div class="landingText container">
 		<h1 noAnchor class="text-center page-padding-top">Welcome to the NightScript Domain!</h1>
 		<h4 noAnchor class="text-center" id="characterDescription">
-			I'm <img src="/assets/images/avatar.png" style="width: 1em; border-radius: 50%;"> NightScript, a 17 year old open-source developer with a love for Nintendo Modding.<br>
+			I'm <img src="/assets/images/avatar.png" style="width: 1em; border-radius: 50%;"> NightScript, a <noscript id="age">19</noscript> year old open-source developer with a love for Nintendo Modding.<br>
 			I also specialize in these aspects:
 		</h4>
 		<ul>
@@ -144,3 +144,24 @@ noBG: true
 		</div>
 	</div>
 </div>
+
+<script>
+	const dob = new Date("10/22/2003");
+	const month_diff = Date.now() - dob.getTime();  
+	const age_dt = new Date(month_diff);
+	const year = age_dt.getUTCFullYear();  
+	const age = Math.abs(year - 1970);
+	
+	const hardcodeAgeElement = document.getElementById("age");
+	const dynamicAgeElement = document.createElement("span");
+	dynamicAgeElement.appendChild(document.createTextNode("0"))
+	hardcodeAgeElement.insertAdjacentElement("afterend", dynamicAgeElement);
+
+	while (dynamicAgeElement.innerText !== age.toString()) {
+		delay(250).then(() => { dynamicAgeElement.innerText = (parseInt(dynamicAgeElement.innerText) + 1).toString() });
+	}
+
+	function delay(time) {
+		return new Promise(resolve => setTimeout(resolve, time));
+	}
+</script>
