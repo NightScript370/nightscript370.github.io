@@ -151,10 +151,10 @@ noBG: true
 	const age_dt = new Date(month_diff);
 	const year = age_dt.getUTCFullYear();  
 	const age = Math.abs(year - 1970);
-	
+
 	const hardcodeAgeElement = document.getElementById("age");
 	const dynamicAgeElement = document.createElement("span");
-	dynamicAgeElement.appendChild(document.createTextNode("0"))
+	dynamicAgeElement.appendChild(document.createTextNode("0"));
 	hardcodeAgeElement.insertAdjacentElement("afterend", dynamicAgeElement);
 
 	while (dynamicAgeElement.innerText !== age.toString()) {
