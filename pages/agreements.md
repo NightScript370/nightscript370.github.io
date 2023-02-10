@@ -1,7 +1,6 @@
 ---
 title: Agreements
 description: Code of Conduct & Ethics when working with me
-permalink: /offline
 ---
 
 This contract is a binding set of agreements for whoever chose to work with "NightScript". By confirming my stay in a business, you willfully acknowledge that you will abide by the guidelines described in this document. Consequences may include a consulting with the HR department or a full on resignation.
