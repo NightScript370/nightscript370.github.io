@@ -3,11 +3,15 @@ title: Agreements
 description: Code of Conduct & Ethics when working with me
 ---
 
-This contract is a binding set of agreements for whoever chose to work with "NightScript". By confirming my stay in a business, you willfully acknowledge that you will abide by the guidelines described in this document. Consequences may include a consulting with the HR department or a full on resignation.
+This contract is a binding set of agreements for whoever chose to work with "NightScript". By employing me, you willfully acknowledge that you will abide by the guidelines described in this document. Consequences may include a consulting with the HR department or a full on resignation.
 
 ## Scheduling
 
-I currently attend a College which surrounds a Talmudic study schedule. This is my full schedule, on days that I'd be able to do programming.
+- For our intents and purposes, there are ""three"" religious holidays that prevent me from coming online during the months of April-June during those days the holiday is celebrated. Each of them last for two full days + a work-prohibition on the eve starting at mid-day (11:30-at earliest). While the first two are 7 days apart, the last one is set 7 weeks apart. You will be alerted before these days.
+- The same concept of Jewish holidays return during September-October, but all take place within the span of 24 days. In addition to the 3 sets of 2-days, there is a 4th holiday that lasts a full 25 hours. This will also be alerted
+- Beyond these time-bound holidays, there is also the Sabbath, which prevents me to do any work on Saturday. Since its work-restrictions starts at mid-day, Early-Friday & Late-Night-Saturdays are spent on mental health maintenance. Availability can be set, albeit only if needed (due to its unpredictable nature, considering nightfall times change every months based on the seasons)
+
+The other days of the year are when I am expected to work on College courses, each with their own degree of homework. Below is the full schedule, as per what our Talmud-study-oriented College set for us students:
 
 <table>
 <tr>
@@ -52,8 +56,8 @@ I currently attend a College which surrounds a Talmudic study schedule. This is 
 </tr>
 <tr>
 	<td>13:00 - 13:15</td>
-	<td rowspan='8' colspan='1' >Free Time!</td>
-	<td rowspan='2' colspan='1' >Free Time!</td>
+	<td rowspan='8' colspan='1' >Free Time</td>
+	<td rowspan='2' colspan='1' >Free Time</td>
 	<td>Lunch</td>
 </tr>
 <tr>
@@ -112,10 +116,6 @@ I currently attend a College which surrounds a Talmudic study schedule. This is 
 	<td rowspan='1' colspan='5' >Jewish Law Study</td>
 </tr>
 </table>
-
-- This will be altered by Jewish holidays, which lasts for two days from sundown to nightfall of the 2nd day
-- Friday has an availability period until midday. This is unpredictable, though; since I don't have any courses, I am more likely to sleep in.
-- Saturdays have an availability that starts at night-fall.
 
 My college handles its secular courses through a Monday/Wednesday & Tuesday/Thursday system, each to their own degree of homework assignments. The time slots I will allocate to work will be during the "Free Time" periods, and may even have a part during meal-times.
 
