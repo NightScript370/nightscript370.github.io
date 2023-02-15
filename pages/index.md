@@ -23,8 +23,8 @@ noBG: true
 			<li>Video Editing (using HitFilm Express + Windows Movie Maker)</li>
 		</ul>
 		<div class="text-center mt-3" id="contactMeButtons">
-			<a class="nstooltip" data-tooltip="Check out my FOSS portfolio" href="/social/github"><img src="/assets/images/icons/github.svg"></a>
-			<a class="nstooltip" data-tooltip="Join my Discord Server" href="/social/discord"><img src="/assets/images/icons/discord.svg"></a>
+			<a class="nstooltip" data-tooltip="Check out my repositories" href="/social/github"><img src="/assets/images/icons/github.svg"></a>
+			<a class="nstooltip" data-tooltip="Join my hangout channel" href="/social/discord"><img src="/assets/images/icons/discord.svg"></a>
 		</div>
 	</div>
 </div>

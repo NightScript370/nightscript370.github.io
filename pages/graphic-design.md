@@ -2,6 +2,7 @@
 title: Graphic Design
 description: All about the graphic design works I've done over the years
 carousel: true
+permalink: /graphic-design
 ---
 
 {% assign symbolface = "/assets/images/gd/CropLetterYoshi.jpg | Symbols could potentially replace pixels. Here's my face converted into a bunch of characters" | split: ' | ' %}
@@ -25,8 +26,8 @@ carousel: true
 
 # Graphic Design Works
 
-During my 3rd year in High School (meaning I was in 11th grade), I have finally joined an art class that takes place digitally rather than a drawing class. This Graphic Design class knocked me off the high horse that I put myself on and taught me how to do things properly. While having previously used Paint.NET and bashed Photoshop for being "expensive trash", I have come to appreciate what it has done and all the tools it has provided me with.
+My 3<sup>rd</sup> year of High School had me leave the pencil drawings and enter the commercialized world of Photoshop. Everyone in the Graphic Design industry seemed to appreciate it, yet I never understood why; after all, Paint.NET worked great for me. However, as I started using it more, I understood the importance of non-rasterization; masking, vectors and much more. I have yet to find another editor to do that, so I switched over to Photoshop CS6 as my default editor, to the point where I don't even want to run it on Wine; I have Windows just for this. (Please Adobe, make a standard linux version kthx)
 
-Although I have since then moved from the class, I still value the work done through the class and appreciate what my teacher has done for me. This is most the work I have done last year
+The gallery below are all the abstract arts that we've done in the Graphic Design class. Although I have done much more in my later years, those are more private due to revealing personal data.
 
 {% include carousel.html pages=my_array id="graphicDesign" %}
